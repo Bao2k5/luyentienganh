@@ -7,13 +7,13 @@ const Result = require('../models/Result');
 // POST /api/quiz/start - Initialize quiz session
 router.post('/start', async (req, res) => {
     try {
-        const { studentName, studentClass } = req.body;
+        const { studentName, studentClass, setNumber } = req.body;
 
         // Validation
-        if (!studentName || !studentClass) {
+        if (!studentName || !studentClass || !setNumber) {
             return res.status(400).json({
                 error: {
-                    message: 'Student name and class are required'
+                    message: 'Student name, class, and set number are required'
                 }
             });
         }
@@ -34,10 +34,20 @@ router.post('/start', async (req, res) => {
             });
         }
 
+        const set = parseInt(setNumber);
+        if (set < 1 || set > 10) {
+            return res.status(400).json({
+                error: {
+                    message: 'Set number must be between 1 and 10'
+                }
+            });
+        }
+
         // Create new session
         const session = new Session({
             studentName: studentName.trim(),
             studentClass: studentClass.trim(),
+            setNumber: set,
             startTime: new Date(),
             status: 'active'
         });
@@ -46,7 +56,8 @@ router.post('/start', async (req, res) => {
 
         res.status(201).json({
             sessionId: session._id,
-            startTime: session.startTime
+            startTime: session.startTime,
+            setNumber: set
         });
 
     } catch (error) {
@@ -185,6 +196,7 @@ router.post('/submit', async (req, res) => {
             sessionId: session._id,
             studentName: session.studentName,
             studentClass: session.studentClass,
+            setNumber: session.setNumber,
             answers: processedAnswers,
             score,
             correctCount,
@@ -250,6 +262,7 @@ router.get('/results/:id', async (req, res) => {
             resultId: result._id,
             studentName: result.studentName,
             studentClass: result.studentClass,
+            setNumber: result.setNumber,
             score: result.score,
             correctCount: result.correctCount,
             incorrectCount: result.incorrectCount,
@@ -263,6 +276,124 @@ router.get('/results/:id', async (req, res) => {
         res.status(500).json({
             error: {
                 message: 'Failed to fetch quiz result'
+            }
+        });
+    }
+});
+
+// GET /api/quiz/history/:studentName - Get student's quiz history
+router.get('/history/:studentName', async (req, res) => {
+    try {
+        const { studentName } = req.params;
+
+        if (!studentName || studentName.trim().length < 2) {
+            return res.status(400).json({
+                error: {
+                    message: 'Valid student name is required'
+                }
+            });
+        }
+
+        // Fetch all results for this student, sorted by most recent first
+        const results = await Result.find({
+            studentName: { $regex: new RegExp(`^${studentName.trim()}$`, 'i') }
+        })
+            .sort({ submittedAt: -1 })
+            .limit(50); // Limit to last 50 attempts
+
+        // Format response
+        const history = results.map(result => ({
+            resultId: result._id,
+            studentName: result.studentName,
+            studentClass: result.studentClass,
+            setNumber: result.setNumber,
+            score: result.score,
+            correctCount: result.correctCount,
+            incorrectCount: result.incorrectCount,
+            timeTaken: result.timeTaken,
+            submittedAt: result.submittedAt
+        }));
+
+        res.status(200).json({
+            studentName: studentName.trim(),
+            totalAttempts: history.length,
+            history
+        });
+
+    } catch (error) {
+        console.error('Error fetching quiz history:', error);
+        res.status(500).json({
+            error: {
+                message: 'Failed to fetch quiz history'
+            }
+        });
+    }
+});
+
+// GET /api/quiz/stats/:studentName - Get student's statistics
+router.get('/stats/:studentName', async (req, res) => {
+    try {
+        const { studentName } = req.params;
+
+        if (!studentName || studentName.trim().length < 2) {
+            return res.status(400).json({
+                error: {
+                    message: 'Valid student name is required'
+                }
+            });
+        }
+
+        // Fetch all results for this student
+        const results = await Result.find({
+            studentName: { $regex: new RegExp(`^${studentName.trim()}$`, 'i') }
+        });
+
+        if (results.length === 0) {
+            return res.status(404).json({
+                error: {
+                    message: 'No quiz history found for this student'
+                }
+            });
+        }
+
+        // Calculate statistics
+        const totalAttempts = results.length;
+        const averageScore = results.reduce((sum, r) => sum + r.score, 0) / totalAttempts;
+        const highestScore = Math.max(...results.map(r => r.score));
+        const lowestScore = Math.min(...results.map(r => r.score));
+
+        // Count attempts per set
+        const setAttempts = {};
+        for (let i = 1; i <= 10; i++) {
+            setAttempts[i] = results.filter(r => r.setNumber === i).length;
+        }
+
+        // Get best score per set
+        const bestScorePerSet = {};
+        for (let i = 1; i <= 10; i++) {
+            const setResults = results.filter(r => r.setNumber === i);
+            if (setResults.length > 0) {
+                bestScorePerSet[i] = Math.max(...setResults.map(r => r.score));
+            } else {
+                bestScorePerSet[i] = null;
+            }
+        }
+
+        res.status(200).json({
+            studentName: studentName.trim(),
+            totalAttempts,
+            averageScore: Math.round(averageScore * 100) / 100,
+            highestScore,
+            lowestScore,
+            setAttempts,
+            bestScorePerSet
+        });
+
+    } catch (error) {
+        console.error('Error fetching quiz stats:', error);
+        res.status(500).json({
+            error: {
+                message: 'Failed to fetch quiz statistics'
             }
         });
     }

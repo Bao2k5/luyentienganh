@@ -15,18 +15,24 @@ function App() {
 
   const handleStartQuiz = async (name, studentClass) => {
     try {
-      const response = await startQuiz(name, studentClass);
-      setSessionId(response.sessionId);
       setStudentInfo({ name, class: studentClass });
-      setCurrentScreen('setSelection'); // Go to set selection instead of quiz
+      setCurrentScreen('setSelection'); // Go to set selection first
     } catch (error) {
       throw error;
     }
   };
 
-  const handleSelectSet = (setNumber) => {
-    setSelectedSet(setNumber);
-    setCurrentScreen('quiz');
+  const handleSelectSet = async (setNumber) => {
+    try {
+      // Start quiz session with selected set
+      const response = await startQuiz(studentInfo.name, studentInfo.class, setNumber);
+      setSessionId(response.sessionId);
+      setSelectedSet(setNumber);
+      setCurrentScreen('quiz');
+    } catch (error) {
+      console.error('Error starting quiz:', error);
+      alert('Không thể bắt đầu bài thi. Vui lòng thử lại.');
+    }
   };
 
   const handleSubmitQuiz = (resultIdFromQuiz) => {

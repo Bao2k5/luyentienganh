@@ -10,11 +10,12 @@ const api = axios.create({
 });
 
 // Start quiz session
-export const startQuiz = async (studentName, studentClass) => {
+export const startQuiz = async (studentName, studentClass, setNumber) => {
     try {
         const response = await api.post('/api/quiz/start', {
             studentName,
             studentClass,
+            setNumber,
         });
         return response.data;
     } catch (error) {

@@ -9,6 +9,12 @@ const SessionSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    setNumber: {
+        type: Number,
+        required: true,
+        min: 1,
+        max: 10
+    },
     startTime: {
         type: Date,
         required: true,

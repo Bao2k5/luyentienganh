@@ -14,6 +14,12 @@ const ResultSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    setNumber: {
+        type: Number,
+        required: true,
+        min: 1,
+        max: 10
+    },
     answers: [{
         questionId: {
             type: mongoose.Schema.Types.ObjectId,
