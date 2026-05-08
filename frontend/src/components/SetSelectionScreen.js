@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BookOpen, Trophy, Target, ChevronRight, Star, Zap, Shield } from 'lucide-react';
+import { BookOpen, Trophy, ChevronRight, Star, Zap, Shield } from 'lucide-react';
 
 const DIFFICULTY_CONFIG = {
     easy: {
@@ -59,7 +59,6 @@ const DIFFICULTY_BREAKDOWN = {
 
 const SetSelectionScreen = ({ onSelectSet, studentInfo }) => {
     const [activeFilter, setActiveFilter] = useState('all');
-    const [hoveredSet, setHoveredSet] = useState(null);
 
     const filteredSets = activeFilter === 'all'
         ? SETS_DATA
@@ -142,13 +141,11 @@ const SetSelectionScreen = ({ onSelectSet, studentInfo }) => {
                     {filteredSets.map((set) => {
                         const cfg = DIFFICULTY_CONFIG[set.setDifficulty];
                         const breakdown = DIFFICULTY_BREAKDOWN[set.setDifficulty];
-                        const Icon = cfg.icon;
                         return (
                             <div
                                 key={set.number}
                                 onClick={() => onSelectSet(set.number)}
-                                onMouseEnter={() => setHoveredSet(set.number)}
-                                onMouseLeave={() => setHoveredSet(null)}
+                                onMouseLeave={() => {}}
                                 className={`bg-white rounded-2xl shadow-md hover:shadow-xl ${cfg.glowClass} transition-all duration-300 transform hover:-translate-y-1 cursor-pointer overflow-hidden border border-gray-100`}
                             >
                                 {/* Colored Header */}

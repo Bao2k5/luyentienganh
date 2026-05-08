@@ -36,65 +36,6 @@ const QuestionReview = ({ questions }) => {
         return `Đáp án ${wrongAns} không đúng theo ngữ pháp hoặc ngữ cảnh của câu. Xem giải thích chi tiết ở trên để hiểu rõ hơn.`;
     };
 
-    // Helper function to get common mistakes for each specific grammatical point
-    const getCommonMistake = (question) => {
-        const relativeIndex = question.orderIndex ? ((question.orderIndex - 1) % 50 + 1) : 0;
-
-        const specificMistakes = {
-            1: "⚠️ Lỗi thường gặp: Đặt trạng từ tần suất sai vị trí. Nhớ: TRƯỚC động từ thường.",
-            2: "⚠️ Lỗi thường gặp: Đặt trạng từ tần suất sai vị trí. Nhớ: SAU động từ 'to be'.",
-            3: "⚠️ Lỗi thường gặp: Dùng sai thì khi hỏi về tần suất. 'How often' phải dùng Hiện tại đơn.",
-            4: "⚠️ Lỗi thường gặp: Quên thêm 's/es' cho động từ khi chủ ngữ là số ít (ngôi thứ 3) ở Hiện tại đơn.",
-            5: "⚠️ Lỗi thường gặp: Không nhận ra dấu hiệu 'at the moment' để dùng Hiện tại tiếp diễn.",
-            6: "⚠️ Lỗi thường gặp: Dùng Hiện tại đơn cho hành động tạm thời. 'this week/these days' cần Hiện tại tiếp diễn.",
-            7: "⚠️ Lỗi thường gặp: Thêm '-ing' vào động từ trạng thái (know, want...). Các từ này KHÔNG dùng ở thì tiếp diễn.",
-            8: "⚠️ Lỗi thường gặp: Không thuộc động từ bất quy tắc (go -> went).",
-            9: "⚠️ Lỗi thường gặp: Thêm '-ed' vào động từ sau 'didn't'. Sau 'didn't' động từ phải ở dạng nguyên mẫu.",
-            10: "⚠️ Lỗi thường gặp: Thêm '-ed' vào động từ trong câu hỏi. Sau 'Did' động từ phải ở dạng nguyên mẫu.",
-            11: "⚠️ Lỗi thường gặp: Thiếu trợ động từ 'did' trong câu hỏi Wh- ở quá khứ.",
-            12: "⚠️ Lỗi thường gặp: Dùng sai 'was/were'. Nhớ: I/He/She/It + was; You/We/They + were.",
-            13: "⚠️ Lỗi thường gặp: Chia sai đuôi '-ed' với từ kết thúc bằng 'y'. Chú ý trước 'y' là nguyên âm hay phụ âm.",
-            14: "⚠️ Lỗi thường gặp: Dùng sai từ để hỏi (What, Where, Who...). Phải đọc kỹ thông tin cần hỏi.",
-            15: "⚠️ Lỗi thường gặp: Không phân biệt được hành động ĐANG diễn ra (Qúa khứ tiếp diễn) và XEN VÀO (Quá khứ đơn).",
-            16: "⚠️ Lỗi thường gặp: Dùng Quá khứ đơn thay vì Tiếp diễn khi muốn nhấn mạnh một hành động kéo dài.",
-            17: "⚠️ Lỗi thường gặp: Dùng 'anything' trong câu khẳng định. Khẳng định phải dùng 'something'.",
-            18: "⚠️ Lỗi thường gặp: Dùng 'something' trong câu phủ định/nghi vấn. Phủ định/nghi vấn phải dùng 'anything'.",
-            19: "⚠️ Lỗi thường gặp: Chia động từ số nhiều cho 'Everyone/Everybody'. Các đại từ này luôn đi với động từ SỐ ÍT.",
-            20: "⚠️ Lỗi thường gặp: Phủ định kép. 'Nothing/nobody' bản thân nó đã mang nghĩa phủ định, không dùng thêm not.",
-            21: "⚠️ Lỗi thường gặp: Không hiểu nghĩa khẳng định của 'anywhere' ('bất cứ đâu').",
-            22: "⚠️ Lỗi thường gặp: Nhầm lẫn 'will' và 'be going to'. Kế hoạch đã định trước phải dùng 'be going to'.",
-            23: "⚠️ Lỗi thường gặp: Viết sai cấu trúc phủ định của 'be going to'.",
-            24: "⚠️ Lỗi thường gặp: Dùng 'be going to' cho Lời hứa. Lời hứa phải dùng 'will/won't'.",
-            25: "⚠️ Lỗi thường gặp: Dùng 'be going to' cho Lời đề nghị giúp đỡ. Đề nghị giúp đỡ phải dùng 'will'.",
-            26: "⚠️ Lỗi thường gặp: Dùng 'be going to' cho Quyết định đột ngột lúc nói. Phải dùng 'will'.",
-            27: "⚠️ Lỗi thường gặp: Dùng thì Tương lai ('will') trong mệnh đề 'If'. Mệnh đề 'If' phải dùng Hiện tại đơn.",
-            28: "⚠️ Lỗi thường gặp: Dùng sai trợ động từ khi đưa ra yêu cầu giúp đỡ. Dùng 'Will you...?'",
-            29: "⚠️ Lỗi thường gặp: Dùng 'will' trong câu điều kiện loại 0 (sự thật hiển nhiên). Cả 2 vế đều là Hiện tại đơn.",
-            30: "⚠️ Lỗi thường gặp: Chia sai vế chính của câu điều kiện loại 1. Vế chính phải có 'will + V'.",
-            31: "⚠️ Lỗi thường gặp: Phủ định sai cấu trúc trong câu điều kiện loại 1.",
-            32: "⚠️ Lỗi thường gặp: Dùng 'more' với tính từ ngắn. Tính từ 1 âm tiết chỉ thêm '-er'.",
-            33: "⚠️ Lỗi thường gặp: Nhầm lẫn so sánh hơn và so sánh nhất. Có 'the' thì phải là so sánh nhất.",
-            34: "⚠️ Lỗi thường gặp: Không đổi 'y' thành 'i' trước khi thêm '-er' với tính từ 2 âm tiết kết thúc bằng 'y'.",
-            35: "⚠️ Lỗi thường gặp: Không nhớ dạng so sánh bất quy tắc (good -> better -> best).",
-            36: "⚠️ Lỗi thường gặp: Dùng quá khứ đơn thay vì Hiện tại hoàn thành khi hỏi về trải nghiệm (ever).",
-            37: "⚠️ Lỗi thường gặp: Dùng 'ever' trong câu kể phủ định. Dùng 'never' thay thế.",
-            38: "⚠️ Lỗi thường gặp: Thiếu 'have/has' trong cấu trúc 'the best... I have ever...'.",
-            39: "⚠️ Lỗi thường gặp: Dùng 'to V' sau 'practise'. 'Practise' bắt buộc đi với 'V-ing'.",
-            40: "⚠️ Lỗi thường gặp: Dùng 'V-ing' sau 'need'. 'Need' phải đi với 'to V'.",
-            41: "⚠️ Lỗi thường gặp: Nhầm lẫn các động từ có thể đi với cả 'V-ing' và 'to V' mà không đổi nghĩa.",
-            42: "⚠️ Lỗi thường gặp: Dùng 'which' thay thế cho Người. Phải dùng 'who'.",
-            43: "⚠️ Lỗi thường gặp: Dùng 'who' thay thế cho Vật. Phải dùng 'which'.",
-            44: "⚠️ Lỗi thường gặp: Dùng 'which' cho Nơi chốn. Phải dùng 'where'.",
-            45: "⚠️ Lỗi thường gặp: Dùng 'which' cho Thời gian. Phải dùng 'when'.",
-            46: "⚠️ Lỗi thường gặp: Nhầm lẫn ngữ cảnh của các tính từ miêu tả tính cách.",
-            47: "⚠️ Lỗi thường gặp: Nhầm lẫn từ vựng các môn học.",
-            48: "⚠️ Lỗi thường gặp: Dùng sai giới từ đi kèm với từ vựng (collocation).",
-            49: "⚠️ Lỗi thường gặp: Không tìm được từ đồng nghĩa phù hợp.",
-            50: "⚠️ Lỗi thường gặp: Dùng 'very' với tính từ cực cấp. Tính từ cực cấp (freezing, awful...) không đi với very."
-        };
-
-        return specificMistakes[relativeIndex] || "⚠️ Lưu ý: Đọc kỹ đề và chú ý ngữ cảnh câu.";
-    };
 
     return (
         <div className="bg-white rounded-lg shadow-lg p-8">
