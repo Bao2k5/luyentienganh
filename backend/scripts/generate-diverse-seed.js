@@ -692,7 +692,8 @@ for (let setIdx = 1; setIdx <= 10; setIdx++) {
 
     // Q13
     let p13 = q13_list[i].split('|');
-    parseAndPush(setIdx, `_______ did they ${p13[0]}`, `Họ đã _______ ${p13[1]}`, "Where", "Ở đâu", ["When", "Why", "Who"], ["Khi nào", "Tại sao", "Ai"], "Câu trả lời chỉ nơi chốn nên dùng từ để hỏi 'Where'.", "Unit 2", 13);
+    const q13parts = p13[0].split('?');
+    parseAndPush(setIdx, `_______ did they ${q13parts[0]}? (${q13parts[1].replace('- ','').trim()})`, `Họ đã _______ ${p13[1]}?`, "Where", "Ở đâu", ["When", "Why", "Who"], ["Khi nào", "Tại sao", "Ai"], "Câu trả lời chỉ nơi chốn nên dùng từ để hỏi 'Where'.", "Unit 2", 13);
 
     // Q14
     let p14 = q14_list[i].split('|');
@@ -700,7 +701,8 @@ for (let setIdx = 1; setIdx <= 10; setIdx++) {
 
     // Q15
     let p15 = q15_list[i].split('|');
-    parseAndPush(setIdx, `${s.en} _______ ${p15[0]} at 8 PM.`, `${s.vi} _______ ${p15[1]} lúc 8 giờ tối.`, `${s.pastBe} ${p15[0].split(' ')[0]}ing`, "đang", [s.pastBe==='was'?'were':'was', "are", "did"], ["sai to-be", "hiện tại", "quá khứ"], "Dùng thì Quá khứ tiếp diễn cho hành động đang xảy ra tại một thời điểm trong quá khứ.", "Unit 3", 15);
+    const p15obj = p15[0].split(' ').slice(1).join(' ');
+    parseAndPush(setIdx, `${s.en} _______ ${p15obj} at 8 PM.`, `${s.vi} _______ ${p15[1]} lúc 8 giờ tối.`, `${s.pastBe} ${p15[0].split(' ')[0]}ing`, "đang", [s.pastBe==='was'?'were':'was', "are", "did"], ["sai to-be", "hiện tại", "quá khứ"], "Dùng thì Quá khứ tiếp diễn cho hành động đang xảy ra tại một thời điểm cụ thể trong quá khứ.", "Unit 3", 15);
 
     // Q16
     let p16 = q16_list[i].split('|');
@@ -712,19 +714,23 @@ for (let setIdx = 1; setIdx <= 10; setIdx++) {
 
     // Q18
     let p18 = q18_list[i].split('|');
-    parseAndPush(setIdx, `I want to ${p18[0]}`, `Tôi muốn ${p18[1]}`, "something/someone/somewhere", "đại từ bất định khẳng định", ["anything", "nothing", "everything"], ["bất cứ", "không", "mọi thứ"], "Trong câu khẳng định, dùng đại từ bất định some-.", "Unit 3", 18);
+    const p18text = p18[0].replace('something', '_______').replace('someone', '_______').replace('somewhere', '_______');
+    parseAndPush(setIdx, `I want to ${p18text}`, `Tôi muốn ${p18[1]}`, "something/someone/somewhere", "đại từ bất định khẳng định", ["anything", "nothing", "everything"], ["bất cứ", "không", "mọi thứ"], "Trong câu khẳng định, dùng đại từ bất định some-.", "Unit 3", 18);
 
     // Q19
     let p19 = q19_list[i].split('|');
-    parseAndPush(setIdx, `I didn't ${p19[0]}.`, `Tôi đã không ${p19[1]}.`, "anything/anyone/anywhere", "đại từ phủ định", ["something", "nothing", "everything"], ["khẳng định", "phủ định kép", "mọi thứ"], "Trong câu phủ định, dùng đại từ bất định any-.", "Unit 3", 19);
+    const p19text = p19[0].replace('anything', '_______').replace('anyone', '_______').replace('anywhere', '_______');
+    parseAndPush(setIdx, `I didn't ${p19text}.`, `Tôi đã không ${p19[1]}.`, "anything/anyone/anywhere", "đại từ phủ định", ["something", "nothing", "everything"], ["khẳng định", "phủ định kép", "mọi thứ"], "Trong câu phủ định, dùng đại từ bất định any-.", "Unit 3", 19);
 
     // Q20
     let p20 = q20_list[i].split('|');
-    parseAndPush(setIdx, `There is ${p20[0]}.`, `Không có ${p20[1]}.`, "nothing/no one/nowhere", "nghĩa phủ định", ["anything", "something", "everything"], ["bất cứ", "một vài", "mọi"], "'Nothing/No one/Nowhere' mang nghĩa phủ định, động từ chia ở khẳng định.", "Unit 3", 20);
+    const p20text = p20[0].replace('nothing', '_______').replace('no one', '_______').replace('nowhere', '_______');
+    parseAndPush(setIdx, `There is ${p20text}.`, `Không có ${p20[1]}.`, "nothing/no one/nowhere", "nghĩa phủ định", ["anything", "something", "everything"], ["bất cứ", "một vài", "mọi"], "'Nothing/No one/Nowhere' mang nghĩa phủ định, động từ chia ở khẳng định.", "Unit 3", 20);
 
     // Q21
     let p21 = q21_list[i].split('|');
-    parseAndPush(setIdx, p21[0], p21[1], "Everyone/Everything", "Mọi người/Mọi thứ", ["Anyone", "All", "Some"], ["Bất cứ", "Tất cả", "Một vài"], "Đại từ 'Everyone/Everything' dùng với động từ số ít.", "Unit 3", 21);
+    const p21text = p21[0].replace('Everyone', '_______').replace('Everything', '_______');
+    parseAndPush(setIdx, p21text, p21[1], "Everyone/Everything", "Mọi người/Mọi thứ", ["Anyone", "All", "Some"], ["Bất cứ", "Tất cả", "Một vài"], "Đại từ 'Everyone/Everything' dùng với động từ số ít.", "Unit 3", 21);
 
     // Q22
     let p22 = q22_list[i].split('|');
@@ -814,7 +820,7 @@ for (let setIdx = 1; setIdx <= 10; setIdx++) {
 
     // Q42
     let p42 = q42_list[i].split('|');
-    parseAndPush(setIdx, `I started learning ${p42[0]}.`, `Tôi bắt đầu học ${p42[1]}.`, "Both B & C", "Cả 2 đều đúng", ["learn", "to learn", "learning"], ["V", "to V", "V-ing"], "Sau start có thể dùng cả to V và V-ing.", "Unit 6", 42);
+    parseAndPush(setIdx, `I started _______ ${p42[0]}.`, `Tôi bắt đầu _______ ${p42[1]}.`, "Both B & C", "Cả 2 đều đúng", ["learn", "to learn", "learning"], ["V", "to V", "V-ing"], "Sau start có thể dùng cả to V và V-ing.", "Unit 6", 42);
 
     // Q43
     let p43 = q43_list[i].split('|');
