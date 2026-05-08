@@ -176,12 +176,12 @@ const q16_list = [
     "The power went out while we _______ TV.|Mất điện trong khi chúng tôi _______ TV.|were watching",
     "It started to rain while they _______ football.|Trời bắt đầu mưa trong khi họ _______ bóng đá.|were playing",
     "I dropped my phone while I _______ for the bus.|Tôi đánh rơi điện thoại trong khi tôi _______ xe buýt.|was waiting",
-    "She hurt her leg while she _______|Cô ấy bị đau chân trong khi cô ấy _______|was running",
-    "The bell rang while the students _______|Chuông reo trong khi học sinh _______|were studying",
+    "She hurt her leg while she _______.|Cô ấy bị đau chân trong khi cô ấy _______.|was running",
+    "The bell rang while the students _______.|Chuông reo trong khi học sinh _______.|were studying",
     "He arrived while my parents _______ dinner.|Anh ấy đến trong khi bố mẹ tôi _______ bữa tối.|were cooking",
     "I saw an accident while I _______ to work.|Tôi thấy một vụ tai nạn trong khi tôi _______ đi làm.|was driving",
     "My pen broke while I _______ the essay.|Bút của tôi bị hỏng trong khi tôi _______ bài luận.|was writing",
-    "The dog barked while Mary _______|Chó sủa trong khi Mary _______|was sleeping"
+    "The dog barked while Mary _______.|Chó sủa trong khi Mary _______.|was sleeping"
 ];
 
 // Q17: when vs while
@@ -683,7 +683,8 @@ for (let setIdx = 1; setIdx <= 10; setIdx++) {
 
     // Q11
     let p11 = q11_list[i].split('|');
-    parseAndPush(setIdx, `${s.en} _______ ${p11[0]} last night.`, `${s.vi} _______ ${p11[1]} tối qua.`, p11[2], "đã", [p11[3], p11[4], p11[3]+'ed'], ["nguyên thể", "hiện tại s/es", "sai chính tả (-yed thay vì -ied)"], "Động từ tận cùng bằng phụ âm + y, đổi y thành ied. VD: study→studied, NOT studyed.", "Unit 2", 11);
+    const p11obj = p11[0].split(' ').slice(1).join(' ');
+    parseAndPush(setIdx, `${s.en} _______ ${p11obj} last night.`, `${s.vi} _______ ${p11[1]} tối qua.`, p11[2], "đã", [p11[3], p11[4], p11[3]+'ed'], ["nguyên thể (base form)", "hiện tại s/es", "sai chính tả -yed"], `Quy tắc: phụ âm + y → đổi y thành i rồi thêm -ed. Ví dụ: ${p11[3]} → ${p11[2]}. Không viết '${p11[3]}ed'.`, "Unit 2", 11);
 
     // Q12
     let p12 = q12_list[i].split('|');
@@ -764,7 +765,12 @@ for (let setIdx = 1; setIdx <= 10; setIdx++) {
 
     // Q31
     let p31 = q31_list[i].split('|');
-    parseAndPush(setIdx, `If it ${p31[0]}, _______.`, `Nếu trời ${p31[0]}, _______.`, p31[1], p31[2], [p31[1].replace("won't", "don't"), p31[1].replace("won't", "didn't"), p31[1].replace("won't", "aren't")], ["không", "đã không", "không phải"], "Câu điều kiện loại 1: If + HTĐ, will/won't + V.", "Unit 5", 31);
+    const wrong31 = [
+        p31[1].replace("won't", "don't").replace("is", "isn't"),
+        p31[1].replace("won't", "didn't").replace("is", "wasn't"),
+        p31[1].replace("won't", "aren't").replace("is", "weren't")
+    ];
+    parseAndPush(setIdx, `If it ${p31[0]}, _______.`, `Nếu trời ${p31[0]}, _______.`, p31[1], p31[2], wrong31, ["không", "đã không", "không phải"], "Câu điều kiện loại 1: If + HTĐ, will/won't + V.", "Unit 5", 31);
 
     // Q32
     let p32 = q32_list[i].split('|');
@@ -820,7 +826,7 @@ for (let setIdx = 1; setIdx <= 10; setIdx++) {
 
     // Q45
     let p45 = q45_list[i].split('|');
-    parseAndPush(setIdx, `That is ${p45[0]}.`, `Đó là ${p45[1]}.`, "where", "nơi chốn", ["which", "who", "when"], ["vật", "người", "thời gian"], "Đại từ 'where' thay thế danh từ chỉ nơi chốn.", "Unit 6", 45);
+    parseAndPush(setIdx, `This is ${p45[0]}.`, `Đây là ${p45[1]}.`, "where", "nơi chốn", ["which", "who", "when"], ["vật", "người", "thời gian"], "Đại từ quan hệ 'where' dùng để thay thế cho danh từ chỉ nơi chốn.", "Unit 6", 45);
 
     // Q46 - use unique wrong options that don't overlap with answer
     let p46 = q46_list[i].split('|');

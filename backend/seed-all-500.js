@@ -3,10 +3,10 @@ const questions = [
   {
     "questionText": "I _______ play tennis.",
     "options": {
-      "A": "never am",
+      "A": "am never",
       "B": "don't never",
       "C": "never",
-      "D": "am never"
+      "D": "never am"
     },
     "correctAnswer": "C",
     "explanation": "Adverbs of frequency đứng TRƯỚC động từ thường.",
@@ -27,19 +27,19 @@ const questions = [
   {
     "questionText": "I _______ late for school.",
     "options": {
-      "A": "be never",
-      "B": "never be",
-      "C": "am never",
-      "D": "never am"
+      "A": "never be",
+      "B": "never am",
+      "C": "be never",
+      "D": "am never"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Adverbs of frequency đứng SAU động từ 'to be'.",
     "vietnameseTranslation": "Tôi _______ muộn học.",
     "optionTranslations": {
-      "A": "sai động từ be",
-      "B": "sai cấu trúc",
-      "C": "không bao giờ",
-      "D": "sai vị trí"
+      "A": "sai cấu trúc",
+      "B": "sai vị trí",
+      "C": "sai động từ be",
+      "D": "không bao giờ"
     },
     "unit": "Unit 1",
     "orderIndex": 2,
@@ -51,19 +51,19 @@ const questions = [
   {
     "questionText": "How _______ do you travel abroad?",
     "options": {
-      "A": "often",
-      "B": "long",
-      "C": "much",
-      "D": "many"
+      "A": "much",
+      "B": "many",
+      "C": "often",
+      "D": "long"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Dùng 'How often...?' để hỏi về tần suất.",
     "vietnameseTranslation": "Bạn có _______ đi du lịch nước ngoài không?",
     "optionTranslations": {
-      "A": "thường xuyên",
-      "B": "bao lâu",
-      "C": "nhiều",
-      "D": "nhiều"
+      "A": "nhiều",
+      "B": "nhiều",
+      "C": "thường xuyên",
+      "D": "bao lâu"
     },
     "unit": "Unit 1",
     "orderIndex": 3,
@@ -76,18 +76,18 @@ const questions = [
     "questionText": "Water _______ at 100°C.",
     "options": {
       "A": "boiling",
-      "B": "boils",
-      "C": "is boils",
-      "D": "boil"
+      "B": "is boils",
+      "C": "boil",
+      "D": "boils"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Sự thật hiển nhiên dùng thì Hiện tại đơn.",
     "vietnameseTranslation": "Sự thật: Nước _______ ở 100°C.",
     "optionTranslations": {
       "A": "tiếp diễn",
-      "B": "sôi",
-      "C": "đang",
-      "D": "nguyên thể"
+      "B": "đang",
+      "C": "nguyên thể",
+      "D": "sôi"
     },
     "unit": "Unit 1",
     "orderIndex": 4,
@@ -99,18 +99,18 @@ const questions = [
   {
     "questionText": "The train _______ at 9 AM.",
     "options": {
-      "A": "is leave",
-      "B": "leaves",
-      "C": "leaveed",
+      "A": "leaveed",
+      "B": "is leave",
+      "C": "leaves",
       "D": "leave"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Lịch trình tàu xe dùng thì Hiện tại đơn.",
     "vietnameseTranslation": "Chuyến tàu _______ lúc 9 giờ sáng.",
     "optionTranslations": {
-      "A": "đang",
-      "B": "rời đi",
-      "C": "đã",
+      "A": "đã",
+      "B": "đang",
+      "C": "rời đi",
       "D": "nguyên thể"
     },
     "unit": "Unit 1",
@@ -124,18 +124,18 @@ const questions = [
     "questionText": "I _______  a text message at the moment.",
     "options": {
       "A": "am sending",
-      "B": "send",
-      "C": "sends",
-      "D": "sending"
+      "B": "sending",
+      "C": "send",
+      "D": "sends"
     },
     "correctAnswer": "A",
     "explanation": "Dấu hiệu 'at the moment' dùng thì Hiện tại tiếp diễn.",
     "vietnameseTranslation": "Tôi _______ gửi một tin nhắn vào lúc này.",
     "optionTranslations": {
       "A": "đang send",
-      "B": "hiện tại",
+      "B": "thiếu be",
       "C": "hiện tại",
-      "D": "thiếu be"
+      "D": "hiện tại"
     },
     "unit": "Unit 1",
     "orderIndex": 6,
@@ -148,18 +148,18 @@ const questions = [
     "questionText": "I _______  what you mean.",
     "options": {
       "A": "know",
-      "B": "knew",
+      "B": "am knowing",
       "C": "was knowing",
-      "D": "am knowing"
+      "D": "knew"
     },
     "correctAnswer": "A",
     "explanation": "Động từ trạng thái (stative verb) KHÔNG dùng ở thì tiếp diễn.",
     "vietnameseTranslation": "Tôi _______ biết ý của bạn.",
     "optionTranslations": {
       "A": "đúng",
-      "B": "đã",
+      "B": "đang (sai)",
       "C": "đã đang",
-      "D": "đang (sai)"
+      "D": "đã"
     },
     "unit": "Unit 1",
     "orderIndex": 7,
@@ -171,19 +171,19 @@ const questions = [
   {
     "questionText": "Yesterday, I _______  to Mexico.",
     "options": {
-      "A": "was going",
-      "B": "go",
+      "A": "go",
+      "B": "goes",
       "C": "went",
-      "D": "goes"
+      "D": "was going"
     },
     "correctAnswer": "C",
     "explanation": "Dấu hiệu 'Yesterday' dùng thì Quá khứ đơn.",
     "vietnameseTranslation": "Hôm qua, Tôi _______ đi Mexico.",
     "optionTranslations": {
-      "A": "tiếp diễn",
+      "A": "hiện tại",
       "B": "hiện tại",
       "C": "đã go",
-      "D": "hiện tại"
+      "D": "tiếp diễn"
     },
     "unit": "Unit 2",
     "orderIndex": 8,
@@ -195,9 +195,9 @@ const questions = [
   {
     "questionText": "I _______ like the film.",
     "options": {
-      "A": "don't",
+      "A": "doesn't",
       "B": "wasn't",
-      "C": "doesn't",
+      "C": "don't",
       "D": "didn't"
     },
     "correctAnswer": "D",
@@ -220,18 +220,18 @@ const questions = [
     "questionText": "_______ you enjoy the party yesterday?",
     "options": {
       "A": "Are",
-      "B": "Were",
-      "C": "Do",
-      "D": "Did"
+      "B": "Do",
+      "C": "Did",
+      "D": "Were"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Câu hỏi Yes/No quá khứ đơn dùng 'Did'.",
     "vietnameseTranslation": "Bạn _______ thích bữa tiệc ngày hôm qua không?",
     "optionTranslations": {
       "A": "Hiện tại to-be",
-      "B": "Quá khứ to-be",
-      "C": "Hiện tại",
-      "D": "Quá khứ"
+      "B": "Hiện tại",
+      "C": "Quá khứ",
+      "D": "Quá khứ to-be"
     },
     "unit": "Unit 2",
     "orderIndex": 10,
@@ -241,21 +241,21 @@ const questions = [
     "setDifficulty": "easy"
   },
   {
-    "questionText": "I _______ study for the exam last night.",
+    "questionText": "I _______ for the exam last night.",
     "options": {
-      "A": "studies",
+      "A": "studyed",
       "B": "study",
       "C": "studied",
-      "D": "studyed"
+      "D": "studies"
     },
     "correctAnswer": "C",
-    "explanation": "Động từ tận cùng bằng phụ âm + y, đổi y thành ied. VD: study→studied, NOT studyed.",
+    "explanation": "Quy tắc: phụ âm + y → đổi y thành i rồi thêm -ed. Ví dụ: study → studied. Không viết 'studyed'.",
     "vietnameseTranslation": "Tôi _______ học cho bài kiểm tra tối qua.",
     "optionTranslations": {
-      "A": "hiện tại s/es",
-      "B": "nguyên thể",
+      "A": "sai chính tả -yed",
+      "B": "nguyên thể (base form)",
       "C": "đã",
-      "D": "sai chính tả (-yed thay vì -ied)"
+      "D": "hiện tại s/es"
     },
     "unit": "Unit 2",
     "orderIndex": 11,
@@ -267,8 +267,8 @@ const questions = [
   {
     "questionText": "_______ is your email address?",
     "options": {
-      "A": "Who",
-      "B": "Where",
+      "A": "Where",
+      "B": "Who",
       "C": "When",
       "D": "What"
     },
@@ -276,8 +276,8 @@ const questions = [
     "explanation": "Hỏi về thông tin dùng 'What'.",
     "vietnameseTranslation": "địa chỉ email của bạn là _______?",
     "optionTranslations": {
-      "A": "Ai",
-      "B": "Ở đâu",
+      "A": "Ở đâu",
+      "B": "Ai",
       "C": "Khi nào",
       "D": "Cái gì"
     },
@@ -291,19 +291,19 @@ const questions = [
   {
     "questionText": "_______ did they go? - To London",
     "options": {
-      "A": "Why",
-      "B": "Where",
-      "C": "Who",
-      "D": "When"
+      "A": "Who",
+      "B": "Why",
+      "C": "When",
+      "D": "Where"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Câu trả lời chỉ nơi chốn nên dùng từ để hỏi 'Where'.",
     "vietnameseTranslation": "Họ đã _______ đi? - Đến London",
     "optionTranslations": {
-      "A": "Tại sao",
-      "B": "Ở đâu",
-      "C": "Ai",
-      "D": "Khi nào"
+      "A": "Ai",
+      "B": "Tại sao",
+      "C": "Khi nào",
+      "D": "Ở đâu"
     },
     "unit": "Unit 2",
     "orderIndex": 13,
@@ -316,18 +316,18 @@ const questions = [
     "questionText": "_______ you help me with this?",
     "options": {
       "A": "Are",
-      "B": "Can",
+      "B": "Have",
       "C": "Do",
-      "D": "Have"
+      "D": "Can"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Yêu cầu giúp đỡ dùng 'Can' hoặc 'Could'.",
     "vietnameseTranslation": "Bạn _______ giúp tôi việc này được không?",
     "optionTranslations": {
       "A": "Là",
-      "B": "Có thể",
+      "B": "Có",
       "C": "Làm",
-      "D": "Có"
+      "D": "Có thể"
     },
     "unit": "Unit 2",
     "orderIndex": 14,
@@ -339,19 +339,19 @@ const questions = [
   {
     "questionText": "I _______ wait for a long time at 8 PM.",
     "options": {
-      "A": "was waiting",
-      "B": "were",
-      "C": "did",
-      "D": "are"
+      "A": "were",
+      "B": "did",
+      "C": "are",
+      "D": "was waiting"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Dùng thì Quá khứ tiếp diễn cho hành động đang xảy ra tại một thời điểm trong quá khứ.",
     "vietnameseTranslation": "Tôi _______ chờ đợi một thời gian dài lúc 8 giờ tối.",
     "optionTranslations": {
-      "A": "đang",
-      "B": "sai to-be",
-      "C": "quá khứ",
-      "D": "hiện tại"
+      "A": "sai to-be",
+      "B": "quá khứ",
+      "C": "hiện tại",
+      "D": "đang"
     },
     "unit": "Unit 3",
     "orderIndex": 15,
@@ -363,19 +363,19 @@ const questions = [
   {
     "questionText": "He called while I _______ lunch.",
     "options": {
-      "A": "is making",
-      "B": "was making",
-      "C": "make",
-      "D": "maked"
+      "A": "make",
+      "B": "maked",
+      "C": "is making",
+      "D": "was making"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Hành động đang diễn ra trong quá khứ bị gián đoạn dùng Quá khứ tiếp diễn.",
     "vietnameseTranslation": "Anh ấy đã gọi trong khi tôi _______ bữa trưa.",
     "optionTranslations": {
-      "A": "hiện tại",
-      "B": "đang",
-      "C": "nguyên thể",
-      "D": "quá khứ"
+      "A": "nguyên thể",
+      "B": "quá khứ",
+      "C": "hiện tại",
+      "D": "đang"
     },
     "unit": "Unit 3",
     "orderIndex": 16,
@@ -387,19 +387,19 @@ const questions = [
   {
     "questionText": "I was making lunch _______ he called.",
     "options": {
-      "A": "while",
-      "B": "so",
-      "C": "when",
-      "D": "during"
+      "A": "when",
+      "B": "during",
+      "C": "while",
+      "D": "so"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Dùng 'when' trước hành động gián đoạn ở thì Quá khứ đơn.",
     "vietnameseTranslation": "khi anh ấy gọi",
     "optionTranslations": {
-      "A": "trong khi",
-      "B": "vì vậy",
-      "C": "khi",
-      "D": "trong suốt"
+      "A": "khi",
+      "B": "trong suốt",
+      "C": "trong khi",
+      "D": "vì vậy"
     },
     "unit": "Unit 3",
     "orderIndex": 17,
@@ -411,19 +411,19 @@ const questions = [
   {
     "questionText": "I want to eat something. I'm hungry.",
     "options": {
-      "A": "nothing",
-      "B": "anything",
-      "C": "everything",
-      "D": "something/someone/somewhere"
+      "A": "everything",
+      "B": "something/someone/somewhere",
+      "C": "nothing",
+      "D": "anything"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Trong câu khẳng định, dùng đại từ bất định some-.",
     "vietnameseTranslation": "Tôi muốn ăn thứ gì đó. Tôi đang đói.",
     "optionTranslations": {
-      "A": "không",
-      "B": "bất cứ",
-      "C": "mọi thứ",
-      "D": "đại từ bất định khẳng định"
+      "A": "mọi thứ",
+      "B": "đại từ bất định khẳng định",
+      "C": "không",
+      "D": "bất cứ"
     },
     "unit": "Unit 3",
     "orderIndex": 18,
@@ -436,18 +436,18 @@ const questions = [
     "questionText": "I didn't eat anything.",
     "options": {
       "A": "something",
-      "B": "everything",
+      "B": "anything/anyone/anywhere",
       "C": "nothing",
-      "D": "anything/anyone/anywhere"
+      "D": "everything"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Trong câu phủ định, dùng đại từ bất định any-.",
     "vietnameseTranslation": "Tôi đã không ăn bất cứ thứ gì.",
     "optionTranslations": {
       "A": "khẳng định",
-      "B": "mọi thứ",
+      "B": "đại từ phủ định",
       "C": "phủ định kép",
-      "D": "đại từ phủ định"
+      "D": "mọi thứ"
     },
     "unit": "Unit 3",
     "orderIndex": 19,
@@ -459,19 +459,19 @@ const questions = [
   {
     "questionText": "There is nothing to drink.",
     "options": {
-      "A": "anything",
-      "B": "something",
-      "C": "everything",
-      "D": "nothing/no one/nowhere"
+      "A": "everything",
+      "B": "anything",
+      "C": "nothing/no one/nowhere",
+      "D": "something"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "'Nothing/No one/Nowhere' mang nghĩa phủ định, động từ chia ở khẳng định.",
     "vietnameseTranslation": "Không có không có gì để uống.",
     "optionTranslations": {
-      "A": "bất cứ",
-      "B": "một vài",
-      "C": "mọi",
-      "D": "nghĩa phủ định"
+      "A": "mọi",
+      "B": "bất cứ",
+      "C": "nghĩa phủ định",
+      "D": "một vài"
     },
     "unit": "Unit 3",
     "orderIndex": 20,
@@ -483,19 +483,19 @@ const questions = [
   {
     "questionText": "Everyone was happy at the party.",
     "options": {
-      "A": "Everyone/Everything",
-      "B": "All",
-      "C": "Anyone",
-      "D": "Some"
+      "A": "Some",
+      "B": "Everyone/Everything",
+      "C": "All",
+      "D": "Anyone"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Đại từ 'Everyone/Everything' dùng với động từ số ít.",
     "vietnameseTranslation": "Mọi người đều vui vẻ ở bữa tiệc.",
     "optionTranslations": {
-      "A": "Mọi người/Mọi thứ",
-      "B": "Tất cả",
-      "C": "Bất cứ",
-      "D": "Một vài"
+      "A": "Một vài",
+      "B": "Mọi người/Mọi thứ",
+      "C": "Tất cả",
+      "D": "Bất cứ"
     },
     "unit": "Unit 3",
     "orderIndex": 21,
@@ -507,19 +507,19 @@ const questions = [
   {
     "questionText": "I _______ buy a new phone.",
     "options": {
-      "A": "am going to",
-      "B": "am going",
-      "C": "will to",
-      "D": "going to"
+      "A": "am going",
+      "B": "am going to",
+      "C": "going to",
+      "D": "will to"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Nói về một kế hoạch dùng cấu trúc 'be going to'.",
     "vietnameseTranslation": "Tôi _______ mua một chiếc điện thoại mới.",
     "optionTranslations": {
-      "A": "dự định",
-      "B": "thiếu to",
-      "C": "sai",
-      "D": "thiếu be"
+      "A": "thiếu to",
+      "B": "dự định",
+      "C": "thiếu be",
+      "D": "sai"
     },
     "unit": "Unit 4",
     "orderIndex": 22,
@@ -531,19 +531,19 @@ const questions = [
   {
     "questionText": "I _______ work tomorrow.",
     "options": {
-      "A": "not going to",
-      "B": "am not going to",
-      "C": "don't going to",
-      "D": "won't going to"
+      "A": "won't going to",
+      "B": "don't going to",
+      "C": "am not going to",
+      "D": "not going to"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Phủ định của 'be going to'.",
     "vietnameseTranslation": "Tôi _______ đi làm vào ngày mai.",
     "optionTranslations": {
-      "A": "thiếu be",
-      "B": "không dự định",
-      "C": "sai",
-      "D": "sai"
+      "A": "sai",
+      "B": "sai",
+      "C": "không dự định",
+      "D": "thiếu be"
     },
     "unit": "Unit 4",
     "orderIndex": 23,
@@ -555,19 +555,19 @@ const questions = [
   {
     "questionText": "I promise I _______ tell anyone.",
     "options": {
-      "A": "not",
-      "B": "don't",
+      "A": "am not going to",
+      "B": "not",
       "C": "won't",
-      "D": "am not going to"
+      "D": "don't"
     },
     "correctAnswer": "C",
     "explanation": "Lời hứa dùng 'won't'.",
     "vietnameseTranslation": "Tôi hứa tôi _______ nói với ai.",
     "optionTranslations": {
-      "A": "không",
+      "A": "không dự định",
       "B": "không",
       "C": "sẽ không",
-      "D": "không dự định"
+      "D": "không"
     },
     "unit": "Unit 4",
     "orderIndex": 24,
@@ -579,19 +579,19 @@ const questions = [
   {
     "questionText": "Don't worry, I _______ help you.",
     "options": {
-      "A": "do",
-      "B": "am",
-      "C": "am going to",
-      "D": "will"
+      "A": "am going to",
+      "B": "do",
+      "C": "will",
+      "D": "am"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Đề nghị giúp đỡ (Offer) dùng 'will'.",
     "vietnameseTranslation": "Đừng lo, tôi _______ giúp bạn.",
     "optionTranslations": {
-      "A": "làm",
-      "B": "đang",
-      "C": "dự định",
-      "D": "sẽ"
+      "A": "dự định",
+      "B": "làm",
+      "C": "sẽ",
+      "D": "đang"
     },
     "unit": "Unit 4",
     "orderIndex": 25,
@@ -604,18 +604,18 @@ const questions = [
     "questionText": "Okay, I _______ close the window.",
     "options": {
       "A": "will",
-      "B": "am going to",
+      "B": "am doing",
       "C": "do",
-      "D": "am doing"
+      "D": "am going to"
     },
     "correctAnswer": "A",
     "explanation": "Quyết định đột ngột lúc nói dùng 'will'.",
     "vietnameseTranslation": "Được rồi, tôi _______ đóng cửa sổ lại.",
     "optionTranslations": {
       "A": "sẽ",
-      "B": "dự định",
+      "B": "đang làm",
       "C": "làm",
-      "D": "đang làm"
+      "D": "dự định"
     },
     "unit": "Unit 4",
     "orderIndex": 26,
@@ -627,18 +627,18 @@ const questions = [
   {
     "questionText": "If I _______ time, I'll email you.",
     "options": {
-      "A": "had",
+      "A": "have",
       "B": "am having",
-      "C": "have",
+      "C": "had",
       "D": "will have"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "KHÔNG dùng 'will' trong mệnh đề 'If'. Mệnh đề điều kiện loại 1 dùng Hiện tại đơn. Đáp án đúng: 'have'.",
     "vietnameseTranslation": "Nếu có thời gian, ...",
     "optionTranslations": {
-      "A": "quá khứ (sai)",
+      "A": "hiện tại",
       "B": "tiếp diễn (sai)",
-      "C": "hiện tại",
+      "C": "quá khứ (sai)",
       "D": "tương lai (sai)"
     },
     "unit": "Unit 4",
@@ -652,17 +652,17 @@ const questions = [
     "questionText": "I'm _______ watch the football tonight.",
     "options": {
       "A": "will",
-      "B": "going to",
-      "C": "go to",
+      "B": "go to",
+      "C": "going to",
       "D": "going"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Cấu trúc am/is/are + going to + V.",
     "vietnameseTranslation": "Kế hoạch: xem bóng đá",
     "optionTranslations": {
       "A": "sẽ",
-      "B": "dự định",
-      "C": "đi",
+      "B": "đi",
+      "C": "dự định",
       "D": "đang"
     },
     "unit": "Unit 4",
@@ -675,19 +675,19 @@ const questions = [
   {
     "questionText": "If you heat water to 100°C, _______ .",
     "options": {
-      "A": "might happen",
-      "B": "it boils",
-      "C": "is happening",
-      "D": "will happen"
+      "A": "it boils",
+      "B": "might happen",
+      "C": "will happen",
+      "D": "is happening"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Câu điều kiện loại 0 diễn tả sự thật hiển nhiên. Cả 2 vế đều dùng Hiện tại đơn. Đáp án đúng là 'it boils'.",
     "vietnameseTranslation": "Nếu bạn heat water to 100°C, _______ .",
     "optionTranslations": {
-      "A": "có thể (sai)",
-      "B": "sôi",
-      "C": "đang diễn ra (sai)",
-      "D": "tương lai (sai)"
+      "A": "sôi",
+      "B": "có thể (sai)",
+      "C": "tương lai (sai)",
+      "D": "đang diễn ra (sai)"
     },
     "unit": "Unit 5",
     "orderIndex": 29,
@@ -699,19 +699,19 @@ const questions = [
   {
     "questionText": "If the power is low, _______ .",
     "options": {
-      "A": "is happening",
-      "B": "the red light flashes",
-      "C": "might happen",
-      "D": "will happen"
+      "A": "will happen",
+      "B": "might happen",
+      "C": "the red light flashes",
+      "D": "is happening"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Câu điều kiện loại 0 chỉ quy luật máy móc. Cả 2 vế đều dùng Hiện tại đơn. Đáp án đúng là 'the red light flashes'.",
     "vietnameseTranslation": "Nếu the power is low, _______ .",
     "optionTranslations": {
-      "A": "đang diễn ra (sai)",
-      "B": "nhấp nháy",
-      "C": "có thể (sai)",
-      "D": "tương lai (sai)"
+      "A": "tương lai (sai)",
+      "B": "có thể (sai)",
+      "C": "nhấp nháy",
+      "D": "đang diễn ra (sai)"
     },
     "unit": "Unit 5",
     "orderIndex": 30,
@@ -723,19 +723,19 @@ const questions = [
   {
     "questionText": "If it rains, _______.",
     "options": {
-      "A": "we don't go out",
-      "B": "we didn't go out",
-      "C": "we won't go out",
-      "D": "we aren't go out"
+      "A": "we didn't go out",
+      "B": "we won't go out",
+      "C": "we aren't go out",
+      "D": "we don't go out"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Câu điều kiện loại 1: If + HTĐ, will/won't + V.",
     "vietnameseTranslation": "Nếu trời rains, _______.",
     "optionTranslations": {
-      "A": "không",
-      "B": "đã không",
-      "C": "chúng ta sẽ không ra ngoài",
-      "D": "không phải"
+      "A": "đã không",
+      "B": "chúng ta sẽ không ra ngoài",
+      "C": "không phải",
+      "D": "không"
     },
     "unit": "Unit 5",
     "orderIndex": 31,
@@ -747,19 +747,19 @@ const questions = [
   {
     "questionText": "If I _______ Dina, I'll give her your message.",
     "options": {
-      "A": "will see",
-      "B": "am seeing",
-      "C": "saw",
-      "D": "see"
+      "A": "saw",
+      "B": "see",
+      "C": "am seeing",
+      "D": "will see"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Mệnh đề If loại 1 dùng Hiện tại đơn.",
     "vietnameseTranslation": "Nếu gặp",
     "optionTranslations": {
-      "A": "sẽ",
-      "B": "tiếp diễn",
-      "C": "quá khứ",
-      "D": "hiện tại"
+      "A": "quá khứ",
+      "B": "hiện tại",
+      "C": "tiếp diễn",
+      "D": "sẽ"
     },
     "unit": "Unit 5",
     "orderIndex": 32,
@@ -771,17 +771,17 @@ const questions = [
   {
     "questionText": "My phone is _______ than yours. (big)",
     "options": {
-      "A": "most big",
-      "B": "bigger",
+      "A": "bigger",
+      "B": "most big",
       "C": "big",
       "D": "more big"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "So sánh hơn của tính từ ngắn 'big': thêm -er. KHÔNG dùng 'more'.",
     "vietnameseTranslation": "Điện thoại của tôi _______ của bạn. (big)",
     "optionTranslations": {
-      "A": "so sánh nhất (sai)",
-      "B": "to hơn",
+      "A": "to hơn",
+      "B": "so sánh nhất (sai)",
       "C": "nguyên thể",
       "D": "so sánh hơn (sai cấu trúc)"
     },
@@ -795,19 +795,19 @@ const questions = [
   {
     "questionText": "That was the _______ experience of my life. (expensive)",
     "options": {
-      "A": "most expensive",
-      "B": "more expensive",
-      "C": "expensiveer",
-      "D": "expensive"
+      "A": "more expensive",
+      "B": "expensive",
+      "C": "most expensive",
+      "D": "expensiveer"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "So sánh nhất của tính từ dài 'expensive': dùng 'most expensive'. KHÔNG thêm -er.",
     "vietnameseTranslation": "Đó là trải nghiệm _______ của cuộc đời tôi. (expensive)",
     "optionTranslations": {
-      "A": "đắt nhất",
-      "B": "so sánh hơn (sai)",
-      "C": "so sánh nhất (sai cấu trúc)",
-      "D": "nguyên thể"
+      "A": "so sánh hơn (sai)",
+      "B": "nguyên thể",
+      "C": "đắt nhất",
+      "D": "so sánh nhất (sai cấu trúc)"
     },
     "unit": "Unit 5",
     "orderIndex": 34,
@@ -819,19 +819,19 @@ const questions = [
   {
     "questionText": "It is _______ crowded than before.",
     "options": {
-      "A": "less",
-      "B": "little",
+      "A": "few",
+      "B": "less",
       "C": "least",
-      "D": "few"
+      "D": "little"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "So sánh ít hơn dùng less + tính từ dài + than.",
     "vietnameseTranslation": "Nó thì ít _______ hơn trước.",
     "optionTranslations": {
-      "A": "ít hơn",
-      "B": "ít",
+      "A": "vài",
+      "B": "ít hơn",
       "C": "ít nhất",
-      "D": "vài"
+      "D": "ít"
     },
     "unit": "Unit 5",
     "orderIndex": 35,
@@ -843,18 +843,18 @@ const questions = [
   {
     "questionText": "_______ you ever been to Japan?",
     "options": {
-      "A": "Have",
-      "B": "Do",
-      "C": "Did",
+      "A": "Did",
+      "B": "Have",
+      "C": "Do",
       "D": "Are"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Hỏi về trải nghiệm dùng Hiện tại hoàn thành.",
     "vietnameseTranslation": "_______ bạn đã từng...",
     "optionTranslations": {
-      "A": "HT hoàn thành",
-      "B": "HT",
-      "C": "QK",
+      "A": "QK",
+      "B": "HT hoàn thành",
+      "C": "HT",
       "D": "to-be"
     },
     "unit": "Unit 6",
@@ -869,8 +869,8 @@ const questions = [
     "options": {
       "A": "always",
       "B": "never",
-      "C": "ever",
-      "D": "sometimes"
+      "C": "sometimes",
+      "D": "ever"
     },
     "correctAnswer": "B",
     "explanation": "Trong câu khẳng định mang nghĩa chưa từng, dùng 'never'.",
@@ -878,8 +878,8 @@ const questions = [
     "optionTranslations": {
       "A": "luôn",
       "B": "chưa bao giờ",
-      "C": "từng",
-      "D": "thỉnh thoảng"
+      "C": "thỉnh thoảng",
+      "D": "từng"
     },
     "unit": "Unit 6",
     "orderIndex": 37,
@@ -891,19 +891,19 @@ const questions = [
   {
     "questionText": "This is the best food I have _______ eaten.",
     "options": {
-      "A": "never",
-      "B": "ever",
-      "C": "just",
-      "D": "always"
+      "A": "just",
+      "B": "always",
+      "C": "ever",
+      "D": "never"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Dùng ever trong câu so sánh nhất.",
     "vietnameseTranslation": "Đây là thức ăn tốt nhất tôi từng ăn.",
     "optionTranslations": {
-      "A": "chưa từng",
-      "B": "từng",
-      "C": "vừa mới",
-      "D": "luôn"
+      "A": "vừa mới",
+      "B": "luôn",
+      "C": "từng",
+      "D": "chưa từng"
     },
     "unit": "Unit 6",
     "orderIndex": 38,
@@ -915,19 +915,19 @@ const questions = [
   {
     "questionText": "She practises _______ the piano every day.",
     "options": {
-      "A": "play",
-      "B": "playing",
+      "A": "to play",
+      "B": "play",
       "C": "is playing",
-      "D": "to play"
+      "D": "playing"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Dùng V-ing sau các động từ như practise, enjoy, mind...",
     "vietnameseTranslation": "V-ing sau động từ.",
     "optionTranslations": {
-      "A": "V",
-      "B": "V-ing",
+      "A": "to V",
+      "B": "V",
       "C": "sai",
-      "D": "to V"
+      "D": "V-ing"
     },
     "unit": "Unit 6",
     "orderIndex": 39,
@@ -939,8 +939,8 @@ const questions = [
   {
     "questionText": "We need _______ early.",
     "options": {
-      "A": "leave",
-      "B": "is leaving",
+      "A": "is leaving",
+      "B": "leave",
       "C": "to leave",
       "D": "leaving"
     },
@@ -948,8 +948,8 @@ const questions = [
     "explanation": "Dùng to-infinitive sau need, want, decide...",
     "vietnameseTranslation": "to V sau động từ.",
     "optionTranslations": {
-      "A": "V",
-      "B": "sai",
+      "A": "sai",
+      "B": "V",
       "C": "to V",
       "D": "V-ing"
     },
@@ -963,19 +963,19 @@ const questions = [
   {
     "questionText": "He persuaded me _______ with him.",
     "options": {
-      "A": "going",
+      "A": "is going",
       "B": "go",
-      "C": "to go",
-      "D": "is going"
+      "C": "going",
+      "D": "to go"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Cấu trúc: verb + object + to V.",
     "vietnameseTranslation": "persuade/ask/want + sb + to V",
     "optionTranslations": {
-      "A": "V-ing",
+      "A": "sai",
       "B": "V",
-      "C": "to V",
-      "D": "sai"
+      "C": "V-ing",
+      "D": "to V"
     },
     "unit": "Unit 6",
     "orderIndex": 41,
@@ -987,19 +987,19 @@ const questions = [
   {
     "questionText": "I started learning English three years ago.",
     "options": {
-      "A": "learning",
-      "B": "to learn",
-      "C": "Both B & C",
-      "D": "learn"
+      "A": "learn",
+      "B": "learning",
+      "C": "to learn",
+      "D": "Both B & C"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Sau start có thể dùng cả to V và V-ing.",
     "vietnameseTranslation": "Tôi bắt đầu học tiếng Anh ba năm trước.",
     "optionTranslations": {
-      "A": "V-ing",
-      "B": "to V",
-      "C": "Cả 2 đều đúng",
-      "D": "V"
+      "A": "V",
+      "B": "V-ing",
+      "C": "to V",
+      "D": "Cả 2 đều đúng"
     },
     "unit": "Unit 6",
     "orderIndex": 42,
@@ -1011,19 +1011,19 @@ const questions = [
   {
     "questionText": "The person _______ inspires me is my mother.",
     "options": {
-      "A": "when",
-      "B": "who",
-      "C": "which",
-      "D": "where"
+      "A": "who",
+      "B": "when",
+      "C": "where",
+      "D": "which"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Đại từ 'who' thay thế danh từ chỉ người.",
     "vietnameseTranslation": "người truyền cảm hứng cho tôi",
     "optionTranslations": {
-      "A": "thời gian",
-      "B": "người",
-      "C": "vật",
-      "D": "nơi"
+      "A": "người",
+      "B": "thời gian",
+      "C": "nơi",
+      "D": "vật"
     },
     "unit": "Unit 6",
     "orderIndex": 43,
@@ -1035,19 +1035,19 @@ const questions = [
   {
     "questionText": "I found a book _______ I love.",
     "options": {
-      "A": "when",
-      "B": "which",
-      "C": "where",
-      "D": "who"
+      "A": "which",
+      "B": "where",
+      "C": "who",
+      "D": "when"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Đại từ 'which' thay thế danh từ chỉ vật.",
     "vietnameseTranslation": "cuốn sách",
     "optionTranslations": {
-      "A": "thời gian",
-      "B": "vật",
-      "C": "nơi",
-      "D": "người"
+      "A": "vật",
+      "B": "nơi",
+      "C": "người",
+      "D": "thời gian"
     },
     "unit": "Unit 6",
     "orderIndex": 44,
@@ -1057,21 +1057,21 @@ const questions = [
     "setDifficulty": "easy"
   },
   {
-    "questionText": "That is the hotel _______ we stayed.",
+    "questionText": "This is the hotel _______ we stayed.",
     "options": {
-      "A": "who",
-      "B": "when",
-      "C": "which",
-      "D": "where"
+      "A": "which",
+      "B": "where",
+      "C": "when",
+      "D": "who"
     },
-    "correctAnswer": "D",
-    "explanation": "Đại từ 'where' thay thế danh từ chỉ nơi chốn.",
-    "vietnameseTranslation": "Đó là khách sạn.",
+    "correctAnswer": "B",
+    "explanation": "Đại từ quan hệ 'where' dùng để thay thế cho danh từ chỉ nơi chốn.",
+    "vietnameseTranslation": "Đây là khách sạn.",
     "optionTranslations": {
-      "A": "người",
-      "B": "thời gian",
-      "C": "vật",
-      "D": "nơi chốn"
+      "A": "vật",
+      "B": "nơi chốn",
+      "C": "thời gian",
+      "D": "người"
     },
     "unit": "Unit 6",
     "orderIndex": 45,
@@ -1083,19 +1083,19 @@ const questions = [
   {
     "questionText": "He is very _______ because he doesn't often laugh.",
     "options": {
-      "A": "honest",
-      "B": "serious",
+      "A": "friendly",
+      "B": "honest",
       "C": "confident",
-      "D": "friendly"
+      "D": "serious"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Từ vựng Personality: 'serious' (nghiêm túc) phù hợp với ngữ cảnh 'doesn't often laugh'.",
     "vietnameseTranslation": "Anh ấy rất _______ vì anh ấy không hay cười.",
     "optionTranslations": {
-      "A": "trung thực",
-      "B": "nghiêm túc",
+      "A": "thân thiện",
+      "B": "trung thực",
       "C": "tự tin",
-      "D": "thân thiện"
+      "D": "nghiêm túc"
     },
     "unit": "Vocabulary",
     "orderIndex": 46,
@@ -1108,18 +1108,18 @@ const questions = [
     "questionText": "We learn about a Shakespeare play in _______ class.",
     "options": {
       "A": "drama",
-      "B": "biology",
-      "C": "art",
-      "D": "maths"
+      "B": "art",
+      "C": "maths",
+      "D": "biology"
     },
     "correctAnswer": "A",
     "explanation": "Từ vựng School Subjects: 'drama' (kịch) được học qua chủ đề 'a Shakespeare play'.",
     "vietnameseTranslation": "Chúng tôi học về một vở kịch Shakespeare trong lớp _______.",
     "optionTranslations": {
       "A": "kịch",
-      "B": "sinh học",
-      "C": "mỹ thuật",
-      "D": "toán"
+      "B": "mỹ thuật",
+      "C": "toán",
+      "D": "sinh học"
     },
     "unit": "Vocabulary",
     "orderIndex": 47,
@@ -1131,19 +1131,19 @@ const questions = [
   {
     "questionText": "He _______, so he is a vegetarian.",
     "options": {
-      "A": "vegetarian",
-      "B": "allergy",
-      "C": "vegan",
-      "D": "delicious"
+      "A": "allergy",
+      "B": "vegan",
+      "C": "delicious",
+      "D": "vegetarian"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Từ vựng Food: 'vegetarian' có nghĩa là người ăn chay.",
     "vietnameseTranslation": "Anh ấy không ăn thịt hay cá, nên anh ấy là người ăn chay.",
     "optionTranslations": {
-      "A": "người ăn chay",
-      "B": "dị ứng",
-      "C": "thuần chay",
-      "D": "ngon"
+      "A": "dị ứng",
+      "B": "thuần chay",
+      "C": "ngon",
+      "D": "người ăn chay"
     },
     "unit": "Vocabulary",
     "orderIndex": 48,
@@ -1155,19 +1155,19 @@ const questions = [
   {
     "questionText": "I like the _______ of learning a new language.",
     "options": {
-      "A": "challenge",
-      "B": "prize",
-      "C": "encourage",
-      "D": "praise"
+      "A": "prize",
+      "B": "praise",
+      "C": "challenge",
+      "D": "encourage"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Từ vựng Motivation: 'challenge' có nghĩa là thử thách.",
     "vietnameseTranslation": "Tôi thích _______ của việc học một ngôn ngữ mới.",
     "optionTranslations": {
-      "A": "thử thách",
-      "B": "giải thưởng",
-      "C": "khuyến khích",
-      "D": "lời khen"
+      "A": "giải thưởng",
+      "B": "lời khen",
+      "C": "thử thách",
+      "D": "khuyến khích"
     },
     "unit": "Vocabulary",
     "orderIndex": 49,
@@ -1179,19 +1179,19 @@ const questions = [
   {
     "questionText": "The views from the mountain is _______.",
     "options": {
-      "A": "spectacular",
-      "B": "disgusting",
-      "C": "brilliant",
-      "D": "awful"
+      "A": "brilliant",
+      "B": "awful",
+      "C": "spectacular",
+      "D": "disgusting"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Từ vựng Extreme Adjectives: 'spectacular' (ngoạn mục) là tính từ cực cấp. KHÔNG dùng 'very' với các từ này.",
     "vietnameseTranslation": "Cảnh nhìn từ ngọn núi thì _______.",
     "optionTranslations": {
-      "A": "ngoạn mục",
-      "B": "kinh tởm",
-      "C": "tuyệt vời",
-      "D": "tệ hại"
+      "A": "tuyệt vời",
+      "B": "tệ hại",
+      "C": "ngoạn mục",
+      "D": "kinh tởm"
     },
     "unit": "Vocabulary",
     "orderIndex": 50,
@@ -1204,9 +1204,9 @@ const questions = [
     "questionText": "He _______ goes jogging.",
     "options": {
       "A": "always",
-      "B": "don't always",
-      "C": "am always",
-      "D": "always am"
+      "B": "am always",
+      "C": "always am",
+      "D": "don't always"
     },
     "correctAnswer": "A",
     "explanation": "Adverbs of frequency đứng TRƯỚC động từ thường.",
@@ -1228,18 +1228,18 @@ const questions = [
     "questionText": "He _______ happy at work.",
     "options": {
       "A": "always be",
-      "B": "be always",
-      "C": "always is",
-      "D": "is always"
+      "B": "always is",
+      "C": "is always",
+      "D": "be always"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Adverbs of frequency đứng SAU động từ 'to be'.",
     "vietnameseTranslation": "Anh ấy _______ vui vẻ ở chỗ làm.",
     "optionTranslations": {
       "A": "sai cấu trúc",
-      "B": "sai động từ be",
-      "C": "sai vị trí",
-      "D": "luôn luôn"
+      "B": "sai vị trí",
+      "C": "luôn luôn",
+      "D": "sai động từ be"
     },
     "unit": "Unit 1",
     "orderIndex": 2,
@@ -1251,19 +1251,19 @@ const questions = [
   {
     "questionText": "How _______ do you visit your parents?",
     "options": {
-      "A": "many",
-      "B": "much",
-      "C": "long",
-      "D": "often"
+      "A": "long",
+      "B": "many",
+      "C": "often",
+      "D": "much"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Dùng 'How often...?' để hỏi về tần suất.",
     "vietnameseTranslation": "Bạn có _______ thăm bố mẹ không?",
     "optionTranslations": {
-      "A": "nhiều",
+      "A": "bao lâu",
       "B": "nhiều",
-      "C": "bao lâu",
-      "D": "thường xuyên"
+      "C": "thường xuyên",
+      "D": "nhiều"
     },
     "unit": "Unit 1",
     "orderIndex": 3,
@@ -1276,18 +1276,18 @@ const questions = [
     "questionText": "The sun _______ in the east.",
     "options": {
       "A": "rise",
-      "B": "rising",
+      "B": "rises",
       "C": "is rises",
-      "D": "rises"
+      "D": "rising"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Sự thật hiển nhiên dùng thì Hiện tại đơn.",
     "vietnameseTranslation": "Sự thật: Mặt trời _______ ở hướng đông.",
     "optionTranslations": {
       "A": "nguyên thể",
-      "B": "tiếp diễn",
+      "B": "mọc",
       "C": "đang",
-      "D": "mọc"
+      "D": "tiếp diễn"
     },
     "unit": "Unit 1",
     "orderIndex": 4,
@@ -1299,19 +1299,19 @@ const questions = [
   {
     "questionText": "The bus _______ at 10 PM.",
     "options": {
-      "A": "arriveed",
-      "B": "arrives",
-      "C": "arrive",
-      "D": "is arrive"
+      "A": "is arrive",
+      "B": "arrive",
+      "C": "arriveed",
+      "D": "arrives"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Lịch trình tàu xe dùng thì Hiện tại đơn.",
     "vietnameseTranslation": "Chuyến xe buýt _______ lúc 10 giờ tối.",
     "optionTranslations": {
-      "A": "đã",
-      "B": "đến nơi",
-      "C": "nguyên thể",
-      "D": "đang"
+      "A": "đang",
+      "B": "nguyên thể",
+      "C": "đã",
+      "D": "đến nơi"
     },
     "unit": "Unit 1",
     "orderIndex": 5,
@@ -1323,17 +1323,17 @@ const questions = [
   {
     "questionText": "He _______  an email at the moment.",
     "options": {
-      "A": "writing",
-      "B": "is writing",
-      "C": "writes",
-      "D": "write"
+      "A": "is writing",
+      "B": "writing",
+      "C": "write",
+      "D": "writes"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Dấu hiệu 'at the moment' dùng thì Hiện tại tiếp diễn.",
     "vietnameseTranslation": "Anh ấy _______ viết email vào lúc này.",
     "optionTranslations": {
-      "A": "thiếu be",
-      "B": "đang write",
+      "A": "đang write",
+      "B": "thiếu be",
       "C": "hiện tại",
       "D": "hiện tại"
     },
@@ -1347,19 +1347,19 @@ const questions = [
   {
     "questionText": "He _______  his story.",
     "options": {
-      "A": "believes",
+      "A": "believed",
       "B": "is believing",
-      "C": "believed",
-      "D": "was believing"
+      "C": "was believing",
+      "D": "believes"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Động từ trạng thái (stative verb) KHÔNG dùng ở thì tiếp diễn.",
     "vietnameseTranslation": "Anh ấy _______ tin câu chuyện của anh ấy.",
     "optionTranslations": {
-      "A": "đúng",
+      "A": "đã",
       "B": "đang (sai)",
-      "C": "đã",
-      "D": "đã đang"
+      "C": "đã đang",
+      "D": "đúng"
     },
     "unit": "Unit 1",
     "orderIndex": 7,
@@ -1372,17 +1372,17 @@ const questions = [
     "questionText": "Yesterday, He _______  a new car.",
     "options": {
       "A": "bought",
-      "B": "was buying",
-      "C": "buy",
-      "D": "buys"
+      "B": "buys",
+      "C": "was buying",
+      "D": "buy"
     },
     "correctAnswer": "A",
     "explanation": "Dấu hiệu 'Yesterday' dùng thì Quá khứ đơn.",
     "vietnameseTranslation": "Hôm qua, Anh ấy _______ mua một chiếc xe mới.",
     "optionTranslations": {
       "A": "đã buy",
-      "B": "tiếp diễn",
-      "C": "hiện tại",
+      "B": "hiện tại",
+      "C": "tiếp diễn",
       "D": "hiện tại"
     },
     "unit": "Unit 2",
@@ -1395,8 +1395,8 @@ const questions = [
   {
     "questionText": "He _______ finish the project.",
     "options": {
-      "A": "doesn't",
-      "B": "wasn't",
+      "A": "wasn't",
+      "B": "doesn't",
       "C": "don't",
       "D": "didn't"
     },
@@ -1404,8 +1404,8 @@ const questions = [
     "explanation": "Câu phủ định quá khứ đơn với động từ thường dùng 'didn't'.",
     "vietnameseTranslation": "Anh ấy _______ hoàn thành dự án.",
     "optionTranslations": {
-      "A": "không",
-      "B": "không phải",
+      "A": "không phải",
+      "B": "không",
       "C": "không",
       "D": "đã không"
     },
@@ -1419,19 +1419,19 @@ const questions = [
   {
     "questionText": "_______ you find your keys yesterday?",
     "options": {
-      "A": "Are",
+      "A": "Do",
       "B": "Were",
-      "C": "Did",
-      "D": "Do"
+      "C": "Are",
+      "D": "Did"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Câu hỏi Yes/No quá khứ đơn dùng 'Did'.",
     "vietnameseTranslation": "Bạn _______ tìm thấy chìa khóa ngày hôm qua không?",
     "optionTranslations": {
-      "A": "Hiện tại to-be",
+      "A": "Hiện tại",
       "B": "Quá khứ to-be",
-      "C": "Quá khứ",
-      "D": "Hiện tại"
+      "C": "Hiện tại to-be",
+      "D": "Quá khứ"
     },
     "unit": "Unit 2",
     "orderIndex": 10,
@@ -1441,21 +1441,21 @@ const questions = [
     "setDifficulty": "easy"
   },
   {
-    "questionText": "He _______ try to call last night.",
+    "questionText": "He _______ to call last night.",
     "options": {
-      "A": "tries",
-      "B": "try",
-      "C": "tried",
-      "D": "tryed"
+      "A": "tried",
+      "B": "tryed",
+      "C": "tries",
+      "D": "try"
     },
-    "correctAnswer": "C",
-    "explanation": "Động từ tận cùng bằng phụ âm + y, đổi y thành ied. VD: study→studied, NOT studyed.",
+    "correctAnswer": "A",
+    "explanation": "Quy tắc: phụ âm + y → đổi y thành i rồi thêm -ed. Ví dụ: try → tried. Không viết 'tryed'.",
     "vietnameseTranslation": "Anh ấy _______ cố gắng gọi tối qua.",
     "optionTranslations": {
-      "A": "hiện tại s/es",
-      "B": "nguyên thể",
-      "C": "đã",
-      "D": "sai chính tả (-yed thay vì -ied)"
+      "A": "đã",
+      "B": "sai chính tả -yed",
+      "C": "hiện tại s/es",
+      "D": "nguyên thể (base form)"
     },
     "unit": "Unit 2",
     "orderIndex": 11,
@@ -1467,19 +1467,19 @@ const questions = [
   {
     "questionText": "_______ is your phone number?",
     "options": {
-      "A": "When",
-      "B": "Who",
-      "C": "What",
-      "D": "Where"
+      "A": "Where",
+      "B": "When",
+      "C": "Who",
+      "D": "What"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Hỏi về thông tin dùng 'What'.",
     "vietnameseTranslation": "số điện thoại của bạn là _______?",
     "optionTranslations": {
-      "A": "Khi nào",
-      "B": "Ai",
-      "C": "Cái gì",
-      "D": "Ở đâu"
+      "A": "Ở đâu",
+      "B": "Khi nào",
+      "C": "Ai",
+      "D": "Cái gì"
     },
     "unit": "Unit 2",
     "orderIndex": 12,
@@ -1491,19 +1491,19 @@ const questions = [
   {
     "questionText": "_______ did they stay? - In Paris",
     "options": {
-      "A": "Why",
+      "A": "Where",
       "B": "When",
       "C": "Who",
-      "D": "Where"
+      "D": "Why"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "Câu trả lời chỉ nơi chốn nên dùng từ để hỏi 'Where'.",
     "vietnameseTranslation": "Họ đã _______ ở? - Ở Paris",
     "optionTranslations": {
-      "A": "Tại sao",
+      "A": "Ở đâu",
       "B": "Khi nào",
       "C": "Ai",
-      "D": "Ở đâu"
+      "D": "Tại sao"
     },
     "unit": "Unit 2",
     "orderIndex": 13,
@@ -1515,19 +1515,19 @@ const questions = [
   {
     "questionText": "_______ you open the window?",
     "options": {
-      "A": "Have",
-      "B": "Can",
-      "C": "Do",
-      "D": "Are"
+      "A": "Do",
+      "B": "Have",
+      "C": "Are",
+      "D": "Can"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Yêu cầu giúp đỡ dùng 'Can' hoặc 'Could'.",
     "vietnameseTranslation": "Bạn _______ mở cửa sổ được không?",
     "optionTranslations": {
-      "A": "Có",
-      "B": "Có thể",
-      "C": "Làm",
-      "D": "Là"
+      "A": "Làm",
+      "B": "Có",
+      "C": "Là",
+      "D": "Có thể"
     },
     "unit": "Unit 2",
     "orderIndex": 14,
@@ -1539,19 +1539,19 @@ const questions = [
   {
     "questionText": "He _______ sleep on the sofa at 8 PM.",
     "options": {
-      "A": "was sleeping",
-      "B": "did",
-      "C": "were",
-      "D": "are"
+      "A": "are",
+      "B": "were",
+      "C": "was sleeping",
+      "D": "did"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Dùng thì Quá khứ tiếp diễn cho hành động đang xảy ra tại một thời điểm trong quá khứ.",
     "vietnameseTranslation": "Anh ấy _______ ngủ trên ghế sofa lúc 8 giờ tối.",
     "optionTranslations": {
-      "A": "đang",
-      "B": "quá khứ",
-      "C": "sai to-be",
-      "D": "hiện tại"
+      "A": "hiện tại",
+      "B": "sai to-be",
+      "C": "đang",
+      "D": "quá khứ"
     },
     "unit": "Unit 3",
     "orderIndex": 15,
@@ -1587,19 +1587,19 @@ const questions = [
   {
     "questionText": "We were watching TV _______ the power went out.",
     "options": {
-      "A": "while",
-      "B": "during",
-      "C": "when",
-      "D": "so"
+      "A": "during",
+      "B": "so",
+      "C": "while",
+      "D": "when"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Dùng 'when' trước hành động gián đoạn ở thì Quá khứ đơn.",
     "vietnameseTranslation": "khi mất điện",
     "optionTranslations": {
-      "A": "trong khi",
-      "B": "trong suốt",
-      "C": "khi",
-      "D": "vì vậy"
+      "A": "trong suốt",
+      "B": "vì vậy",
+      "C": "trong khi",
+      "D": "khi"
     },
     "unit": "Unit 3",
     "orderIndex": 17,
@@ -1611,19 +1611,19 @@ const questions = [
   {
     "questionText": "I want to drink something. I'm thirsty.",
     "options": {
-      "A": "anything",
-      "B": "nothing",
-      "C": "everything",
-      "D": "something/someone/somewhere"
+      "A": "nothing",
+      "B": "everything",
+      "C": "something/someone/somewhere",
+      "D": "anything"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Trong câu khẳng định, dùng đại từ bất định some-.",
     "vietnameseTranslation": "Tôi muốn uống thứ gì đó. Tôi đang khát.",
     "optionTranslations": {
-      "A": "bất cứ",
-      "B": "không",
-      "C": "mọi thứ",
-      "D": "đại từ bất định khẳng định"
+      "A": "không",
+      "B": "mọi thứ",
+      "C": "đại từ bất định khẳng định",
+      "D": "bất cứ"
     },
     "unit": "Unit 3",
     "orderIndex": 18,
@@ -1635,19 +1635,19 @@ const questions = [
   {
     "questionText": "I didn't drink anything.",
     "options": {
-      "A": "anything/anyone/anywhere",
-      "B": "everything",
-      "C": "nothing",
-      "D": "something"
+      "A": "nothing",
+      "B": "something",
+      "C": "everything",
+      "D": "anything/anyone/anywhere"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Trong câu phủ định, dùng đại từ bất định any-.",
     "vietnameseTranslation": "Tôi đã không uống bất cứ thứ gì.",
     "optionTranslations": {
-      "A": "đại từ phủ định",
-      "B": "mọi thứ",
-      "C": "phủ định kép",
-      "D": "khẳng định"
+      "A": "phủ định kép",
+      "B": "khẳng định",
+      "C": "mọi thứ",
+      "D": "đại từ phủ định"
     },
     "unit": "Unit 3",
     "orderIndex": 19,
@@ -1683,19 +1683,19 @@ const questions = [
   {
     "questionText": "Everything is ready for the meeting.",
     "options": {
-      "A": "Everyone/Everything",
-      "B": "All",
-      "C": "Some",
-      "D": "Anyone"
+      "A": "All",
+      "B": "Anyone",
+      "C": "Everyone/Everything",
+      "D": "Some"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Đại từ 'Everyone/Everything' dùng với động từ số ít.",
     "vietnameseTranslation": "Mọi thứ đã sẵn sàng cho cuộc họp.",
     "optionTranslations": {
-      "A": "Mọi người/Mọi thứ",
-      "B": "Tất cả",
-      "C": "Một vài",
-      "D": "Bất cứ"
+      "A": "Tất cả",
+      "B": "Bất cứ",
+      "C": "Mọi người/Mọi thứ",
+      "D": "Một vài"
     },
     "unit": "Unit 3",
     "orderIndex": 21,
@@ -1707,18 +1707,18 @@ const questions = [
   {
     "questionText": "He _______ start a new job.",
     "options": {
-      "A": "going to",
-      "B": "is going",
-      "C": "is going to",
+      "A": "is going to",
+      "B": "going to",
+      "C": "is going",
       "D": "will to"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Nói về một kế hoạch dùng cấu trúc 'be going to'.",
     "vietnameseTranslation": "Anh ấy _______ bắt đầu công việc mới.",
     "optionTranslations": {
-      "A": "thiếu be",
-      "B": "thiếu to",
-      "C": "dự định",
+      "A": "dự định",
+      "B": "thiếu be",
+      "C": "thiếu to",
       "D": "sai"
     },
     "unit": "Unit 4",
@@ -1731,19 +1731,19 @@ const questions = [
   {
     "questionText": "He _______ cook tonight.",
     "options": {
-      "A": "not going to",
-      "B": "isn't going to",
-      "C": "don't going to",
-      "D": "won't going to"
+      "A": "don't going to",
+      "B": "won't going to",
+      "C": "isn't going to",
+      "D": "not going to"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Phủ định của 'be going to'.",
     "vietnameseTranslation": "Anh ấy _______ nấu ăn tối nay.",
     "optionTranslations": {
-      "A": "thiếu be",
-      "B": "không dự định",
-      "C": "sai",
-      "D": "sai"
+      "A": "sai",
+      "B": "sai",
+      "C": "không dự định",
+      "D": "thiếu be"
     },
     "unit": "Unit 4",
     "orderIndex": 23,
@@ -1755,18 +1755,18 @@ const questions = [
   {
     "questionText": "I promise I _______ forget your birthday.",
     "options": {
-      "A": "am not going to",
+      "A": "don't",
       "B": "not",
-      "C": "don't",
+      "C": "am not going to",
       "D": "won't"
     },
     "correctAnswer": "D",
     "explanation": "Lời hứa dùng 'won't'.",
     "vietnameseTranslation": "Tôi hứa tôi _______ quên sinh nhật bạn.",
     "optionTranslations": {
-      "A": "không dự định",
+      "A": "không",
       "B": "không",
-      "C": "không",
+      "C": "không dự định",
       "D": "sẽ không"
     },
     "unit": "Unit 4",
@@ -1779,19 +1779,19 @@ const questions = [
   {
     "questionText": "Don't worry, I _______ carry your bags.",
     "options": {
-      "A": "will",
+      "A": "am going to",
       "B": "am",
       "C": "do",
-      "D": "am going to"
+      "D": "will"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Đề nghị giúp đỡ (Offer) dùng 'will'.",
     "vietnameseTranslation": "Đừng lo, tôi _______ mang túi cho bạn.",
     "optionTranslations": {
-      "A": "sẽ",
+      "A": "dự định",
       "B": "đang",
       "C": "làm",
-      "D": "dự định"
+      "D": "sẽ"
     },
     "unit": "Unit 4",
     "orderIndex": 25,
@@ -1803,19 +1803,19 @@ const questions = [
   {
     "questionText": "Okay, I _______ answer the phone.",
     "options": {
-      "A": "am going to",
-      "B": "do",
-      "C": "am doing",
-      "D": "will"
+      "A": "will",
+      "B": "am doing",
+      "C": "am going to",
+      "D": "do"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "Quyết định đột ngột lúc nói dùng 'will'.",
     "vietnameseTranslation": "Được rồi, tôi _______ trả lời điện thoại.",
     "optionTranslations": {
-      "A": "dự định",
-      "B": "làm",
-      "C": "đang làm",
-      "D": "sẽ"
+      "A": "sẽ",
+      "B": "đang làm",
+      "C": "dự định",
+      "D": "làm"
     },
     "unit": "Unit 4",
     "orderIndex": 26,
@@ -1852,18 +1852,18 @@ const questions = [
     "questionText": "He's _______ clean his room.",
     "options": {
       "A": "going",
-      "B": "go to",
-      "C": "will",
-      "D": "going to"
+      "B": "going to",
+      "C": "go to",
+      "D": "will"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Cấu trúc am/is/are + going to + V.",
     "vietnameseTranslation": "Kế hoạch: dọn phòng",
     "optionTranslations": {
       "A": "đang",
-      "B": "đi",
-      "C": "sẽ",
-      "D": "dự định"
+      "B": "dự định",
+      "C": "đi",
+      "D": "sẽ"
     },
     "unit": "Unit 4",
     "orderIndex": 28,
@@ -1899,19 +1899,19 @@ const questions = [
   {
     "questionText": "If the door is open, _______ .",
     "options": {
-      "A": "is happening",
+      "A": "might happen",
       "B": "will happen",
-      "C": "might happen",
-      "D": "the alarm rings"
+      "C": "the alarm rings",
+      "D": "is happening"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Câu điều kiện loại 0 chỉ quy luật máy móc. Cả 2 vế đều dùng Hiện tại đơn. Đáp án đúng là 'the alarm rings'.",
     "vietnameseTranslation": "Nếu the door is open, _______ .",
     "optionTranslations": {
-      "A": "đang diễn ra (sai)",
+      "A": "có thể (sai)",
       "B": "tương lai (sai)",
-      "C": "có thể (sai)",
-      "D": "reo lên"
+      "C": "reo lên",
+      "D": "đang diễn ra (sai)"
     },
     "unit": "Unit 5",
     "orderIndex": 30,
@@ -1923,19 +1923,19 @@ const questions = [
   {
     "questionText": "If it snows, _______.",
     "options": {
-      "A": "the flights aren't depart",
-      "B": "the flights won't depart",
-      "C": "the flights didn't depart",
-      "D": "the flights don't depart"
+      "A": "the flights don't depart",
+      "B": "the flights aren't depart",
+      "C": "the flights won't depart",
+      "D": "the flights didn't depart"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Câu điều kiện loại 1: If + HTĐ, will/won't + V.",
     "vietnameseTranslation": "Nếu trời snows, _______.",
     "optionTranslations": {
-      "A": "không phải",
-      "B": "chuyến bay sẽ không cất cánh",
-      "C": "đã không",
-      "D": "không"
+      "A": "không",
+      "B": "không phải",
+      "C": "chuyến bay sẽ không cất cánh",
+      "D": "đã không"
     },
     "unit": "Unit 5",
     "orderIndex": 31,
@@ -1948,18 +1948,18 @@ const questions = [
     "questionText": "If he _______ early, we'll go out.",
     "options": {
       "A": "arrives",
-      "B": "will arrive",
-      "C": "is arriving",
-      "D": "arrived"
+      "B": "arrived",
+      "C": "will arrive",
+      "D": "is arriving"
     },
     "correctAnswer": "A",
     "explanation": "Mệnh đề If loại 1 dùng Hiện tại đơn.",
     "vietnameseTranslation": "Nếu đến",
     "optionTranslations": {
       "A": "hiện tại",
-      "B": "sẽ",
-      "C": "tiếp diễn",
-      "D": "quá khứ"
+      "B": "quá khứ",
+      "C": "sẽ",
+      "D": "tiếp diễn"
     },
     "unit": "Unit 5",
     "orderIndex": 32,
@@ -1971,18 +1971,18 @@ const questions = [
   {
     "questionText": "My phone is _______ than yours. (small)",
     "options": {
-      "A": "small",
-      "B": "more small",
-      "C": "most small",
+      "A": "most small",
+      "B": "small",
+      "C": "more small",
       "D": "smaller"
     },
     "correctAnswer": "D",
     "explanation": "So sánh hơn của tính từ ngắn 'small': thêm -er. KHÔNG dùng 'more'.",
     "vietnameseTranslation": "Điện thoại của tôi _______ của bạn. (small)",
     "optionTranslations": {
-      "A": "nguyên thể",
-      "B": "so sánh hơn (sai cấu trúc)",
-      "C": "so sánh nhất (sai)",
+      "A": "so sánh nhất (sai)",
+      "B": "nguyên thể",
+      "C": "so sánh hơn (sai cấu trúc)",
       "D": "nhỏ hơn"
     },
     "unit": "Unit 5",
@@ -1996,18 +1996,18 @@ const questions = [
     "questionText": "That was the _______ experience of my life. (beautiful)",
     "options": {
       "A": "most beautiful",
-      "B": "beautiful",
-      "C": "beautifuler",
-      "D": "more beautiful"
+      "B": "beautifuler",
+      "C": "more beautiful",
+      "D": "beautiful"
     },
     "correctAnswer": "A",
     "explanation": "So sánh nhất của tính từ dài 'beautiful': dùng 'most beautiful'. KHÔNG thêm -er.",
     "vietnameseTranslation": "Đó là trải nghiệm _______ của cuộc đời tôi. (beautiful)",
     "optionTranslations": {
       "A": "đẹp nhất",
-      "B": "nguyên thể",
-      "C": "so sánh nhất (sai cấu trúc)",
-      "D": "so sánh hơn (sai)"
+      "B": "so sánh nhất (sai cấu trúc)",
+      "C": "so sánh hơn (sai)",
+      "D": "nguyên thể"
     },
     "unit": "Unit 5",
     "orderIndex": 34,
@@ -2019,19 +2019,19 @@ const questions = [
   {
     "questionText": "It is _______ expensive than before.",
     "options": {
-      "A": "least",
-      "B": "little",
+      "A": "less",
+      "B": "least",
       "C": "few",
-      "D": "less"
+      "D": "little"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "So sánh ít hơn dùng less + tính từ dài + than.",
     "vietnameseTranslation": "Nó thì ít _______ hơn trước.",
     "optionTranslations": {
-      "A": "ít nhất",
-      "B": "ít",
+      "A": "ít hơn",
+      "B": "ít nhất",
       "C": "vài",
-      "D": "ít hơn"
+      "D": "ít"
     },
     "unit": "Unit 5",
     "orderIndex": 35,
@@ -2043,8 +2043,8 @@ const questions = [
   {
     "questionText": "_______ she ever eaten sushi?",
     "options": {
-      "A": "Does",
-      "B": "Is",
+      "A": "Is",
+      "B": "Does",
       "C": "Did",
       "D": "Has"
     },
@@ -2052,8 +2052,8 @@ const questions = [
     "explanation": "Hỏi về trải nghiệm dùng Hiện tại hoàn thành.",
     "vietnameseTranslation": "_______ bạn đã từng...",
     "optionTranslations": {
-      "A": "HT",
-      "B": "to-be",
+      "A": "to-be",
+      "B": "HT",
       "C": "QK",
       "D": "HT hoàn thành"
     },
@@ -2068,18 +2068,18 @@ const questions = [
     "questionText": "I've _______ eaten snake.",
     "options": {
       "A": "always",
-      "B": "never",
-      "C": "ever",
-      "D": "sometimes"
+      "B": "sometimes",
+      "C": "never",
+      "D": "ever"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Trong câu khẳng định mang nghĩa chưa từng, dùng 'never'.",
     "vietnameseTranslation": "Tôi chưa bao giờ ăn thịt rắn.",
     "optionTranslations": {
       "A": "luôn",
-      "B": "chưa bao giờ",
-      "C": "từng",
-      "D": "thỉnh thoảng"
+      "B": "thỉnh thoảng",
+      "C": "chưa bao giờ",
+      "D": "từng"
     },
     "unit": "Unit 6",
     "orderIndex": 37,
@@ -2091,19 +2091,19 @@ const questions = [
   {
     "questionText": "This is the best movie I have _______ seen.",
     "options": {
-      "A": "never",
-      "B": "just",
+      "A": "always",
+      "B": "never",
       "C": "ever",
-      "D": "always"
+      "D": "just"
     },
     "correctAnswer": "C",
     "explanation": "Dùng ever trong câu so sánh nhất.",
     "vietnameseTranslation": "Đây là bộ phim tốt nhất tôi từng xem.",
     "optionTranslations": {
-      "A": "chưa từng",
-      "B": "vừa mới",
+      "A": "luôn",
+      "B": "chưa từng",
       "C": "từng",
-      "D": "luôn"
+      "D": "vừa mới"
     },
     "unit": "Unit 6",
     "orderIndex": 38,
@@ -2115,19 +2115,19 @@ const questions = [
   {
     "questionText": "I enjoy _______ in the sea.",
     "options": {
-      "A": "to swim",
-      "B": "is swimming",
-      "C": "swim",
-      "D": "swimming"
+      "A": "swimming",
+      "B": "swim",
+      "C": "to swim",
+      "D": "is swimming"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "Dùng V-ing sau các động từ như practise, enjoy, mind...",
     "vietnameseTranslation": "V-ing sau động từ.",
     "optionTranslations": {
-      "A": "to V",
-      "B": "sai",
-      "C": "V",
-      "D": "V-ing"
+      "A": "V-ing",
+      "B": "V",
+      "C": "to V",
+      "D": "sai"
     },
     "unit": "Unit 6",
     "orderIndex": 39,
@@ -2139,19 +2139,19 @@ const questions = [
   {
     "questionText": "They want _______ a new house.",
     "options": {
-      "A": "buying",
-      "B": "is buying",
-      "C": "buy",
-      "D": "to buy"
+      "A": "buy",
+      "B": "to buy",
+      "C": "is buying",
+      "D": "buying"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Dùng to-infinitive sau need, want, decide...",
     "vietnameseTranslation": "to V sau động từ.",
     "optionTranslations": {
-      "A": "V-ing",
-      "B": "sai",
-      "C": "V",
-      "D": "to V"
+      "A": "V",
+      "B": "to V",
+      "C": "sai",
+      "D": "V-ing"
     },
     "unit": "Unit 6",
     "orderIndex": 40,
@@ -2163,18 +2163,18 @@ const questions = [
   {
     "questionText": "She asked him _______ the door.",
     "options": {
-      "A": "opening",
-      "B": "open",
-      "C": "is opening",
+      "A": "is opening",
+      "B": "opening",
+      "C": "open",
       "D": "to open"
     },
     "correctAnswer": "D",
     "explanation": "Cấu trúc: verb + object + to V.",
     "vietnameseTranslation": "persuade/ask/want + sb + to V",
     "optionTranslations": {
-      "A": "V-ing",
-      "B": "V",
-      "C": "sai",
+      "A": "sai",
+      "B": "V-ing",
+      "C": "V",
       "D": "to V"
     },
     "unit": "Unit 6",
@@ -2187,19 +2187,19 @@ const questions = [
   {
     "questionText": "I started learning piano when I was five.",
     "options": {
-      "A": "to learn",
+      "A": "learn",
       "B": "learning",
-      "C": "learn",
-      "D": "Both B & C"
+      "C": "Both B & C",
+      "D": "to learn"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Sau start có thể dùng cả to V và V-ing.",
     "vietnameseTranslation": "Tôi bắt đầu học piano khi tôi năm tuổi.",
     "optionTranslations": {
-      "A": "to V",
+      "A": "V",
       "B": "V-ing",
-      "C": "V",
-      "D": "Cả 2 đều đúng"
+      "C": "Cả 2 đều đúng",
+      "D": "to V"
     },
     "unit": "Unit 6",
     "orderIndex": 42,
@@ -2211,19 +2211,19 @@ const questions = [
   {
     "questionText": "The man _______ lives next door is a doctor.",
     "options": {
-      "A": "who",
-      "B": "where",
-      "C": "when",
-      "D": "which"
+      "A": "when",
+      "B": "who",
+      "C": "which",
+      "D": "where"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Đại từ 'who' thay thế danh từ chỉ người.",
     "vietnameseTranslation": "người sống cạnh nhà",
     "optionTranslations": {
-      "A": "người",
-      "B": "nơi",
-      "C": "thời gian",
-      "D": "vật"
+      "A": "thời gian",
+      "B": "người",
+      "C": "vật",
+      "D": "nơi"
     },
     "unit": "Unit 6",
     "orderIndex": 43,
@@ -2236,8 +2236,8 @@ const questions = [
     "questionText": "This is the car _______ he bought.",
     "options": {
       "A": "which",
-      "B": "when",
-      "C": "who",
+      "B": "who",
+      "C": "when",
       "D": "where"
     },
     "correctAnswer": "A",
@@ -2245,8 +2245,8 @@ const questions = [
     "vietnameseTranslation": "chiếc xe",
     "optionTranslations": {
       "A": "vật",
-      "B": "thời gian",
-      "C": "người",
+      "B": "người",
+      "C": "thời gian",
       "D": "nơi"
     },
     "unit": "Unit 6",
@@ -2257,21 +2257,21 @@ const questions = [
     "setDifficulty": "easy"
   },
   {
-    "questionText": "That is the city _______ I was born.",
+    "questionText": "This is the city _______ I was born.",
     "options": {
-      "A": "which",
-      "B": "when",
-      "C": "who",
-      "D": "where"
+      "A": "who",
+      "B": "where",
+      "C": "when",
+      "D": "which"
     },
-    "correctAnswer": "D",
-    "explanation": "Đại từ 'where' thay thế danh từ chỉ nơi chốn.",
-    "vietnameseTranslation": "Đó là thành phố.",
+    "correctAnswer": "B",
+    "explanation": "Đại từ quan hệ 'where' dùng để thay thế cho danh từ chỉ nơi chốn.",
+    "vietnameseTranslation": "Đây là thành phố.",
     "optionTranslations": {
-      "A": "vật",
-      "B": "thời gian",
-      "C": "người",
-      "D": "nơi chốn"
+      "A": "người",
+      "B": "nơi chốn",
+      "C": "thời gian",
+      "D": "vật"
     },
     "unit": "Unit 6",
     "orderIndex": 45,
@@ -2284,18 +2284,18 @@ const questions = [
     "questionText": "He is very _______ because he is always sure of himself.",
     "options": {
       "A": "serious",
-      "B": "confident",
+      "B": "friendly",
       "C": "honest",
-      "D": "friendly"
+      "D": "confident"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Từ vựng Personality: 'confident' (tự tin) phù hợp với ngữ cảnh 'is always sure of himself'.",
     "vietnameseTranslation": "Anh ấy rất _______ vì anh ấy luôn tin chắc vào bản thân.",
     "optionTranslations": {
       "A": "nghiêm túc",
-      "B": "tự tin",
+      "B": "thân thiện",
       "C": "trung thực",
-      "D": "thân thiện"
+      "D": "tự tin"
     },
     "unit": "Vocabulary",
     "orderIndex": 46,
@@ -2307,19 +2307,19 @@ const questions = [
   {
     "questionText": "We learn about paints and brushes in _______ class.",
     "options": {
-      "A": "drama",
-      "B": "maths",
-      "C": "biology",
-      "D": "art"
+      "A": "biology",
+      "B": "art",
+      "C": "drama",
+      "D": "maths"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Từ vựng School Subjects: 'art' (mỹ thuật) được học qua chủ đề 'paints and brushes'.",
     "vietnameseTranslation": "Chúng tôi học về sơn và cọ trong lớp _______.",
     "optionTranslations": {
-      "A": "kịch",
-      "B": "toán",
-      "C": "sinh học",
-      "D": "mỹ thuật"
+      "A": "sinh học",
+      "B": "mỹ thuật",
+      "C": "kịch",
+      "D": "toán"
     },
     "unit": "Vocabulary",
     "orderIndex": 47,
@@ -2331,19 +2331,19 @@ const questions = [
   {
     "questionText": "He _______, so he is a vegan.",
     "options": {
-      "A": "vegetarian",
-      "B": "vegan",
-      "C": "delicious",
-      "D": "allergy"
+      "A": "vegan",
+      "B": "delicious",
+      "C": "allergy",
+      "D": "vegetarian"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Từ vựng Food: 'vegan' có nghĩa là người ăn chay thuần.",
     "vietnameseTranslation": "Anh ấy không ăn các sản phẩm từ động vật, nên anh ấy là người ăn chay thuần.",
     "optionTranslations": {
-      "A": "ăn chay",
-      "B": "người ăn chay thuần",
-      "C": "ngon",
-      "D": "dị ứng"
+      "A": "người ăn chay thuần",
+      "B": "ngon",
+      "C": "dị ứng",
+      "D": "ăn chay"
     },
     "unit": "Vocabulary",
     "orderIndex": 48,
@@ -2355,19 +2355,19 @@ const questions = [
   {
     "questionText": "I like the _______ of her students to study.",
     "options": {
-      "A": "prize",
+      "A": "encourage",
       "B": "praise",
       "C": "challenge",
-      "D": "encourage"
+      "D": "prize"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "Từ vựng Motivation: 'encourage' có nghĩa là khuyến khích.",
     "vietnameseTranslation": "Tôi thích _______ của việc học sinh của cô ấy học tập.",
     "optionTranslations": {
-      "A": "giải thưởng",
+      "A": "khuyến khích",
       "B": "lời khen",
       "C": "thử thách",
-      "D": "khuyến khích"
+      "D": "giải thưởng"
     },
     "unit": "Vocabulary",
     "orderIndex": 49,
@@ -2379,19 +2379,19 @@ const questions = [
   {
     "questionText": "The accommodation we stayed in is _______.",
     "options": {
-      "A": "brilliant",
-      "B": "awful",
-      "C": "spectacular",
-      "D": "disgusting"
+      "A": "awful",
+      "B": "brilliant",
+      "C": "disgusting",
+      "D": "spectacular"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Từ vựng Extreme Adjectives: 'awful' (tệ hại) là tính từ cực cấp. KHÔNG dùng 'very' với các từ này.",
     "vietnameseTranslation": "Chỗ ở mà chúng tôi ở thì _______.",
     "optionTranslations": {
-      "A": "tuyệt vời",
-      "B": "tệ hại",
-      "C": "ngoạn mục",
-      "D": "kinh tởm"
+      "A": "tệ hại",
+      "B": "tuyệt vời",
+      "C": "kinh tởm",
+      "D": "ngoạn mục"
     },
     "unit": "Vocabulary",
     "orderIndex": 50,
@@ -2404,17 +2404,17 @@ const questions = [
     "questionText": "She _______ eats out.",
     "options": {
       "A": "don't usually",
-      "B": "usually am",
-      "C": "usually",
+      "B": "usually",
+      "C": "usually am",
       "D": "am usually"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Adverbs of frequency đứng TRƯỚC động từ thường.",
     "vietnameseTranslation": "Cô ấy _______ ăn ngoài.",
     "optionTranslations": {
       "A": "sai",
-      "B": "sai",
-      "C": "thường xuyên",
+      "B": "thường xuyên",
+      "C": "sai",
       "D": "sai"
     },
     "unit": "Unit 1",
@@ -2427,19 +2427,19 @@ const questions = [
   {
     "questionText": "She _______ tired in the morning.",
     "options": {
-      "A": "be usually",
-      "B": "usually be",
-      "C": "usually is",
-      "D": "is usually"
+      "A": "usually is",
+      "B": "is usually",
+      "C": "usually be",
+      "D": "be usually"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Adverbs of frequency đứng SAU động từ 'to be'.",
     "vietnameseTranslation": "Cô ấy _______ mệt mỏi vào buổi sáng.",
     "optionTranslations": {
-      "A": "sai động từ be",
-      "B": "sai cấu trúc",
-      "C": "sai vị trí",
-      "D": "thường xuyên"
+      "A": "sai vị trí",
+      "B": "thường xuyên",
+      "C": "sai cấu trúc",
+      "D": "sai động từ be"
     },
     "unit": "Unit 1",
     "orderIndex": 2,
@@ -2452,8 +2452,8 @@ const questions = [
     "questionText": "How _______ do you go to the gym?",
     "options": {
       "A": "often",
-      "B": "much",
-      "C": "long",
+      "B": "long",
+      "C": "much",
       "D": "many"
     },
     "correctAnswer": "A",
@@ -2461,8 +2461,8 @@ const questions = [
     "vietnameseTranslation": "Bạn có _______ đến phòng gym không?",
     "optionTranslations": {
       "A": "thường xuyên",
-      "B": "nhiều",
-      "C": "bao lâu",
+      "B": "bao lâu",
+      "C": "nhiều",
       "D": "nhiều"
     },
     "unit": "Unit 1",
@@ -2475,19 +2475,19 @@ const questions = [
   {
     "questionText": "Ice _______ at 0°C.",
     "options": {
-      "A": "melts",
-      "B": "is melts",
-      "C": "melt",
-      "D": "melting"
+      "A": "melt",
+      "B": "melts",
+      "C": "melting",
+      "D": "is melts"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Sự thật hiển nhiên dùng thì Hiện tại đơn.",
     "vietnameseTranslation": "Sự thật: Đá _______ ở 0°C.",
     "optionTranslations": {
-      "A": "tan chảy",
-      "B": "đang",
-      "C": "nguyên thể",
-      "D": "tiếp diễn"
+      "A": "nguyên thể",
+      "B": "tan chảy",
+      "C": "tiếp diễn",
+      "D": "đang"
     },
     "unit": "Unit 1",
     "orderIndex": 4,
@@ -2499,19 +2499,19 @@ const questions = [
   {
     "questionText": "The flight _______ at midnight.",
     "options": {
-      "A": "departs",
+      "A": "is depart",
       "B": "departed",
       "C": "depart",
-      "D": "is depart"
+      "D": "departs"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Lịch trình tàu xe dùng thì Hiện tại đơn.",
     "vietnameseTranslation": "Chuyến bay _______ lúc nửa đêm.",
     "optionTranslations": {
-      "A": "khởi hành",
+      "A": "đang",
       "B": "đã",
       "C": "nguyên thể",
-      "D": "đang"
+      "D": "khởi hành"
     },
     "unit": "Unit 1",
     "orderIndex": 5,
@@ -2524,18 +2524,18 @@ const questions = [
     "questionText": "She _______  on the phone at the moment.",
     "options": {
       "A": "talks",
-      "B": "talking",
-      "C": "talk",
-      "D": "is talking"
+      "B": "is talking",
+      "C": "talking",
+      "D": "talk"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Dấu hiệu 'at the moment' dùng thì Hiện tại tiếp diễn.",
     "vietnameseTranslation": "Cô ấy _______ nói chuyện điện thoại vào lúc này.",
     "optionTranslations": {
       "A": "hiện tại",
-      "B": "thiếu be",
-      "C": "hiện tại",
-      "D": "đang talk"
+      "B": "đang talk",
+      "C": "thiếu be",
+      "D": "hiện tại"
     },
     "unit": "Unit 1",
     "orderIndex": 6,
@@ -2547,19 +2547,19 @@ const questions = [
   {
     "questionText": "She _______  the lesson.",
     "options": {
-      "A": "is understanding",
-      "B": "understands",
-      "C": "understood",
-      "D": "was understanding"
+      "A": "understands",
+      "B": "is understanding",
+      "C": "was understanding",
+      "D": "understood"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Động từ trạng thái (stative verb) KHÔNG dùng ở thì tiếp diễn.",
     "vietnameseTranslation": "Cô ấy _______ hiểu bài học.",
     "optionTranslations": {
-      "A": "đang (sai)",
-      "B": "đúng",
-      "C": "đã",
-      "D": "đã đang"
+      "A": "đúng",
+      "B": "đang (sai)",
+      "C": "đã đang",
+      "D": "đã"
     },
     "unit": "Unit 1",
     "orderIndex": 7,
@@ -2595,18 +2595,18 @@ const questions = [
   {
     "questionText": "She _______ see him at the party.",
     "options": {
-      "A": "doesn't",
-      "B": "don't",
-      "C": "didn't",
+      "A": "don't",
+      "B": "didn't",
+      "C": "doesn't",
       "D": "wasn't"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Câu phủ định quá khứ đơn với động từ thường dùng 'didn't'.",
     "vietnameseTranslation": "Cô ấy _______ thấy anh ấy ở bữa tiệc.",
     "optionTranslations": {
       "A": "không",
-      "B": "không",
-      "C": "đã không",
+      "B": "đã không",
+      "C": "không",
       "D": "không phải"
     },
     "unit": "Unit 2",
@@ -2619,18 +2619,18 @@ const questions = [
   {
     "questionText": "_______ you see the news yesterday?",
     "options": {
-      "A": "Were",
-      "B": "Are",
-      "C": "Did",
+      "A": "Are",
+      "B": "Did",
+      "C": "Were",
       "D": "Do"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Câu hỏi Yes/No quá khứ đơn dùng 'Did'.",
     "vietnameseTranslation": "Bạn _______ xem tin tức ngày hôm qua không?",
     "optionTranslations": {
-      "A": "Quá khứ to-be",
-      "B": "Hiện tại to-be",
-      "C": "Quá khứ",
+      "A": "Hiện tại to-be",
+      "B": "Quá khứ",
+      "C": "Quá khứ to-be",
       "D": "Hiện tại"
     },
     "unit": "Unit 2",
@@ -2641,20 +2641,20 @@ const questions = [
     "setDifficulty": "easy"
   },
   {
-    "questionText": "She _______ carry the bags last night.",
+    "questionText": "She _______ the bags last night.",
     "options": {
       "A": "carry",
-      "B": "carryed",
-      "C": "carried",
+      "B": "carried",
+      "C": "carryed",
       "D": "carries"
     },
-    "correctAnswer": "C",
-    "explanation": "Động từ tận cùng bằng phụ âm + y, đổi y thành ied. VD: study→studied, NOT studyed.",
+    "correctAnswer": "B",
+    "explanation": "Quy tắc: phụ âm + y → đổi y thành i rồi thêm -ed. Ví dụ: carry → carried. Không viết 'carryed'.",
     "vietnameseTranslation": "Cô ấy _______ mang những chiếc túi tối qua.",
     "optionTranslations": {
-      "A": "nguyên thể",
-      "B": "sai chính tả (-yed thay vì -ied)",
-      "C": "đã",
+      "A": "nguyên thể (base form)",
+      "B": "đã",
+      "C": "sai chính tả -yed",
       "D": "hiện tại s/es"
     },
     "unit": "Unit 2",
@@ -2667,19 +2667,19 @@ const questions = [
   {
     "questionText": "_______ is your full name?",
     "options": {
-      "A": "When",
-      "B": "Where",
-      "C": "Who",
-      "D": "What"
+      "A": "Where",
+      "B": "Who",
+      "C": "What",
+      "D": "When"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Hỏi về thông tin dùng 'What'.",
     "vietnameseTranslation": "họ và tên của bạn là _______?",
     "optionTranslations": {
-      "A": "Khi nào",
-      "B": "Ở đâu",
-      "C": "Ai",
-      "D": "Cái gì"
+      "A": "Ở đâu",
+      "B": "Ai",
+      "C": "Cái gì",
+      "D": "Khi nào"
     },
     "unit": "Unit 2",
     "orderIndex": 12,
@@ -2691,19 +2691,19 @@ const questions = [
   {
     "questionText": "_______ did they work? - At a bank",
     "options": {
-      "A": "Who",
-      "B": "Why",
+      "A": "Why",
+      "B": "Where",
       "C": "When",
-      "D": "Where"
+      "D": "Who"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Câu trả lời chỉ nơi chốn nên dùng từ để hỏi 'Where'.",
     "vietnameseTranslation": "Họ đã _______ làm việc? - Ở ngân hàng",
     "optionTranslations": {
-      "A": "Ai",
-      "B": "Tại sao",
+      "A": "Tại sao",
+      "B": "Ở đâu",
       "C": "Khi nào",
-      "D": "Ở đâu"
+      "D": "Ai"
     },
     "unit": "Unit 2",
     "orderIndex": 13,
@@ -2716,18 +2716,18 @@ const questions = [
     "questionText": "_______ you pass the salt?",
     "options": {
       "A": "Are",
-      "B": "Do",
-      "C": "Have",
-      "D": "Can"
+      "B": "Have",
+      "C": "Can",
+      "D": "Do"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Yêu cầu giúp đỡ dùng 'Can' hoặc 'Could'.",
     "vietnameseTranslation": "Bạn _______ đưa lọ muối được không?",
     "optionTranslations": {
       "A": "Là",
-      "B": "Làm",
-      "C": "Có",
-      "D": "Có thể"
+      "B": "Có",
+      "C": "Có thể",
+      "D": "Làm"
     },
     "unit": "Unit 2",
     "orderIndex": 14,
@@ -2739,19 +2739,19 @@ const questions = [
   {
     "questionText": "She _______ read a magazine at 8 PM.",
     "options": {
-      "A": "did",
-      "B": "are",
+      "A": "are",
+      "B": "were",
       "C": "was reading",
-      "D": "were"
+      "D": "did"
     },
     "correctAnswer": "C",
     "explanation": "Dùng thì Quá khứ tiếp diễn cho hành động đang xảy ra tại một thời điểm trong quá khứ.",
     "vietnameseTranslation": "Cô ấy _______ đọc một cuốn tạp chí lúc 8 giờ tối.",
     "optionTranslations": {
-      "A": "quá khứ",
-      "B": "hiện tại",
+      "A": "hiện tại",
+      "B": "sai to-be",
       "C": "đang",
-      "D": "sai to-be"
+      "D": "quá khứ"
     },
     "unit": "Unit 3",
     "orderIndex": 15,
@@ -2763,19 +2763,19 @@ const questions = [
   {
     "questionText": "It started to rain while they _______ football.",
     "options": {
-      "A": "playe",
+      "A": "were playing",
       "B": "are playing",
-      "C": "were playing",
-      "D": "played"
+      "C": "played",
+      "D": "playe"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Hành động đang diễn ra trong quá khứ bị gián đoạn dùng Quá khứ tiếp diễn.",
     "vietnameseTranslation": "Trời bắt đầu mưa trong khi họ _______ bóng đá.",
     "optionTranslations": {
-      "A": "nguyên thể",
+      "A": "đang",
       "B": "hiện tại",
-      "C": "đang",
-      "D": "quá khứ"
+      "C": "quá khứ",
+      "D": "nguyên thể"
     },
     "unit": "Unit 3",
     "orderIndex": 16,
@@ -2787,17 +2787,17 @@ const questions = [
   {
     "questionText": "They were playing football _______ it started to rain.",
     "options": {
-      "A": "when",
-      "B": "while",
+      "A": "while",
+      "B": "when",
       "C": "during",
       "D": "so"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Dùng 'when' trước hành động gián đoạn ở thì Quá khứ đơn.",
     "vietnameseTranslation": "khi trời bắt đầu mưa",
     "optionTranslations": {
-      "A": "khi",
-      "B": "trong khi",
+      "A": "trong khi",
+      "B": "khi",
       "C": "trong suốt",
       "D": "vì vậy"
     },
@@ -2811,19 +2811,19 @@ const questions = [
   {
     "questionText": "I want to talk to someone. I'm lonely.",
     "options": {
-      "A": "everything",
-      "B": "something/someone/somewhere",
-      "C": "anything",
-      "D": "nothing"
+      "A": "something/someone/somewhere",
+      "B": "everything",
+      "C": "nothing",
+      "D": "anything"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Trong câu khẳng định, dùng đại từ bất định some-.",
     "vietnameseTranslation": "Tôi muốn nói chuyện với ai đó. Tôi cô đơn.",
     "optionTranslations": {
-      "A": "mọi thứ",
-      "B": "đại từ bất định khẳng định",
-      "C": "bất cứ",
-      "D": "không"
+      "A": "đại từ bất định khẳng định",
+      "B": "mọi thứ",
+      "C": "không",
+      "D": "bất cứ"
     },
     "unit": "Unit 3",
     "orderIndex": 18,
@@ -2835,19 +2835,19 @@ const questions = [
   {
     "questionText": "I didn't see anyone.",
     "options": {
-      "A": "nothing",
-      "B": "anything/anyone/anywhere",
-      "C": "everything",
-      "D": "something"
+      "A": "everything",
+      "B": "something",
+      "C": "nothing",
+      "D": "anything/anyone/anywhere"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Trong câu phủ định, dùng đại từ bất định any-.",
     "vietnameseTranslation": "Tôi đã không thấy bất cứ ai.",
     "optionTranslations": {
-      "A": "phủ định kép",
-      "B": "đại từ phủ định",
-      "C": "mọi thứ",
-      "D": "khẳng định"
+      "A": "mọi thứ",
+      "B": "khẳng định",
+      "C": "phủ định kép",
+      "D": "đại từ phủ định"
     },
     "unit": "Unit 3",
     "orderIndex": 19,
@@ -2859,19 +2859,19 @@ const questions = [
   {
     "questionText": "There is nowhere to go.",
     "options": {
-      "A": "something",
+      "A": "nothing/no one/nowhere",
       "B": "everything",
-      "C": "anything",
-      "D": "nothing/no one/nowhere"
+      "C": "something",
+      "D": "anything"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "'Nothing/No one/Nowhere' mang nghĩa phủ định, động từ chia ở khẳng định.",
     "vietnameseTranslation": "Không có không có nơi nào để đi.",
     "optionTranslations": {
-      "A": "một vài",
+      "A": "nghĩa phủ định",
       "B": "mọi",
-      "C": "bất cứ",
-      "D": "nghĩa phủ định"
+      "C": "một vài",
+      "D": "bất cứ"
     },
     "unit": "Unit 3",
     "orderIndex": 20,
@@ -2883,19 +2883,19 @@ const questions = [
   {
     "questionText": "Everyone wants to succeed.",
     "options": {
-      "A": "Some",
+      "A": "All",
       "B": "Everyone/Everything",
-      "C": "All",
-      "D": "Anyone"
+      "C": "Anyone",
+      "D": "Some"
     },
     "correctAnswer": "B",
     "explanation": "Đại từ 'Everyone/Everything' dùng với động từ số ít.",
     "vietnameseTranslation": "Mọi người đều muốn thành công.",
     "optionTranslations": {
-      "A": "Một vài",
+      "A": "Tất cả",
       "B": "Mọi người/Mọi thứ",
-      "C": "Tất cả",
-      "D": "Bất cứ"
+      "C": "Bất cứ",
+      "D": "Một vài"
     },
     "unit": "Unit 3",
     "orderIndex": 21,
@@ -2907,19 +2907,19 @@ const questions = [
   {
     "questionText": "She _______ visit my grandparents.",
     "options": {
-      "A": "is going",
-      "B": "will to",
-      "C": "going to",
-      "D": "is going to"
+      "A": "is going to",
+      "B": "is going",
+      "C": "will to",
+      "D": "going to"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "Nói về một kế hoạch dùng cấu trúc 'be going to'.",
     "vietnameseTranslation": "Cô ấy _______ thăm ông bà.",
     "optionTranslations": {
-      "A": "thiếu to",
-      "B": "sai",
-      "C": "thiếu be",
-      "D": "dự định"
+      "A": "dự định",
+      "B": "thiếu to",
+      "C": "sai",
+      "D": "thiếu be"
     },
     "unit": "Unit 4",
     "orderIndex": 22,
@@ -2931,19 +2931,19 @@ const questions = [
   {
     "questionText": "She _______ travel this summer.",
     "options": {
-      "A": "don't going to",
+      "A": "isn't going to",
       "B": "won't going to",
-      "C": "isn't going to",
-      "D": "not going to"
+      "C": "not going to",
+      "D": "don't going to"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Phủ định của 'be going to'.",
     "vietnameseTranslation": "Cô ấy _______ đi du lịch mùa hè này.",
     "optionTranslations": {
-      "A": "sai",
+      "A": "không dự định",
       "B": "sai",
-      "C": "không dự định",
-      "D": "thiếu be"
+      "C": "thiếu be",
+      "D": "sai"
     },
     "unit": "Unit 4",
     "orderIndex": 23,
@@ -2956,18 +2956,18 @@ const questions = [
     "questionText": "I promise I _______ be late again.",
     "options": {
       "A": "don't",
-      "B": "won't",
-      "C": "not",
-      "D": "am not going to"
+      "B": "am not going to",
+      "C": "won't",
+      "D": "not"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Lời hứa dùng 'won't'.",
     "vietnameseTranslation": "Tôi hứa tôi _______ đến muộn nữa.",
     "optionTranslations": {
       "A": "không",
-      "B": "sẽ không",
-      "C": "không",
-      "D": "không dự định"
+      "B": "không dự định",
+      "C": "sẽ không",
+      "D": "không"
     },
     "unit": "Unit 4",
     "orderIndex": 24,
@@ -2979,19 +2979,19 @@ const questions = [
   {
     "questionText": "Don't worry, I _______ open the door for you.",
     "options": {
-      "A": "do",
-      "B": "am going to",
-      "C": "am",
-      "D": "will"
+      "A": "am",
+      "B": "do",
+      "C": "will",
+      "D": "am going to"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Đề nghị giúp đỡ (Offer) dùng 'will'.",
     "vietnameseTranslation": "Đừng lo, tôi _______ mở cửa cho bạn.",
     "optionTranslations": {
-      "A": "làm",
-      "B": "dự định",
-      "C": "đang",
-      "D": "sẽ"
+      "A": "đang",
+      "B": "làm",
+      "C": "sẽ",
+      "D": "dự định"
     },
     "unit": "Unit 4",
     "orderIndex": 25,
@@ -3003,19 +3003,19 @@ const questions = [
   {
     "questionText": "Okay, I _______ check the email.",
     "options": {
-      "A": "am doing",
-      "B": "am going to",
-      "C": "do",
-      "D": "will"
+      "A": "will",
+      "B": "am doing",
+      "C": "am going to",
+      "D": "do"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "Quyết định đột ngột lúc nói dùng 'will'.",
     "vietnameseTranslation": "Được rồi, tôi _______ kiểm tra email.",
     "optionTranslations": {
-      "A": "đang làm",
-      "B": "dự định",
-      "C": "làm",
-      "D": "sẽ"
+      "A": "sẽ",
+      "B": "đang làm",
+      "C": "dự định",
+      "D": "làm"
     },
     "unit": "Unit 4",
     "orderIndex": 26,
@@ -3027,19 +3027,19 @@ const questions = [
   {
     "questionText": "If the bus _______, I'll take a taxi.",
     "options": {
-      "A": "was late",
+      "A": "will be late",
       "B": "is late",
       "C": "was being late",
-      "D": "will be late"
+      "D": "was late"
     },
     "correctAnswer": "B",
     "explanation": "KHÔNG dùng 'will' trong mệnh đề 'If'. Mệnh đề điều kiện loại 1 dùng Hiện tại đơn. Đáp án đúng: 'is late'.",
     "vietnameseTranslation": "Nếu đến trễ, ...",
     "optionTranslations": {
-      "A": "quá khứ (sai)",
+      "A": "tương lai (sai)",
       "B": "hiện tại",
       "C": "tiếp diễn (sai)",
-      "D": "tương lai (sai)"
+      "D": "quá khứ (sai)"
     },
     "unit": "Unit 4",
     "orderIndex": 27,
@@ -3051,19 +3051,19 @@ const questions = [
   {
     "questionText": "She's _______ call her mom.",
     "options": {
-      "A": "going",
+      "A": "will",
       "B": "going to",
-      "C": "go to",
-      "D": "will"
+      "C": "going",
+      "D": "go to"
     },
     "correctAnswer": "B",
     "explanation": "Cấu trúc am/is/are + going to + V.",
     "vietnameseTranslation": "Kế hoạch: gọi mẹ",
     "optionTranslations": {
-      "A": "đang",
+      "A": "sẽ",
       "B": "dự định",
-      "C": "đi",
-      "D": "sẽ"
+      "C": "đang",
+      "D": "đi"
     },
     "unit": "Unit 4",
     "orderIndex": 28,
@@ -3075,19 +3075,19 @@ const questions = [
   {
     "questionText": "If you freeze water, _______ .",
     "options": {
-      "A": "will happen",
-      "B": "it becomes ice",
-      "C": "might happen",
-      "D": "is happening"
+      "A": "might happen",
+      "B": "will happen",
+      "C": "is happening",
+      "D": "it becomes ice"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Câu điều kiện loại 0 diễn tả sự thật hiển nhiên. Cả 2 vế đều dùng Hiện tại đơn. Đáp án đúng là 'it becomes ice'.",
     "vietnameseTranslation": "Nếu bạn freeze water, _______ .",
     "optionTranslations": {
-      "A": "tương lai (sai)",
-      "B": "trở thành",
-      "C": "có thể (sai)",
-      "D": "đang diễn ra (sai)"
+      "A": "có thể (sai)",
+      "B": "tương lai (sai)",
+      "C": "đang diễn ra (sai)",
+      "D": "trở thành"
     },
     "unit": "Unit 5",
     "orderIndex": 29,
@@ -3099,19 +3099,19 @@ const questions = [
   {
     "questionText": "If the temperature rises, _______ .",
     "options": {
-      "A": "will happen",
-      "B": "is happening",
-      "C": "might happen",
-      "D": "the fan starts"
+      "A": "the fan starts",
+      "B": "might happen",
+      "C": "will happen",
+      "D": "is happening"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "Câu điều kiện loại 0 chỉ quy luật máy móc. Cả 2 vế đều dùng Hiện tại đơn. Đáp án đúng là 'the fan starts'.",
     "vietnameseTranslation": "Nếu the temperature rises, _______ .",
     "optionTranslations": {
-      "A": "tương lai (sai)",
-      "B": "đang diễn ra (sai)",
-      "C": "có thể (sai)",
-      "D": "khởi động"
+      "A": "khởi động",
+      "B": "có thể (sai)",
+      "C": "tương lai (sai)",
+      "D": "đang diễn ra (sai)"
     },
     "unit": "Unit 5",
     "orderIndex": 30,
@@ -3123,8 +3123,8 @@ const questions = [
   {
     "questionText": "If it is cold, _______.",
     "options": {
-      "A": "I didn't swim",
-      "B": "I don't swim",
+      "A": "I don't swim",
+      "B": "I didn't swim",
       "C": "I aren't swim",
       "D": "I won't swim"
     },
@@ -3132,8 +3132,8 @@ const questions = [
     "explanation": "Câu điều kiện loại 1: If + HTĐ, will/won't + V.",
     "vietnameseTranslation": "Nếu trời is cold, _______.",
     "optionTranslations": {
-      "A": "đã không",
-      "B": "không",
+      "A": "không",
+      "B": "đã không",
       "C": "không phải",
       "D": "tôi sẽ không bơi"
     },
@@ -3147,19 +3147,19 @@ const questions = [
   {
     "questionText": "If she _______ the game, she'll celebrate.",
     "options": {
-      "A": "will win",
-      "B": "won",
-      "C": "wins",
-      "D": "is winning"
+      "A": "wins",
+      "B": "is winning",
+      "C": "will win",
+      "D": "won"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Mệnh đề If loại 1 dùng Hiện tại đơn.",
     "vietnameseTranslation": "Nếu thắng",
     "optionTranslations": {
-      "A": "sẽ",
-      "B": "quá khứ",
-      "C": "hiện tại",
-      "D": "tiếp diễn"
+      "A": "hiện tại",
+      "B": "tiếp diễn",
+      "C": "sẽ",
+      "D": "quá khứ"
     },
     "unit": "Unit 5",
     "orderIndex": 32,
@@ -3171,19 +3171,19 @@ const questions = [
   {
     "questionText": "My phone is _______ than yours. (tall)",
     "options": {
-      "A": "more tall",
-      "B": "taller",
+      "A": "most tall",
+      "B": "more tall",
       "C": "tall",
-      "D": "most tall"
+      "D": "taller"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "So sánh hơn của tính từ ngắn 'tall': thêm -er. KHÔNG dùng 'more'.",
     "vietnameseTranslation": "Điện thoại của tôi _______ của bạn. (tall)",
     "optionTranslations": {
-      "A": "so sánh hơn (sai cấu trúc)",
-      "B": "cao hơn",
+      "A": "so sánh nhất (sai)",
+      "B": "so sánh hơn (sai cấu trúc)",
       "C": "nguyên thể",
-      "D": "so sánh nhất (sai)"
+      "D": "cao hơn"
     },
     "unit": "Unit 5",
     "orderIndex": 33,
@@ -3195,19 +3195,19 @@ const questions = [
   {
     "questionText": "That was the _______ experience of my life. (interesting)",
     "options": {
-      "A": "interestinger",
-      "B": "interesting",
-      "C": "more interesting",
-      "D": "most interesting"
+      "A": "most interesting",
+      "B": "interestinger",
+      "C": "interesting",
+      "D": "more interesting"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "So sánh nhất của tính từ dài 'interesting': dùng 'most interesting'. KHÔNG thêm -er.",
     "vietnameseTranslation": "Đó là trải nghiệm _______ của cuộc đời tôi. (interesting)",
     "optionTranslations": {
-      "A": "so sánh nhất (sai cấu trúc)",
-      "B": "nguyên thể",
-      "C": "so sánh hơn (sai)",
-      "D": "thú vị nhất"
+      "A": "thú vị nhất",
+      "B": "so sánh nhất (sai cấu trúc)",
+      "C": "nguyên thể",
+      "D": "so sánh hơn (sai)"
     },
     "unit": "Unit 5",
     "orderIndex": 34,
@@ -3219,19 +3219,19 @@ const questions = [
   {
     "questionText": "It is _______ dangerous than before.",
     "options": {
-      "A": "few",
-      "B": "little",
-      "C": "least",
-      "D": "less"
+      "A": "little",
+      "B": "few",
+      "C": "less",
+      "D": "least"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "So sánh ít hơn dùng less + tính từ dài + than.",
     "vietnameseTranslation": "Nó thì ít _______ hơn trước.",
     "optionTranslations": {
-      "A": "vài",
-      "B": "ít",
-      "C": "ít nhất",
-      "D": "ít hơn"
+      "A": "ít",
+      "B": "vài",
+      "C": "ít hơn",
+      "D": "ít nhất"
     },
     "unit": "Unit 5",
     "orderIndex": 35,
@@ -3243,18 +3243,18 @@ const questions = [
   {
     "questionText": "_______ they ever seen a ghost?",
     "options": {
-      "A": "Do",
-      "B": "Have",
-      "C": "Did",
+      "A": "Have",
+      "B": "Did",
+      "C": "Do",
       "D": "Are"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Hỏi về trải nghiệm dùng Hiện tại hoàn thành.",
     "vietnameseTranslation": "_______ bạn đã từng...",
     "optionTranslations": {
-      "A": "HT",
-      "B": "HT hoàn thành",
-      "C": "QK",
+      "A": "HT hoàn thành",
+      "B": "QK",
+      "C": "HT",
       "D": "to-be"
     },
     "unit": "Unit 6",
@@ -3268,18 +3268,18 @@ const questions = [
     "questionText": "I've _______ been to Africa.",
     "options": {
       "A": "always",
-      "B": "ever",
+      "B": "never",
       "C": "sometimes",
-      "D": "never"
+      "D": "ever"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Trong câu khẳng định mang nghĩa chưa từng, dùng 'never'.",
     "vietnameseTranslation": "Tôi chưa bao giờ đến Châu Phi.",
     "optionTranslations": {
       "A": "luôn",
-      "B": "từng",
+      "B": "chưa bao giờ",
       "C": "thỉnh thoảng",
-      "D": "chưa bao giờ"
+      "D": "từng"
     },
     "unit": "Unit 6",
     "orderIndex": 37,
@@ -3291,19 +3291,19 @@ const questions = [
   {
     "questionText": "This is the best book I have _______ read.",
     "options": {
-      "A": "never",
-      "B": "ever",
-      "C": "always",
-      "D": "just"
+      "A": "just",
+      "B": "always",
+      "C": "never",
+      "D": "ever"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Dùng ever trong câu so sánh nhất.",
     "vietnameseTranslation": "Đây là cuốn sách tốt nhất tôi từng đọc.",
     "optionTranslations": {
-      "A": "chưa từng",
-      "B": "từng",
-      "C": "luôn",
-      "D": "vừa mới"
+      "A": "vừa mới",
+      "B": "luôn",
+      "C": "chưa từng",
+      "D": "từng"
     },
     "unit": "Unit 6",
     "orderIndex": 38,
@@ -3339,18 +3339,18 @@ const questions = [
   {
     "questionText": "She decided _______ the job.",
     "options": {
-      "A": "accepting",
+      "A": "accept",
       "B": "is accepting",
-      "C": "accept",
+      "C": "accepting",
       "D": "to accept"
     },
     "correctAnswer": "D",
     "explanation": "Dùng to-infinitive sau need, want, decide...",
     "vietnameseTranslation": "to V sau động từ.",
     "optionTranslations": {
-      "A": "V-ing",
+      "A": "V",
       "B": "sai",
-      "C": "V",
+      "C": "V-ing",
       "D": "to V"
     },
     "unit": "Unit 6",
@@ -3363,18 +3363,18 @@ const questions = [
   {
     "questionText": "They wanted us _______ early.",
     "options": {
-      "A": "is arriving",
+      "A": "to arrive",
       "B": "arriving",
-      "C": "to arrive",
+      "C": "is arriving",
       "D": "arrive"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Cấu trúc: verb + object + to V.",
     "vietnameseTranslation": "persuade/ask/want + sb + to V",
     "optionTranslations": {
-      "A": "sai",
+      "A": "to V",
       "B": "V-ing",
-      "C": "to V",
+      "C": "sai",
       "D": "V"
     },
     "unit": "Unit 6",
@@ -3387,18 +3387,18 @@ const questions = [
   {
     "questionText": "I started learning the book yesterday.",
     "options": {
-      "A": "Both B & C",
-      "B": "learning",
-      "C": "learn",
+      "A": "learning",
+      "B": "learn",
+      "C": "Both B & C",
       "D": "to learn"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Sau start có thể dùng cả to V và V-ing.",
     "vietnameseTranslation": "Tôi bắt đầu học cuốn sách ngày hôm qua.",
     "optionTranslations": {
-      "A": "Cả 2 đều đúng",
-      "B": "V-ing",
-      "C": "V",
+      "A": "V-ing",
+      "B": "V",
+      "C": "Cả 2 đều đúng",
       "D": "to V"
     },
     "unit": "Unit 6",
@@ -3411,19 +3411,19 @@ const questions = [
   {
     "questionText": "The woman _______ called you is my aunt.",
     "options": {
-      "A": "when",
+      "A": "who",
       "B": "where",
-      "C": "which",
-      "D": "who"
+      "C": "when",
+      "D": "which"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "Đại từ 'who' thay thế danh từ chỉ người.",
     "vietnameseTranslation": "người đã gọi bạn",
     "optionTranslations": {
-      "A": "thời gian",
+      "A": "người",
       "B": "nơi",
-      "C": "vật",
-      "D": "người"
+      "C": "thời gian",
+      "D": "vật"
     },
     "unit": "Unit 6",
     "orderIndex": 43,
@@ -3435,19 +3435,19 @@ const questions = [
   {
     "questionText": "The movie _______ we watched was scary.",
     "options": {
-      "A": "who",
-      "B": "which",
-      "C": "where",
-      "D": "when"
+      "A": "which",
+      "B": "who",
+      "C": "when",
+      "D": "where"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Đại từ 'which' thay thế danh từ chỉ vật.",
     "vietnameseTranslation": "bộ phim",
     "optionTranslations": {
-      "A": "người",
-      "B": "vật",
-      "C": "nơi",
-      "D": "thời gian"
+      "A": "vật",
+      "B": "người",
+      "C": "thời gian",
+      "D": "nơi"
     },
     "unit": "Unit 6",
     "orderIndex": 44,
@@ -3457,21 +3457,21 @@ const questions = [
     "setDifficulty": "easy"
   },
   {
-    "questionText": "That is the restaurant _______ we ate.",
+    "questionText": "This is the restaurant _______ we ate.",
     "options": {
-      "A": "which",
-      "B": "who",
-      "C": "when",
-      "D": "where"
+      "A": "who",
+      "B": "when",
+      "C": "where",
+      "D": "which"
     },
-    "correctAnswer": "D",
-    "explanation": "Đại từ 'where' thay thế danh từ chỉ nơi chốn.",
-    "vietnameseTranslation": "Đó là nhà hàng.",
+    "correctAnswer": "C",
+    "explanation": "Đại từ quan hệ 'where' dùng để thay thế cho danh từ chỉ nơi chốn.",
+    "vietnameseTranslation": "Đây là nhà hàng.",
     "optionTranslations": {
-      "A": "vật",
-      "B": "người",
-      "C": "thời gian",
-      "D": "nơi chốn"
+      "A": "người",
+      "B": "thời gian",
+      "C": "nơi chốn",
+      "D": "vật"
     },
     "unit": "Unit 6",
     "orderIndex": 45,
@@ -3484,17 +3484,17 @@ const questions = [
     "questionText": "He is very _______ because he is kind and helpful.",
     "options": {
       "A": "honest",
-      "B": "friendly",
-      "C": "serious",
+      "B": "serious",
+      "C": "friendly",
       "D": "confident"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Từ vựng Personality: 'friendly' (thân thiện) phù hợp với ngữ cảnh 'is kind and helpful'.",
     "vietnameseTranslation": "Anh ấy rất _______ vì anh ấy tốt bụng và hay giúp đỡ.",
     "optionTranslations": {
       "A": "trung thực",
-      "B": "thân thiện",
-      "C": "nghiêm túc",
+      "B": "nghiêm túc",
+      "C": "thân thiện",
       "D": "tự tin"
     },
     "unit": "Vocabulary",
@@ -3507,19 +3507,19 @@ const questions = [
   {
     "questionText": "We learn about the human heart in _______ class.",
     "options": {
-      "A": "maths",
-      "B": "biology",
-      "C": "art",
-      "D": "drama"
+      "A": "art",
+      "B": "maths",
+      "C": "drama",
+      "D": "biology"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Từ vựng School Subjects: 'biology' (sinh học) được học qua chủ đề 'the human heart'.",
     "vietnameseTranslation": "Chúng tôi học về trái tim con người trong lớp _______.",
     "optionTranslations": {
-      "A": "toán",
-      "B": "sinh học",
-      "C": "mỹ thuật",
-      "D": "kịch"
+      "A": "mỹ thuật",
+      "B": "toán",
+      "C": "kịch",
+      "D": "sinh học"
     },
     "unit": "Vocabulary",
     "orderIndex": 47,
@@ -3532,18 +3532,18 @@ const questions = [
     "questionText": "He _______, so he is a allergy.",
     "options": {
       "A": "allergy",
-      "B": "vegan",
+      "B": "vegetarian",
       "C": "delicious",
-      "D": "vegetarian"
+      "D": "vegan"
     },
     "correctAnswer": "A",
     "explanation": "Từ vựng Food: 'allergy' có nghĩa là dị ứng.",
     "vietnameseTranslation": "Anh ấy bị ốm vì ăn các loại hạt, nên anh ấy là dị ứng.",
     "optionTranslations": {
       "A": "dị ứng",
-      "B": "thuần chay",
+      "B": "ăn chay",
       "C": "ngon",
-      "D": "ăn chay"
+      "D": "thuần chay"
     },
     "unit": "Vocabulary",
     "orderIndex": 48,
@@ -3555,19 +3555,19 @@ const questions = [
   {
     "questionText": "I like the _______ of a lot of for his essay.",
     "options": {
-      "A": "prize",
-      "B": "encourage",
-      "C": "challenge",
-      "D": "praise"
+      "A": "praise",
+      "B": "challenge",
+      "C": "prize",
+      "D": "encourage"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "Từ vựng Motivation: 'praise' có nghĩa là lời khen.",
     "vietnameseTranslation": "Tôi thích _______ của việc rất nhiều cho bài tiểu luận của anh ấy.",
     "optionTranslations": {
-      "A": "giải thưởng",
-      "B": "khuyến khích",
-      "C": "thử thách",
-      "D": "lời khen"
+      "A": "lời khen",
+      "B": "thử thách",
+      "C": "giải thưởng",
+      "D": "khuyến khích"
     },
     "unit": "Vocabulary",
     "orderIndex": 49,
@@ -3580,18 +3580,18 @@ const questions = [
     "questionText": "The cake she baked is _______.",
     "options": {
       "A": "brilliant",
-      "B": "spectacular",
-      "C": "awful",
-      "D": "disgusting"
+      "B": "awful",
+      "C": "disgusting",
+      "D": "spectacular"
     },
     "correctAnswer": "A",
     "explanation": "Từ vựng Extreme Adjectives: 'brilliant' (tuyệt vời) là tính từ cực cấp. KHÔNG dùng 'very' với các từ này.",
     "vietnameseTranslation": "Chiếc bánh mà cô ấy nướng thì _______.",
     "optionTranslations": {
       "A": "tuyệt vời",
-      "B": "ngoạn mục",
-      "C": "tệ hại",
-      "D": "kinh tởm"
+      "B": "tệ hại",
+      "C": "kinh tởm",
+      "D": "ngoạn mục"
     },
     "unit": "Vocabulary",
     "orderIndex": 50,
@@ -3603,8 +3603,8 @@ const questions = [
   {
     "questionText": "They _______ visit museums.",
     "options": {
-      "A": "often am",
-      "B": "am often",
+      "A": "am often",
+      "B": "often am",
       "C": "don't often",
       "D": "often"
     },
@@ -3628,8 +3628,8 @@ const questions = [
     "questionText": "They _______ busy on weekends.",
     "options": {
       "A": "often are",
-      "B": "be often",
-      "C": "often be",
+      "B": "often be",
+      "C": "be often",
       "D": "are often"
     },
     "correctAnswer": "D",
@@ -3637,8 +3637,8 @@ const questions = [
     "vietnameseTranslation": "Họ _______ bận rộn vào cuối tuần.",
     "optionTranslations": {
       "A": "sai vị trí",
-      "B": "sai động từ be",
-      "C": "sai cấu trúc",
+      "B": "sai cấu trúc",
+      "C": "sai động từ be",
       "D": "thường"
     },
     "unit": "Unit 1",
@@ -3651,19 +3651,19 @@ const questions = [
   {
     "questionText": "How _______ do you clean your room?",
     "options": {
-      "A": "often",
+      "A": "many",
       "B": "long",
-      "C": "many",
-      "D": "much"
+      "C": "much",
+      "D": "often"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Dùng 'How often...?' để hỏi về tần suất.",
     "vietnameseTranslation": "Bạn có _______ dọn phòng không?",
     "optionTranslations": {
-      "A": "thường xuyên",
+      "A": "nhiều",
       "B": "bao lâu",
       "C": "nhiều",
-      "D": "nhiều"
+      "D": "thường xuyên"
     },
     "unit": "Unit 1",
     "orderIndex": 3,
@@ -3676,18 +3676,18 @@ const questions = [
     "questionText": "Wood _______ on water.",
     "options": {
       "A": "floats",
-      "B": "float",
-      "C": "is floats",
-      "D": "floating"
+      "B": "floating",
+      "C": "float",
+      "D": "is floats"
     },
     "correctAnswer": "A",
     "explanation": "Sự thật hiển nhiên dùng thì Hiện tại đơn.",
     "vietnameseTranslation": "Sự thật: Gỗ _______ trên mặt nước.",
     "optionTranslations": {
       "A": "nổi",
-      "B": "nguyên thể",
-      "C": "đang",
-      "D": "tiếp diễn"
+      "B": "tiếp diễn",
+      "C": "nguyên thể",
+      "D": "đang"
     },
     "unit": "Unit 1",
     "orderIndex": 4,
@@ -3699,18 +3699,18 @@ const questions = [
   {
     "questionText": "The match _______ at 3 PM.",
     "options": {
-      "A": "starts",
-      "B": "tarts",
-      "C": "is tarts",
+      "A": "is tarts",
+      "B": "starts",
+      "C": "tarts",
       "D": "edtarts"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Lịch trình tàu xe dùng thì Hiện tại đơn.",
     "vietnameseTranslation": "Trận đấu _______ lúc 3 giờ chiều.",
     "optionTranslations": {
-      "A": "bắt đầu",
-      "B": "nguyên thể",
-      "C": "đang",
+      "A": "đang",
+      "B": "bắt đầu",
+      "C": "nguyên thể",
       "D": "đã"
     },
     "unit": "Unit 1",
@@ -3723,19 +3723,19 @@ const questions = [
   {
     "questionText": "They _______  coffee at the moment.",
     "options": {
-      "A": "drinks",
-      "B": "are drinking",
-      "C": "drinking",
-      "D": "drink"
+      "A": "drink",
+      "B": "drinks",
+      "C": "are drinking",
+      "D": "drinking"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Dấu hiệu 'at the moment' dùng thì Hiện tại tiếp diễn.",
     "vietnameseTranslation": "Họ _______ uống cà phê vào lúc này.",
     "optionTranslations": {
       "A": "hiện tại",
-      "B": "đang drink",
-      "C": "thiếu be",
-      "D": "hiện tại"
+      "B": "hiện tại",
+      "C": "đang drink",
+      "D": "thiếu be"
     },
     "unit": "Unit 1",
     "orderIndex": 6,
@@ -3747,18 +3747,18 @@ const questions = [
   {
     "questionText": "They _______  this song.",
     "options": {
-      "A": "are liking",
+      "A": "was liking",
       "B": "liked",
-      "C": "was liking",
+      "C": "are liking",
       "D": "like"
     },
     "correctAnswer": "D",
     "explanation": "Động từ trạng thái (stative verb) KHÔNG dùng ở thì tiếp diễn.",
     "vietnameseTranslation": "Họ _______ thích bài hát này.",
     "optionTranslations": {
-      "A": "đang (sai)",
+      "A": "đã đang",
       "B": "đã",
-      "C": "đã đang",
+      "C": "đang (sai)",
       "D": "đúng"
     },
     "unit": "Unit 1",
@@ -3771,19 +3771,19 @@ const questions = [
   {
     "questionText": "Yesterday, They _______  at a restaurant.",
     "options": {
-      "A": "ate",
-      "B": "were eating",
-      "C": "eats",
-      "D": "eat"
+      "A": "eat",
+      "B": "eats",
+      "C": "were eating",
+      "D": "ate"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Dấu hiệu 'Yesterday' dùng thì Quá khứ đơn.",
     "vietnameseTranslation": "Hôm qua, Họ _______ ăn ở nhà hàng.",
     "optionTranslations": {
-      "A": "đã eat",
-      "B": "tiếp diễn",
-      "C": "hiện tại",
-      "D": "hiện tại"
+      "A": "hiện tại",
+      "B": "hiện tại",
+      "C": "tiếp diễn",
+      "D": "đã eat"
     },
     "unit": "Unit 2",
     "orderIndex": 8,
@@ -3796,9 +3796,9 @@ const questions = [
     "questionText": "They _______ arrive on time.",
     "options": {
       "A": "wasn't",
-      "B": "doesn't",
+      "B": "don't",
       "C": "didn't",
-      "D": "don't"
+      "D": "doesn't"
     },
     "correctAnswer": "C",
     "explanation": "Câu phủ định quá khứ đơn với động từ thường dùng 'didn't'.",
@@ -3821,8 +3821,8 @@ const questions = [
     "options": {
       "A": "Did",
       "B": "Were",
-      "C": "Do",
-      "D": "Are"
+      "C": "Are",
+      "D": "Do"
     },
     "correctAnswer": "A",
     "explanation": "Câu hỏi Yes/No quá khứ đơn dùng 'Did'.",
@@ -3830,8 +3830,8 @@ const questions = [
     "optionTranslations": {
       "A": "Quá khứ",
       "B": "Quá khứ to-be",
-      "C": "Hiện tại",
-      "D": "Hiện tại to-be"
+      "C": "Hiện tại to-be",
+      "D": "Hiện tại"
     },
     "unit": "Unit 2",
     "orderIndex": 10,
@@ -3841,21 +3841,21 @@ const questions = [
     "setDifficulty": "medium"
   },
   {
-    "questionText": "They _______ cry at the end last night.",
+    "questionText": "They _______ at the end last night.",
     "options": {
       "A": "cry",
       "B": "cryed",
-      "C": "cries",
-      "D": "cried"
+      "C": "cried",
+      "D": "cries"
     },
-    "correctAnswer": "D",
-    "explanation": "Động từ tận cùng bằng phụ âm + y, đổi y thành ied. VD: study→studied, NOT studyed.",
+    "correctAnswer": "C",
+    "explanation": "Quy tắc: phụ âm + y → đổi y thành i rồi thêm -ed. Ví dụ: cry → cried. Không viết 'cryed'.",
     "vietnameseTranslation": "Họ _______ khóc vào lúc cuối tối qua.",
     "optionTranslations": {
-      "A": "nguyên thể",
-      "B": "sai chính tả (-yed thay vì -ied)",
-      "C": "hiện tại s/es",
-      "D": "đã"
+      "A": "nguyên thể (base form)",
+      "B": "sai chính tả -yed",
+      "C": "đã",
+      "D": "hiện tại s/es"
     },
     "unit": "Unit 2",
     "orderIndex": 11,
@@ -3868,18 +3868,18 @@ const questions = [
     "questionText": "_______ is your favorite color?",
     "options": {
       "A": "What",
-      "B": "When",
+      "B": "Where",
       "C": "Who",
-      "D": "Where"
+      "D": "When"
     },
     "correctAnswer": "A",
     "explanation": "Hỏi về thông tin dùng 'What'.",
     "vietnameseTranslation": "màu yêu thích của bạn là _______?",
     "optionTranslations": {
       "A": "Cái gì",
-      "B": "Khi nào",
+      "B": "Ở đâu",
       "C": "Ai",
-      "D": "Ở đâu"
+      "D": "Khi nào"
     },
     "unit": "Unit 2",
     "orderIndex": 12,
@@ -3891,19 +3891,19 @@ const questions = [
   {
     "questionText": "_______ did they live? - In Tokyo",
     "options": {
-      "A": "Why",
-      "B": "When",
-      "C": "Where",
-      "D": "Who"
+      "A": "Who",
+      "B": "Where",
+      "C": "Why",
+      "D": "When"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Câu trả lời chỉ nơi chốn nên dùng từ để hỏi 'Where'.",
     "vietnameseTranslation": "Họ đã _______ sống? - Ở Tokyo",
     "optionTranslations": {
-      "A": "Tại sao",
-      "B": "Khi nào",
-      "C": "Ở đâu",
-      "D": "Ai"
+      "A": "Ai",
+      "B": "Ở đâu",
+      "C": "Tại sao",
+      "D": "Khi nào"
     },
     "unit": "Unit 2",
     "orderIndex": 13,
@@ -3916,8 +3916,8 @@ const questions = [
     "questionText": "_______ you turn off the light?",
     "options": {
       "A": "Have",
-      "B": "Are",
-      "C": "Do",
+      "B": "Do",
+      "C": "Are",
       "D": "Can"
     },
     "correctAnswer": "D",
@@ -3925,8 +3925,8 @@ const questions = [
     "vietnameseTranslation": "Bạn _______ tắt đèn được không?",
     "optionTranslations": {
       "A": "Có",
-      "B": "Là",
-      "C": "Làm",
+      "B": "Làm",
+      "C": "Là",
       "D": "Có thể"
     },
     "unit": "Unit 2",
@@ -3939,19 +3939,19 @@ const questions = [
   {
     "questionText": "They _______ play chess at 8 PM.",
     "options": {
-      "A": "was",
-      "B": "are",
-      "C": "were playing",
-      "D": "did"
+      "A": "did",
+      "B": "was",
+      "C": "are",
+      "D": "were playing"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Dùng thì Quá khứ tiếp diễn cho hành động đang xảy ra tại một thời điểm trong quá khứ.",
     "vietnameseTranslation": "Họ _______ chơi cờ vua lúc 8 giờ tối.",
     "optionTranslations": {
-      "A": "sai to-be",
-      "B": "hiện tại",
-      "C": "đang",
-      "D": "quá khứ"
+      "A": "quá khứ",
+      "B": "sai to-be",
+      "C": "hiện tại",
+      "D": "đang"
     },
     "unit": "Unit 3",
     "orderIndex": 15,
@@ -3963,19 +3963,19 @@ const questions = [
   {
     "questionText": "I dropped my phone while I _______ for the bus.",
     "options": {
-      "A": "waited",
-      "B": "is waiting",
-      "C": "was waiting",
-      "D": "waite"
+      "A": "waite",
+      "B": "waited",
+      "C": "is waiting",
+      "D": "was waiting"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Hành động đang diễn ra trong quá khứ bị gián đoạn dùng Quá khứ tiếp diễn.",
     "vietnameseTranslation": "Tôi đánh rơi điện thoại trong khi tôi _______ xe buýt.",
     "optionTranslations": {
-      "A": "quá khứ",
-      "B": "hiện tại",
-      "C": "đang",
-      "D": "nguyên thể"
+      "A": "nguyên thể",
+      "B": "quá khứ",
+      "C": "hiện tại",
+      "D": "đang"
     },
     "unit": "Unit 3",
     "orderIndex": 16,
@@ -3987,19 +3987,19 @@ const questions = [
   {
     "questionText": "I was waiting for the bus _______ I dropped my phone.",
     "options": {
-      "A": "while",
-      "B": "when",
-      "C": "during",
-      "D": "so"
+      "A": "so",
+      "B": "during",
+      "C": "when",
+      "D": "while"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Dùng 'when' trước hành động gián đoạn ở thì Quá khứ đơn.",
     "vietnameseTranslation": "khi tôi đánh rơi điện thoại",
     "optionTranslations": {
-      "A": "trong khi",
-      "B": "khi",
-      "C": "trong suốt",
-      "D": "vì vậy"
+      "A": "vì vậy",
+      "B": "trong suốt",
+      "C": "khi",
+      "D": "trong khi"
     },
     "unit": "Unit 3",
     "orderIndex": 17,
@@ -4011,19 +4011,19 @@ const questions = [
   {
     "questionText": "I want to go somewhere. I'm bored.",
     "options": {
-      "A": "anything",
-      "B": "something/someone/somewhere",
-      "C": "everything",
-      "D": "nothing"
+      "A": "nothing",
+      "B": "everything",
+      "C": "something/someone/somewhere",
+      "D": "anything"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Trong câu khẳng định, dùng đại từ bất định some-.",
     "vietnameseTranslation": "Tôi muốn đi đâu đó. Tôi đang buồn chán.",
     "optionTranslations": {
-      "A": "bất cứ",
-      "B": "đại từ bất định khẳng định",
-      "C": "mọi thứ",
-      "D": "không"
+      "A": "không",
+      "B": "mọi thứ",
+      "C": "đại từ bất định khẳng định",
+      "D": "bất cứ"
     },
     "unit": "Unit 3",
     "orderIndex": 18,
@@ -4035,19 +4035,19 @@ const questions = [
   {
     "questionText": "I didn't go anywhere.",
     "options": {
-      "A": "something",
-      "B": "anything/anyone/anywhere",
+      "A": "anything/anyone/anywhere",
+      "B": "nothing",
       "C": "everything",
-      "D": "nothing"
+      "D": "something"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Trong câu phủ định, dùng đại từ bất định any-.",
     "vietnameseTranslation": "Tôi đã không đi bất cứ đâu.",
     "optionTranslations": {
-      "A": "khẳng định",
-      "B": "đại từ phủ định",
+      "A": "đại từ phủ định",
+      "B": "phủ định kép",
       "C": "mọi thứ",
-      "D": "phủ định kép"
+      "D": "khẳng định"
     },
     "unit": "Unit 3",
     "orderIndex": 19,
@@ -4059,19 +4059,19 @@ const questions = [
   {
     "questionText": "There is nothing to eat.",
     "options": {
-      "A": "everything",
-      "B": "anything",
-      "C": "nothing/no one/nowhere",
-      "D": "something"
+      "A": "anything",
+      "B": "nothing/no one/nowhere",
+      "C": "something",
+      "D": "everything"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "'Nothing/No one/Nowhere' mang nghĩa phủ định, động từ chia ở khẳng định.",
     "vietnameseTranslation": "Không có không có gì để ăn.",
     "optionTranslations": {
-      "A": "mọi",
-      "B": "bất cứ",
-      "C": "nghĩa phủ định",
-      "D": "một vài"
+      "A": "bất cứ",
+      "B": "nghĩa phủ định",
+      "C": "một vài",
+      "D": "mọi"
     },
     "unit": "Unit 3",
     "orderIndex": 20,
@@ -4083,18 +4083,18 @@ const questions = [
   {
     "questionText": "Everything costs more nowadays.",
     "options": {
-      "A": "Some",
+      "A": "All",
       "B": "Anyone",
-      "C": "All",
+      "C": "Some",
       "D": "Everyone/Everything"
     },
     "correctAnswer": "D",
     "explanation": "Đại từ 'Everyone/Everything' dùng với động từ số ít.",
     "vietnameseTranslation": "Mọi thứ đều đắt đỏ hơn ngày nay.",
     "optionTranslations": {
-      "A": "Một vài",
+      "A": "Tất cả",
       "B": "Bất cứ",
-      "C": "Tất cả",
+      "C": "Một vài",
       "D": "Mọi người/Mọi thứ"
     },
     "unit": "Unit 3",
@@ -4107,18 +4107,18 @@ const questions = [
   {
     "questionText": "They _______ sell my car.",
     "options": {
-      "A": "going to",
-      "B": "will to",
-      "C": "are going to",
+      "A": "will to",
+      "B": "are going to",
+      "C": "going to",
       "D": "are going"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Nói về một kế hoạch dùng cấu trúc 'be going to'.",
     "vietnameseTranslation": "Họ _______ bán xe.",
     "optionTranslations": {
-      "A": "thiếu be",
-      "B": "sai",
-      "C": "dự định",
+      "A": "sai",
+      "B": "dự định",
+      "C": "thiếu be",
       "D": "thiếu to"
     },
     "unit": "Unit 4",
@@ -4131,18 +4131,18 @@ const questions = [
   {
     "questionText": "They _______ buy that expensive car.",
     "options": {
-      "A": "won't going to",
-      "B": "aren't going to",
-      "C": "not going to",
+      "A": "aren't going to",
+      "B": "not going to",
+      "C": "won't going to",
       "D": "don't going to"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Phủ định của 'be going to'.",
     "vietnameseTranslation": "Họ _______ mua chiếc xe đắt tiền đó.",
     "optionTranslations": {
-      "A": "sai",
-      "B": "không dự định",
-      "C": "thiếu be",
+      "A": "không dự định",
+      "B": "thiếu be",
+      "C": "sai",
       "D": "sai"
     },
     "unit": "Unit 4",
@@ -4155,19 +4155,19 @@ const questions = [
   {
     "questionText": "I promise I _______ make that mistake.",
     "options": {
-      "A": "not",
-      "B": "am not going to",
-      "C": "won't",
-      "D": "don't"
+      "A": "don't",
+      "B": "won't",
+      "C": "not",
+      "D": "am not going to"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Lời hứa dùng 'won't'.",
     "vietnameseTranslation": "Tôi hứa tôi _______ phạm sai lầm đó.",
     "optionTranslations": {
       "A": "không",
-      "B": "không dự định",
-      "C": "sẽ không",
-      "D": "không"
+      "B": "sẽ không",
+      "C": "không",
+      "D": "không dự định"
     },
     "unit": "Unit 4",
     "orderIndex": 24,
@@ -4179,18 +4179,18 @@ const questions = [
   {
     "questionText": "Don't worry, I _______ pay for the tickets.",
     "options": {
-      "A": "will",
-      "B": "do",
-      "C": "am",
+      "A": "do",
+      "B": "am",
+      "C": "will",
       "D": "am going to"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Đề nghị giúp đỡ (Offer) dùng 'will'.",
     "vietnameseTranslation": "Đừng lo, tôi _______ trả tiền vé.",
     "optionTranslations": {
-      "A": "sẽ",
-      "B": "làm",
-      "C": "đang",
+      "A": "làm",
+      "B": "đang",
+      "C": "sẽ",
       "D": "dự định"
     },
     "unit": "Unit 4",
@@ -4203,19 +4203,19 @@ const questions = [
   {
     "questionText": "Okay, I _______ take a look.",
     "options": {
-      "A": "am doing",
-      "B": "am going to",
-      "C": "do",
-      "D": "will"
+      "A": "am going to",
+      "B": "will",
+      "C": "am doing",
+      "D": "do"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Quyết định đột ngột lúc nói dùng 'will'.",
     "vietnameseTranslation": "Được rồi, tôi _______ xem thử.",
     "optionTranslations": {
-      "A": "đang làm",
-      "B": "dự định",
-      "C": "làm",
-      "D": "sẽ"
+      "A": "dự định",
+      "B": "sẽ",
+      "C": "đang làm",
+      "D": "làm"
     },
     "unit": "Unit 4",
     "orderIndex": 26,
@@ -4227,17 +4227,17 @@ const questions = [
   {
     "questionText": "If you _______ now, you'll reach on time.",
     "options": {
-      "A": "leave",
-      "B": "left",
+      "A": "left",
+      "B": "leave",
       "C": "are leaving",
       "D": "will leave"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "KHÔNG dùng 'will' trong mệnh đề 'If'. Mệnh đề điều kiện loại 1 dùng Hiện tại đơn. Đáp án đúng: 'leave'.",
     "vietnameseTranslation": "Nếu rời đi, ...",
     "optionTranslations": {
-      "A": "hiện tại",
-      "B": "quá khứ (sai)",
+      "A": "quá khứ (sai)",
+      "B": "hiện tại",
       "C": "tiếp diễn (sai)",
       "D": "tương lai (sai)"
     },
@@ -4252,18 +4252,18 @@ const questions = [
     "questionText": "They're _______ build a house.",
     "options": {
       "A": "will",
-      "B": "go to",
-      "C": "going to",
-      "D": "going"
+      "B": "going",
+      "C": "go to",
+      "D": "going to"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Cấu trúc am/is/are + going to + V.",
     "vietnameseTranslation": "Kế hoạch: xây nhà",
     "optionTranslations": {
       "A": "sẽ",
-      "B": "đi",
-      "C": "dự định",
-      "D": "đang"
+      "B": "đang",
+      "C": "đi",
+      "D": "dự định"
     },
     "unit": "Unit 4",
     "orderIndex": 28,
@@ -4276,18 +4276,18 @@ const questions = [
     "questionText": "If you touch fire, _______ .",
     "options": {
       "A": "you get burned",
-      "B": "might happen",
+      "B": "will happen",
       "C": "is happening",
-      "D": "will happen"
+      "D": "might happen"
     },
     "correctAnswer": "A",
     "explanation": "Câu điều kiện loại 0 diễn tả sự thật hiển nhiên. Cả 2 vế đều dùng Hiện tại đơn. Đáp án đúng là 'you get burned'.",
     "vietnameseTranslation": "Nếu bạn touch fire, _______ .",
     "optionTranslations": {
       "A": "bị bỏng",
-      "B": "có thể (sai)",
+      "B": "tương lai (sai)",
       "C": "đang diễn ra (sai)",
-      "D": "tương lai (sai)"
+      "D": "có thể (sai)"
     },
     "unit": "Unit 5",
     "orderIndex": 29,
@@ -4299,19 +4299,19 @@ const questions = [
   {
     "questionText": "If the paper jams, _______ .",
     "options": {
-      "A": "the printer stops",
-      "B": "is happening",
-      "C": "will happen",
-      "D": "might happen"
+      "A": "is happening",
+      "B": "might happen",
+      "C": "the printer stops",
+      "D": "will happen"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Câu điều kiện loại 0 chỉ quy luật máy móc. Cả 2 vế đều dùng Hiện tại đơn. Đáp án đúng là 'the printer stops'.",
     "vietnameseTranslation": "Nếu the paper jams, _______ .",
     "optionTranslations": {
-      "A": "dừng lại",
-      "B": "đang diễn ra (sai)",
-      "C": "tương lai (sai)",
-      "D": "có thể (sai)"
+      "A": "đang diễn ra (sai)",
+      "B": "có thể (sai)",
+      "C": "dừng lại",
+      "D": "tương lai (sai)"
     },
     "unit": "Unit 5",
     "orderIndex": 30,
@@ -4323,18 +4323,18 @@ const questions = [
   {
     "questionText": "If it is late, _______.",
     "options": {
-      "A": "she aren't wait",
-      "B": "she won't wait",
-      "C": "she don't wait",
+      "A": "she don't wait",
+      "B": "she aren't wait",
+      "C": "she won't wait",
       "D": "she didn't wait"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Câu điều kiện loại 1: If + HTĐ, will/won't + V.",
     "vietnameseTranslation": "Nếu trời is late, _______.",
     "optionTranslations": {
-      "A": "không phải",
-      "B": "cô ấy sẽ không đợi",
-      "C": "không",
+      "A": "không",
+      "B": "không phải",
+      "C": "cô ấy sẽ không đợi",
       "D": "đã không"
     },
     "unit": "Unit 5",
@@ -4347,19 +4347,19 @@ const questions = [
   {
     "questionText": "If they _______ the map, they'll get lost.",
     "options": {
-      "A": "drop",
-      "B": "dropped",
-      "C": "are dropping",
-      "D": "will drop"
+      "A": "dropped",
+      "B": "will drop",
+      "C": "drop",
+      "D": "are dropping"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Mệnh đề If loại 1 dùng Hiện tại đơn.",
     "vietnameseTranslation": "Nếu làm rơi",
     "optionTranslations": {
-      "A": "hiện tại",
-      "B": "quá khứ",
-      "C": "tiếp diễn",
-      "D": "sẽ"
+      "A": "quá khứ",
+      "B": "sẽ",
+      "C": "hiện tại",
+      "D": "tiếp diễn"
     },
     "unit": "Unit 5",
     "orderIndex": 32,
@@ -4372,8 +4372,8 @@ const questions = [
     "questionText": "My phone is _______ than yours. (short)",
     "options": {
       "A": "shorter",
-      "B": "more short",
-      "C": "most short",
+      "B": "most short",
+      "C": "more short",
       "D": "short"
     },
     "correctAnswer": "A",
@@ -4381,8 +4381,8 @@ const questions = [
     "vietnameseTranslation": "Điện thoại của tôi _______ của bạn. (short)",
     "optionTranslations": {
       "A": "ngắn hơn",
-      "B": "so sánh hơn (sai cấu trúc)",
-      "C": "so sánh nhất (sai)",
+      "B": "so sánh nhất (sai)",
+      "C": "so sánh hơn (sai cấu trúc)",
       "D": "nguyên thể"
     },
     "unit": "Unit 5",
@@ -4395,19 +4395,19 @@ const questions = [
   {
     "questionText": "That was the _______ experience of my life. (difficult)",
     "options": {
-      "A": "difficulter",
-      "B": "difficult",
-      "C": "more difficult",
-      "D": "most difficult"
+      "A": "more difficult",
+      "B": "difficulter",
+      "C": "most difficult",
+      "D": "difficult"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "So sánh nhất của tính từ dài 'difficult': dùng 'most difficult'. KHÔNG thêm -er.",
     "vietnameseTranslation": "Đó là trải nghiệm _______ của cuộc đời tôi. (difficult)",
     "optionTranslations": {
-      "A": "so sánh nhất (sai cấu trúc)",
-      "B": "nguyên thể",
-      "C": "so sánh hơn (sai)",
-      "D": "khó nhất"
+      "A": "so sánh hơn (sai)",
+      "B": "so sánh nhất (sai cấu trúc)",
+      "C": "khó nhất",
+      "D": "nguyên thể"
     },
     "unit": "Unit 5",
     "orderIndex": 34,
@@ -4419,19 +4419,19 @@ const questions = [
   {
     "questionText": "It is _______ difficult than before.",
     "options": {
-      "A": "few",
-      "B": "least",
+      "A": "least",
+      "B": "less",
       "C": "little",
-      "D": "less"
+      "D": "few"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "So sánh ít hơn dùng less + tính từ dài + than.",
     "vietnameseTranslation": "Nó thì ít _______ hơn trước.",
     "optionTranslations": {
-      "A": "vài",
-      "B": "ít nhất",
+      "A": "ít nhất",
+      "B": "ít hơn",
       "C": "ít",
-      "D": "ít hơn"
+      "D": "vài"
     },
     "unit": "Unit 5",
     "orderIndex": 35,
@@ -4444,8 +4444,8 @@ const questions = [
     "questionText": "_______ he ever played golf?",
     "options": {
       "A": "Does",
-      "B": "Did",
-      "C": "Is",
+      "B": "Is",
+      "C": "Did",
       "D": "Has"
     },
     "correctAnswer": "D",
@@ -4453,8 +4453,8 @@ const questions = [
     "vietnameseTranslation": "_______ bạn đã từng...",
     "optionTranslations": {
       "A": "HT",
-      "B": "QK",
-      "C": "to-be",
+      "B": "to-be",
+      "C": "QK",
       "D": "HT hoàn thành"
     },
     "unit": "Unit 6",
@@ -4468,18 +4468,18 @@ const questions = [
     "questionText": "I've _______ driven a Ferrari.",
     "options": {
       "A": "sometimes",
-      "B": "always",
-      "C": "never",
-      "D": "ever"
+      "B": "never",
+      "C": "ever",
+      "D": "always"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Trong câu khẳng định mang nghĩa chưa từng, dùng 'never'.",
     "vietnameseTranslation": "Tôi chưa bao giờ lái Ferrari.",
     "optionTranslations": {
       "A": "thỉnh thoảng",
-      "B": "luôn",
-      "C": "chưa bao giờ",
-      "D": "từng"
+      "B": "chưa bao giờ",
+      "C": "từng",
+      "D": "luôn"
     },
     "unit": "Unit 6",
     "orderIndex": 37,
@@ -4491,19 +4491,19 @@ const questions = [
   {
     "questionText": "This is the best place I have _______ visited.",
     "options": {
-      "A": "just",
+      "A": "ever",
       "B": "never",
-      "C": "always",
-      "D": "ever"
+      "C": "just",
+      "D": "always"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "Dùng ever trong câu so sánh nhất.",
     "vietnameseTranslation": "Đây là nơi tốt nhất tôi từng đến thăm.",
     "optionTranslations": {
-      "A": "vừa mới",
+      "A": "từng",
       "B": "chưa từng",
-      "C": "luôn",
-      "D": "từng"
+      "C": "vừa mới",
+      "D": "luôn"
     },
     "unit": "Unit 6",
     "orderIndex": 38,
@@ -4515,19 +4515,19 @@ const questions = [
   {
     "questionText": "They don't mind _______ the window.",
     "options": {
-      "A": "is opening",
-      "B": "opening",
-      "C": "open",
-      "D": "to open"
+      "A": "opening",
+      "B": "is opening",
+      "C": "to open",
+      "D": "open"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Dùng V-ing sau các động từ như practise, enjoy, mind...",
     "vietnameseTranslation": "V-ing sau động từ.",
     "optionTranslations": {
-      "A": "sai",
-      "B": "V-ing",
-      "C": "V",
-      "D": "to V"
+      "A": "V-ing",
+      "B": "sai",
+      "C": "to V",
+      "D": "V"
     },
     "unit": "Unit 6",
     "orderIndex": 39,
@@ -4539,19 +4539,19 @@ const questions = [
   {
     "questionText": "He promised _______ me.",
     "options": {
-      "A": "is helping",
-      "B": "helping",
-      "C": "help",
-      "D": "to help"
+      "A": "helping",
+      "B": "help",
+      "C": "to help",
+      "D": "is helping"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Dùng to-infinitive sau need, want, decide...",
     "vietnameseTranslation": "to V sau động từ.",
     "optionTranslations": {
-      "A": "sai",
-      "B": "V-ing",
-      "C": "V",
-      "D": "to V"
+      "A": "V-ing",
+      "B": "V",
+      "C": "to V",
+      "D": "sai"
     },
     "unit": "Unit 6",
     "orderIndex": 40,
@@ -4563,19 +4563,19 @@ const questions = [
   {
     "questionText": "I told her _______ quiet.",
     "options": {
-      "A": "to be",
-      "B": "be",
-      "C": "being",
-      "D": "is being"
+      "A": "being",
+      "B": "is being",
+      "C": "be",
+      "D": "to be"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Cấu trúc: verb + object + to V.",
     "vietnameseTranslation": "persuade/ask/want + sb + to V",
     "optionTranslations": {
-      "A": "to V",
-      "B": "V",
-      "C": "V-ing",
-      "D": "sai"
+      "A": "V-ing",
+      "B": "sai",
+      "C": "V",
+      "D": "to V"
     },
     "unit": "Unit 6",
     "orderIndex": 41,
@@ -4589,8 +4589,8 @@ const questions = [
     "options": {
       "A": "to learn",
       "B": "Both B & C",
-      "C": "learn",
-      "D": "learning"
+      "C": "learning",
+      "D": "learn"
     },
     "correctAnswer": "B",
     "explanation": "Sau start có thể dùng cả to V và V-ing.",
@@ -4598,8 +4598,8 @@ const questions = [
     "optionTranslations": {
       "A": "to V",
       "B": "Cả 2 đều đúng",
-      "C": "V",
-      "D": "V-ing"
+      "C": "V-ing",
+      "D": "V"
     },
     "unit": "Unit 6",
     "orderIndex": 42,
@@ -4611,19 +4611,19 @@ const questions = [
   {
     "questionText": "The boy _______ broke the window is crying.",
     "options": {
-      "A": "where",
+      "A": "who",
       "B": "when",
-      "C": "which",
-      "D": "who"
+      "C": "where",
+      "D": "which"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "Đại từ 'who' thay thế danh từ chỉ người.",
     "vietnameseTranslation": "cậu bé đã làm vỡ cửa sổ",
     "optionTranslations": {
-      "A": "nơi",
+      "A": "người",
       "B": "thời gian",
-      "C": "vật",
-      "D": "người"
+      "C": "nơi",
+      "D": "vật"
     },
     "unit": "Unit 6",
     "orderIndex": 43,
@@ -4636,18 +4636,18 @@ const questions = [
     "questionText": "The bag _______ she lost was red.",
     "options": {
       "A": "when",
-      "B": "which",
-      "C": "who",
-      "D": "where"
+      "B": "where",
+      "C": "which",
+      "D": "who"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Đại từ 'which' thay thế danh từ chỉ vật.",
     "vietnameseTranslation": "chiếc túi",
     "optionTranslations": {
       "A": "thời gian",
-      "B": "vật",
-      "C": "người",
-      "D": "nơi"
+      "B": "nơi",
+      "C": "vật",
+      "D": "người"
     },
     "unit": "Unit 6",
     "orderIndex": 44,
@@ -4657,21 +4657,21 @@ const questions = [
     "setDifficulty": "medium"
   },
   {
-    "questionText": "That is the park _______ we met.",
+    "questionText": "This is the park _______ we met.",
     "options": {
       "A": "which",
-      "B": "where",
+      "B": "who",
       "C": "when",
-      "D": "who"
+      "D": "where"
     },
-    "correctAnswer": "B",
-    "explanation": "Đại từ 'where' thay thế danh từ chỉ nơi chốn.",
-    "vietnameseTranslation": "Đó là công viên.",
+    "correctAnswer": "D",
+    "explanation": "Đại từ quan hệ 'where' dùng để thay thế cho danh từ chỉ nơi chốn.",
+    "vietnameseTranslation": "Đây là công viên.",
     "optionTranslations": {
       "A": "vật",
-      "B": "nơi chốn",
+      "B": "người",
       "C": "thời gian",
-      "D": "người"
+      "D": "nơi chốn"
     },
     "unit": "Unit 6",
     "orderIndex": 45,
@@ -4683,19 +4683,19 @@ const questions = [
   {
     "questionText": "He is very _______ because he always tells the truth.",
     "options": {
-      "A": "confident",
-      "B": "friendly",
-      "C": "serious",
-      "D": "honest"
+      "A": "friendly",
+      "B": "serious",
+      "C": "honest",
+      "D": "confident"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Từ vựng Personality: 'honest' (trung thực) phù hợp với ngữ cảnh 'always tells the truth'.",
     "vietnameseTranslation": "Anh ấy rất _______ vì anh ấy luôn nói sự thật.",
     "optionTranslations": {
-      "A": "tự tin",
-      "B": "thân thiện",
-      "C": "nghiêm túc",
-      "D": "trung thực"
+      "A": "thân thiện",
+      "B": "nghiêm túc",
+      "C": "trung thực",
+      "D": "tự tin"
     },
     "unit": "Vocabulary",
     "orderIndex": 46,
@@ -4708,18 +4708,18 @@ const questions = [
     "questionText": "We learn about numbers and equations in _______ class.",
     "options": {
       "A": "drama",
-      "B": "art",
-      "C": "biology",
-      "D": "maths"
+      "B": "biology",
+      "C": "maths",
+      "D": "art"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Từ vựng School Subjects: 'maths' (toán) được học qua chủ đề 'numbers and equations'.",
     "vietnameseTranslation": "Chúng tôi học về số và phương trình trong lớp _______.",
     "optionTranslations": {
       "A": "kịch",
-      "B": "mỹ thuật",
-      "C": "sinh học",
-      "D": "toán"
+      "B": "sinh học",
+      "C": "toán",
+      "D": "mỹ thuật"
     },
     "unit": "Vocabulary",
     "orderIndex": 47,
@@ -4731,19 +4731,19 @@ const questions = [
   {
     "questionText": "He _______, so he is a delicious.",
     "options": {
-      "A": "vegetarian",
-      "B": "delicious",
-      "C": "allergy",
-      "D": "vegan"
+      "A": "allergy",
+      "B": "vegetarian",
+      "C": "vegan",
+      "D": "delicious"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Từ vựng Food: 'delicious' có nghĩa là ngon.",
     "vietnameseTranslation": "Anh ấy rất ngon, nên anh ấy là ngon.",
     "optionTranslations": {
-      "A": "ăn chay",
-      "B": "ngon",
-      "C": "dị ứng",
-      "D": "thuần chay"
+      "A": "dị ứng",
+      "B": "ăn chay",
+      "C": "thuần chay",
+      "D": "ngon"
     },
     "unit": "Vocabulary",
     "orderIndex": 48,
@@ -4755,19 +4755,19 @@ const questions = [
   {
     "questionText": "I like the _______ of a return flight to New York.",
     "options": {
-      "A": "praise",
+      "A": "challenge",
       "B": "encourage",
-      "C": "challenge",
-      "D": "prize"
+      "C": "prize",
+      "D": "praise"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Từ vựng Motivation: 'prize' có nghĩa là giải thưởng.",
     "vietnameseTranslation": "Tôi thích _______ của việc một chuyến bay khứ hồi tới New York.",
     "optionTranslations": {
-      "A": "lời khen",
+      "A": "thử thách",
       "B": "khuyến khích",
-      "C": "thử thách",
-      "D": "giải thưởng"
+      "C": "giải thưởng",
+      "D": "lời khen"
     },
     "unit": "Vocabulary",
     "orderIndex": 49,
@@ -4781,8 +4781,8 @@ const questions = [
     "options": {
       "A": "spectacular",
       "B": "disgusting",
-      "C": "brilliant",
-      "D": "awful"
+      "C": "awful",
+      "D": "brilliant"
     },
     "correctAnswer": "B",
     "explanation": "Từ vựng Extreme Adjectives: 'disgusting' (kinh tởm) là tính từ cực cấp. KHÔNG dùng 'very' với các từ này.",
@@ -4790,8 +4790,8 @@ const questions = [
     "optionTranslations": {
       "A": "ngoạn mục",
       "B": "kinh tởm",
-      "C": "tuyệt vời",
-      "D": "tệ hại"
+      "C": "tệ hại",
+      "D": "tuyệt vời"
     },
     "unit": "Vocabulary",
     "orderIndex": 50,
@@ -4803,19 +4803,19 @@ const questions = [
   {
     "questionText": "We _______ watch movies.",
     "options": {
-      "A": "sometimes am",
-      "B": "don't sometimes",
-      "C": "am sometimes",
-      "D": "sometimes"
+      "A": "am sometimes",
+      "B": "sometimes",
+      "C": "sometimes am",
+      "D": "don't sometimes"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Adverbs of frequency đứng TRƯỚC động từ thường.",
     "vietnameseTranslation": "Chúng tôi _______ xem phim.",
     "optionTranslations": {
       "A": "sai",
-      "B": "sai",
+      "B": "thỉnh thoảng",
       "C": "sai",
-      "D": "thỉnh thoảng"
+      "D": "sai"
     },
     "unit": "Unit 1",
     "orderIndex": 1,
@@ -4827,19 +4827,19 @@ const questions = [
   {
     "questionText": "We _______ hungry at night.",
     "options": {
-      "A": "sometimes be",
-      "B": "are sometimes",
+      "A": "are sometimes",
+      "B": "be sometimes",
       "C": "sometimes are",
-      "D": "be sometimes"
+      "D": "sometimes be"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Adverbs of frequency đứng SAU động từ 'to be'.",
     "vietnameseTranslation": "Chúng tôi _______ đói vào ban đêm.",
     "optionTranslations": {
-      "A": "sai cấu trúc",
-      "B": "thỉnh thoảng",
+      "A": "thỉnh thoảng",
+      "B": "sai động từ be",
       "C": "sai vị trí",
-      "D": "sai động từ be"
+      "D": "sai cấu trúc"
     },
     "unit": "Unit 1",
     "orderIndex": 2,
@@ -4875,19 +4875,19 @@ const questions = [
   {
     "questionText": "Plants _______ light to grow.",
     "options": {
-      "A": "is need",
-      "B": "needs",
-      "C": "need",
-      "D": "needing"
+      "A": "need",
+      "B": "needing",
+      "C": "needs",
+      "D": "is need"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Sự thật hiển nhiên dùng thì Hiện tại đơn.",
     "vietnameseTranslation": "Sự thật: Thực vật _______ ánh sáng để phát triển.",
     "optionTranslations": {
-      "A": "đang",
-      "B": "nguyên thể",
-      "C": "cần",
-      "D": "tiếp diễn"
+      "A": "cần",
+      "B": "tiếp diễn",
+      "C": "nguyên thể",
+      "D": "đang"
     },
     "unit": "Unit 1",
     "orderIndex": 4,
@@ -4899,18 +4899,18 @@ const questions = [
   {
     "questionText": "The museum _______ at 8 AM.",
     "options": {
-      "A": "opens",
-      "B": "open",
-      "C": "opened",
+      "A": "opened",
+      "B": "opens",
+      "C": "open",
       "D": "is open"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Lịch trình tàu xe dùng thì Hiện tại đơn.",
     "vietnameseTranslation": "Bảo tàng _______ lúc 8 giờ sáng.",
     "optionTranslations": {
-      "A": "mở cửa",
-      "B": "nguyên thể",
-      "C": "đã",
+      "A": "đã",
+      "B": "mở cửa",
+      "C": "nguyên thể",
       "D": "đang"
     },
     "unit": "Unit 1",
@@ -4947,19 +4947,19 @@ const questions = [
   {
     "questionText": "We _______  some help.",
     "options": {
-      "A": "need",
-      "B": "are needing",
-      "C": "was needing",
-      "D": "needed"
+      "A": "was needing",
+      "B": "needed",
+      "C": "need",
+      "D": "are needing"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Động từ trạng thái (stative verb) KHÔNG dùng ở thì tiếp diễn.",
     "vietnameseTranslation": "Chúng tôi _______ cần chút sự giúp đỡ.",
     "optionTranslations": {
-      "A": "đúng",
-      "B": "đang (sai)",
-      "C": "đã đang",
-      "D": "đã"
+      "A": "đã đang",
+      "B": "đã",
+      "C": "đúng",
+      "D": "đang (sai)"
     },
     "unit": "Unit 1",
     "orderIndex": 7,
@@ -4971,18 +4971,18 @@ const questions = [
   {
     "questionText": "Yesterday, We _______  some friends.",
     "options": {
-      "A": "meets",
-      "B": "met",
-      "C": "were meeting",
+      "A": "met",
+      "B": "were meeting",
+      "C": "meets",
       "D": "meet"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Dấu hiệu 'Yesterday' dùng thì Quá khứ đơn.",
     "vietnameseTranslation": "Hôm qua, Chúng tôi _______ gặp vài người bạn.",
     "optionTranslations": {
-      "A": "hiện tại",
-      "B": "đã meet",
-      "C": "tiếp diễn",
+      "A": "đã meet",
+      "B": "tiếp diễn",
+      "C": "hiện tại",
       "D": "hiện tại"
     },
     "unit": "Unit 2",
@@ -4996,18 +4996,18 @@ const questions = [
     "questionText": "We _______ answer my call.",
     "options": {
       "A": "don't",
-      "B": "doesn't",
+      "B": "wasn't",
       "C": "didn't",
-      "D": "wasn't"
+      "D": "doesn't"
     },
     "correctAnswer": "C",
     "explanation": "Câu phủ định quá khứ đơn với động từ thường dùng 'didn't'.",
     "vietnameseTranslation": "Chúng tôi _______ trả lời cuộc gọi của tôi.",
     "optionTranslations": {
       "A": "không",
-      "B": "không",
+      "B": "không phải",
       "C": "đã không",
-      "D": "không phải"
+      "D": "không"
     },
     "unit": "Unit 2",
     "orderIndex": 9,
@@ -5019,19 +5019,19 @@ const questions = [
   {
     "questionText": "_______ you buy the tickets yesterday?",
     "options": {
-      "A": "Did",
-      "B": "Were",
-      "C": "Do",
-      "D": "Are"
+      "A": "Were",
+      "B": "Do",
+      "C": "Are",
+      "D": "Did"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Câu hỏi Yes/No quá khứ đơn dùng 'Did'.",
     "vietnameseTranslation": "Bạn _______ mua vé ngày hôm qua không?",
     "optionTranslations": {
-      "A": "Quá khứ",
-      "B": "Quá khứ to-be",
-      "C": "Hiện tại",
-      "D": "Hiện tại to-be"
+      "A": "Quá khứ to-be",
+      "B": "Hiện tại",
+      "C": "Hiện tại to-be",
+      "D": "Quá khứ"
     },
     "unit": "Unit 2",
     "orderIndex": 10,
@@ -5041,21 +5041,21 @@ const questions = [
     "setDifficulty": "medium"
   },
   {
-    "questionText": "We _______ reply to the email last night.",
+    "questionText": "We _______ to the email last night.",
     "options": {
-      "A": "replies",
-      "B": "reply",
-      "C": "replied",
+      "A": "replied",
+      "B": "replies",
+      "C": "reply",
       "D": "replyed"
     },
-    "correctAnswer": "C",
-    "explanation": "Động từ tận cùng bằng phụ âm + y, đổi y thành ied. VD: study→studied, NOT studyed.",
+    "correctAnswer": "A",
+    "explanation": "Quy tắc: phụ âm + y → đổi y thành i rồi thêm -ed. Ví dụ: reply → replied. Không viết 'replyed'.",
     "vietnameseTranslation": "Chúng tôi _______ trả lời email tối qua.",
     "optionTranslations": {
-      "A": "hiện tại s/es",
-      "B": "nguyên thể",
-      "C": "đã",
-      "D": "sai chính tả (-yed thay vì -ied)"
+      "A": "đã",
+      "B": "hiện tại s/es",
+      "C": "nguyên thể (base form)",
+      "D": "sai chính tả -yed"
     },
     "unit": "Unit 2",
     "orderIndex": 11,
@@ -5067,19 +5067,19 @@ const questions = [
   {
     "questionText": "_______ is your dream job?",
     "options": {
-      "A": "What",
-      "B": "Who",
-      "C": "Where",
-      "D": "When"
+      "A": "Who",
+      "B": "When",
+      "C": "What",
+      "D": "Where"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Hỏi về thông tin dùng 'What'.",
     "vietnameseTranslation": "công việc mơ ước của bạn là _______?",
     "optionTranslations": {
-      "A": "Cái gì",
-      "B": "Ai",
-      "C": "Ở đâu",
-      "D": "Khi nào"
+      "A": "Ai",
+      "B": "Khi nào",
+      "C": "Cái gì",
+      "D": "Ở đâu"
     },
     "unit": "Unit 2",
     "orderIndex": 12,
@@ -5091,19 +5091,19 @@ const questions = [
   {
     "questionText": "_______ did they eat? - At the cafe",
     "options": {
-      "A": "Where",
-      "B": "Who",
-      "C": "When",
-      "D": "Why"
+      "A": "When",
+      "B": "Where",
+      "C": "Why",
+      "D": "Who"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Câu trả lời chỉ nơi chốn nên dùng từ để hỏi 'Where'.",
     "vietnameseTranslation": "Họ đã _______ ăn? - Ở quán cà phê",
     "optionTranslations": {
-      "A": "Ở đâu",
-      "B": "Ai",
-      "C": "Khi nào",
-      "D": "Tại sao"
+      "A": "Khi nào",
+      "B": "Ở đâu",
+      "C": "Tại sao",
+      "D": "Ai"
     },
     "unit": "Unit 2",
     "orderIndex": 13,
@@ -5117,17 +5117,17 @@ const questions = [
     "options": {
       "A": "Have",
       "B": "Are",
-      "C": "Can",
-      "D": "Do"
+      "C": "Do",
+      "D": "Can"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Yêu cầu giúp đỡ dùng 'Can' hoặc 'Could'.",
     "vietnameseTranslation": "Bạn _______ nói to hơn được không?",
     "optionTranslations": {
       "A": "Có",
       "B": "Là",
-      "C": "Có thể",
-      "D": "Làm"
+      "C": "Làm",
+      "D": "Có thể"
     },
     "unit": "Unit 2",
     "orderIndex": 14,
@@ -5139,19 +5139,19 @@ const questions = [
   {
     "questionText": "We _______ talk to the manager at 8 PM.",
     "options": {
-      "A": "are",
-      "B": "did",
-      "C": "were talking",
-      "D": "was"
+      "A": "was",
+      "B": "were talking",
+      "C": "did",
+      "D": "are"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Dùng thì Quá khứ tiếp diễn cho hành động đang xảy ra tại một thời điểm trong quá khứ.",
     "vietnameseTranslation": "Chúng tôi _______ nói chuyện với quản lý lúc 8 giờ tối.",
     "optionTranslations": {
-      "A": "hiện tại",
-      "B": "quá khứ",
-      "C": "đang",
-      "D": "sai to-be"
+      "A": "sai to-be",
+      "B": "đang",
+      "C": "quá khứ",
+      "D": "hiện tại"
     },
     "unit": "Unit 3",
     "orderIndex": 15,
@@ -5161,21 +5161,21 @@ const questions = [
     "setDifficulty": "medium"
   },
   {
-    "questionText": "She hurt her leg while she _______",
+    "questionText": "She hurt her leg while she _______.",
     "options": {
       "A": "was running",
       "B": "runne",
-      "C": "is running",
-      "D": "runned"
+      "C": "runned",
+      "D": "is running"
     },
     "correctAnswer": "A",
     "explanation": "Hành động đang diễn ra trong quá khứ bị gián đoạn dùng Quá khứ tiếp diễn.",
-    "vietnameseTranslation": "Cô ấy bị đau chân trong khi cô ấy _______",
+    "vietnameseTranslation": "Cô ấy bị đau chân trong khi cô ấy _______.",
     "optionTranslations": {
       "A": "đang",
       "B": "nguyên thể",
-      "C": "hiện tại",
-      "D": "quá khứ"
+      "C": "quá khứ",
+      "D": "hiện tại"
     },
     "unit": "Unit 3",
     "orderIndex": 16,
@@ -5187,19 +5187,19 @@ const questions = [
   {
     "questionText": "She was running _______ she hurt her leg.",
     "options": {
-      "A": "during",
-      "B": "so",
-      "C": "when",
-      "D": "while"
+      "A": "so",
+      "B": "while",
+      "C": "during",
+      "D": "when"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Dùng 'when' trước hành động gián đoạn ở thì Quá khứ đơn.",
     "vietnameseTranslation": "khi cô ấy bị đau chân",
     "optionTranslations": {
-      "A": "trong suốt",
-      "B": "vì vậy",
-      "C": "khi",
-      "D": "trong khi"
+      "A": "vì vậy",
+      "B": "trong khi",
+      "C": "trong suốt",
+      "D": "khi"
     },
     "unit": "Unit 3",
     "orderIndex": 17,
@@ -5211,19 +5211,19 @@ const questions = [
   {
     "questionText": "I want to buy something. I need clothes.",
     "options": {
-      "A": "nothing",
-      "B": "something/someone/somewhere",
-      "C": "anything",
-      "D": "everything"
+      "A": "anything",
+      "B": "everything",
+      "C": "nothing",
+      "D": "something/someone/somewhere"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Trong câu khẳng định, dùng đại từ bất định some-.",
     "vietnameseTranslation": "Tôi muốn mua thứ gì đó. Tôi cần quần áo.",
     "optionTranslations": {
-      "A": "không",
-      "B": "đại từ bất định khẳng định",
-      "C": "bất cứ",
-      "D": "mọi thứ"
+      "A": "bất cứ",
+      "B": "mọi thứ",
+      "C": "không",
+      "D": "đại từ bất định khẳng định"
     },
     "unit": "Unit 3",
     "orderIndex": 18,
@@ -5235,19 +5235,19 @@ const questions = [
   {
     "questionText": "I didn't buy anything.",
     "options": {
-      "A": "something",
-      "B": "nothing",
-      "C": "everything",
-      "D": "anything/anyone/anywhere"
+      "A": "nothing",
+      "B": "anything/anyone/anywhere",
+      "C": "something",
+      "D": "everything"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Trong câu phủ định, dùng đại từ bất định any-.",
     "vietnameseTranslation": "Tôi đã không mua bất cứ thứ gì.",
     "optionTranslations": {
-      "A": "khẳng định",
-      "B": "phủ định kép",
-      "C": "mọi thứ",
-      "D": "đại từ phủ định"
+      "A": "phủ định kép",
+      "B": "đại từ phủ định",
+      "C": "khẳng định",
+      "D": "mọi thứ"
     },
     "unit": "Unit 3",
     "orderIndex": 19,
@@ -5259,19 +5259,19 @@ const questions = [
   {
     "questionText": "There is nothing to do.",
     "options": {
-      "A": "something",
+      "A": "nothing/no one/nowhere",
       "B": "everything",
-      "C": "nothing/no one/nowhere",
-      "D": "anything"
+      "C": "anything",
+      "D": "something"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "'Nothing/No one/Nowhere' mang nghĩa phủ định, động từ chia ở khẳng định.",
     "vietnameseTranslation": "Không có không có gì để làm.",
     "optionTranslations": {
-      "A": "một vài",
+      "A": "nghĩa phủ định",
       "B": "mọi",
-      "C": "nghĩa phủ định",
-      "D": "bất cứ"
+      "C": "bất cứ",
+      "D": "một vài"
     },
     "unit": "Unit 3",
     "orderIndex": 20,
@@ -5283,19 +5283,19 @@ const questions = [
   {
     "questionText": "Everyone knows the truth.",
     "options": {
-      "A": "All",
-      "B": "Everyone/Everything",
-      "C": "Anyone",
-      "D": "Some"
+      "A": "Anyone",
+      "B": "Some",
+      "C": "All",
+      "D": "Everyone/Everything"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Đại từ 'Everyone/Everything' dùng với động từ số ít.",
     "vietnameseTranslation": "Mọi người đều biết sự thật.",
     "optionTranslations": {
-      "A": "Tất cả",
-      "B": "Mọi người/Mọi thứ",
-      "C": "Bất cứ",
-      "D": "Một vài"
+      "A": "Bất cứ",
+      "B": "Một vài",
+      "C": "Tất cả",
+      "D": "Mọi người/Mọi thứ"
     },
     "unit": "Unit 3",
     "orderIndex": 21,
@@ -5307,19 +5307,19 @@ const questions = [
   {
     "questionText": "We _______ learn Spanish.",
     "options": {
-      "A": "are going",
+      "A": "are going to",
       "B": "will to",
       "C": "going to",
-      "D": "are going to"
+      "D": "are going"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "Nói về một kế hoạch dùng cấu trúc 'be going to'.",
     "vietnameseTranslation": "Chúng tôi _______ học tiếng Tây Ban Nha.",
     "optionTranslations": {
-      "A": "thiếu to",
+      "A": "dự định",
       "B": "sai",
       "C": "thiếu be",
-      "D": "dự định"
+      "D": "thiếu to"
     },
     "unit": "Unit 4",
     "orderIndex": 22,
@@ -5332,18 +5332,18 @@ const questions = [
     "questionText": "We _______ attend the meeting.",
     "options": {
       "A": "don't going to",
-      "B": "aren't going to",
+      "B": "not going to",
       "C": "won't going to",
-      "D": "not going to"
+      "D": "aren't going to"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Phủ định của 'be going to'.",
     "vietnameseTranslation": "Chúng tôi _______ tham dự cuộc họp.",
     "optionTranslations": {
       "A": "sai",
-      "B": "không dự định",
+      "B": "thiếu be",
       "C": "sai",
-      "D": "thiếu be"
+      "D": "không dự định"
     },
     "unit": "Unit 4",
     "orderIndex": 23,
@@ -5355,18 +5355,18 @@ const questions = [
   {
     "questionText": "I promise I _______ lose it.",
     "options": {
-      "A": "won't",
-      "B": "am not going to",
-      "C": "don't",
+      "A": "am not going to",
+      "B": "don't",
+      "C": "won't",
       "D": "not"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Lời hứa dùng 'won't'.",
     "vietnameseTranslation": "Tôi hứa tôi _______ làm mất nó.",
     "optionTranslations": {
-      "A": "sẽ không",
-      "B": "không dự định",
-      "C": "không",
+      "A": "không dự định",
+      "B": "không",
+      "C": "sẽ không",
       "D": "không"
     },
     "unit": "Unit 4",
@@ -5379,19 +5379,19 @@ const questions = [
   {
     "questionText": "Don't worry, I _______ lend you some money.",
     "options": {
-      "A": "am going to",
-      "B": "will",
-      "C": "am",
-      "D": "do"
+      "A": "will",
+      "B": "am",
+      "C": "do",
+      "D": "am going to"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Đề nghị giúp đỡ (Offer) dùng 'will'.",
     "vietnameseTranslation": "Đừng lo, tôi _______ cho bạn mượn tiền.",
     "optionTranslations": {
-      "A": "dự định",
-      "B": "sẽ",
-      "C": "đang",
-      "D": "làm"
+      "A": "sẽ",
+      "B": "đang",
+      "C": "làm",
+      "D": "dự định"
     },
     "unit": "Unit 4",
     "orderIndex": 25,
@@ -5404,18 +5404,18 @@ const questions = [
     "questionText": "Okay, I _______ buy some water.",
     "options": {
       "A": "am going to",
-      "B": "will",
-      "C": "am doing",
-      "D": "do"
+      "B": "am doing",
+      "C": "do",
+      "D": "will"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Quyết định đột ngột lúc nói dùng 'will'.",
     "vietnameseTranslation": "Được rồi, tôi _______ mua chút nước.",
     "optionTranslations": {
       "A": "dự định",
-      "B": "sẽ",
-      "C": "đang làm",
-      "D": "làm"
+      "B": "đang làm",
+      "C": "làm",
+      "D": "sẽ"
     },
     "unit": "Unit 4",
     "orderIndex": 26,
@@ -5428,8 +5428,8 @@ const questions = [
     "questionText": "If he _______ quickly, we'll miss the start.",
     "options": {
       "A": "eats slowly",
-      "B": "will eat slowly",
-      "C": "is eating slowly",
+      "B": "is eating slowly",
+      "C": "will eat slowly",
       "D": "ate slowly"
     },
     "correctAnswer": "A",
@@ -5437,8 +5437,8 @@ const questions = [
     "vietnameseTranslation": "Nếu ăn chậm, ...",
     "optionTranslations": {
       "A": "hiện tại",
-      "B": "tương lai (sai)",
-      "C": "tiếp diễn (sai)",
+      "B": "tiếp diễn (sai)",
+      "C": "tương lai (sai)",
       "D": "quá khứ (sai)"
     },
     "unit": "Unit 4",
@@ -5451,19 +5451,19 @@ const questions = [
   {
     "questionText": "We're _______ order pizza.",
     "options": {
-      "A": "go to",
-      "B": "will",
-      "C": "going",
-      "D": "going to"
+      "A": "going",
+      "B": "going to",
+      "C": "go to",
+      "D": "will"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Cấu trúc am/is/are + going to + V.",
     "vietnameseTranslation": "Kế hoạch: gọi pizza",
     "optionTranslations": {
-      "A": "đi",
-      "B": "sẽ",
-      "C": "đang",
-      "D": "dự định"
+      "A": "đang",
+      "B": "dự định",
+      "C": "đi",
+      "D": "sẽ"
     },
     "unit": "Unit 4",
     "orderIndex": 28,
@@ -5475,19 +5475,19 @@ const questions = [
   {
     "questionText": "If you don't water plants, _______ .",
     "options": {
-      "A": "is happening",
-      "B": "they die",
-      "C": "might happen",
-      "D": "will happen"
+      "A": "they die",
+      "B": "will happen",
+      "C": "is happening",
+      "D": "might happen"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Câu điều kiện loại 0 diễn tả sự thật hiển nhiên. Cả 2 vế đều dùng Hiện tại đơn. Đáp án đúng là 'they die'.",
     "vietnameseTranslation": "Nếu bạn don't water plants, _______ .",
     "optionTranslations": {
-      "A": "đang diễn ra (sai)",
-      "B": "chết",
-      "C": "có thể (sai)",
-      "D": "tương lai (sai)"
+      "A": "chết",
+      "B": "tương lai (sai)",
+      "C": "đang diễn ra (sai)",
+      "D": "có thể (sai)"
     },
     "unit": "Unit 5",
     "orderIndex": 29,
@@ -5523,19 +5523,19 @@ const questions = [
   {
     "questionText": "If it is expensive, _______.",
     "options": {
-      "A": "they aren't buy it",
-      "B": "they won't buy it",
-      "C": "they don't buy it",
-      "D": "they didn't buy it"
+      "A": "they won't buy it",
+      "B": "they don't buy it",
+      "C": "they didn't buy it",
+      "D": "they aren't buy it"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Câu điều kiện loại 1: If + HTĐ, will/won't + V.",
     "vietnameseTranslation": "Nếu trời is expensive, _______.",
     "optionTranslations": {
-      "A": "không phải",
-      "B": "họ sẽ không mua",
-      "C": "không",
-      "D": "đã không"
+      "A": "họ sẽ không mua",
+      "B": "không",
+      "C": "đã không",
+      "D": "không phải"
     },
     "unit": "Unit 5",
     "orderIndex": 31,
@@ -5547,19 +5547,19 @@ const questions = [
   {
     "questionText": "If you _______ your homework, the teacher will be happy.",
     "options": {
-      "A": "will submit",
+      "A": "submitted",
       "B": "are submitting",
-      "C": "submit",
-      "D": "submitted"
+      "C": "will submit",
+      "D": "submit"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Mệnh đề If loại 1 dùng Hiện tại đơn.",
     "vietnameseTranslation": "Nếu nộp",
     "optionTranslations": {
-      "A": "sẽ",
+      "A": "quá khứ",
       "B": "tiếp diễn",
-      "C": "hiện tại",
-      "D": "quá khứ"
+      "C": "sẽ",
+      "D": "hiện tại"
     },
     "unit": "Unit 5",
     "orderIndex": 32,
@@ -5571,19 +5571,19 @@ const questions = [
   {
     "questionText": "My phone is _______ than yours. (fast)",
     "options": {
-      "A": "more fast",
+      "A": "most fast",
       "B": "fast",
       "C": "faster",
-      "D": "most fast"
+      "D": "more fast"
     },
     "correctAnswer": "C",
     "explanation": "So sánh hơn của tính từ ngắn 'fast': thêm -er. KHÔNG dùng 'more'.",
     "vietnameseTranslation": "Điện thoại của tôi _______ của bạn. (fast)",
     "optionTranslations": {
-      "A": "so sánh hơn (sai cấu trúc)",
+      "A": "so sánh nhất (sai)",
       "B": "nguyên thể",
       "C": "nhanh hơn",
-      "D": "so sánh nhất (sai)"
+      "D": "so sánh hơn (sai cấu trúc)"
     },
     "unit": "Unit 5",
     "orderIndex": 33,
@@ -5595,19 +5595,19 @@ const questions = [
   {
     "questionText": "That was the _______ experience of my life. (important)",
     "options": {
-      "A": "more important",
-      "B": "most important",
-      "C": "importanter",
-      "D": "important"
+      "A": "important",
+      "B": "more important",
+      "C": "most important",
+      "D": "importanter"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "So sánh nhất của tính từ dài 'important': dùng 'most important'. KHÔNG thêm -er.",
     "vietnameseTranslation": "Đó là trải nghiệm _______ của cuộc đời tôi. (important)",
     "optionTranslations": {
-      "A": "so sánh hơn (sai)",
-      "B": "quan trọng nhất",
-      "C": "so sánh nhất (sai cấu trúc)",
-      "D": "nguyên thể"
+      "A": "nguyên thể",
+      "B": "so sánh hơn (sai)",
+      "C": "quan trọng nhất",
+      "D": "so sánh nhất (sai cấu trúc)"
     },
     "unit": "Unit 5",
     "orderIndex": 34,
@@ -5619,17 +5619,17 @@ const questions = [
   {
     "questionText": "It is _______ popular than before.",
     "options": {
-      "A": "little",
-      "B": "less",
+      "A": "less",
+      "B": "little",
       "C": "least",
       "D": "few"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "So sánh ít hơn dùng less + tính từ dài + than.",
     "vietnameseTranslation": "Nó thì ít _______ hơn trước.",
     "optionTranslations": {
-      "A": "ít",
-      "B": "ít hơn",
+      "A": "ít hơn",
+      "B": "ít",
       "C": "ít nhất",
       "D": "vài"
     },
@@ -5643,19 +5643,19 @@ const questions = [
   {
     "questionText": "_______ we ever met before?",
     "options": {
-      "A": "Are",
-      "B": "Did",
-      "C": "Do",
-      "D": "Have"
+      "A": "Do",
+      "B": "Have",
+      "C": "Did",
+      "D": "Are"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Hỏi về trải nghiệm dùng Hiện tại hoàn thành.",
     "vietnameseTranslation": "_______ bạn đã từng...",
     "optionTranslations": {
-      "A": "to-be",
-      "B": "QK",
-      "C": "HT",
-      "D": "HT hoàn thành"
+      "A": "HT",
+      "B": "HT hoàn thành",
+      "C": "QK",
+      "D": "to-be"
     },
     "unit": "Unit 6",
     "orderIndex": 36,
@@ -5668,18 +5668,18 @@ const questions = [
     "questionText": "I've _______ met a famous person.",
     "options": {
       "A": "always",
-      "B": "never",
-      "C": "ever",
-      "D": "sometimes"
+      "B": "sometimes",
+      "C": "never",
+      "D": "ever"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Trong câu khẳng định mang nghĩa chưa từng, dùng 'never'.",
     "vietnameseTranslation": "Tôi chưa bao giờ gặp người nổi tiếng.",
     "optionTranslations": {
       "A": "luôn",
-      "B": "chưa bao giờ",
-      "C": "từng",
-      "D": "thỉnh thoảng"
+      "B": "thỉnh thoảng",
+      "C": "chưa bao giờ",
+      "D": "từng"
     },
     "unit": "Unit 6",
     "orderIndex": 37,
@@ -5691,19 +5691,19 @@ const questions = [
   {
     "questionText": "This is the best song I have _______ heard.",
     "options": {
-      "A": "never",
+      "A": "just",
       "B": "always",
-      "C": "ever",
-      "D": "just"
+      "C": "never",
+      "D": "ever"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Dùng ever trong câu so sánh nhất.",
     "vietnameseTranslation": "Đây là bài hát tốt nhất tôi từng nghe.",
     "optionTranslations": {
-      "A": "chưa từng",
+      "A": "vừa mới",
       "B": "luôn",
-      "C": "từng",
-      "D": "vừa mới"
+      "C": "chưa từng",
+      "D": "từng"
     },
     "unit": "Unit 6",
     "orderIndex": 38,
@@ -5716,18 +5716,18 @@ const questions = [
     "questionText": "We miss _______ in the countryside.",
     "options": {
       "A": "to live",
-      "B": "is living",
-      "C": "living",
-      "D": "live"
+      "B": "living",
+      "C": "live",
+      "D": "is living"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Dùng V-ing sau các động từ như practise, enjoy, mind...",
     "vietnameseTranslation": "V-ing sau động từ.",
     "optionTranslations": {
       "A": "to V",
-      "B": "sai",
-      "C": "V-ing",
-      "D": "V"
+      "B": "V-ing",
+      "C": "V",
+      "D": "sai"
     },
     "unit": "Unit 6",
     "orderIndex": 39,
@@ -5739,19 +5739,19 @@ const questions = [
   {
     "questionText": "I hope _______ you soon.",
     "options": {
-      "A": "seeing",
+      "A": "to see",
       "B": "is seeing",
-      "C": "see",
-      "D": "to see"
+      "C": "seeing",
+      "D": "see"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "Dùng to-infinitive sau need, want, decide...",
     "vietnameseTranslation": "to V sau động từ.",
     "optionTranslations": {
-      "A": "V-ing",
+      "A": "to V",
       "B": "sai",
-      "C": "V",
-      "D": "to V"
+      "C": "V-ing",
+      "D": "V"
     },
     "unit": "Unit 6",
     "orderIndex": 40,
@@ -5765,17 +5765,17 @@ const questions = [
     "options": {
       "A": "is studying",
       "B": "studying",
-      "C": "study",
-      "D": "to study"
+      "C": "to study",
+      "D": "study"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Cấu trúc: verb + object + to V.",
     "vietnameseTranslation": "persuade/ask/want + sb + to V",
     "optionTranslations": {
       "A": "sai",
       "B": "V-ing",
-      "C": "V",
-      "D": "to V"
+      "C": "to V",
+      "D": "V"
     },
     "unit": "Unit 6",
     "orderIndex": 41,
@@ -5789,8 +5789,8 @@ const questions = [
     "options": {
       "A": "Both B & C",
       "B": "to learn",
-      "C": "learning",
-      "D": "learn"
+      "C": "learn",
+      "D": "learning"
     },
     "correctAnswer": "A",
     "explanation": "Sau start có thể dùng cả to V và V-ing.",
@@ -5798,8 +5798,8 @@ const questions = [
     "optionTranslations": {
       "A": "Cả 2 đều đúng",
       "B": "to V",
-      "C": "V-ing",
-      "D": "V"
+      "C": "V",
+      "D": "V-ing"
     },
     "unit": "Unit 6",
     "orderIndex": 42,
@@ -5812,18 +5812,18 @@ const questions = [
     "questionText": "The girl _______ won the prize is happy.",
     "options": {
       "A": "where",
-      "B": "which",
+      "B": "when",
       "C": "who",
-      "D": "when"
+      "D": "which"
     },
     "correctAnswer": "C",
     "explanation": "Đại từ 'who' thay thế danh từ chỉ người.",
     "vietnameseTranslation": "cô gái đã giành giải",
     "optionTranslations": {
       "A": "nơi",
-      "B": "vật",
+      "B": "thời gian",
       "C": "người",
-      "D": "thời gian"
+      "D": "vật"
     },
     "unit": "Unit 6",
     "orderIndex": 43,
@@ -5835,19 +5835,19 @@ const questions = [
   {
     "questionText": "The phone _______ I use is old.",
     "options": {
-      "A": "when",
-      "B": "which",
-      "C": "who",
-      "D": "where"
+      "A": "which",
+      "B": "who",
+      "C": "where",
+      "D": "when"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Đại từ 'which' thay thế danh từ chỉ vật.",
     "vietnameseTranslation": "chiếc điện thoại",
     "optionTranslations": {
-      "A": "thời gian",
-      "B": "vật",
-      "C": "người",
-      "D": "nơi"
+      "A": "vật",
+      "B": "người",
+      "C": "nơi",
+      "D": "thời gian"
     },
     "unit": "Unit 6",
     "orderIndex": 44,
@@ -5857,21 +5857,21 @@ const questions = [
     "setDifficulty": "medium"
   },
   {
-    "questionText": "That is the school _______ he studies.",
+    "questionText": "This is the school _______ he studies.",
     "options": {
-      "A": "which",
-      "B": "who",
-      "C": "where",
-      "D": "when"
+      "A": "who",
+      "B": "when",
+      "C": "which",
+      "D": "where"
     },
-    "correctAnswer": "C",
-    "explanation": "Đại từ 'where' thay thế danh từ chỉ nơi chốn.",
-    "vietnameseTranslation": "Đó là ngôi trường.",
+    "correctAnswer": "D",
+    "explanation": "Đại từ quan hệ 'where' dùng để thay thế cho danh từ chỉ nơi chốn.",
+    "vietnameseTranslation": "Đây là ngôi trường.",
     "optionTranslations": {
-      "A": "vật",
-      "B": "người",
-      "C": "nơi chốn",
-      "D": "thời gian"
+      "A": "người",
+      "B": "thời gian",
+      "C": "vật",
+      "D": "nơi chốn"
     },
     "unit": "Unit 6",
     "orderIndex": 45,
@@ -5883,19 +5883,19 @@ const questions = [
   {
     "questionText": "He is very _______ because he is calm with children.",
     "options": {
-      "A": "confident",
-      "B": "friendly",
+      "A": "friendly",
+      "B": "patient",
       "C": "serious",
-      "D": "patient"
+      "D": "confident"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Từ vựng Personality: 'patient' (kiên nhẫn) phù hợp với ngữ cảnh 'is calm with children'.",
     "vietnameseTranslation": "Anh ấy rất _______ vì anh ấy bình tĩnh với trẻ em.",
     "optionTranslations": {
-      "A": "tự tin",
-      "B": "thân thiện",
+      "A": "thân thiện",
+      "B": "kiên nhẫn",
       "C": "nghiêm túc",
-      "D": "kiên nhẫn"
+      "D": "tự tin"
     },
     "unit": "Vocabulary",
     "orderIndex": 46,
@@ -5908,17 +5908,17 @@ const questions = [
     "questionText": "We learn about light and colour in _______ class.",
     "options": {
       "A": "art",
-      "B": "drama",
-      "C": "physics",
+      "B": "physics",
+      "C": "drama",
       "D": "biology"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Từ vựng School Subjects: 'physics' (vật lý) được học qua chủ đề 'light and colour'.",
     "vietnameseTranslation": "Chúng tôi học về ánh sáng và màu sắc trong lớp _______.",
     "optionTranslations": {
       "A": "mỹ thuật",
-      "B": "kịch",
-      "C": "vật lý",
+      "B": "vật lý",
+      "C": "kịch",
       "D": "sinh học"
     },
     "unit": "Vocabulary",
@@ -5931,19 +5931,19 @@ const questions = [
   {
     "questionText": "He _______, so he is a dish.",
     "options": {
-      "A": "vegetarian",
-      "B": "allergy",
-      "C": "vegan",
-      "D": "dish"
+      "A": "allergy",
+      "B": "vegetarian",
+      "C": "dish",
+      "D": "vegan"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Từ vựng Food: 'dish' có nghĩa là món ăn.",
     "vietnameseTranslation": "Anh ấy là ngon nhất trong thực đơn, nên anh ấy là món ăn.",
     "optionTranslations": {
-      "A": "ăn chay",
-      "B": "dị ứng",
-      "C": "thuần chay",
-      "D": "món ăn"
+      "A": "dị ứng",
+      "B": "ăn chay",
+      "C": "món ăn",
+      "D": "thuần chay"
     },
     "unit": "Vocabulary",
     "orderIndex": 48,
@@ -5955,18 +5955,18 @@ const questions = [
   {
     "questionText": "I like the _______ of us by sending us to bed early.",
     "options": {
-      "A": "challenge",
-      "B": "praise",
-      "C": "punish",
+      "A": "punish",
+      "B": "challenge",
+      "C": "praise",
       "D": "encourage"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Từ vựng Motivation: 'punish' có nghĩa là phạt.",
     "vietnameseTranslation": "Tôi thích _______ của việc chúng tôi bằng cách bắt chúng tôi đi ngủ sớm.",
     "optionTranslations": {
-      "A": "thử thách",
-      "B": "lời khen",
-      "C": "phạt",
+      "A": "phạt",
+      "B": "thử thách",
+      "C": "lời khen",
       "D": "khuyến khích"
     },
     "unit": "Vocabulary",
@@ -5979,19 +5979,19 @@ const questions = [
   {
     "questionText": "The house he lives in is _______.",
     "options": {
-      "A": "awful",
-      "B": "spectacular",
-      "C": "brilliant",
-      "D": "enormous"
+      "A": "spectacular",
+      "B": "enormous",
+      "C": "awful",
+      "D": "brilliant"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Từ vựng Extreme Adjectives: 'enormous' (khổng lồ) là tính từ cực cấp. KHÔNG dùng 'very' với các từ này.",
     "vietnameseTranslation": "Ngôi nhà anh ấy đang sống thì _______.",
     "optionTranslations": {
-      "A": "tệ hại",
-      "B": "ngoạn mục",
-      "C": "tuyệt vời",
-      "D": "khổng lồ"
+      "A": "ngoạn mục",
+      "B": "khổng lồ",
+      "C": "tệ hại",
+      "D": "tuyệt vời"
     },
     "unit": "Vocabulary",
     "orderIndex": 50,
@@ -6004,18 +6004,18 @@ const questions = [
     "questionText": "My brother _______ cooks dinner.",
     "options": {
       "A": "am rarely",
-      "B": "don't rarely",
+      "B": "rarely",
       "C": "rarely am",
-      "D": "rarely"
+      "D": "don't rarely"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Adverbs of frequency đứng TRƯỚC động từ thường.",
     "vietnameseTranslation": "Anh trai tôi _______ nấu bữa tối.",
     "optionTranslations": {
       "A": "sai",
-      "B": "sai",
+      "B": "hiếm khi",
       "C": "sai",
-      "D": "hiếm khi"
+      "D": "sai"
     },
     "unit": "Unit 1",
     "orderIndex": 1,
@@ -6027,19 +6027,19 @@ const questions = [
   {
     "questionText": "My brother _______ ready for exams.",
     "options": {
-      "A": "rarely is",
-      "B": "is rarely",
-      "C": "be rarely",
-      "D": "rarely be"
+      "A": "rarely be",
+      "B": "be rarely",
+      "C": "is rarely",
+      "D": "rarely is"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Adverbs of frequency đứng SAU động từ 'to be'.",
     "vietnameseTranslation": "Anh trai tôi _______ sẵn sàng cho kỳ thi.",
     "optionTranslations": {
-      "A": "sai vị trí",
-      "B": "hiếm khi",
-      "C": "sai động từ be",
-      "D": "sai cấu trúc"
+      "A": "sai cấu trúc",
+      "B": "sai động từ be",
+      "C": "hiếm khi",
+      "D": "sai vị trí"
     },
     "unit": "Unit 1",
     "orderIndex": 2,
@@ -6051,19 +6051,19 @@ const questions = [
   {
     "questionText": "How _______ do you buy new clothes?",
     "options": {
-      "A": "often",
-      "B": "long",
+      "A": "long",
+      "B": "many",
       "C": "much",
-      "D": "many"
+      "D": "often"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Dùng 'How often...?' để hỏi về tần suất.",
     "vietnameseTranslation": "Bạn có _______ mua quần áo mới không?",
     "optionTranslations": {
-      "A": "thường xuyên",
-      "B": "bao lâu",
+      "A": "bao lâu",
+      "B": "nhiều",
       "C": "nhiều",
-      "D": "nhiều"
+      "D": "thường xuyên"
     },
     "unit": "Unit 1",
     "orderIndex": 3,
@@ -6075,18 +6075,18 @@ const questions = [
   {
     "questionText": "Earth _______ around the sun.",
     "options": {
-      "A": "going",
+      "A": "go",
       "B": "goes",
-      "C": "go",
+      "C": "going",
       "D": "is goes"
     },
     "correctAnswer": "B",
     "explanation": "Sự thật hiển nhiên dùng thì Hiện tại đơn.",
     "vietnameseTranslation": "Sự thật: Trái đất _______ quanh mặt trời.",
     "optionTranslations": {
-      "A": "tiếp diễn",
+      "A": "nguyên thể",
       "B": "quay",
-      "C": "nguyên thể",
+      "C": "tiếp diễn",
       "D": "đang"
     },
     "unit": "Unit 1",
@@ -6099,19 +6099,19 @@ const questions = [
   {
     "questionText": "The supermarket _______ at 11 PM.",
     "options": {
-      "A": "cloes",
-      "B": "is cloes",
+      "A": "is cloes",
+      "B": "cloedes",
       "C": "closes",
-      "D": "cloedes"
+      "D": "cloes"
     },
     "correctAnswer": "C",
     "explanation": "Lịch trình tàu xe dùng thì Hiện tại đơn.",
     "vietnameseTranslation": "Siêu thị _______ lúc 11 giờ tối.",
     "optionTranslations": {
-      "A": "nguyên thể",
-      "B": "đang",
+      "A": "đang",
+      "B": "đã",
       "C": "đóng cửa",
-      "D": "đã"
+      "D": "nguyên thể"
     },
     "unit": "Unit 1",
     "orderIndex": 5,
@@ -6123,17 +6123,17 @@ const questions = [
   {
     "questionText": "My brother _______  lunch at the moment.",
     "options": {
-      "A": "haves",
-      "B": "is having",
+      "A": "is having",
+      "B": "haves",
       "C": "have",
       "D": "having"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Dấu hiệu 'at the moment' dùng thì Hiện tại tiếp diễn.",
     "vietnameseTranslation": "Anh trai tôi _______ ăn trưa vào lúc này.",
     "optionTranslations": {
-      "A": "hiện tại",
-      "B": "đang have",
+      "A": "đang have",
+      "B": "hiện tại",
       "C": "hiện tại",
       "D": "thiếu be"
     },
@@ -6172,18 +6172,18 @@ const questions = [
     "questionText": "Yesterday, My brother _______  a wallet.",
     "options": {
       "A": "was finding",
-      "B": "find",
-      "C": "found",
-      "D": "finds"
+      "B": "finds",
+      "C": "find",
+      "D": "found"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Dấu hiệu 'Yesterday' dùng thì Quá khứ đơn.",
     "vietnameseTranslation": "Hôm qua, Anh trai tôi _______ tìm thấy một chiếc ví.",
     "optionTranslations": {
       "A": "tiếp diễn",
       "B": "hiện tại",
-      "C": "đã find",
-      "D": "hiện tại"
+      "C": "hiện tại",
+      "D": "đã find"
     },
     "unit": "Unit 2",
     "orderIndex": 8,
@@ -6196,18 +6196,18 @@ const questions = [
     "questionText": "My brother _______ open the door.",
     "options": {
       "A": "don't",
-      "B": "wasn't",
-      "C": "didn't",
-      "D": "doesn't"
+      "B": "doesn't",
+      "C": "wasn't",
+      "D": "didn't"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Câu phủ định quá khứ đơn với động từ thường dùng 'didn't'.",
     "vietnameseTranslation": "Anh trai tôi _______ mở cửa.",
     "optionTranslations": {
       "A": "không",
-      "B": "không phải",
-      "C": "đã không",
-      "D": "không"
+      "B": "không",
+      "C": "không phải",
+      "D": "đã không"
     },
     "unit": "Unit 2",
     "orderIndex": 9,
@@ -6219,17 +6219,17 @@ const questions = [
   {
     "questionText": "_______ you talk to him yesterday?",
     "options": {
-      "A": "Were",
-      "B": "Did",
+      "A": "Did",
+      "B": "Were",
       "C": "Are",
       "D": "Do"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Câu hỏi Yes/No quá khứ đơn dùng 'Did'.",
     "vietnameseTranslation": "Bạn _______ nói chuyện với anh ấy ngày hôm qua không?",
     "optionTranslations": {
-      "A": "Quá khứ to-be",
-      "B": "Quá khứ",
+      "A": "Quá khứ",
+      "B": "Quá khứ to-be",
       "C": "Hiện tại to-be",
       "D": "Hiện tại"
     },
@@ -6241,21 +6241,21 @@ const questions = [
     "setDifficulty": "medium"
   },
   {
-    "questionText": "My brother _______ hurry to the station last night.",
+    "questionText": "My brother _______ to the station last night.",
     "options": {
       "A": "hurried",
-      "B": "hurries",
-      "C": "hurry",
-      "D": "hurryed"
+      "B": "hurryed",
+      "C": "hurries",
+      "D": "hurry"
     },
     "correctAnswer": "A",
-    "explanation": "Động từ tận cùng bằng phụ âm + y, đổi y thành ied. VD: study→studied, NOT studyed.",
+    "explanation": "Quy tắc: phụ âm + y → đổi y thành i rồi thêm -ed. Ví dụ: hurry → hurried. Không viết 'hurryed'.",
     "vietnameseTranslation": "Anh trai tôi _______ vội vã đến nhà ga tối qua.",
     "optionTranslations": {
       "A": "đã",
-      "B": "hiện tại s/es",
-      "C": "nguyên thể",
-      "D": "sai chính tả (-yed thay vì -ied)"
+      "B": "sai chính tả -yed",
+      "C": "hiện tại s/es",
+      "D": "nguyên thể (base form)"
     },
     "unit": "Unit 2",
     "orderIndex": 11,
@@ -6267,19 +6267,19 @@ const questions = [
   {
     "questionText": "_______ is your main hobby?",
     "options": {
-      "A": "What",
-      "B": "Where",
+      "A": "Where",
+      "B": "When",
       "C": "Who",
-      "D": "When"
+      "D": "What"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Hỏi về thông tin dùng 'What'.",
     "vietnameseTranslation": "sở thích chính của bạn là _______?",
     "optionTranslations": {
-      "A": "Cái gì",
-      "B": "Ở đâu",
+      "A": "Ở đâu",
+      "B": "Khi nào",
       "C": "Ai",
-      "D": "Khi nào"
+      "D": "Cái gì"
     },
     "unit": "Unit 2",
     "orderIndex": 12,
@@ -6291,19 +6291,19 @@ const questions = [
   {
     "questionText": "_______ did they meet? - At the park",
     "options": {
-      "A": "Who",
-      "B": "Why",
-      "C": "When",
-      "D": "Where"
+      "A": "Why",
+      "B": "When",
+      "C": "Where",
+      "D": "Who"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Câu trả lời chỉ nơi chốn nên dùng từ để hỏi 'Where'.",
     "vietnameseTranslation": "Họ đã _______ gặp nhau? - Ở công viên",
     "optionTranslations": {
-      "A": "Ai",
-      "B": "Tại sao",
-      "C": "Khi nào",
-      "D": "Ở đâu"
+      "A": "Tại sao",
+      "B": "Khi nào",
+      "C": "Ở đâu",
+      "D": "Ai"
     },
     "unit": "Unit 2",
     "orderIndex": 13,
@@ -6315,19 +6315,19 @@ const questions = [
   {
     "questionText": "_______ you repeat that?",
     "options": {
-      "A": "Have",
-      "B": "Are",
-      "C": "Do",
-      "D": "Can"
+      "A": "Can",
+      "B": "Do",
+      "C": "Are",
+      "D": "Have"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "Yêu cầu giúp đỡ dùng 'Can' hoặc 'Could'.",
     "vietnameseTranslation": "Bạn _______ nhắc lại điều đó được không?",
     "optionTranslations": {
-      "A": "Có",
-      "B": "Là",
-      "C": "Làm",
-      "D": "Có thể"
+      "A": "Có thể",
+      "B": "Làm",
+      "C": "Là",
+      "D": "Có"
     },
     "unit": "Unit 2",
     "orderIndex": 14,
@@ -6339,19 +6339,19 @@ const questions = [
   {
     "questionText": "My brother _______ look out the window at 8 PM.",
     "options": {
-      "A": "was looking",
+      "A": "are",
       "B": "did",
-      "C": "were",
-      "D": "are"
+      "C": "was looking",
+      "D": "were"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Dùng thì Quá khứ tiếp diễn cho hành động đang xảy ra tại một thời điểm trong quá khứ.",
     "vietnameseTranslation": "Anh trai tôi _______ nhìn ra ngoài cửa sổ lúc 8 giờ tối.",
     "optionTranslations": {
-      "A": "đang",
+      "A": "hiện tại",
       "B": "quá khứ",
-      "C": "sai to-be",
-      "D": "hiện tại"
+      "C": "đang",
+      "D": "sai to-be"
     },
     "unit": "Unit 3",
     "orderIndex": 15,
@@ -6361,21 +6361,21 @@ const questions = [
     "setDifficulty": "medium"
   },
   {
-    "questionText": "The bell rang while the students _______",
+    "questionText": "The bell rang while the students _______.",
     "options": {
-      "A": "are studying",
-      "B": "studyed",
-      "C": "were studying",
-      "D": "studye"
+      "A": "studye",
+      "B": "were studying",
+      "C": "studyed",
+      "D": "are studying"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Hành động đang diễn ra trong quá khứ bị gián đoạn dùng Quá khứ tiếp diễn.",
-    "vietnameseTranslation": "Chuông reo trong khi học sinh _______",
+    "vietnameseTranslation": "Chuông reo trong khi học sinh _______.",
     "optionTranslations": {
-      "A": "hiện tại",
-      "B": "quá khứ",
-      "C": "đang",
-      "D": "nguyên thể"
+      "A": "nguyên thể",
+      "B": "đang",
+      "C": "quá khứ",
+      "D": "hiện tại"
     },
     "unit": "Unit 3",
     "orderIndex": 16,
@@ -6387,19 +6387,19 @@ const questions = [
   {
     "questionText": "The students were studying _______ the bell rang.",
     "options": {
-      "A": "when",
+      "A": "while",
       "B": "during",
       "C": "so",
-      "D": "while"
+      "D": "when"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Dùng 'when' trước hành động gián đoạn ở thì Quá khứ đơn.",
     "vietnameseTranslation": "khi chuông reo",
     "optionTranslations": {
-      "A": "khi",
+      "A": "trong khi",
       "B": "trong suốt",
       "C": "vì vậy",
-      "D": "trong khi"
+      "D": "khi"
     },
     "unit": "Unit 3",
     "orderIndex": 17,
@@ -6411,18 +6411,18 @@ const questions = [
   {
     "questionText": "I want to ask someone. I'm lost.",
     "options": {
-      "A": "something/someone/somewhere",
+      "A": "everything",
       "B": "anything",
-      "C": "everything",
+      "C": "something/someone/somewhere",
       "D": "nothing"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Trong câu khẳng định, dùng đại từ bất định some-.",
     "vietnameseTranslation": "Tôi muốn hỏi ai đó. Tôi bị lạc.",
     "optionTranslations": {
-      "A": "đại từ bất định khẳng định",
+      "A": "mọi thứ",
       "B": "bất cứ",
-      "C": "mọi thứ",
+      "C": "đại từ bất định khẳng định",
       "D": "không"
     },
     "unit": "Unit 3",
@@ -6435,19 +6435,19 @@ const questions = [
   {
     "questionText": "I didn't meet anyone.",
     "options": {
-      "A": "nothing",
-      "B": "something",
-      "C": "everything",
-      "D": "anything/anyone/anywhere"
+      "A": "something",
+      "B": "everything",
+      "C": "anything/anyone/anywhere",
+      "D": "nothing"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Trong câu phủ định, dùng đại từ bất định any-.",
     "vietnameseTranslation": "Tôi đã không gặp bất cứ ai.",
     "optionTranslations": {
-      "A": "phủ định kép",
-      "B": "khẳng định",
-      "C": "mọi thứ",
-      "D": "đại từ phủ định"
+      "A": "khẳng định",
+      "B": "mọi thứ",
+      "C": "đại từ phủ định",
+      "D": "phủ định kép"
     },
     "unit": "Unit 3",
     "orderIndex": 19,
@@ -6460,18 +6460,18 @@ const questions = [
     "questionText": "There is no one at home.",
     "options": {
       "A": "nothing/no one/nowhere",
-      "B": "anything",
+      "B": "something",
       "C": "everything",
-      "D": "something"
+      "D": "anything"
     },
     "correctAnswer": "A",
     "explanation": "'Nothing/No one/Nowhere' mang nghĩa phủ định, động từ chia ở khẳng định.",
     "vietnameseTranslation": "Không có không có ai ở nhà.",
     "optionTranslations": {
       "A": "nghĩa phủ định",
-      "B": "bất cứ",
+      "B": "một vài",
       "C": "mọi",
-      "D": "một vài"
+      "D": "bất cứ"
     },
     "unit": "Unit 3",
     "orderIndex": 20,
@@ -6483,18 +6483,18 @@ const questions = [
   {
     "questionText": "Everything was perfect on that day.",
     "options": {
-      "A": "Anyone",
-      "B": "All",
-      "C": "Some",
+      "A": "All",
+      "B": "Some",
+      "C": "Anyone",
       "D": "Everyone/Everything"
     },
     "correctAnswer": "D",
     "explanation": "Đại từ 'Everyone/Everything' dùng với động từ số ít.",
     "vietnameseTranslation": "Mọi thứ đều hoàn hảo vào ngày hôm đó.",
     "optionTranslations": {
-      "A": "Bất cứ",
-      "B": "Tất cả",
-      "C": "Một vài",
+      "A": "Tất cả",
+      "B": "Một vài",
+      "C": "Bất cứ",
       "D": "Mọi người/Mọi thứ"
     },
     "unit": "Unit 3",
@@ -6507,19 +6507,19 @@ const questions = [
   {
     "questionText": "My brother _______ move to a new city.",
     "options": {
-      "A": "is going",
-      "B": "going to",
-      "C": "will to",
-      "D": "is going to"
+      "A": "going to",
+      "B": "is going to",
+      "C": "is going",
+      "D": "will to"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Nói về một kế hoạch dùng cấu trúc 'be going to'.",
     "vietnameseTranslation": "Anh trai tôi _______ chuyển đến thành phố mới.",
     "optionTranslations": {
-      "A": "thiếu to",
-      "B": "thiếu be",
-      "C": "sai",
-      "D": "dự định"
+      "A": "thiếu be",
+      "B": "dự định",
+      "C": "thiếu to",
+      "D": "sai"
     },
     "unit": "Unit 4",
     "orderIndex": 22,
@@ -6532,18 +6532,18 @@ const questions = [
     "questionText": "My brother _______ watch TV later.",
     "options": {
       "A": "isn't going to",
-      "B": "don't going to",
+      "B": "not going to",
       "C": "won't going to",
-      "D": "not going to"
+      "D": "don't going to"
     },
     "correctAnswer": "A",
     "explanation": "Phủ định của 'be going to'.",
     "vietnameseTranslation": "Anh trai tôi _______ xem TV lát nữa.",
     "optionTranslations": {
       "A": "không dự định",
-      "B": "sai",
+      "B": "thiếu be",
       "C": "sai",
-      "D": "thiếu be"
+      "D": "sai"
     },
     "unit": "Unit 4",
     "orderIndex": 23,
@@ -6555,19 +6555,19 @@ const questions = [
   {
     "questionText": "I promise I _______ let you down.",
     "options": {
-      "A": "not",
-      "B": "won't",
-      "C": "am not going to",
-      "D": "don't"
+      "A": "won't",
+      "B": "don't",
+      "C": "not",
+      "D": "am not going to"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Lời hứa dùng 'won't'.",
     "vietnameseTranslation": "Tôi hứa tôi _______ làm bạn thất vọng.",
     "optionTranslations": {
-      "A": "không",
-      "B": "sẽ không",
-      "C": "không dự định",
-      "D": "không"
+      "A": "sẽ không",
+      "B": "không",
+      "C": "không",
+      "D": "không dự định"
     },
     "unit": "Unit 4",
     "orderIndex": 24,
@@ -6579,19 +6579,19 @@ const questions = [
   {
     "questionText": "Don't worry, I _______ show you the way.",
     "options": {
-      "A": "will",
+      "A": "am",
       "B": "am going to",
       "C": "do",
-      "D": "am"
+      "D": "will"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Đề nghị giúp đỡ (Offer) dùng 'will'.",
     "vietnameseTranslation": "Đừng lo, tôi _______ chỉ đường cho bạn.",
     "optionTranslations": {
-      "A": "sẽ",
+      "A": "đang",
       "B": "dự định",
       "C": "làm",
-      "D": "đang"
+      "D": "sẽ"
     },
     "unit": "Unit 4",
     "orderIndex": 25,
@@ -6603,19 +6603,19 @@ const questions = [
   {
     "questionText": "Okay, I _______ ask the waiter.",
     "options": {
-      "A": "do",
+      "A": "am doing",
       "B": "will",
-      "C": "am doing",
-      "D": "am going to"
+      "C": "am going to",
+      "D": "do"
     },
     "correctAnswer": "B",
     "explanation": "Quyết định đột ngột lúc nói dùng 'will'.",
     "vietnameseTranslation": "Được rồi, tôi _______ hỏi người phục vụ.",
     "optionTranslations": {
-      "A": "làm",
+      "A": "đang làm",
       "B": "sẽ",
-      "C": "đang làm",
-      "D": "dự định"
+      "C": "dự định",
+      "D": "làm"
     },
     "unit": "Unit 4",
     "orderIndex": 26,
@@ -6627,19 +6627,19 @@ const questions = [
   {
     "questionText": "If the weather _______ bad, we'll stay home.",
     "options": {
-      "A": "gets bad",
+      "A": "will get bad",
       "B": "is getting bad",
       "C": "got bad",
-      "D": "will get bad"
+      "D": "gets bad"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "KHÔNG dùng 'will' trong mệnh đề 'If'. Mệnh đề điều kiện loại 1 dùng Hiện tại đơn. Đáp án đúng: 'gets bad'.",
     "vietnameseTranslation": "Nếu trở xấu, ...",
     "optionTranslations": {
-      "A": "hiện tại",
+      "A": "tương lai (sai)",
       "B": "tiếp diễn (sai)",
       "C": "quá khứ (sai)",
-      "D": "tương lai (sai)"
+      "D": "hiện tại"
     },
     "unit": "Unit 4",
     "orderIndex": 27,
@@ -6651,19 +6651,19 @@ const questions = [
   {
     "questionText": "John is _______ buy a gift.",
     "options": {
-      "A": "going to",
+      "A": "will",
       "B": "going",
-      "C": "go to",
-      "D": "will"
+      "C": "going to",
+      "D": "go to"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Cấu trúc am/is/are + going to + V.",
     "vietnameseTranslation": "Kế hoạch: mua quà",
     "optionTranslations": {
-      "A": "dự định",
+      "A": "sẽ",
       "B": "đang",
-      "C": "đi",
-      "D": "sẽ"
+      "C": "dự định",
+      "D": "đi"
     },
     "unit": "Unit 4",
     "orderIndex": 28,
@@ -6675,19 +6675,19 @@ const questions = [
   {
     "questionText": "If you drop a glass, _______ .",
     "options": {
-      "A": "is happening",
-      "B": "might happen",
+      "A": "might happen",
+      "B": "will happen",
       "C": "it breaks",
-      "D": "will happen"
+      "D": "is happening"
     },
     "correctAnswer": "C",
     "explanation": "Câu điều kiện loại 0 diễn tả sự thật hiển nhiên. Cả 2 vế đều dùng Hiện tại đơn. Đáp án đúng là 'it breaks'.",
     "vietnameseTranslation": "Nếu bạn drop a glass, _______ .",
     "optionTranslations": {
-      "A": "đang diễn ra (sai)",
-      "B": "có thể (sai)",
+      "A": "có thể (sai)",
+      "B": "tương lai (sai)",
       "C": "vỡ",
-      "D": "tương lai (sai)"
+      "D": "đang diễn ra (sai)"
     },
     "unit": "Unit 5",
     "orderIndex": 29,
@@ -6700,18 +6700,18 @@ const questions = [
     "questionText": "If you push the lever, _______ .",
     "options": {
       "A": "the machine works",
-      "B": "will happen",
-      "C": "is happening",
-      "D": "might happen"
+      "B": "might happen",
+      "C": "will happen",
+      "D": "is happening"
     },
     "correctAnswer": "A",
     "explanation": "Câu điều kiện loại 0 chỉ quy luật máy móc. Cả 2 vế đều dùng Hiện tại đơn. Đáp án đúng là 'the machine works'.",
     "vietnameseTranslation": "Nếu you push the lever, _______ .",
     "optionTranslations": {
       "A": "hoạt động",
-      "B": "tương lai (sai)",
-      "C": "đang diễn ra (sai)",
-      "D": "có thể (sai)"
+      "B": "có thể (sai)",
+      "C": "tương lai (sai)",
+      "D": "đang diễn ra (sai)"
     },
     "unit": "Unit 5",
     "orderIndex": 30,
@@ -6723,10 +6723,10 @@ const questions = [
   {
     "questionText": "If it is hard, _______.",
     "options": {
-      "A": "we didn't finish",
+      "A": "we didn't finwasn'th",
       "B": "we won't finish",
-      "C": "we aren't finish",
-      "D": "we don't finish"
+      "C": "we don't finisn'th",
+      "D": "we aren't finweren'th"
     },
     "correctAnswer": "B",
     "explanation": "Câu điều kiện loại 1: If + HTĐ, will/won't + V.",
@@ -6734,8 +6734,8 @@ const questions = [
     "optionTranslations": {
       "A": "đã không",
       "B": "chúng ta sẽ không hoàn thành",
-      "C": "không phải",
-      "D": "không"
+      "C": "không",
+      "D": "không phải"
     },
     "unit": "Unit 5",
     "orderIndex": 31,
@@ -6747,19 +6747,19 @@ const questions = [
   {
     "questionText": "If we _______ the next train, we'll take a taxi.",
     "options": {
-      "A": "will miss",
-      "B": "miss",
-      "C": "missed",
-      "D": "are missing"
+      "A": "miss",
+      "B": "are missing",
+      "C": "will miss",
+      "D": "missed"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Mệnh đề If loại 1 dùng Hiện tại đơn.",
     "vietnameseTranslation": "Nếu lỡ chậu",
     "optionTranslations": {
-      "A": "sẽ",
-      "B": "hiện tại",
-      "C": "quá khứ",
-      "D": "tiếp diễn"
+      "A": "hiện tại",
+      "B": "tiếp diễn",
+      "C": "sẽ",
+      "D": "quá khứ"
     },
     "unit": "Unit 5",
     "orderIndex": 32,
@@ -6771,19 +6771,19 @@ const questions = [
   {
     "questionText": "My phone is _______ than yours. (slow)",
     "options": {
-      "A": "more slow",
-      "B": "slower",
-      "C": "slow",
-      "D": "most slow"
+      "A": "slow",
+      "B": "most slow",
+      "C": "slower",
+      "D": "more slow"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "So sánh hơn của tính từ ngắn 'slow': thêm -er. KHÔNG dùng 'more'.",
     "vietnameseTranslation": "Điện thoại của tôi _______ của bạn. (slow)",
     "optionTranslations": {
-      "A": "so sánh hơn (sai cấu trúc)",
-      "B": "chậm hơn",
-      "C": "nguyên thể",
-      "D": "so sánh nhất (sai)"
+      "A": "nguyên thể",
+      "B": "so sánh nhất (sai)",
+      "C": "chậm hơn",
+      "D": "so sánh hơn (sai cấu trúc)"
     },
     "unit": "Unit 5",
     "orderIndex": 33,
@@ -6796,18 +6796,18 @@ const questions = [
     "questionText": "That was the _______ experience of my life. (dangerous)",
     "options": {
       "A": "most dangerous",
-      "B": "more dangerous",
+      "B": "dangerous",
       "C": "dangerouser",
-      "D": "dangerous"
+      "D": "more dangerous"
     },
     "correctAnswer": "A",
     "explanation": "So sánh nhất của tính từ dài 'dangerous': dùng 'most dangerous'. KHÔNG thêm -er.",
     "vietnameseTranslation": "Đó là trải nghiệm _______ của cuộc đời tôi. (dangerous)",
     "optionTranslations": {
       "A": "nguy hiểm nhất",
-      "B": "so sánh hơn (sai)",
+      "B": "nguyên thể",
       "C": "so sánh nhất (sai cấu trúc)",
-      "D": "nguyên thể"
+      "D": "so sánh hơn (sai)"
     },
     "unit": "Unit 5",
     "orderIndex": 34,
@@ -6819,8 +6819,8 @@ const questions = [
   {
     "questionText": "It is _______ interesting than before.",
     "options": {
-      "A": "least",
-      "B": "little",
+      "A": "little",
+      "B": "least",
       "C": "few",
       "D": "less"
     },
@@ -6828,8 +6828,8 @@ const questions = [
     "explanation": "So sánh ít hơn dùng less + tính từ dài + than.",
     "vietnameseTranslation": "Nó thì ít _______ hơn trước.",
     "optionTranslations": {
-      "A": "ít nhất",
-      "B": "ít",
+      "A": "ít",
+      "B": "ít nhất",
       "C": "vài",
       "D": "ít hơn"
     },
@@ -6844,18 +6844,18 @@ const questions = [
     "questionText": "_______ John ever traveled alone?",
     "options": {
       "A": "Does",
-      "B": "Is",
-      "C": "Has",
-      "D": "Did"
+      "B": "Did",
+      "C": "Is",
+      "D": "Has"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Hỏi về trải nghiệm dùng Hiện tại hoàn thành.",
     "vietnameseTranslation": "_______ bạn đã từng...",
     "optionTranslations": {
       "A": "HT",
-      "B": "to-be",
-      "C": "HT hoàn thành",
-      "D": "QK"
+      "B": "QK",
+      "C": "to-be",
+      "D": "HT hoàn thành"
     },
     "unit": "Unit 6",
     "orderIndex": 36,
@@ -6867,19 +6867,19 @@ const questions = [
   {
     "questionText": "I've _______ flown in a helicopter.",
     "options": {
-      "A": "never",
-      "B": "sometimes",
-      "C": "always",
-      "D": "ever"
+      "A": "always",
+      "B": "never",
+      "C": "ever",
+      "D": "sometimes"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Trong câu khẳng định mang nghĩa chưa từng, dùng 'never'.",
     "vietnameseTranslation": "Tôi chưa bao giờ bay trực thăng.",
     "optionTranslations": {
-      "A": "chưa bao giờ",
-      "B": "thỉnh thoảng",
-      "C": "luôn",
-      "D": "từng"
+      "A": "luôn",
+      "B": "chưa bao giờ",
+      "C": "từng",
+      "D": "thỉnh thoảng"
     },
     "unit": "Unit 6",
     "orderIndex": 37,
@@ -6891,19 +6891,19 @@ const questions = [
   {
     "questionText": "This is the best game I have _______ played.",
     "options": {
-      "A": "just",
-      "B": "ever",
+      "A": "always",
+      "B": "just",
       "C": "never",
-      "D": "always"
+      "D": "ever"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Dùng ever trong câu so sánh nhất.",
     "vietnameseTranslation": "Đây là trò chơi tốt nhất tôi từng chơi.",
     "optionTranslations": {
-      "A": "vừa mới",
-      "B": "từng",
+      "A": "luôn",
+      "B": "vừa mới",
       "C": "chưa từng",
-      "D": "luôn"
+      "D": "từng"
     },
     "unit": "Unit 6",
     "orderIndex": 38,
@@ -6916,18 +6916,18 @@ const questions = [
     "questionText": "I recommend _______ this book.",
     "options": {
       "A": "to read",
-      "B": "reading",
-      "C": "is reading",
-      "D": "read"
+      "B": "is reading",
+      "C": "read",
+      "D": "reading"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Dùng V-ing sau các động từ như practise, enjoy, mind...",
     "vietnameseTranslation": "V-ing sau động từ.",
     "optionTranslations": {
       "A": "to V",
-      "B": "V-ing",
-      "C": "sai",
-      "D": "V"
+      "B": "sai",
+      "C": "V",
+      "D": "V-ing"
     },
     "unit": "Unit 6",
     "orderIndex": 39,
@@ -6939,19 +6939,19 @@ const questions = [
   {
     "questionText": "We plan _______ to Europe.",
     "options": {
-      "A": "traveling",
-      "B": "is traveling",
-      "C": "to travel",
-      "D": "travel"
+      "A": "to travel",
+      "B": "traveling",
+      "C": "travel",
+      "D": "is traveling"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Dùng to-infinitive sau need, want, decide...",
     "vietnameseTranslation": "to V sau động từ.",
     "optionTranslations": {
-      "A": "V-ing",
-      "B": "sai",
-      "C": "to V",
-      "D": "V"
+      "A": "to V",
+      "B": "V-ing",
+      "C": "V",
+      "D": "sai"
     },
     "unit": "Unit 6",
     "orderIndex": 40,
@@ -6963,18 +6963,18 @@ const questions = [
   {
     "questionText": "She invited him _______ dinner.",
     "options": {
-      "A": "to have",
+      "A": "have",
       "B": "having",
-      "C": "have",
+      "C": "to have",
       "D": "is having"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Cấu trúc: verb + object + to V.",
     "vietnameseTranslation": "persuade/ask/want + sb + to V",
     "optionTranslations": {
-      "A": "to V",
+      "A": "V",
       "B": "V-ing",
-      "C": "V",
+      "C": "to V",
       "D": "sai"
     },
     "unit": "Unit 6",
@@ -6987,19 +6987,19 @@ const questions = [
   {
     "questionText": "I started learning tennis recently.",
     "options": {
-      "A": "learning",
-      "B": "Both B & C",
-      "C": "learn",
-      "D": "to learn"
+      "A": "to learn",
+      "B": "learn",
+      "C": "learning",
+      "D": "Both B & C"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Sau start có thể dùng cả to V và V-ing.",
     "vietnameseTranslation": "Tôi bắt đầu học quần vợt gần đây.",
     "optionTranslations": {
-      "A": "V-ing",
-      "B": "Cả 2 đều đúng",
-      "C": "V",
-      "D": "to V"
+      "A": "to V",
+      "B": "V",
+      "C": "V-ing",
+      "D": "Cả 2 đều đúng"
     },
     "unit": "Unit 6",
     "orderIndex": 42,
@@ -7011,19 +7011,19 @@ const questions = [
   {
     "questionText": "The teacher _______ teaches math is strict.",
     "options": {
-      "A": "which",
-      "B": "where",
-      "C": "who",
-      "D": "when"
+      "A": "where",
+      "B": "which",
+      "C": "when",
+      "D": "who"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Đại từ 'who' thay thế danh từ chỉ người.",
     "vietnameseTranslation": "giáo viên dạy toán",
     "optionTranslations": {
-      "A": "vật",
-      "B": "nơi",
-      "C": "người",
-      "D": "thời gian"
+      "A": "nơi",
+      "B": "vật",
+      "C": "thời gian",
+      "D": "người"
     },
     "unit": "Unit 6",
     "orderIndex": 43,
@@ -7035,8 +7035,8 @@ const questions = [
   {
     "questionText": "The house _______ they built is big.",
     "options": {
-      "A": "where",
-      "B": "who",
+      "A": "who",
+      "B": "where",
       "C": "which",
       "D": "when"
     },
@@ -7044,8 +7044,8 @@ const questions = [
     "explanation": "Đại từ 'which' thay thế danh từ chỉ vật.",
     "vietnameseTranslation": "ngôi nhà",
     "optionTranslations": {
-      "A": "nơi",
-      "B": "người",
+      "A": "người",
+      "B": "nơi",
       "C": "vật",
       "D": "thời gian"
     },
@@ -7057,21 +7057,21 @@ const questions = [
     "setDifficulty": "medium"
   },
   {
-    "questionText": "That is the room _______ she sleeps.",
+    "questionText": "This is the room _______ she sleeps.",
     "options": {
-      "A": "which",
-      "B": "who",
-      "C": "where",
-      "D": "when"
+      "A": "where",
+      "B": "when",
+      "C": "which",
+      "D": "who"
     },
-    "correctAnswer": "C",
-    "explanation": "Đại từ 'where' thay thế danh từ chỉ nơi chốn.",
-    "vietnameseTranslation": "Đó là căn phòng.",
+    "correctAnswer": "A",
+    "explanation": "Đại từ quan hệ 'where' dùng để thay thế cho danh từ chỉ nơi chốn.",
+    "vietnameseTranslation": "Đây là căn phòng.",
     "optionTranslations": {
-      "A": "vật",
-      "B": "người",
-      "C": "nơi chốn",
-      "D": "thời gian"
+      "A": "nơi chốn",
+      "B": "thời gian",
+      "C": "vật",
+      "D": "người"
     },
     "unit": "Unit 6",
     "orderIndex": 45,
@@ -7083,19 +7083,19 @@ const questions = [
   {
     "questionText": "He is very _______ because he keeps his promises.",
     "options": {
-      "A": "confident",
-      "B": "friendly",
-      "C": "reliable",
-      "D": "serious"
+      "A": "friendly",
+      "B": "confident",
+      "C": "serious",
+      "D": "reliable"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Từ vựng Personality: 'reliable' (đáng tin cậy) phù hợp với ngữ cảnh 'keeps his promises'.",
     "vietnameseTranslation": "Anh ấy rất _______ vì anh ấy giữ lời hứa.",
     "optionTranslations": {
-      "A": "tự tin",
-      "B": "thân thiện",
-      "C": "đáng tin cậy",
-      "D": "nghiêm túc"
+      "A": "thân thiện",
+      "B": "tự tin",
+      "C": "nghiêm túc",
+      "D": "đáng tin cậy"
     },
     "unit": "Vocabulary",
     "orderIndex": 46,
@@ -7107,19 +7107,19 @@ const questions = [
   {
     "questionText": "We learn about past events and dates in _______ class.",
     "options": {
-      "A": "history",
+      "A": "art",
       "B": "drama",
       "C": "biology",
-      "D": "art"
+      "D": "history"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Từ vựng School Subjects: 'history' (lịch sử) được học qua chủ đề 'past events and dates'.",
     "vietnameseTranslation": "Chúng tôi học về các sự kiện và ngày tháng trong quá khứ trong lớp _______.",
     "optionTranslations": {
-      "A": "lịch sử",
+      "A": "mỹ thuật",
       "B": "kịch",
       "C": "sinh học",
-      "D": "mỹ thuật"
+      "D": "lịch sử"
     },
     "unit": "Vocabulary",
     "orderIndex": 47,
@@ -7131,19 +7131,19 @@ const questions = [
   {
     "questionText": "He _______, so he is a raw.",
     "options": {
-      "A": "vegetarian",
+      "A": "allergy",
       "B": "vegan",
-      "C": "raw",
-      "D": "allergy"
+      "C": "vegetarian",
+      "D": "raw"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Từ vựng Food: 'raw' có nghĩa là sống.",
     "vietnameseTranslation": "Anh ấy chưa được nấu chín, nên anh ấy là sống.",
     "optionTranslations": {
-      "A": "ăn chay",
+      "A": "dị ứng",
       "B": "thuần chay",
-      "C": "sống",
-      "D": "dị ứng"
+      "C": "ăn chay",
+      "D": "sống"
     },
     "unit": "Vocabulary",
     "orderIndex": 48,
@@ -7155,19 +7155,19 @@ const questions = [
   {
     "questionText": "I like the _______ of your phone call.",
     "options": {
-      "A": "purpose",
-      "B": "praise",
+      "A": "praise",
+      "B": "challenge",
       "C": "encourage",
-      "D": "challenge"
+      "D": "purpose"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Từ vựng Motivation: 'purpose' có nghĩa là mục đích.",
     "vietnameseTranslation": "Tôi thích _______ của việc cuộc gọi của bạn.",
     "optionTranslations": {
-      "A": "mục đích",
-      "B": "lời khen",
+      "A": "lời khen",
+      "B": "thử thách",
       "C": "khuyến khích",
-      "D": "thử thách"
+      "D": "mục đích"
     },
     "unit": "Vocabulary",
     "orderIndex": 49,
@@ -7181,8 +7181,8 @@ const questions = [
     "options": {
       "A": "filthy",
       "B": "brilliant",
-      "C": "awful",
-      "D": "spectacular"
+      "C": "spectacular",
+      "D": "awful"
     },
     "correctAnswer": "A",
     "explanation": "Từ vựng Extreme Adjectives: 'filthy' (bẩn thỉu) là tính từ cực cấp. KHÔNG dùng 'very' với các từ này.",
@@ -7190,8 +7190,8 @@ const questions = [
     "optionTranslations": {
       "A": "bẩn thỉu",
       "B": "tuyệt vời",
-      "C": "tệ hại",
-      "D": "ngoạn mục"
+      "C": "ngoạn mục",
+      "D": "tệ hại"
     },
     "unit": "Vocabulary",
     "orderIndex": 50,
@@ -7203,17 +7203,17 @@ const questions = [
   {
     "questionText": "The students _______ clean the classroom.",
     "options": {
-      "A": "don't occasionally",
-      "B": "occasionally",
-      "C": "occasionally am",
+      "A": "occasionally",
+      "B": "occasionally am",
+      "C": "don't occasionally",
       "D": "am occasionally"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Adverbs of frequency đứng TRƯỚC động từ thường.",
     "vietnameseTranslation": "Các học sinh _______ dọn phòng học.",
     "optionTranslations": {
-      "A": "sai",
-      "B": "đôi khi",
+      "A": "đôi khi",
+      "B": "sai",
       "C": "sai",
       "D": "sai"
     },
@@ -7227,19 +7227,19 @@ const questions = [
   {
     "questionText": "The students _______ excited about trips.",
     "options": {
-      "A": "occasionally are",
+      "A": "be occasionally",
       "B": "occasionally be",
-      "C": "be occasionally",
-      "D": "are occasionally"
+      "C": "are occasionally",
+      "D": "occasionally are"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Adverbs of frequency đứng SAU động từ 'to be'.",
     "vietnameseTranslation": "Các học sinh _______ hào hứng về chuyến đi.",
     "optionTranslations": {
-      "A": "sai vị trí",
+      "A": "sai động từ be",
       "B": "sai cấu trúc",
-      "C": "sai động từ be",
-      "D": "đôi khi"
+      "C": "đôi khi",
+      "D": "sai vị trí"
     },
     "unit": "Unit 1",
     "orderIndex": 2,
@@ -7251,19 +7251,19 @@ const questions = [
   {
     "questionText": "How _______ do you eat fast food?",
     "options": {
-      "A": "often",
-      "B": "long",
-      "C": "much",
-      "D": "many"
+      "A": "many",
+      "B": "much",
+      "C": "long",
+      "D": "often"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Dùng 'How often...?' để hỏi về tần suất.",
     "vietnameseTranslation": "Bạn có _______ ăn đồ ăn nhanh không?",
     "optionTranslations": {
-      "A": "thường xuyên",
-      "B": "bao lâu",
-      "C": "nhiều",
-      "D": "nhiều"
+      "A": "nhiều",
+      "B": "nhiều",
+      "C": "bao lâu",
+      "D": "thường xuyên"
     },
     "unit": "Unit 1",
     "orderIndex": 3,
@@ -7275,19 +7275,19 @@ const questions = [
   {
     "questionText": "A magnet _______ iron.",
     "options": {
-      "A": "is attracts",
-      "B": "attracts",
-      "C": "attracting",
-      "D": "attract"
+      "A": "attract",
+      "B": "attracting",
+      "C": "is attracts",
+      "D": "attracts"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Sự thật hiển nhiên dùng thì Hiện tại đơn.",
     "vietnameseTranslation": "Sự thật: Nam châm _______ sắt.",
     "optionTranslations": {
-      "A": "đang",
-      "B": "hút",
-      "C": "tiếp diễn",
-      "D": "nguyên thể"
+      "A": "nguyên thể",
+      "B": "tiếp diễn",
+      "C": "đang",
+      "D": "hút"
     },
     "unit": "Unit 1",
     "orderIndex": 4,
@@ -7300,18 +7300,18 @@ const questions = [
     "questionText": "The movie _______ at 10:30 PM.",
     "options": {
       "A": "end",
-      "B": "ended",
-      "C": "ends",
-      "D": "is end"
+      "B": "ends",
+      "C": "is end",
+      "D": "ended"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Lịch trình tàu xe dùng thì Hiện tại đơn.",
     "vietnameseTranslation": "Bộ phim _______ lúc 10 rưỡi tối.",
     "optionTranslations": {
       "A": "nguyên thể",
-      "B": "đã",
-      "C": "kết thúc",
-      "D": "đang"
+      "B": "kết thúc",
+      "C": "đang",
+      "D": "đã"
     },
     "unit": "Unit 1",
     "orderIndex": 5,
@@ -7324,18 +7324,18 @@ const questions = [
     "questionText": "The students _______  for a test at the moment.",
     "options": {
       "A": "studys",
-      "B": "study",
-      "C": "are studying",
-      "D": "studying"
+      "B": "are studying",
+      "C": "studying",
+      "D": "study"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Dấu hiệu 'at the moment' dùng thì Hiện tại tiếp diễn.",
     "vietnameseTranslation": "Các học sinh _______ học cho bài kiểm tra vào lúc này.",
     "optionTranslations": {
       "A": "hiện tại",
-      "B": "hiện tại",
-      "C": "đang study",
-      "D": "thiếu be"
+      "B": "đang study",
+      "C": "thiếu be",
+      "D": "hiện tại"
     },
     "unit": "Unit 1",
     "orderIndex": 6,
@@ -7347,19 +7347,19 @@ const questions = [
   {
     "questionText": "The students _______  this city.",
     "options": {
-      "A": "was loving",
+      "A": "are loving",
       "B": "love",
-      "C": "loved",
-      "D": "are loving"
+      "C": "was loving",
+      "D": "loved"
     },
     "correctAnswer": "B",
     "explanation": "Động từ trạng thái (stative verb) KHÔNG dùng ở thì tiếp diễn.",
     "vietnameseTranslation": "Các học sinh _______ yêu thành phố này.",
     "optionTranslations": {
-      "A": "đã đang",
+      "A": "đang (sai)",
       "B": "đúng",
-      "C": "đã",
-      "D": "đang (sai)"
+      "C": "đã đang",
+      "D": "đã"
     },
     "unit": "Unit 1",
     "orderIndex": 7,
@@ -7371,18 +7371,18 @@ const questions = [
   {
     "questionText": "Yesterday, The students _______  his keys.",
     "options": {
-      "A": "loses",
-      "B": "lose",
-      "C": "lost",
+      "A": "lost",
+      "B": "loses",
+      "C": "lose",
       "D": "were losing"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Dấu hiệu 'Yesterday' dùng thì Quá khứ đơn.",
     "vietnameseTranslation": "Hôm qua, Các học sinh _______ đánh mất chìa khóa.",
     "optionTranslations": {
-      "A": "hiện tại",
+      "A": "đã lose",
       "B": "hiện tại",
-      "C": "đã lose",
+      "C": "hiện tại",
       "D": "tiếp diễn"
     },
     "unit": "Unit 2",
@@ -7395,19 +7395,19 @@ const questions = [
   {
     "questionText": "The students _______ pass the exam.",
     "options": {
-      "A": "don't",
-      "B": "didn't",
-      "C": "doesn't",
-      "D": "wasn't"
+      "A": "wasn't",
+      "B": "doesn't",
+      "C": "don't",
+      "D": "didn't"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Câu phủ định quá khứ đơn với động từ thường dùng 'didn't'.",
     "vietnameseTranslation": "Các học sinh _______ qua kỳ thi.",
     "optionTranslations": {
-      "A": "không",
-      "B": "đã không",
+      "A": "không phải",
+      "B": "không",
       "C": "không",
-      "D": "không phải"
+      "D": "đã không"
     },
     "unit": "Unit 2",
     "orderIndex": 9,
@@ -7419,19 +7419,19 @@ const questions = [
   {
     "questionText": "_______ you sleep well yesterday?",
     "options": {
-      "A": "Are",
-      "B": "Do",
-      "C": "Did",
-      "D": "Were"
+      "A": "Were",
+      "B": "Are",
+      "C": "Do",
+      "D": "Did"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Câu hỏi Yes/No quá khứ đơn dùng 'Did'.",
     "vietnameseTranslation": "Bạn _______ ngủ ngon ngày hôm qua không?",
     "optionTranslations": {
-      "A": "Hiện tại to-be",
-      "B": "Hiện tại",
-      "C": "Quá khứ",
-      "D": "Quá khứ to-be"
+      "A": "Quá khứ to-be",
+      "B": "Hiện tại to-be",
+      "C": "Hiện tại",
+      "D": "Quá khứ"
     },
     "unit": "Unit 2",
     "orderIndex": 10,
@@ -7441,21 +7441,21 @@ const questions = [
     "setDifficulty": "medium"
   },
   {
-    "questionText": "The students _______ worry about the test last night.",
+    "questionText": "The students _______ about the test last night.",
     "options": {
-      "A": "worries",
-      "B": "worry",
-      "C": "worried",
-      "D": "worryed"
+      "A": "worry",
+      "B": "worries",
+      "C": "worryed",
+      "D": "worried"
     },
-    "correctAnswer": "C",
-    "explanation": "Động từ tận cùng bằng phụ âm + y, đổi y thành ied. VD: study→studied, NOT studyed.",
+    "correctAnswer": "D",
+    "explanation": "Quy tắc: phụ âm + y → đổi y thành i rồi thêm -ed. Ví dụ: worry → worried. Không viết 'worryed'.",
     "vietnameseTranslation": "Các học sinh _______ lo lắng về bài thi tối qua.",
     "optionTranslations": {
-      "A": "hiện tại s/es",
-      "B": "nguyên thể",
-      "C": "đã",
-      "D": "sai chính tả (-yed thay vì -ied)"
+      "A": "nguyên thể (base form)",
+      "B": "hiện tại s/es",
+      "C": "sai chính tả -yed",
+      "D": "đã"
     },
     "unit": "Unit 2",
     "orderIndex": 11,
@@ -7467,17 +7467,17 @@ const questions = [
   {
     "questionText": "_______ is your home address?",
     "options": {
-      "A": "Where",
-      "B": "What",
+      "A": "What",
+      "B": "Where",
       "C": "Who",
       "D": "When"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Hỏi về thông tin dùng 'What'.",
     "vietnameseTranslation": "địa chỉ nhà của bạn là _______?",
     "optionTranslations": {
-      "A": "Ở đâu",
-      "B": "Cái gì",
+      "A": "Cái gì",
+      "B": "Ở đâu",
       "C": "Ai",
       "D": "Khi nào"
     },
@@ -7491,19 +7491,19 @@ const questions = [
   {
     "questionText": "_______ did they hide? - Under the bed",
     "options": {
-      "A": "Who",
-      "B": "Why",
-      "C": "Where",
-      "D": "When"
+      "A": "Where",
+      "B": "When",
+      "C": "Why",
+      "D": "Who"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Câu trả lời chỉ nơi chốn nên dùng từ để hỏi 'Where'.",
     "vietnameseTranslation": "Họ đã _______ trốn? - Dưới gầm giường",
     "optionTranslations": {
-      "A": "Ai",
-      "B": "Tại sao",
-      "C": "Ở đâu",
-      "D": "Khi nào"
+      "A": "Ở đâu",
+      "B": "Khi nào",
+      "C": "Tại sao",
+      "D": "Ai"
     },
     "unit": "Unit 2",
     "orderIndex": 13,
@@ -7515,19 +7515,19 @@ const questions = [
   {
     "questionText": "_______ you close the door?",
     "options": {
-      "A": "Have",
-      "B": "Can",
-      "C": "Are",
-      "D": "Do"
+      "A": "Are",
+      "B": "Have",
+      "C": "Do",
+      "D": "Can"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Yêu cầu giúp đỡ dùng 'Can' hoặc 'Could'.",
     "vietnameseTranslation": "Bạn _______ đóng cửa được không?",
     "optionTranslations": {
-      "A": "Có",
-      "B": "Có thể",
-      "C": "Là",
-      "D": "Làm"
+      "A": "Là",
+      "B": "Có",
+      "C": "Làm",
+      "D": "Có thể"
     },
     "unit": "Unit 2",
     "orderIndex": 14,
@@ -7539,18 +7539,18 @@ const questions = [
   {
     "questionText": "The students _______ drive to work at 8 PM.",
     "options": {
-      "A": "did",
+      "A": "was",
       "B": "are",
-      "C": "was",
+      "C": "did",
       "D": "were driveing"
     },
     "correctAnswer": "D",
     "explanation": "Dùng thì Quá khứ tiếp diễn cho hành động đang xảy ra tại một thời điểm trong quá khứ.",
     "vietnameseTranslation": "Các học sinh _______ lái xe đi làm lúc 8 giờ tối.",
     "optionTranslations": {
-      "A": "quá khứ",
+      "A": "sai to-be",
       "B": "hiện tại",
-      "C": "sai to-be",
+      "C": "quá khứ",
       "D": "đang"
     },
     "unit": "Unit 3",
@@ -7563,18 +7563,18 @@ const questions = [
   {
     "questionText": "He arrived while my parents _______ dinner.",
     "options": {
-      "A": "cooked",
+      "A": "cooke",
       "B": "were cooking",
-      "C": "cooke",
+      "C": "cooked",
       "D": "are cooking"
     },
     "correctAnswer": "B",
     "explanation": "Hành động đang diễn ra trong quá khứ bị gián đoạn dùng Quá khứ tiếp diễn.",
     "vietnameseTranslation": "Anh ấy đến trong khi bố mẹ tôi _______ bữa tối.",
     "optionTranslations": {
-      "A": "quá khứ",
+      "A": "nguyên thể",
       "B": "đang",
-      "C": "nguyên thể",
+      "C": "quá khứ",
       "D": "hiện tại"
     },
     "unit": "Unit 3",
@@ -7587,19 +7587,19 @@ const questions = [
   {
     "questionText": "My parents were cooking dinner _______ he arrived.",
     "options": {
-      "A": "when",
-      "B": "while",
-      "C": "so",
-      "D": "during"
+      "A": "during",
+      "B": "when",
+      "C": "while",
+      "D": "so"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Dùng 'when' trước hành động gián đoạn ở thì Quá khứ đơn.",
     "vietnameseTranslation": "khi anh ấy đến",
     "optionTranslations": {
-      "A": "khi",
-      "B": "trong khi",
-      "C": "vì vậy",
-      "D": "trong suốt"
+      "A": "trong suốt",
+      "B": "khi",
+      "C": "trong khi",
+      "D": "vì vậy"
     },
     "unit": "Unit 3",
     "orderIndex": 17,
@@ -7611,8 +7611,8 @@ const questions = [
   {
     "questionText": "I want to find somewhere quiet. I have a headache.",
     "options": {
-      "A": "nothing",
-      "B": "anything",
+      "A": "anything",
+      "B": "nothing",
       "C": "everything",
       "D": "something/someone/somewhere"
     },
@@ -7620,8 +7620,8 @@ const questions = [
     "explanation": "Trong câu khẳng định, dùng đại từ bất định some-.",
     "vietnameseTranslation": "Tôi muốn tìm nơi nào đó yên tĩnh. Tôi bị đau đầu.",
     "optionTranslations": {
-      "A": "không",
-      "B": "bất cứ",
+      "A": "bất cứ",
+      "B": "không",
       "C": "mọi thứ",
       "D": "đại từ bất định khẳng định"
     },
@@ -7635,19 +7635,19 @@ const questions = [
   {
     "questionText": "I didn't find anywhere to park.",
     "options": {
-      "A": "anything/anyone/anywhere",
-      "B": "everything",
-      "C": "nothing",
-      "D": "something"
+      "A": "nothing",
+      "B": "something",
+      "C": "anything/anyone/anywhere",
+      "D": "everything"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Trong câu phủ định, dùng đại từ bất định any-.",
     "vietnameseTranslation": "Tôi đã không tìm bất cứ chỗ nào để đỗ xe.",
     "optionTranslations": {
-      "A": "đại từ phủ định",
-      "B": "mọi thứ",
-      "C": "phủ định kép",
-      "D": "khẳng định"
+      "A": "phủ định kép",
+      "B": "khẳng định",
+      "C": "đại từ phủ định",
+      "D": "mọi thứ"
     },
     "unit": "Unit 3",
     "orderIndex": 19,
@@ -7683,19 +7683,19 @@ const questions = [
   {
     "questionText": "Everyone is waiting outside.",
     "options": {
-      "A": "All",
+      "A": "Some",
       "B": "Anyone",
-      "C": "Some",
-      "D": "Everyone/Everything"
+      "C": "Everyone/Everything",
+      "D": "All"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Đại từ 'Everyone/Everything' dùng với động từ số ít.",
     "vietnameseTranslation": "Mọi người đang đợi bên ngoài.",
     "optionTranslations": {
-      "A": "Tất cả",
+      "A": "Một vài",
       "B": "Bất cứ",
-      "C": "Một vài",
-      "D": "Mọi người/Mọi thứ"
+      "C": "Mọi người/Mọi thứ",
+      "D": "Tất cả"
     },
     "unit": "Unit 3",
     "orderIndex": 21,
@@ -7707,19 +7707,19 @@ const questions = [
   {
     "questionText": "The students _______ clean the garage.",
     "options": {
-      "A": "going to",
-      "B": "are going",
-      "C": "are going to",
-      "D": "will to"
+      "A": "are going to",
+      "B": "will to",
+      "C": "are going",
+      "D": "going to"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Nói về một kế hoạch dùng cấu trúc 'be going to'.",
     "vietnameseTranslation": "Các học sinh _______ dọn dẹp gara.",
     "optionTranslations": {
-      "A": "thiếu be",
-      "B": "thiếu to",
-      "C": "dự định",
-      "D": "sai"
+      "A": "dự định",
+      "B": "sai",
+      "C": "thiếu to",
+      "D": "thiếu be"
     },
     "unit": "Unit 4",
     "orderIndex": 22,
@@ -7731,19 +7731,19 @@ const questions = [
   {
     "questionText": "The students _______ play football this weekend.",
     "options": {
-      "A": "don't going to",
-      "B": "not going to",
+      "A": "won't going to",
+      "B": "don't going to",
       "C": "aren't going to",
-      "D": "won't going to"
+      "D": "not going to"
     },
     "correctAnswer": "C",
     "explanation": "Phủ định của 'be going to'.",
     "vietnameseTranslation": "Các học sinh _______ chơi bóng đá cuối tuần này.",
     "optionTranslations": {
       "A": "sai",
-      "B": "thiếu be",
+      "B": "sai",
       "C": "không dự định",
-      "D": "sai"
+      "D": "thiếu be"
     },
     "unit": "Unit 4",
     "orderIndex": 23,
@@ -7756,18 +7756,18 @@ const questions = [
     "questionText": "I promise I _______ stop trying.",
     "options": {
       "A": "am not going to",
-      "B": "not",
-      "C": "don't",
-      "D": "won't"
+      "B": "don't",
+      "C": "won't",
+      "D": "not"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Lời hứa dùng 'won't'.",
     "vietnameseTranslation": "Tôi hứa tôi _______ ngừng cố gắng.",
     "optionTranslations": {
       "A": "không dự định",
       "B": "không",
-      "C": "không",
-      "D": "sẽ không"
+      "C": "sẽ không",
+      "D": "không"
     },
     "unit": "Unit 4",
     "orderIndex": 24,
@@ -7780,18 +7780,18 @@ const questions = [
     "questionText": "Don't worry, I _______ call a taxi for you.",
     "options": {
       "A": "will",
-      "B": "do",
-      "C": "am",
-      "D": "am going to"
+      "B": "am",
+      "C": "am going to",
+      "D": "do"
     },
     "correctAnswer": "A",
     "explanation": "Đề nghị giúp đỡ (Offer) dùng 'will'.",
     "vietnameseTranslation": "Đừng lo, tôi _______ gọi taxi cho bạn.",
     "optionTranslations": {
       "A": "sẽ",
-      "B": "làm",
-      "C": "đang",
-      "D": "dự định"
+      "B": "đang",
+      "C": "dự định",
+      "D": "làm"
     },
     "unit": "Unit 4",
     "orderIndex": 25,
@@ -7804,18 +7804,18 @@ const questions = [
     "questionText": "Okay, I _______ turn down the volume.",
     "options": {
       "A": "do",
-      "B": "am going to",
-      "C": "will",
-      "D": "am doing"
+      "B": "will",
+      "C": "am doing",
+      "D": "am going to"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Quyết định đột ngột lúc nói dùng 'will'.",
     "vietnameseTranslation": "Được rồi, tôi _______ vặn nhỏ âm lượng.",
     "optionTranslations": {
       "A": "làm",
-      "B": "dự định",
-      "C": "sẽ",
-      "D": "đang làm"
+      "B": "sẽ",
+      "C": "đang làm",
+      "D": "dự định"
     },
     "unit": "Unit 4",
     "orderIndex": 26,
@@ -7828,18 +7828,18 @@ const questions = [
     "questionText": "If the train _______, we'll be late.",
     "options": {
       "A": "is departing",
-      "B": "will depart on time",
-      "C": "departed on time",
-      "D": "departs on time"
+      "B": "departed on time",
+      "C": "departs on time",
+      "D": "will depart on time"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "KHÔNG dùng 'will' trong mệnh đề 'If'. Mệnh đề điều kiện loại 1 dùng Hiện tại đơn. Đáp án đúng: 'departs on time'.",
     "vietnameseTranslation": "Nếu khởi hành đúng giờ, ...",
     "optionTranslations": {
       "A": "tiếp diễn (sai)",
-      "B": "tương lai (sai)",
-      "C": "quá khứ (sai)",
-      "D": "hiện tại"
+      "B": "quá khứ (sai)",
+      "C": "hiện tại",
+      "D": "tương lai (sai)"
     },
     "unit": "Unit 4",
     "orderIndex": 27,
@@ -7851,19 +7851,19 @@ const questions = [
   {
     "questionText": "Mary is _______ take a photo.",
     "options": {
-      "A": "going to",
-      "B": "go to",
-      "C": "will",
-      "D": "going"
+      "A": "will",
+      "B": "going",
+      "C": "going to",
+      "D": "go to"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Cấu trúc am/is/are + going to + V.",
     "vietnameseTranslation": "Kế hoạch: chụp ảnh",
     "optionTranslations": {
-      "A": "dự định",
-      "B": "đi",
-      "C": "sẽ",
-      "D": "đang"
+      "A": "sẽ",
+      "B": "đang",
+      "C": "dự định",
+      "D": "đi"
     },
     "unit": "Unit 4",
     "orderIndex": 28,
@@ -7876,18 +7876,18 @@ const questions = [
     "questionText": "If you eat too much, _______ .",
     "options": {
       "A": "is happening",
-      "B": "you get fat",
-      "C": "will happen",
-      "D": "might happen"
+      "B": "might happen",
+      "C": "you get fat",
+      "D": "will happen"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Câu điều kiện loại 0 diễn tả sự thật hiển nhiên. Cả 2 vế đều dùng Hiện tại đơn. Đáp án đúng là 'you get fat'.",
     "vietnameseTranslation": "Nếu bạn eat too much, _______ .",
     "optionTranslations": {
       "A": "đang diễn ra (sai)",
-      "B": "trở nên",
-      "C": "tương lai (sai)",
-      "D": "có thể (sai)"
+      "B": "có thể (sai)",
+      "C": "trở nên",
+      "D": "tương lai (sai)"
     },
     "unit": "Unit 5",
     "orderIndex": 29,
@@ -7899,18 +7899,18 @@ const questions = [
   {
     "questionText": "If the tank is empty, _______ .",
     "options": {
-      "A": "the engine fails",
+      "A": "will happen",
       "B": "might happen",
-      "C": "will happen",
+      "C": "the engine fails",
       "D": "is happening"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Câu điều kiện loại 0 chỉ quy luật máy móc. Cả 2 vế đều dùng Hiện tại đơn. Đáp án đúng là 'the engine fails'.",
     "vietnameseTranslation": "Nếu the tank is empty, _______ .",
     "optionTranslations": {
-      "A": "ngừng chạy",
+      "A": "tương lai (sai)",
       "B": "có thể (sai)",
-      "C": "tương lai (sai)",
+      "C": "ngừng chạy",
       "D": "đang diễn ra (sai)"
     },
     "unit": "Unit 5",
@@ -7923,18 +7923,18 @@ const questions = [
   {
     "questionText": "If it is closed, _______.",
     "options": {
-      "A": "you didn't enter",
-      "B": "you don't enter",
-      "C": "you aren't enter",
+      "A": "you don't enter",
+      "B": "you aren't enter",
+      "C": "you didn't enter",
       "D": "you won't enter"
     },
     "correctAnswer": "D",
     "explanation": "Câu điều kiện loại 1: If + HTĐ, will/won't + V.",
     "vietnameseTranslation": "Nếu trời is closed, _______.",
     "optionTranslations": {
-      "A": "đã không",
-      "B": "không",
-      "C": "không phải",
+      "A": "không",
+      "B": "không phải",
+      "C": "đã không",
       "D": "bạn sẽ không vào được"
     },
     "unit": "Unit 5",
@@ -7947,19 +7947,19 @@ const questions = [
   {
     "questionText": "If John _______ the meeting, his boss will be angry.",
     "options": {
-      "A": "will miss",
-      "B": "is missing",
-      "C": "missed",
-      "D": "misses"
+      "A": "is missing",
+      "B": "missed",
+      "C": "misses",
+      "D": "will miss"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Mệnh đề If loại 1 dùng Hiện tại đơn.",
     "vietnameseTranslation": "Nếu vắng mặt",
     "optionTranslations": {
-      "A": "sẽ",
-      "B": "tiếp diễn",
-      "C": "quá khứ",
-      "D": "hiện tại"
+      "A": "tiếp diễn",
+      "B": "quá khứ",
+      "C": "hiện tại",
+      "D": "sẽ"
     },
     "unit": "Unit 5",
     "orderIndex": 32,
@@ -7971,18 +7971,18 @@ const questions = [
   {
     "questionText": "My phone is _______ than yours. (cheap)",
     "options": {
-      "A": "most cheap",
-      "B": "more cheap",
-      "C": "cheaper",
+      "A": "cheaper",
+      "B": "most cheap",
+      "C": "more cheap",
       "D": "cheap"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "So sánh hơn của tính từ ngắn 'cheap': thêm -er. KHÔNG dùng 'more'.",
     "vietnameseTranslation": "Điện thoại của tôi _______ của bạn. (cheap)",
     "optionTranslations": {
-      "A": "so sánh nhất (sai)",
-      "B": "so sánh hơn (sai cấu trúc)",
-      "C": "rẻ hơn",
+      "A": "rẻ hơn",
+      "B": "so sánh nhất (sai)",
+      "C": "so sánh hơn (sai cấu trúc)",
       "D": "nguyên thể"
     },
     "unit": "Unit 5",
@@ -7995,19 +7995,19 @@ const questions = [
   {
     "questionText": "That was the _______ experience of my life. (popular)",
     "options": {
-      "A": "most popular",
-      "B": "popularer",
-      "C": "more popular",
-      "D": "popular"
+      "A": "more popular",
+      "B": "popular",
+      "C": "most popular",
+      "D": "popularer"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "So sánh nhất của tính từ dài 'popular': dùng 'most popular'. KHÔNG thêm -er.",
     "vietnameseTranslation": "Đó là trải nghiệm _______ của cuộc đời tôi. (popular)",
     "optionTranslations": {
-      "A": "phổ biến nhất",
-      "B": "so sánh nhất (sai cấu trúc)",
-      "C": "so sánh hơn (sai)",
-      "D": "nguyên thể"
+      "A": "so sánh hơn (sai)",
+      "B": "nguyên thể",
+      "C": "phổ biến nhất",
+      "D": "so sánh nhất (sai cấu trúc)"
     },
     "unit": "Unit 5",
     "orderIndex": 34,
@@ -8019,18 +8019,18 @@ const questions = [
   {
     "questionText": "It is _______ beautiful than before.",
     "options": {
-      "A": "least",
-      "B": "little",
-      "C": "few",
+      "A": "few",
+      "B": "least",
+      "C": "little",
       "D": "less"
     },
     "correctAnswer": "D",
     "explanation": "So sánh ít hơn dùng less + tính từ dài + than.",
     "vietnameseTranslation": "Nó thì ít _______ hơn trước.",
     "optionTranslations": {
-      "A": "ít nhất",
-      "B": "ít",
-      "C": "vài",
+      "A": "vài",
+      "B": "ít nhất",
+      "C": "ít",
       "D": "ít hơn"
     },
     "unit": "Unit 5",
@@ -8044,18 +8044,18 @@ const questions = [
     "questionText": "_______ Mary ever lost her phone?",
     "options": {
       "A": "Has",
-      "B": "Does",
-      "C": "Is",
-      "D": "Did"
+      "B": "Is",
+      "C": "Did",
+      "D": "Does"
     },
     "correctAnswer": "A",
     "explanation": "Hỏi về trải nghiệm dùng Hiện tại hoàn thành.",
     "vietnameseTranslation": "_______ bạn đã từng...",
     "optionTranslations": {
       "A": "HT hoàn thành",
-      "B": "HT",
-      "C": "to-be",
-      "D": "QK"
+      "B": "to-be",
+      "C": "QK",
+      "D": "HT"
     },
     "unit": "Unit 6",
     "orderIndex": 36,
@@ -8067,18 +8067,18 @@ const questions = [
   {
     "questionText": "I've _______ broken a bone.",
     "options": {
-      "A": "sometimes",
+      "A": "ever",
       "B": "always",
-      "C": "ever",
+      "C": "sometimes",
       "D": "never"
     },
     "correctAnswer": "D",
     "explanation": "Trong câu khẳng định mang nghĩa chưa từng, dùng 'never'.",
     "vietnameseTranslation": "Tôi chưa bao giờ bị gãy xương.",
     "optionTranslations": {
-      "A": "thỉnh thoảng",
+      "A": "từng",
       "B": "luôn",
-      "C": "từng",
+      "C": "thỉnh thoảng",
       "D": "chưa bao giờ"
     },
     "unit": "Unit 6",
@@ -8091,19 +8091,19 @@ const questions = [
   {
     "questionText": "This is the best car I have _______ driven.",
     "options": {
-      "A": "just",
-      "B": "ever",
-      "C": "never",
-      "D": "always"
+      "A": "never",
+      "B": "just",
+      "C": "always",
+      "D": "ever"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Dùng ever trong câu so sánh nhất.",
     "vietnameseTranslation": "Đây là chiếc xe tốt nhất tôi từng lái.",
     "optionTranslations": {
-      "A": "vừa mới",
-      "B": "từng",
-      "C": "chưa từng",
-      "D": "luôn"
+      "A": "chưa từng",
+      "B": "vừa mới",
+      "C": "luôn",
+      "D": "từng"
     },
     "unit": "Unit 6",
     "orderIndex": 38,
@@ -8115,18 +8115,18 @@ const questions = [
   {
     "questionText": "She avoids _______ in rush hour.",
     "options": {
-      "A": "driving",
-      "B": "to drive",
-      "C": "is driving",
+      "A": "to drive",
+      "B": "is driving",
+      "C": "driving",
       "D": "drive"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Dùng V-ing sau các động từ như practise, enjoy, mind...",
     "vietnameseTranslation": "V-ing sau động từ.",
     "optionTranslations": {
-      "A": "V-ing",
-      "B": "to V",
-      "C": "sai",
+      "A": "to V",
+      "B": "sai",
+      "C": "V-ing",
       "D": "V"
     },
     "unit": "Unit 6",
@@ -8139,19 +8139,19 @@ const questions = [
   {
     "questionText": "She offered _______ the dishes.",
     "options": {
-      "A": "is washing",
-      "B": "to wash",
-      "C": "washing",
-      "D": "wash"
+      "A": "washing",
+      "B": "wash",
+      "C": "to wash",
+      "D": "is washing"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Dùng to-infinitive sau need, want, decide...",
     "vietnameseTranslation": "to V sau động từ.",
     "optionTranslations": {
-      "A": "sai",
-      "B": "to V",
-      "C": "V-ing",
-      "D": "V"
+      "A": "V-ing",
+      "B": "V",
+      "C": "to V",
+      "D": "sai"
     },
     "unit": "Unit 6",
     "orderIndex": 40,
@@ -8164,18 +8164,18 @@ const questions = [
     "questionText": "They warned us not _______ there.",
     "options": {
       "A": "go",
-      "B": "is going",
+      "B": "going",
       "C": "to go",
-      "D": "going"
+      "D": "is going"
     },
     "correctAnswer": "C",
     "explanation": "Cấu trúc: verb + object + to V.",
     "vietnameseTranslation": "persuade/ask/want + sb + to V",
     "optionTranslations": {
       "A": "V",
-      "B": "sai",
+      "B": "V-ing",
       "C": "to V",
-      "D": "V-ing"
+      "D": "sai"
     },
     "unit": "Unit 6",
     "orderIndex": 41,
@@ -8187,19 +8187,19 @@ const questions = [
   {
     "questionText": "I started learning Spanish last year.",
     "options": {
-      "A": "to learn",
-      "B": "learning",
+      "A": "learning",
+      "B": "learn",
       "C": "Both B & C",
-      "D": "learn"
+      "D": "to learn"
     },
     "correctAnswer": "C",
     "explanation": "Sau start có thể dùng cả to V và V-ing.",
     "vietnameseTranslation": "Tôi bắt đầu học tiếng Tây Ban Nha năm ngoái.",
     "optionTranslations": {
-      "A": "to V",
-      "B": "V-ing",
+      "A": "V-ing",
+      "B": "V",
       "C": "Cả 2 đều đúng",
-      "D": "V"
+      "D": "to V"
     },
     "unit": "Unit 6",
     "orderIndex": 42,
@@ -8211,18 +8211,18 @@ const questions = [
   {
     "questionText": "The student _______ got an A is smart.",
     "options": {
-      "A": "who",
-      "B": "which",
-      "C": "where",
+      "A": "which",
+      "B": "where",
+      "C": "who",
       "D": "when"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Đại từ 'who' thay thế danh từ chỉ người.",
     "vietnameseTranslation": "học sinh đạt điểm A",
     "optionTranslations": {
-      "A": "người",
-      "B": "vật",
-      "C": "nơi",
+      "A": "vật",
+      "B": "nơi",
+      "C": "người",
       "D": "thời gian"
     },
     "unit": "Unit 6",
@@ -8235,18 +8235,18 @@ const questions = [
   {
     "questionText": "The song _______ is playing is my favorite.",
     "options": {
-      "A": "where",
+      "A": "who",
       "B": "when",
-      "C": "who",
+      "C": "where",
       "D": "which"
     },
     "correctAnswer": "D",
     "explanation": "Đại từ 'which' thay thế danh từ chỉ vật.",
     "vietnameseTranslation": "bài hát",
     "optionTranslations": {
-      "A": "nơi",
+      "A": "người",
       "B": "thời gian",
-      "C": "người",
+      "C": "nơi",
       "D": "vật"
     },
     "unit": "Unit 6",
@@ -8257,21 +8257,21 @@ const questions = [
     "setDifficulty": "medium"
   },
   {
-    "questionText": "That is the street _______ they live.",
+    "questionText": "This is the street _______ they live.",
     "options": {
-      "A": "who",
-      "B": "which",
-      "C": "when",
-      "D": "where"
+      "A": "where",
+      "B": "when",
+      "C": "which",
+      "D": "who"
     },
-    "correctAnswer": "D",
-    "explanation": "Đại từ 'where' thay thế danh từ chỉ nơi chốn.",
-    "vietnameseTranslation": "Đó là con đường.",
+    "correctAnswer": "A",
+    "explanation": "Đại từ quan hệ 'where' dùng để thay thế cho danh từ chỉ nơi chốn.",
+    "vietnameseTranslation": "Đây là con đường.",
     "optionTranslations": {
-      "A": "người",
-      "B": "vật",
-      "C": "thời gian",
-      "D": "nơi chốn"
+      "A": "nơi chốn",
+      "B": "thời gian",
+      "C": "vật",
+      "D": "người"
     },
     "unit": "Unit 6",
     "orderIndex": 45,
@@ -8284,17 +8284,17 @@ const questions = [
     "questionText": "He is very _______ because he makes new things.",
     "options": {
       "A": "confident",
-      "B": "friendly",
-      "C": "creative",
+      "B": "creative",
+      "C": "friendly",
       "D": "serious"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Từ vựng Personality: 'creative' (sáng tạo) phù hợp với ngữ cảnh 'makes new things'.",
     "vietnameseTranslation": "Anh ấy rất _______ vì anh ấy làm ra những thứ mới.",
     "optionTranslations": {
       "A": "tự tin",
-      "B": "thân thiện",
-      "C": "sáng tạo",
+      "B": "sáng tạo",
+      "C": "thân thiện",
       "D": "nghiêm túc"
     },
     "unit": "Vocabulary",
@@ -8308,18 +8308,18 @@ const questions = [
     "questionText": "We learn about maps and countries in _______ class.",
     "options": {
       "A": "geography",
-      "B": "art",
+      "B": "biology",
       "C": "drama",
-      "D": "biology"
+      "D": "art"
     },
     "correctAnswer": "A",
     "explanation": "Từ vựng School Subjects: 'geography' (địa lý) được học qua chủ đề 'maps and countries'.",
     "vietnameseTranslation": "Chúng tôi học về bản đồ và các quốc gia trong lớp _______.",
     "optionTranslations": {
       "A": "địa lý",
-      "B": "mỹ thuật",
+      "B": "sinh học",
       "C": "kịch",
-      "D": "sinh học"
+      "D": "mỹ thuật"
     },
     "unit": "Vocabulary",
     "orderIndex": 47,
@@ -8331,19 +8331,19 @@ const questions = [
   {
     "questionText": "He _______, so he is a chef.",
     "options": {
-      "A": "vegetarian",
-      "B": "allergy",
-      "C": "vegan",
-      "D": "chef"
+      "A": "allergy",
+      "B": "vegetarian",
+      "C": "chef",
+      "D": "vegan"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Từ vựng Food: 'chef' có nghĩa là đầu bếp.",
     "vietnameseTranslation": "Anh ấy nấu bữa ăn, nên anh ấy là đầu bếp.",
     "optionTranslations": {
-      "A": "ăn chay",
-      "B": "dị ứng",
-      "C": "thuần chay",
-      "D": "đầu bếp"
+      "A": "dị ứng",
+      "B": "ăn chay",
+      "C": "đầu bếp",
+      "D": "thuần chay"
     },
     "unit": "Vocabulary",
     "orderIndex": 48,
@@ -8355,19 +8355,19 @@ const questions = [
   {
     "questionText": "I like the _______ of for any information.",
     "options": {
-      "A": "encourage",
-      "B": "praise",
-      "C": "reward",
-      "D": "challenge"
+      "A": "reward",
+      "B": "encourage",
+      "C": "challenge",
+      "D": "praise"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Từ vựng Motivation: 'reward' có nghĩa là phần thưởng.",
     "vietnameseTranslation": "Tôi thích _______ của việc cho bất kỳ thông tin nào.",
     "optionTranslations": {
-      "A": "khuyến khích",
-      "B": "lời khen",
-      "C": "phần thưởng",
-      "D": "thử thách"
+      "A": "phần thưởng",
+      "B": "khuyến khích",
+      "C": "thử thách",
+      "D": "lời khen"
     },
     "unit": "Vocabulary",
     "orderIndex": 49,
@@ -8379,19 +8379,19 @@ const questions = [
   {
     "questionText": "The weather outside is _______.",
     "options": {
-      "A": "brilliant",
-      "B": "awful",
+      "A": "spectacular",
+      "B": "brilliant",
       "C": "freezing",
-      "D": "spectacular"
+      "D": "awful"
     },
     "correctAnswer": "C",
     "explanation": "Từ vựng Extreme Adjectives: 'freezing' (lạnh cóng) là tính từ cực cấp. KHÔNG dùng 'very' với các từ này.",
     "vietnameseTranslation": "Thời tiết bên ngoài thì _______.",
     "optionTranslations": {
-      "A": "tuyệt vời",
-      "B": "tệ hại",
+      "A": "ngoạn mục",
+      "B": "tuyệt vời",
       "C": "lạnh cóng",
-      "D": "ngoạn mục"
+      "D": "tệ hại"
     },
     "unit": "Vocabulary",
     "orderIndex": 50,
@@ -8403,18 +8403,18 @@ const questions = [
   {
     "questionText": "Mary _______ reads news.",
     "options": {
-      "A": "am hardly ever",
-      "B": "hardly ever am",
-      "C": "hardly ever",
-      "D": "don't hardly ever"
+      "A": "don't hardly ever",
+      "B": "hardly ever",
+      "C": "am hardly ever",
+      "D": "hardly ever am"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Adverbs of frequency đứng TRƯỚC động từ thường.",
     "vietnameseTranslation": "Mary _______ đọc tin tức.",
     "optionTranslations": {
       "A": "sai",
-      "B": "sai",
-      "C": "hầu như không bao giờ",
+      "B": "hầu như không bao giờ",
+      "C": "sai",
       "D": "sai"
     },
     "unit": "Unit 1",
@@ -8452,18 +8452,18 @@ const questions = [
     "questionText": "How _______ do you play video games?",
     "options": {
       "A": "much",
-      "B": "often",
-      "C": "long",
-      "D": "many"
+      "B": "many",
+      "C": "often",
+      "D": "long"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Dùng 'How often...?' để hỏi về tần suất.",
     "vietnameseTranslation": "Bạn có _______ chơi trò chơi điện tử không?",
     "optionTranslations": {
       "A": "nhiều",
-      "B": "thường xuyên",
-      "C": "bao lâu",
-      "D": "nhiều"
+      "B": "nhiều",
+      "C": "thường xuyên",
+      "D": "bao lâu"
     },
     "unit": "Unit 1",
     "orderIndex": 3,
@@ -8475,19 +8475,19 @@ const questions = [
   {
     "questionText": "Birds _______ feathers.",
     "options": {
-      "A": "having",
-      "B": "is have",
+      "A": "is have",
+      "B": "has",
       "C": "have",
-      "D": "has"
+      "D": "having"
     },
     "correctAnswer": "C",
     "explanation": "Sự thật hiển nhiên dùng thì Hiện tại đơn.",
     "vietnameseTranslation": "Sự thật: Chim chóc _______ lông vũ.",
     "optionTranslations": {
-      "A": "tiếp diễn",
-      "B": "đang",
+      "A": "đang",
+      "B": "nguyên thể",
       "C": "có",
-      "D": "nguyên thể"
+      "D": "tiếp diễn"
     },
     "unit": "Unit 1",
     "orderIndex": 4,
@@ -8500,18 +8500,18 @@ const questions = [
     "questionText": "The class _______ at 7 AM.",
     "options": {
       "A": "begin",
-      "B": "is begin",
-      "C": "begins",
-      "D": "begined"
+      "B": "begined",
+      "C": "is begin",
+      "D": "begins"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Lịch trình tàu xe dùng thì Hiện tại đơn.",
     "vietnameseTranslation": "Lớp học _______ lúc 7 giờ sáng.",
     "optionTranslations": {
       "A": "nguyên thể",
-      "B": "đang",
-      "C": "bắt đầu",
-      "D": "đã"
+      "B": "đã",
+      "C": "đang",
+      "D": "bắt đầu"
     },
     "unit": "Unit 1",
     "orderIndex": 5,
@@ -8523,18 +8523,18 @@ const questions = [
   {
     "questionText": "Mary _______  a game at the moment.",
     "options": {
-      "A": "playing",
-      "B": "is playing",
-      "C": "plays",
+      "A": "is playing",
+      "B": "plays",
+      "C": "playing",
       "D": "play"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Dấu hiệu 'at the moment' dùng thì Hiện tại tiếp diễn.",
     "vietnameseTranslation": "Mary _______ chơi game vào lúc này.",
     "optionTranslations": {
-      "A": "thiếu be",
-      "B": "đang play",
-      "C": "hiện tại",
+      "A": "đang play",
+      "B": "hiện tại",
+      "C": "thiếu be",
       "D": "hiện tại"
     },
     "unit": "Unit 1",
@@ -8547,18 +8547,18 @@ const questions = [
   {
     "questionText": "Mary _______  her name.",
     "options": {
-      "A": "is remembering",
-      "B": "was remembering",
-      "C": "remembered",
+      "A": "was remembering",
+      "B": "remembered",
+      "C": "is remembering",
       "D": "remembers"
     },
     "correctAnswer": "D",
     "explanation": "Động từ trạng thái (stative verb) KHÔNG dùng ở thì tiếp diễn.",
     "vietnameseTranslation": "Mary _______ nhớ tên cô ấy.",
     "optionTranslations": {
-      "A": "đang (sai)",
-      "B": "đã đang",
-      "C": "đã",
+      "A": "đã đang",
+      "B": "đã",
+      "C": "đang (sai)",
       "D": "đúng"
     },
     "unit": "Unit 1",
@@ -8571,19 +8571,19 @@ const questions = [
   {
     "questionText": "Yesterday, Mary _______  some milk.",
     "options": {
-      "A": "drink",
-      "B": "drinks",
-      "C": "was drinking",
-      "D": "drank"
+      "A": "was drinking",
+      "B": "drink",
+      "C": "drank",
+      "D": "drinks"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Dấu hiệu 'Yesterday' dùng thì Quá khứ đơn.",
     "vietnameseTranslation": "Hôm qua, Mary _______ uống chút sữa.",
     "optionTranslations": {
-      "A": "hiện tại",
+      "A": "tiếp diễn",
       "B": "hiện tại",
-      "C": "tiếp diễn",
-      "D": "đã drink"
+      "C": "đã drink",
+      "D": "hiện tại"
     },
     "unit": "Unit 2",
     "orderIndex": 8,
@@ -8595,18 +8595,18 @@ const questions = [
   {
     "questionText": "Mary _______ tell the truth.",
     "options": {
-      "A": "wasn't",
-      "B": "didn't",
-      "C": "doesn't",
+      "A": "didn't",
+      "B": "doesn't",
+      "C": "wasn't",
       "D": "don't"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Câu phủ định quá khứ đơn với động từ thường dùng 'didn't'.",
     "vietnameseTranslation": "Mary _______ nói sự thật.",
     "optionTranslations": {
-      "A": "không phải",
-      "B": "đã không",
-      "C": "không",
+      "A": "đã không",
+      "B": "không",
+      "C": "không phải",
       "D": "không"
     },
     "unit": "Unit 2",
@@ -8641,21 +8641,21 @@ const questions = [
     "setDifficulty": "hard"
   },
   {
-    "questionText": "Mary _______ marry his girlfriend last night.",
+    "questionText": "Mary _______ his girlfriend last night.",
     "options": {
       "A": "marry",
-      "B": "marries",
-      "C": "marryed",
-      "D": "married"
+      "B": "marryed",
+      "C": "married",
+      "D": "marries"
     },
-    "correctAnswer": "D",
-    "explanation": "Động từ tận cùng bằng phụ âm + y, đổi y thành ied. VD: study→studied, NOT studyed.",
+    "correctAnswer": "C",
+    "explanation": "Quy tắc: phụ âm + y → đổi y thành i rồi thêm -ed. Ví dụ: marry → married. Không viết 'marryed'.",
     "vietnameseTranslation": "Mary _______ kết hôn với bạn gái tối qua.",
     "optionTranslations": {
-      "A": "nguyên thể",
-      "B": "hiện tại s/es",
-      "C": "sai chính tả (-yed thay vì -ied)",
-      "D": "đã"
+      "A": "nguyên thể (base form)",
+      "B": "sai chính tả -yed",
+      "C": "đã",
+      "D": "hiện tại s/es"
     },
     "unit": "Unit 2",
     "orderIndex": 11,
@@ -8667,19 +8667,19 @@ const questions = [
   {
     "questionText": "_______ is your favorite food?",
     "options": {
-      "A": "Who",
-      "B": "When",
-      "C": "Where",
-      "D": "What"
+      "A": "Where",
+      "B": "What",
+      "C": "Who",
+      "D": "When"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Hỏi về thông tin dùng 'What'.",
     "vietnameseTranslation": "món ăn yêu thích của bạn là _______?",
     "optionTranslations": {
-      "A": "Ai",
-      "B": "Khi nào",
-      "C": "Ở đâu",
-      "D": "Cái gì"
+      "A": "Ở đâu",
+      "B": "Cái gì",
+      "C": "Ai",
+      "D": "Khi nào"
     },
     "unit": "Unit 2",
     "orderIndex": 12,
@@ -8691,19 +8691,19 @@ const questions = [
   {
     "questionText": "_______ did they park? - In the garage",
     "options": {
-      "A": "Who",
-      "B": "Why",
-      "C": "Where",
-      "D": "When"
+      "A": "Where",
+      "B": "When",
+      "C": "Who",
+      "D": "Why"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Câu trả lời chỉ nơi chốn nên dùng từ để hỏi 'Where'.",
     "vietnameseTranslation": "Họ đã _______ đỗ xe? - Trong gara",
     "optionTranslations": {
-      "A": "Ai",
-      "B": "Tại sao",
-      "C": "Ở đâu",
-      "D": "Khi nào"
+      "A": "Ở đâu",
+      "B": "Khi nào",
+      "C": "Ai",
+      "D": "Tại sao"
     },
     "unit": "Unit 2",
     "orderIndex": 13,
@@ -8715,19 +8715,19 @@ const questions = [
   {
     "questionText": "_______ you wait a minute?",
     "options": {
-      "A": "Are",
-      "B": "Do",
-      "C": "Have",
-      "D": "Can"
+      "A": "Have",
+      "B": "Can",
+      "C": "Are",
+      "D": "Do"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Yêu cầu giúp đỡ dùng 'Can' hoặc 'Could'.",
     "vietnameseTranslation": "Bạn _______ đợi một phút được không?",
     "optionTranslations": {
-      "A": "Là",
-      "B": "Làm",
-      "C": "Có",
-      "D": "Có thể"
+      "A": "Có",
+      "B": "Có thể",
+      "C": "Là",
+      "D": "Làm"
     },
     "unit": "Unit 2",
     "orderIndex": 14,
@@ -8740,18 +8740,18 @@ const questions = [
     "questionText": "Mary _______ listen to the radio at 8 PM.",
     "options": {
       "A": "was listening",
-      "B": "did",
-      "C": "were",
-      "D": "are"
+      "B": "are",
+      "C": "did",
+      "D": "were"
     },
     "correctAnswer": "A",
     "explanation": "Dùng thì Quá khứ tiếp diễn cho hành động đang xảy ra tại một thời điểm trong quá khứ.",
     "vietnameseTranslation": "Mary _______ nghe đài lúc 8 giờ tối.",
     "optionTranslations": {
       "A": "đang",
-      "B": "quá khứ",
-      "C": "sai to-be",
-      "D": "hiện tại"
+      "B": "hiện tại",
+      "C": "quá khứ",
+      "D": "sai to-be"
     },
     "unit": "Unit 3",
     "orderIndex": 15,
@@ -8763,19 +8763,19 @@ const questions = [
   {
     "questionText": "I saw an accident while I _______ to work.",
     "options": {
-      "A": "drive",
-      "B": "is driving",
-      "C": "was driving",
-      "D": "drived"
+      "A": "drived",
+      "B": "was driving",
+      "C": "drive",
+      "D": "is driving"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Hành động đang diễn ra trong quá khứ bị gián đoạn dùng Quá khứ tiếp diễn.",
     "vietnameseTranslation": "Tôi thấy một vụ tai nạn trong khi tôi _______ đi làm.",
     "optionTranslations": {
-      "A": "nguyên thể",
-      "B": "hiện tại",
-      "C": "đang",
-      "D": "quá khứ"
+      "A": "quá khứ",
+      "B": "đang",
+      "C": "nguyên thể",
+      "D": "hiện tại"
     },
     "unit": "Unit 3",
     "orderIndex": 16,
@@ -8811,19 +8811,19 @@ const questions = [
   {
     "questionText": "I want to read something. I have free time.",
     "options": {
-      "A": "everything",
+      "A": "anything",
       "B": "something/someone/somewhere",
-      "C": "anything",
-      "D": "nothing"
+      "C": "nothing",
+      "D": "everything"
     },
     "correctAnswer": "B",
     "explanation": "Trong câu khẳng định, dùng đại từ bất định some-.",
     "vietnameseTranslation": "Tôi muốn đọc thứ gì đó. Tôi có thời gian rảnh.",
     "optionTranslations": {
-      "A": "mọi thứ",
+      "A": "bất cứ",
       "B": "đại từ bất định khẳng định",
-      "C": "bất cứ",
-      "D": "không"
+      "C": "không",
+      "D": "mọi thứ"
     },
     "unit": "Unit 3",
     "orderIndex": 18,
@@ -8835,19 +8835,19 @@ const questions = [
   {
     "questionText": "I didn't read anything.",
     "options": {
-      "A": "nothing",
-      "B": "everything",
-      "C": "anything/anyone/anywhere",
-      "D": "something"
+      "A": "everything",
+      "B": "anything/anyone/anywhere",
+      "C": "something",
+      "D": "nothing"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Trong câu phủ định, dùng đại từ bất định any-.",
     "vietnameseTranslation": "Tôi đã không đọc bất cứ thứ gì.",
     "optionTranslations": {
-      "A": "phủ định kép",
-      "B": "mọi thứ",
-      "C": "đại từ phủ định",
-      "D": "khẳng định"
+      "A": "mọi thứ",
+      "B": "đại từ phủ định",
+      "C": "khẳng định",
+      "D": "phủ định kép"
     },
     "unit": "Unit 3",
     "orderIndex": 19,
@@ -8859,19 +8859,19 @@ const questions = [
   {
     "questionText": "There is nothing to say.",
     "options": {
-      "A": "nothing/no one/nowhere",
-      "B": "something",
-      "C": "anything",
-      "D": "everything"
+      "A": "everything",
+      "B": "anything",
+      "C": "nothing/no one/nowhere",
+      "D": "something"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "'Nothing/No one/Nowhere' mang nghĩa phủ định, động từ chia ở khẳng định.",
     "vietnameseTranslation": "Không có không có gì để nói.",
     "optionTranslations": {
-      "A": "nghĩa phủ định",
-      "B": "một vài",
-      "C": "bất cứ",
-      "D": "mọi"
+      "A": "mọi",
+      "B": "bất cứ",
+      "C": "nghĩa phủ định",
+      "D": "một vài"
     },
     "unit": "Unit 3",
     "orderIndex": 20,
@@ -8883,19 +8883,19 @@ const questions = [
   {
     "questionText": "Everything looks clean here.",
     "options": {
-      "A": "Anyone",
-      "B": "Everyone/Everything",
-      "C": "All",
-      "D": "Some"
+      "A": "All",
+      "B": "Anyone",
+      "C": "Some",
+      "D": "Everyone/Everything"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Đại từ 'Everyone/Everything' dùng với động từ số ít.",
     "vietnameseTranslation": "Mọi thứ trông có vẻ sạch sẽ ở đây.",
     "optionTranslations": {
-      "A": "Bất cứ",
-      "B": "Mọi người/Mọi thứ",
-      "C": "Tất cả",
-      "D": "Một vài"
+      "A": "Tất cả",
+      "B": "Bất cứ",
+      "C": "Một vài",
+      "D": "Mọi người/Mọi thứ"
     },
     "unit": "Unit 3",
     "orderIndex": 21,
@@ -8907,19 +8907,19 @@ const questions = [
   {
     "questionText": "Mary _______ bake a cake.",
     "options": {
-      "A": "is going",
-      "B": "will to",
+      "A": "will to",
+      "B": "is going to",
       "C": "going to",
-      "D": "is going to"
+      "D": "is going"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Nói về một kế hoạch dùng cấu trúc 'be going to'.",
     "vietnameseTranslation": "Mary _______ nướng bánh.",
     "optionTranslations": {
-      "A": "thiếu to",
-      "B": "sai",
+      "A": "sai",
+      "B": "dự định",
       "C": "thiếu be",
-      "D": "dự định"
+      "D": "thiếu to"
     },
     "unit": "Unit 4",
     "orderIndex": 22,
@@ -8932,18 +8932,18 @@ const questions = [
     "questionText": "Mary _______ invite him to the party.",
     "options": {
       "A": "not going to",
-      "B": "isn't going to",
-      "C": "don't going to",
-      "D": "won't going to"
+      "B": "don't going to",
+      "C": "won't going to",
+      "D": "isn't going to"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Phủ định của 'be going to'.",
     "vietnameseTranslation": "Mary _______ mời anh ấy đến bữa tiệc.",
     "optionTranslations": {
       "A": "thiếu be",
-      "B": "không dự định",
+      "B": "sai",
       "C": "sai",
-      "D": "sai"
+      "D": "không dự định"
     },
     "unit": "Unit 4",
     "orderIndex": 23,
@@ -8956,17 +8956,17 @@ const questions = [
     "questionText": "I promise I _______ leave without you.",
     "options": {
       "A": "am not going to",
-      "B": "won't",
-      "C": "not",
-      "D": "don't"
+      "B": "don't",
+      "C": "won't",
+      "D": "not"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Lời hứa dùng 'won't'.",
     "vietnameseTranslation": "Tôi hứa tôi _______ rời đi mà không có bạn.",
     "optionTranslations": {
       "A": "không dự định",
-      "B": "sẽ không",
-      "C": "không",
+      "B": "không",
+      "C": "sẽ không",
       "D": "không"
     },
     "unit": "Unit 4",
@@ -8979,19 +8979,19 @@ const questions = [
   {
     "questionText": "Don't worry, I _______ make some coffee.",
     "options": {
-      "A": "am",
-      "B": "will",
-      "C": "am going to",
-      "D": "do"
+      "A": "am going to",
+      "B": "am",
+      "C": "do",
+      "D": "will"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Đề nghị giúp đỡ (Offer) dùng 'will'.",
     "vietnameseTranslation": "Đừng lo, tôi _______ pha cà phê.",
     "optionTranslations": {
-      "A": "đang",
-      "B": "sẽ",
-      "C": "dự định",
-      "D": "làm"
+      "A": "dự định",
+      "B": "đang",
+      "C": "làm",
+      "D": "sẽ"
     },
     "unit": "Unit 4",
     "orderIndex": 25,
@@ -9003,19 +9003,19 @@ const questions = [
   {
     "questionText": "Okay, I _______ grab an umbrella.",
     "options": {
-      "A": "am doing",
+      "A": "do",
       "B": "am going to",
       "C": "will",
-      "D": "do"
+      "D": "am doing"
     },
     "correctAnswer": "C",
     "explanation": "Quyết định đột ngột lúc nói dùng 'will'.",
     "vietnameseTranslation": "Được rồi, tôi _______ lấy một chiếc ô.",
     "optionTranslations": {
-      "A": "đang làm",
+      "A": "làm",
       "B": "dự định",
       "C": "sẽ",
-      "D": "làm"
+      "D": "đang làm"
     },
     "unit": "Unit 4",
     "orderIndex": 26,
@@ -9027,19 +9027,19 @@ const questions = [
   {
     "questionText": "If she _______ me, I'll answer her.",
     "options": {
-      "A": "is calling",
-      "B": "calls",
-      "C": "called",
-      "D": "will call"
+      "A": "will call",
+      "B": "called",
+      "C": "is calling",
+      "D": "calls"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "KHÔNG dùng 'will' trong mệnh đề 'If'. Mệnh đề điều kiện loại 1 dùng Hiện tại đơn. Đáp án đúng: 'calls'.",
     "vietnameseTranslation": "Nếu gọi, ...",
     "optionTranslations": {
-      "A": "tiếp diễn (sai)",
-      "B": "hiện tại",
-      "C": "quá khứ (sai)",
-      "D": "tương lai (sai)"
+      "A": "tương lai (sai)",
+      "B": "quá khứ (sai)",
+      "C": "tiếp diễn (sai)",
+      "D": "hiện tại"
     },
     "unit": "Unit 4",
     "orderIndex": 27,
@@ -9051,19 +9051,19 @@ const questions = [
   {
     "questionText": "The students are _______ take a test.",
     "options": {
-      "A": "go to",
+      "A": "going",
       "B": "will",
-      "C": "going",
-      "D": "going to"
+      "C": "going to",
+      "D": "go to"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Cấu trúc am/is/are + going to + V.",
     "vietnameseTranslation": "Kế hoạch: làm bài kiểm tra",
     "optionTranslations": {
-      "A": "đi",
+      "A": "đang",
       "B": "sẽ",
-      "C": "đang",
-      "D": "dự định"
+      "C": "dự định",
+      "D": "đi"
     },
     "unit": "Unit 4",
     "orderIndex": 28,
@@ -9076,18 +9076,18 @@ const questions = [
     "questionText": "If you stay in the rain, _______ .",
     "options": {
       "A": "might happen",
-      "B": "is happening",
-      "C": "you get wet",
-      "D": "will happen"
+      "B": "you get wet",
+      "C": "will happen",
+      "D": "is happening"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Câu điều kiện loại 0 diễn tả sự thật hiển nhiên. Cả 2 vế đều dùng Hiện tại đơn. Đáp án đúng là 'you get wet'.",
     "vietnameseTranslation": "Nếu bạn stay in the rain, _______ .",
     "optionTranslations": {
       "A": "có thể (sai)",
-      "B": "đang diễn ra (sai)",
-      "C": "bị ướt",
-      "D": "tương lai (sai)"
+      "B": "bị ướt",
+      "C": "tương lai (sai)",
+      "D": "đang diễn ra (sai)"
     },
     "unit": "Unit 5",
     "orderIndex": 29,
@@ -9100,18 +9100,18 @@ const questions = [
     "questionText": "If you insert a coin, _______ .",
     "options": {
       "A": "will happen",
-      "B": "is happening",
+      "B": "might happen",
       "C": "the gate opens",
-      "D": "might happen"
+      "D": "is happening"
     },
     "correctAnswer": "C",
     "explanation": "Câu điều kiện loại 0 chỉ quy luật máy móc. Cả 2 vế đều dùng Hiện tại đơn. Đáp án đúng là 'the gate opens'.",
     "vietnameseTranslation": "Nếu you insert a coin, _______ .",
     "optionTranslations": {
       "A": "tương lai (sai)",
-      "B": "đang diễn ra (sai)",
+      "B": "có thể (sai)",
       "C": "mở ra",
-      "D": "có thể (sai)"
+      "D": "đang diễn ra (sai)"
     },
     "unit": "Unit 5",
     "orderIndex": 30,
@@ -9123,19 +9123,19 @@ const questions = [
   {
     "questionText": "If it is busy, _______.",
     "options": {
-      "A": "he don't call",
-      "B": "he aren't call",
+      "A": "he won't call",
+      "B": "he don't call",
       "C": "he didn't call",
-      "D": "he won't call"
+      "D": "he aren't call"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "Câu điều kiện loại 1: If + HTĐ, will/won't + V.",
     "vietnameseTranslation": "Nếu trời is busy, _______.",
     "optionTranslations": {
-      "A": "không",
-      "B": "không phải",
+      "A": "anh ấy sẽ không gọi",
+      "B": "không",
       "C": "đã không",
-      "D": "anh ấy sẽ không gọi"
+      "D": "không phải"
     },
     "unit": "Unit 5",
     "orderIndex": 31,
@@ -9171,19 +9171,19 @@ const questions = [
   {
     "questionText": "My phone is _______ than yours. (old)",
     "options": {
-      "A": "old",
-      "B": "more old",
-      "C": "most old",
-      "D": "older"
+      "A": "more old",
+      "B": "most old",
+      "C": "older",
+      "D": "old"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "So sánh hơn của tính từ ngắn 'old': thêm -er. KHÔNG dùng 'more'.",
     "vietnameseTranslation": "Điện thoại của tôi _______ của bạn. (old)",
     "optionTranslations": {
-      "A": "nguyên thể",
-      "B": "so sánh hơn (sai cấu trúc)",
-      "C": "so sánh nhất (sai)",
-      "D": "cũ hơn"
+      "A": "so sánh hơn (sai cấu trúc)",
+      "B": "so sánh nhất (sai)",
+      "C": "cũ hơn",
+      "D": "nguyên thể"
     },
     "unit": "Unit 5",
     "orderIndex": 33,
@@ -9196,17 +9196,17 @@ const questions = [
     "questionText": "That was the _______ experience of my life. (comfortable)",
     "options": {
       "A": "comfortableer",
-      "B": "comfortable",
-      "C": "most comfortable",
+      "B": "most comfortable",
+      "C": "comfortable",
       "D": "more comfortable"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "So sánh nhất của tính từ dài 'comfortable': dùng 'most comfortable'. KHÔNG thêm -er.",
     "vietnameseTranslation": "Đó là trải nghiệm _______ của cuộc đời tôi. (comfortable)",
     "optionTranslations": {
       "A": "so sánh nhất (sai cấu trúc)",
-      "B": "nguyên thể",
-      "C": "thoải mái nhất",
+      "B": "thoải mái nhất",
+      "C": "nguyên thể",
       "D": "so sánh hơn (sai)"
     },
     "unit": "Unit 5",
@@ -9219,19 +9219,19 @@ const questions = [
   {
     "questionText": "It is _______ important than before.",
     "options": {
-      "A": "little",
-      "B": "less",
-      "C": "few",
-      "D": "least"
+      "A": "least",
+      "B": "few",
+      "C": "little",
+      "D": "less"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "So sánh ít hơn dùng less + tính từ dài + than.",
     "vietnameseTranslation": "Nó thì ít _______ hơn trước.",
     "optionTranslations": {
-      "A": "ít",
-      "B": "ít hơn",
-      "C": "vài",
-      "D": "ít nhất"
+      "A": "ít nhất",
+      "B": "vài",
+      "C": "ít",
+      "D": "ít hơn"
     },
     "unit": "Unit 5",
     "orderIndex": 35,
@@ -9243,19 +9243,19 @@ const questions = [
   {
     "questionText": "_______ the students ever passed this?",
     "options": {
-      "A": "Are",
-      "B": "Did",
-      "C": "Do",
-      "D": "Have"
+      "A": "Did",
+      "B": "Have",
+      "C": "Are",
+      "D": "Do"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Hỏi về trải nghiệm dùng Hiện tại hoàn thành.",
     "vietnameseTranslation": "_______ bạn đã từng...",
     "optionTranslations": {
-      "A": "to-be",
-      "B": "QK",
-      "C": "HT",
-      "D": "HT hoàn thành"
+      "A": "QK",
+      "B": "HT hoàn thành",
+      "C": "to-be",
+      "D": "HT"
     },
     "unit": "Unit 6",
     "orderIndex": 36,
@@ -9267,17 +9267,17 @@ const questions = [
   {
     "questionText": "I've _______ ridden a horse.",
     "options": {
-      "A": "never",
-      "B": "sometimes",
+      "A": "sometimes",
+      "B": "never",
       "C": "always",
       "D": "ever"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Trong câu khẳng định mang nghĩa chưa từng, dùng 'never'.",
     "vietnameseTranslation": "Tôi chưa bao giờ cưỡi ngựa.",
     "optionTranslations": {
-      "A": "chưa bao giờ",
-      "B": "thỉnh thoảng",
+      "A": "thỉnh thoảng",
+      "B": "chưa bao giờ",
       "C": "luôn",
       "D": "từng"
     },
@@ -9291,19 +9291,19 @@ const questions = [
   {
     "questionText": "This is the best person I have _______ met.",
     "options": {
-      "A": "just",
-      "B": "ever",
+      "A": "always",
+      "B": "just",
       "C": "never",
-      "D": "always"
+      "D": "ever"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Dùng ever trong câu so sánh nhất.",
     "vietnameseTranslation": "Đây là người tốt nhất tôi từng gặp.",
     "optionTranslations": {
-      "A": "vừa mới",
-      "B": "từng",
+      "A": "luôn",
+      "B": "vừa mới",
       "C": "chưa từng",
-      "D": "luôn"
+      "D": "từng"
     },
     "unit": "Unit 6",
     "orderIndex": 38,
@@ -9316,18 +9316,18 @@ const questions = [
     "questionText": "He suggested _______ a break.",
     "options": {
       "A": "take",
-      "B": "is taking",
-      "C": "taking",
-      "D": "to take"
+      "B": "taking",
+      "C": "to take",
+      "D": "is taking"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Dùng V-ing sau các động từ như practise, enjoy, mind...",
     "vietnameseTranslation": "V-ing sau động từ.",
     "optionTranslations": {
       "A": "V",
-      "B": "sai",
-      "C": "V-ing",
-      "D": "to V"
+      "B": "V-ing",
+      "C": "to V",
+      "D": "sai"
     },
     "unit": "Unit 6",
     "orderIndex": 39,
@@ -9339,19 +9339,19 @@ const questions = [
   {
     "questionText": "They agreed _______ the contract.",
     "options": {
-      "A": "signing",
+      "A": "is signing",
       "B": "sign",
-      "C": "to sign",
-      "D": "is signing"
+      "C": "signing",
+      "D": "to sign"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Dùng to-infinitive sau need, want, decide...",
     "vietnameseTranslation": "to V sau động từ.",
     "optionTranslations": {
-      "A": "V-ing",
+      "A": "sai",
       "B": "V",
-      "C": "to V",
-      "D": "sai"
+      "C": "V-ing",
+      "D": "to V"
     },
     "unit": "Unit 6",
     "orderIndex": 40,
@@ -9363,19 +9363,19 @@ const questions = [
   {
     "questionText": "I reminded her _______ the keys.",
     "options": {
-      "A": "to bring",
-      "B": "bring",
-      "C": "bringing",
-      "D": "is bringing"
+      "A": "bringing",
+      "B": "is bringing",
+      "C": "to bring",
+      "D": "bring"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Cấu trúc: verb + object + to V.",
     "vietnameseTranslation": "persuade/ask/want + sb + to V",
     "optionTranslations": {
-      "A": "to V",
-      "B": "V",
-      "C": "V-ing",
-      "D": "sai"
+      "A": "V-ing",
+      "B": "sai",
+      "C": "to V",
+      "D": "V"
     },
     "unit": "Unit 6",
     "orderIndex": 41,
@@ -9387,19 +9387,19 @@ const questions = [
   {
     "questionText": "I started learning the new job on Monday.",
     "options": {
-      "A": "learning",
+      "A": "Both B & C",
       "B": "to learn",
-      "C": "learn",
-      "D": "Both B & C"
+      "C": "learning",
+      "D": "learn"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "Sau start có thể dùng cả to V và V-ing.",
     "vietnameseTranslation": "Tôi bắt đầu học công việc mới vào thứ Hai.",
     "optionTranslations": {
-      "A": "V-ing",
+      "A": "Cả 2 đều đúng",
       "B": "to V",
-      "C": "V",
-      "D": "Cả 2 đều đúng"
+      "C": "V-ing",
+      "D": "V"
     },
     "unit": "Unit 6",
     "orderIndex": 42,
@@ -9435,19 +9435,19 @@ const questions = [
   {
     "questionText": "The letter _______ arrived today is for you.",
     "options": {
-      "A": "where",
-      "B": "who",
-      "C": "when",
-      "D": "which"
+      "A": "when",
+      "B": "which",
+      "C": "who",
+      "D": "where"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Đại từ 'which' thay thế danh từ chỉ vật.",
     "vietnameseTranslation": "bức thư",
     "optionTranslations": {
-      "A": "nơi",
-      "B": "người",
-      "C": "thời gian",
-      "D": "vật"
+      "A": "thời gian",
+      "B": "vật",
+      "C": "người",
+      "D": "nơi"
     },
     "unit": "Unit 6",
     "orderIndex": 44,
@@ -9457,21 +9457,21 @@ const questions = [
     "setDifficulty": "hard"
   },
   {
-    "questionText": "That is the hospital _______ he works.",
+    "questionText": "This is the hospital _______ he works.",
     "options": {
       "A": "where",
-      "B": "which",
-      "C": "when",
-      "D": "who"
+      "B": "when",
+      "C": "who",
+      "D": "which"
     },
     "correctAnswer": "A",
-    "explanation": "Đại từ 'where' thay thế danh từ chỉ nơi chốn.",
-    "vietnameseTranslation": "Đó là bệnh viện.",
+    "explanation": "Đại từ quan hệ 'where' dùng để thay thế cho danh từ chỉ nơi chốn.",
+    "vietnameseTranslation": "Đây là bệnh viện.",
     "optionTranslations": {
       "A": "nơi chốn",
-      "B": "vật",
-      "C": "thời gian",
-      "D": "người"
+      "B": "thời gian",
+      "C": "người",
+      "D": "vật"
     },
     "unit": "Unit 6",
     "orderIndex": 45,
@@ -9483,19 +9483,19 @@ const questions = [
   {
     "questionText": "He is very _______ because he works hard and well.",
     "options": {
-      "A": "serious",
-      "B": "professional",
-      "C": "confident",
-      "D": "friendly"
+      "A": "friendly",
+      "B": "serious",
+      "C": "professional",
+      "D": "confident"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Từ vựng Personality: 'professional' (chuyên nghiệp) phù hợp với ngữ cảnh 'works hard and well'.",
     "vietnameseTranslation": "Anh ấy rất _______ vì anh ấy làm việc chăm chỉ và tốt.",
     "optionTranslations": {
-      "A": "nghiêm túc",
-      "B": "chuyên nghiệp",
-      "C": "tự tin",
-      "D": "thân thiện"
+      "A": "thân thiện",
+      "B": "nghiêm túc",
+      "C": "chuyên nghiệp",
+      "D": "tự tin"
     },
     "unit": "Vocabulary",
     "orderIndex": 46,
@@ -9507,18 +9507,18 @@ const questions = [
   {
     "questionText": "We learn about liquids and reactions in _______ class.",
     "options": {
-      "A": "chemistry",
+      "A": "drama",
       "B": "biology",
-      "C": "drama",
+      "C": "chemistry",
       "D": "art"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Từ vựng School Subjects: 'chemistry' (hóa học) được học qua chủ đề 'liquids and reactions'.",
     "vietnameseTranslation": "Chúng tôi học về chất lỏng và phản ứng trong lớp _______.",
     "optionTranslations": {
-      "A": "hóa học",
+      "A": "kịch",
       "B": "sinh học",
-      "C": "kịch",
+      "C": "hóa học",
       "D": "mỹ thuật"
     },
     "unit": "Vocabulary",
@@ -9531,18 +9531,18 @@ const questions = [
   {
     "questionText": "He _______, so he is a waiter.",
     "options": {
-      "A": "waiter",
-      "B": "vegan",
-      "C": "allergy",
+      "A": "vegan",
+      "B": "allergy",
+      "C": "waiter",
       "D": "vegetarian"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Từ vựng Food: 'waiter' có nghĩa là bồi bàn.",
     "vietnameseTranslation": "Anh ấy mang thức ăn ra bàn, nên anh ấy là bồi bàn.",
     "optionTranslations": {
-      "A": "bồi bàn",
-      "B": "thuần chay",
-      "C": "dị ứng",
+      "A": "thuần chay",
+      "B": "dị ứng",
+      "C": "bồi bàn",
       "D": "ăn chay"
     },
     "unit": "Vocabulary",
@@ -9555,18 +9555,18 @@ const questions = [
   {
     "questionText": "I like the _______ of climbing the mountain.",
     "options": {
-      "A": "challenge",
-      "B": "praise",
-      "C": "prize",
+      "A": "prize",
+      "B": "challenge",
+      "C": "praise",
       "D": "encourage"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Từ vựng Motivation: 'challenge' có nghĩa là thử thách.",
     "vietnameseTranslation": "Tôi thích _______ của việc leo núi.",
     "optionTranslations": {
-      "A": "thử thách",
-      "B": "lời khen",
-      "C": "giải thưởng",
+      "A": "giải thưởng",
+      "B": "thử thách",
+      "C": "lời khen",
       "D": "khuyến khích"
     },
     "unit": "Vocabulary",
@@ -9579,19 +9579,19 @@ const questions = [
   {
     "questionText": "The room she rented is _______.",
     "options": {
-      "A": "brilliant",
-      "B": "awful",
-      "C": "spectacular",
-      "D": "tiny"
+      "A": "tiny",
+      "B": "brilliant",
+      "C": "awful",
+      "D": "spectacular"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "Từ vựng Extreme Adjectives: 'tiny' (nhỏ bé) là tính từ cực cấp. KHÔNG dùng 'very' với các từ này.",
     "vietnameseTranslation": "Căn phòng cô ấy thuê thì _______.",
     "optionTranslations": {
-      "A": "tuyệt vời",
-      "B": "tệ hại",
-      "C": "ngoạn mục",
-      "D": "nhỏ bé"
+      "A": "nhỏ bé",
+      "B": "tuyệt vời",
+      "C": "tệ hại",
+      "D": "ngoạn mục"
     },
     "unit": "Vocabulary",
     "orderIndex": 50,
@@ -9603,18 +9603,18 @@ const questions = [
   {
     "questionText": "My parents _______ travel abroad.",
     "options": {
-      "A": "don't always",
+      "A": "always",
       "B": "am always",
-      "C": "always",
+      "C": "don't always",
       "D": "always am"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Adverbs of frequency đứng TRƯỚC động từ thường.",
     "vietnameseTranslation": "Bố mẹ tôi _______ đi du lịch nước ngoài.",
     "optionTranslations": {
-      "A": "sai",
+      "A": "luôn luôn",
       "B": "sai",
-      "C": "luôn luôn",
+      "C": "sai",
       "D": "sai"
     },
     "unit": "Unit 1",
@@ -9627,19 +9627,19 @@ const questions = [
   {
     "questionText": "My parents _______ bored at home.",
     "options": {
-      "A": "always are",
-      "B": "be always",
-      "C": "are always",
-      "D": "always be"
+      "A": "are always",
+      "B": "always are",
+      "C": "always be",
+      "D": "be always"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Adverbs of frequency đứng SAU động từ 'to be'.",
     "vietnameseTranslation": "Bố mẹ tôi _______ buồn chán ở nhà.",
     "optionTranslations": {
-      "A": "sai vị trí",
-      "B": "sai động từ be",
-      "C": "luôn luôn",
-      "D": "sai cấu trúc"
+      "A": "luôn luôn",
+      "B": "sai vị trí",
+      "C": "sai cấu trúc",
+      "D": "sai động từ be"
     },
     "unit": "Unit 1",
     "orderIndex": 2,
@@ -9651,19 +9651,19 @@ const questions = [
   {
     "questionText": "How _______ do you go swimming?",
     "options": {
-      "A": "many",
-      "B": "much",
-      "C": "long",
-      "D": "often"
+      "A": "long",
+      "B": "many",
+      "C": "often",
+      "D": "much"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Dùng 'How often...?' để hỏi về tần suất.",
     "vietnameseTranslation": "Bạn có _______ đi bơi không?",
     "optionTranslations": {
-      "A": "nhiều",
+      "A": "bao lâu",
       "B": "nhiều",
-      "C": "bao lâu",
-      "D": "thường xuyên"
+      "C": "thường xuyên",
+      "D": "nhiều"
     },
     "unit": "Unit 1",
     "orderIndex": 3,
@@ -9675,19 +9675,19 @@ const questions = [
   {
     "questionText": "Fish _______ in water.",
     "options": {
-      "A": "live",
+      "A": "is live",
       "B": "lives",
       "C": "living",
-      "D": "is live"
+      "D": "live"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Sự thật hiển nhiên dùng thì Hiện tại đơn.",
     "vietnameseTranslation": "Sự thật: Cá _______ dưới nước.",
     "optionTranslations": {
-      "A": "sống",
+      "A": "đang",
       "B": "nguyên thể",
       "C": "tiếp diễn",
-      "D": "đang"
+      "D": "sống"
     },
     "unit": "Unit 1",
     "orderIndex": 4,
@@ -9699,18 +9699,18 @@ const questions = [
   {
     "questionText": "The festival _______ on Sunday.",
     "options": {
-      "A": "takes place",
-      "B": "take place",
-      "C": "takeed place",
+      "A": "takeed place",
+      "B": "takes place",
+      "C": "take place",
       "D": "is take place"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Lịch trình tàu xe dùng thì Hiện tại đơn.",
     "vietnameseTranslation": "Lễ hội _______ vào Chủ nhật.",
     "optionTranslations": {
-      "A": "diễn ra",
-      "B": "nguyên thể",
-      "C": "đã",
+      "A": "đã",
+      "B": "diễn ra",
+      "C": "nguyên thể",
       "D": "đang"
     },
     "unit": "Unit 1",
@@ -9723,19 +9723,19 @@ const questions = [
   {
     "questionText": "My parents _______  to a podcast at the moment.",
     "options": {
-      "A": "listen",
-      "B": "are listening",
+      "A": "listens",
+      "B": "listen",
       "C": "listening",
-      "D": "listens"
+      "D": "are listening"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Dấu hiệu 'at the moment' dùng thì Hiện tại tiếp diễn.",
     "vietnameseTranslation": "Bố mẹ tôi _______ nghe podcast vào lúc này.",
     "optionTranslations": {
       "A": "hiện tại",
-      "B": "đang listen",
+      "B": "hiện tại",
       "C": "thiếu be",
-      "D": "hiện tại"
+      "D": "đang listen"
     },
     "unit": "Unit 1",
     "orderIndex": 6,
@@ -9747,19 +9747,19 @@ const questions = [
   {
     "questionText": "My parents _______  tea.",
     "options": {
-      "A": "preferred",
+      "A": "are preferring",
       "B": "was preferring",
       "C": "prefer",
-      "D": "are preferring"
+      "D": "preferred"
     },
     "correctAnswer": "C",
     "explanation": "Động từ trạng thái (stative verb) KHÔNG dùng ở thì tiếp diễn.",
     "vietnameseTranslation": "Bố mẹ tôi _______ thích trà hơn.",
     "optionTranslations": {
-      "A": "đã",
+      "A": "đang (sai)",
       "B": "đã đang",
       "C": "đúng",
-      "D": "đang (sai)"
+      "D": "đã"
     },
     "unit": "Unit 1",
     "orderIndex": 7,
@@ -9771,19 +9771,19 @@ const questions = [
   {
     "questionText": "Yesterday, My parents _______  a letter.",
     "options": {
-      "A": "writes",
-      "B": "write",
-      "C": "wrote",
-      "D": "were writing"
+      "A": "were writing",
+      "B": "wrote",
+      "C": "writes",
+      "D": "write"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Dấu hiệu 'Yesterday' dùng thì Quá khứ đơn.",
     "vietnameseTranslation": "Hôm qua, Bố mẹ tôi _______ viết một lá thư.",
     "optionTranslations": {
-      "A": "hiện tại",
-      "B": "hiện tại",
-      "C": "đã write",
-      "D": "tiếp diễn"
+      "A": "tiếp diễn",
+      "B": "đã write",
+      "C": "hiện tại",
+      "D": "hiện tại"
     },
     "unit": "Unit 2",
     "orderIndex": 8,
@@ -9796,18 +9796,18 @@ const questions = [
     "questionText": "My parents _______ work yesterday.",
     "options": {
       "A": "didn't",
-      "B": "wasn't",
-      "C": "don't",
-      "D": "doesn't"
+      "B": "don't",
+      "C": "doesn't",
+      "D": "wasn't"
     },
     "correctAnswer": "A",
     "explanation": "Câu phủ định quá khứ đơn với động từ thường dùng 'didn't'.",
     "vietnameseTranslation": "Bố mẹ tôi _______ làm việc ngày hôm qua.",
     "optionTranslations": {
       "A": "đã không",
-      "B": "không phải",
+      "B": "không",
       "C": "không",
-      "D": "không"
+      "D": "không phải"
     },
     "unit": "Unit 2",
     "orderIndex": 9,
@@ -9819,19 +9819,19 @@ const questions = [
   {
     "questionText": "_______ you go out yesterday?",
     "options": {
-      "A": "Did",
-      "B": "Are",
+      "A": "Were",
+      "B": "Did",
       "C": "Do",
-      "D": "Were"
+      "D": "Are"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Câu hỏi Yes/No quá khứ đơn dùng 'Did'.",
     "vietnameseTranslation": "Bạn _______ đi chơi ngày hôm qua không?",
     "optionTranslations": {
-      "A": "Quá khứ",
-      "B": "Hiện tại to-be",
+      "A": "Quá khứ to-be",
+      "B": "Quá khứ",
       "C": "Hiện tại",
-      "D": "Quá khứ to-be"
+      "D": "Hiện tại to-be"
     },
     "unit": "Unit 2",
     "orderIndex": 10,
@@ -9841,21 +9841,21 @@ const questions = [
     "setDifficulty": "hard"
   },
   {
-    "questionText": "My parents _______ empty the bin last night.",
+    "questionText": "My parents _______ the bin last night.",
     "options": {
-      "A": "empty",
-      "B": "emptyed",
-      "C": "empties",
-      "D": "emptied"
+      "A": "emptyed",
+      "B": "empty",
+      "C": "emptied",
+      "D": "empties"
     },
-    "correctAnswer": "D",
-    "explanation": "Động từ tận cùng bằng phụ âm + y, đổi y thành ied. VD: study→studied, NOT studyed.",
+    "correctAnswer": "C",
+    "explanation": "Quy tắc: phụ âm + y → đổi y thành i rồi thêm -ed. Ví dụ: empty → emptied. Không viết 'emptyed'.",
     "vietnameseTranslation": "Bố mẹ tôi _______ đổ thùng rác tối qua.",
     "optionTranslations": {
-      "A": "nguyên thể",
-      "B": "sai chính tả (-yed thay vì -ied)",
-      "C": "hiện tại s/es",
-      "D": "đã"
+      "A": "sai chính tả -yed",
+      "B": "nguyên thể (base form)",
+      "C": "đã",
+      "D": "hiện tại s/es"
     },
     "unit": "Unit 2",
     "orderIndex": 11,
@@ -9868,18 +9868,18 @@ const questions = [
     "questionText": "_______ is your ultimate goal?",
     "options": {
       "A": "When",
-      "B": "Where",
+      "B": "Who",
       "C": "What",
-      "D": "Who"
+      "D": "Where"
     },
     "correctAnswer": "C",
     "explanation": "Hỏi về thông tin dùng 'What'.",
     "vietnameseTranslation": "mục tiêu cuối cùng của bạn là _______?",
     "optionTranslations": {
       "A": "Khi nào",
-      "B": "Ở đâu",
+      "B": "Ai",
       "C": "Cái gì",
-      "D": "Ai"
+      "D": "Ở đâu"
     },
     "unit": "Unit 2",
     "orderIndex": 12,
@@ -9892,18 +9892,18 @@ const questions = [
     "questionText": "_______ did they sit? - On the sofa",
     "options": {
       "A": "Why",
-      "B": "When",
-      "C": "Who",
-      "D": "Where"
+      "B": "Who",
+      "C": "Where",
+      "D": "When"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Câu trả lời chỉ nơi chốn nên dùng từ để hỏi 'Where'.",
     "vietnameseTranslation": "Họ đã _______ ngồi? - Trên ghế sofa",
     "optionTranslations": {
       "A": "Tại sao",
-      "B": "Khi nào",
-      "C": "Ai",
-      "D": "Ở đâu"
+      "B": "Ai",
+      "C": "Ở đâu",
+      "D": "Khi nào"
     },
     "unit": "Unit 2",
     "orderIndex": 13,
@@ -9916,18 +9916,18 @@ const questions = [
     "questionText": "_______ you show me the way?",
     "options": {
       "A": "Do",
-      "B": "Are",
+      "B": "Can",
       "C": "Have",
-      "D": "Can"
+      "D": "Are"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Yêu cầu giúp đỡ dùng 'Can' hoặc 'Could'.",
     "vietnameseTranslation": "Bạn _______ chỉ đường cho tôi được không?",
     "optionTranslations": {
       "A": "Làm",
-      "B": "Là",
+      "B": "Có thể",
       "C": "Có",
-      "D": "Có thể"
+      "D": "Là"
     },
     "unit": "Unit 2",
     "orderIndex": 14,
@@ -9939,19 +9939,19 @@ const questions = [
   {
     "questionText": "My parents _______ work in the garden at 8 PM.",
     "options": {
-      "A": "did",
-      "B": "were working",
-      "C": "was",
-      "D": "are"
+      "A": "were working",
+      "B": "was",
+      "C": "are",
+      "D": "did"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Dùng thì Quá khứ tiếp diễn cho hành động đang xảy ra tại một thời điểm trong quá khứ.",
     "vietnameseTranslation": "Bố mẹ tôi _______ làm việc trong vườn lúc 8 giờ tối.",
     "optionTranslations": {
-      "A": "quá khứ",
-      "B": "đang",
-      "C": "sai to-be",
-      "D": "hiện tại"
+      "A": "đang",
+      "B": "sai to-be",
+      "C": "hiện tại",
+      "D": "quá khứ"
     },
     "unit": "Unit 3",
     "orderIndex": 15,
@@ -9964,18 +9964,18 @@ const questions = [
     "questionText": "My pen broke while I _______ the essay.",
     "options": {
       "A": "write",
-      "B": "is writing",
-      "C": "was writing",
-      "D": "writed"
+      "B": "was writing",
+      "C": "writed",
+      "D": "is writing"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Hành động đang diễn ra trong quá khứ bị gián đoạn dùng Quá khứ tiếp diễn.",
     "vietnameseTranslation": "Bút của tôi bị hỏng trong khi tôi _______ bài luận.",
     "optionTranslations": {
       "A": "nguyên thể",
-      "B": "hiện tại",
-      "C": "đang",
-      "D": "quá khứ"
+      "B": "đang",
+      "C": "quá khứ",
+      "D": "hiện tại"
     },
     "unit": "Unit 3",
     "orderIndex": 16,
@@ -9988,18 +9988,18 @@ const questions = [
     "questionText": "I was writing the essay _______ my pen broke.",
     "options": {
       "A": "during",
-      "B": "while",
-      "C": "so",
-      "D": "when"
+      "B": "when",
+      "C": "while",
+      "D": "so"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Dùng 'when' trước hành động gián đoạn ở thì Quá khứ đơn.",
     "vietnameseTranslation": "khi bút bị hỏng",
     "optionTranslations": {
       "A": "trong suốt",
-      "B": "trong khi",
-      "C": "vì vậy",
-      "D": "khi"
+      "B": "khi",
+      "C": "trong khi",
+      "D": "vì vậy"
     },
     "unit": "Unit 3",
     "orderIndex": 17,
@@ -10035,19 +10035,19 @@ const questions = [
   {
     "questionText": "I didn't say anything.",
     "options": {
-      "A": "something",
-      "B": "anything/anyone/anywhere",
-      "C": "nothing",
-      "D": "everything"
+      "A": "everything",
+      "B": "something",
+      "C": "anything/anyone/anywhere",
+      "D": "nothing"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Trong câu phủ định, dùng đại từ bất định any-.",
     "vietnameseTranslation": "Tôi đã không nói bất cứ điều gì.",
     "optionTranslations": {
-      "A": "khẳng định",
-      "B": "đại từ phủ định",
-      "C": "phủ định kép",
-      "D": "mọi thứ"
+      "A": "mọi thứ",
+      "B": "khẳng định",
+      "C": "đại từ phủ định",
+      "D": "phủ định kép"
     },
     "unit": "Unit 3",
     "orderIndex": 19,
@@ -10059,19 +10059,19 @@ const questions = [
   {
     "questionText": "There is no one in the room.",
     "options": {
-      "A": "nothing/no one/nowhere",
-      "B": "everything",
-      "C": "something",
-      "D": "anything"
+      "A": "anything",
+      "B": "something",
+      "C": "nothing/no one/nowhere",
+      "D": "everything"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "'Nothing/No one/Nowhere' mang nghĩa phủ định, động từ chia ở khẳng định.",
     "vietnameseTranslation": "Không có không có ai trong phòng.",
     "optionTranslations": {
-      "A": "nghĩa phủ định",
-      "B": "mọi",
-      "C": "một vài",
-      "D": "bất cứ"
+      "A": "bất cứ",
+      "B": "một vài",
+      "C": "nghĩa phủ định",
+      "D": "mọi"
     },
     "unit": "Unit 3",
     "orderIndex": 20,
@@ -10083,18 +10083,18 @@ const questions = [
   {
     "questionText": "Everyone loves this movie.",
     "options": {
-      "A": "Everyone/Everything",
-      "B": "Anyone",
-      "C": "Some",
+      "A": "Anyone",
+      "B": "Some",
+      "C": "Everyone/Everything",
       "D": "All"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Đại từ 'Everyone/Everything' dùng với động từ số ít.",
     "vietnameseTranslation": "Mọi người đều yêu thích bộ phim này.",
     "optionTranslations": {
-      "A": "Mọi người/Mọi thứ",
-      "B": "Bất cứ",
-      "C": "Một vài",
+      "A": "Bất cứ",
+      "B": "Một vài",
+      "C": "Mọi người/Mọi thứ",
       "D": "Tất cả"
     },
     "unit": "Unit 3",
@@ -10107,19 +10107,19 @@ const questions = [
   {
     "questionText": "My parents _______ take a vacation.",
     "options": {
-      "A": "going to",
-      "B": "are going",
-      "C": "are going to",
-      "D": "will to"
+      "A": "will to",
+      "B": "are going to",
+      "C": "going to",
+      "D": "are going"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Nói về một kế hoạch dùng cấu trúc 'be going to'.",
     "vietnameseTranslation": "Bố mẹ tôi _______ đi nghỉ mát.",
     "optionTranslations": {
-      "A": "thiếu be",
-      "B": "thiếu to",
-      "C": "dự định",
-      "D": "sai"
+      "A": "sai",
+      "B": "dự định",
+      "C": "thiếu be",
+      "D": "thiếu to"
     },
     "unit": "Unit 4",
     "orderIndex": 22,
@@ -10131,19 +10131,19 @@ const questions = [
   {
     "questionText": "My parents _______ change my mind.",
     "options": {
-      "A": "not going to",
+      "A": "don't going to",
       "B": "won't going to",
-      "C": "don't going to",
-      "D": "aren't going to"
+      "C": "aren't going to",
+      "D": "not going to"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Phủ định của 'be going to'.",
     "vietnameseTranslation": "Bố mẹ tôi _______ thay đổi ý định.",
     "optionTranslations": {
-      "A": "thiếu be",
+      "A": "sai",
       "B": "sai",
-      "C": "sai",
-      "D": "không dự định"
+      "C": "không dự định",
+      "D": "thiếu be"
     },
     "unit": "Unit 4",
     "orderIndex": 23,
@@ -10155,18 +10155,18 @@ const questions = [
   {
     "questionText": "I promise I _______ hurt your feelings.",
     "options": {
-      "A": "am not going to",
+      "A": "not",
       "B": "don't",
-      "C": "not",
+      "C": "am not going to",
       "D": "won't"
     },
     "correctAnswer": "D",
     "explanation": "Lời hứa dùng 'won't'.",
     "vietnameseTranslation": "Tôi hứa tôi _______ làm tổn thương bạn.",
     "optionTranslations": {
-      "A": "không dự định",
+      "A": "không",
       "B": "không",
-      "C": "không",
+      "C": "không dự định",
       "D": "sẽ không"
     },
     "unit": "Unit 4",
@@ -10179,18 +10179,18 @@ const questions = [
   {
     "questionText": "Don't worry, I _______ turn on the AC.",
     "options": {
-      "A": "am going to",
+      "A": "am",
       "B": "do",
-      "C": "am",
+      "C": "am going to",
       "D": "will"
     },
     "correctAnswer": "D",
     "explanation": "Đề nghị giúp đỡ (Offer) dùng 'will'.",
     "vietnameseTranslation": "Đừng lo, tôi _______ bật điều hòa.",
     "optionTranslations": {
-      "A": "dự định",
+      "A": "đang",
       "B": "làm",
-      "C": "đang",
+      "C": "dự định",
       "D": "sẽ"
     },
     "unit": "Unit 4",
@@ -10203,19 +10203,19 @@ const questions = [
   {
     "questionText": "Okay, I _______ write it down.",
     "options": {
-      "A": "am going to",
-      "B": "am doing",
-      "C": "do",
-      "D": "will"
+      "A": "am doing",
+      "B": "do",
+      "C": "will",
+      "D": "am going to"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Quyết định đột ngột lúc nói dùng 'will'.",
     "vietnameseTranslation": "Được rồi, tôi _______ viết nó ra.",
     "optionTranslations": {
-      "A": "dự định",
-      "B": "đang làm",
-      "C": "làm",
-      "D": "sẽ"
+      "A": "đang làm",
+      "B": "làm",
+      "C": "sẽ",
+      "D": "dự định"
     },
     "unit": "Unit 4",
     "orderIndex": 26,
@@ -10228,18 +10228,18 @@ const questions = [
     "questionText": "If they _______ hard, they'll win.",
     "options": {
       "A": "practised",
-      "B": "will practise",
-      "C": "practise",
-      "D": "are practising"
+      "B": "practise",
+      "C": "are practising",
+      "D": "will practise"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "KHÔNG dùng 'will' trong mệnh đề 'If'. Mệnh đề điều kiện loại 1 dùng Hiện tại đơn. Đáp án đúng: 'practise'.",
     "vietnameseTranslation": "Nếu ôn luyện, ...",
     "optionTranslations": {
       "A": "quá khứ (sai)",
-      "B": "tương lai (sai)",
-      "C": "hiện tại",
-      "D": "tiếp diễn (sai)"
+      "B": "hiện tại",
+      "C": "tiếp diễn (sai)",
+      "D": "tương lai (sai)"
     },
     "unit": "Unit 4",
     "orderIndex": 27,
@@ -10251,19 +10251,19 @@ const questions = [
   {
     "questionText": "My parents are _______ retire soon.",
     "options": {
-      "A": "going to",
-      "B": "will",
-      "C": "go to",
-      "D": "going"
+      "A": "go to",
+      "B": "going",
+      "C": "will",
+      "D": "going to"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Cấu trúc am/is/are + going to + V.",
     "vietnameseTranslation": "Kế hoạch: nghỉ hưu",
     "optionTranslations": {
-      "A": "dự định",
-      "B": "sẽ",
-      "C": "đi",
-      "D": "đang"
+      "A": "đi",
+      "B": "đang",
+      "C": "sẽ",
+      "D": "dự định"
     },
     "unit": "Unit 4",
     "orderIndex": 28,
@@ -10275,19 +10275,19 @@ const questions = [
   {
     "questionText": "If you heat ice, _______ .",
     "options": {
-      "A": "it melts",
-      "B": "might happen",
-      "C": "is happening",
-      "D": "will happen"
+      "A": "is happening",
+      "B": "will happen",
+      "C": "might happen",
+      "D": "it melts"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Câu điều kiện loại 0 diễn tả sự thật hiển nhiên. Cả 2 vế đều dùng Hiện tại đơn. Đáp án đúng là 'it melts'.",
     "vietnameseTranslation": "Nếu bạn heat ice, _______ .",
     "optionTranslations": {
-      "A": "tan chảy",
-      "B": "có thể (sai)",
-      "C": "đang diễn ra (sai)",
-      "D": "tương lai (sai)"
+      "A": "đang diễn ra (sai)",
+      "B": "tương lai (sai)",
+      "C": "có thể (sai)",
+      "D": "tan chảy"
     },
     "unit": "Unit 5",
     "orderIndex": 29,
@@ -10299,19 +10299,19 @@ const questions = [
   {
     "questionText": "If the memory is full, _______ .",
     "options": {
-      "A": "the phone lags",
-      "B": "might happen",
+      "A": "might happen",
+      "B": "will happen",
       "C": "is happening",
-      "D": "will happen"
+      "D": "the phone lags"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Câu điều kiện loại 0 chỉ quy luật máy móc. Cả 2 vế đều dùng Hiện tại đơn. Đáp án đúng là 'the phone lags'.",
     "vietnameseTranslation": "Nếu the memory is full, _______ .",
     "optionTranslations": {
-      "A": "bị giật",
-      "B": "có thể (sai)",
+      "A": "có thể (sai)",
+      "B": "tương lai (sai)",
       "C": "đang diễn ra (sai)",
-      "D": "tương lai (sai)"
+      "D": "bị giật"
     },
     "unit": "Unit 5",
     "orderIndex": 30,
@@ -10323,19 +10323,19 @@ const questions = [
   {
     "questionText": "If it is dark, _______.",
     "options": {
-      "A": "I won't walk alone",
-      "B": "I aren't walk alone",
+      "A": "I don't walk alone",
+      "B": "I won't walk alone",
       "C": "I didn't walk alone",
-      "D": "I don't walk alone"
+      "D": "I aren't walk alone"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Câu điều kiện loại 1: If + HTĐ, will/won't + V.",
     "vietnameseTranslation": "Nếu trời is dark, _______.",
     "optionTranslations": {
-      "A": "tôi sẽ không đi dạo một mình",
-      "B": "không phải",
+      "A": "không",
+      "B": "tôi sẽ không đi dạo một mình",
       "C": "đã không",
-      "D": "không"
+      "D": "không phải"
     },
     "unit": "Unit 5",
     "orderIndex": 31,
@@ -10348,18 +10348,18 @@ const questions = [
     "questionText": "If the dog _______, I'll feed it.",
     "options": {
       "A": "barked",
-      "B": "will bark",
+      "B": "barks",
       "C": "is barking",
-      "D": "barks"
+      "D": "will bark"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Mệnh đề If loại 1 dùng Hiện tại đơn.",
     "vietnameseTranslation": "Nếu sủa",
     "optionTranslations": {
       "A": "quá khứ",
-      "B": "sẽ",
+      "B": "hiện tại",
       "C": "tiếp diễn",
-      "D": "hiện tại"
+      "D": "sẽ"
     },
     "unit": "Unit 5",
     "orderIndex": 32,
@@ -10371,18 +10371,18 @@ const questions = [
   {
     "questionText": "My phone is _______ than yours. (young)",
     "options": {
-      "A": "more young",
-      "B": "younger",
-      "C": "young",
+      "A": "young",
+      "B": "more young",
+      "C": "younger",
       "D": "most young"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "So sánh hơn của tính từ ngắn 'young': thêm -er. KHÔNG dùng 'more'.",
     "vietnameseTranslation": "Điện thoại của tôi _______ của bạn. (young)",
     "optionTranslations": {
-      "A": "so sánh hơn (sai cấu trúc)",
-      "B": "trẻ hơn",
-      "C": "nguyên thể",
+      "A": "nguyên thể",
+      "B": "so sánh hơn (sai cấu trúc)",
+      "C": "trẻ hơn",
       "D": "so sánh nhất (sai)"
     },
     "unit": "Unit 5",
@@ -10395,8 +10395,8 @@ const questions = [
   {
     "questionText": "That was the _______ experience of my life. (crowded)",
     "options": {
-      "A": "more crowded",
-      "B": "crowdeder",
+      "A": "crowdeder",
+      "B": "more crowded",
       "C": "crowded",
       "D": "most crowded"
     },
@@ -10404,8 +10404,8 @@ const questions = [
     "explanation": "So sánh nhất của tính từ dài 'crowded': dùng 'most crowded'. KHÔNG thêm -er.",
     "vietnameseTranslation": "Đó là trải nghiệm _______ của cuộc đời tôi. (crowded)",
     "optionTranslations": {
-      "A": "so sánh hơn (sai)",
-      "B": "so sánh nhất (sai cấu trúc)",
+      "A": "so sánh nhất (sai cấu trúc)",
+      "B": "so sánh hơn (sai)",
       "C": "nguyên thể",
       "D": "đông đúc nhất"
     },
@@ -10419,19 +10419,19 @@ const questions = [
   {
     "questionText": "It is _______ comfortable than before.",
     "options": {
-      "A": "less",
+      "A": "least",
       "B": "little",
-      "C": "few",
-      "D": "least"
+      "C": "less",
+      "D": "few"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "So sánh ít hơn dùng less + tính từ dài + than.",
     "vietnameseTranslation": "Nó thì ít _______ hơn trước.",
     "optionTranslations": {
-      "A": "ít hơn",
+      "A": "ít nhất",
       "B": "ít",
-      "C": "vài",
-      "D": "ít nhất"
+      "C": "ít hơn",
+      "D": "vài"
     },
     "unit": "Unit 5",
     "orderIndex": 35,
@@ -10444,18 +10444,18 @@ const questions = [
     "questionText": "_______ you ever driven a truck?",
     "options": {
       "A": "Do",
-      "B": "Have",
+      "B": "Did",
       "C": "Are",
-      "D": "Did"
+      "D": "Have"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Hỏi về trải nghiệm dùng Hiện tại hoàn thành.",
     "vietnameseTranslation": "_______ bạn đã từng...",
     "optionTranslations": {
       "A": "HT",
-      "B": "HT hoàn thành",
+      "B": "QK",
       "C": "to-be",
-      "D": "QK"
+      "D": "HT hoàn thành"
     },
     "unit": "Unit 6",
     "orderIndex": 36,
@@ -10468,18 +10468,18 @@ const questions = [
     "questionText": "I've _______ sung on stage.",
     "options": {
       "A": "always",
-      "B": "sometimes",
-      "C": "ever",
-      "D": "never"
+      "B": "never",
+      "C": "sometimes",
+      "D": "ever"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Trong câu khẳng định mang nghĩa chưa từng, dùng 'never'.",
     "vietnameseTranslation": "Tôi chưa bao giờ hát trên sân khấu.",
     "optionTranslations": {
       "A": "luôn",
-      "B": "thỉnh thoảng",
-      "C": "từng",
-      "D": "chưa bao giờ"
+      "B": "chưa bao giờ",
+      "C": "thỉnh thoảng",
+      "D": "từng"
     },
     "unit": "Unit 6",
     "orderIndex": 37,
@@ -10492,18 +10492,18 @@ const questions = [
     "questionText": "This is the best joke I have _______ heard.",
     "options": {
       "A": "never",
-      "B": "just",
+      "B": "always",
       "C": "ever",
-      "D": "always"
+      "D": "just"
     },
     "correctAnswer": "C",
     "explanation": "Dùng ever trong câu so sánh nhất.",
     "vietnameseTranslation": "Đây là trò đùa tốt nhất tôi từng nghe.",
     "optionTranslations": {
       "A": "chưa từng",
-      "B": "vừa mới",
+      "B": "luôn",
       "C": "từng",
-      "D": "luôn"
+      "D": "vừa mới"
     },
     "unit": "Unit 6",
     "orderIndex": 38,
@@ -10515,19 +10515,19 @@ const questions = [
   {
     "questionText": "I feel like _______ a pizza.",
     "options": {
-      "A": "to eat",
+      "A": "is eating",
       "B": "eat",
-      "C": "eating",
-      "D": "is eating"
+      "C": "to eat",
+      "D": "eating"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Dùng V-ing sau các động từ như practise, enjoy, mind...",
     "vietnameseTranslation": "V-ing sau động từ.",
     "optionTranslations": {
-      "A": "to V",
+      "A": "sai",
       "B": "V",
-      "C": "V-ing",
-      "D": "sai"
+      "C": "to V",
+      "D": "V-ing"
     },
     "unit": "Unit 6",
     "orderIndex": 39,
@@ -10539,19 +10539,19 @@ const questions = [
   {
     "questionText": "He managed _______ the exam.",
     "options": {
-      "A": "to pass",
-      "B": "passing",
-      "C": "pass",
-      "D": "is passing"
+      "A": "pass",
+      "B": "is passing",
+      "C": "to pass",
+      "D": "passing"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Dùng to-infinitive sau need, want, decide...",
     "vietnameseTranslation": "to V sau động từ.",
     "optionTranslations": {
-      "A": "to V",
-      "B": "V-ing",
-      "C": "V",
-      "D": "sai"
+      "A": "V",
+      "B": "sai",
+      "C": "to V",
+      "D": "V-ing"
     },
     "unit": "Unit 6",
     "orderIndex": 40,
@@ -10563,18 +10563,18 @@ const questions = [
   {
     "questionText": "He allowed me _______ his car.",
     "options": {
-      "A": "to use",
-      "B": "using",
-      "C": "is using",
+      "A": "is using",
+      "B": "to use",
+      "C": "using",
       "D": "use"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Cấu trúc: verb + object + to V.",
     "vietnameseTranslation": "persuade/ask/want + sb + to V",
     "optionTranslations": {
-      "A": "to V",
-      "B": "V-ing",
-      "C": "sai",
+      "A": "sai",
+      "B": "to V",
+      "C": "V-ing",
       "D": "V"
     },
     "unit": "Unit 6",
@@ -10587,19 +10587,19 @@ const questions = [
   {
     "questionText": "I started learning the course in September.",
     "options": {
-      "A": "learning",
-      "B": "learn",
-      "C": "to learn",
-      "D": "Both B & C"
+      "A": "learn",
+      "B": "learning",
+      "C": "Both B & C",
+      "D": "to learn"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Sau start có thể dùng cả to V và V-ing.",
     "vietnameseTranslation": "Tôi bắt đầu học khóa học vào tháng Chín.",
     "optionTranslations": {
-      "A": "V-ing",
-      "B": "V",
-      "C": "to V",
-      "D": "Cả 2 đều đúng"
+      "A": "V",
+      "B": "V-ing",
+      "C": "Cả 2 đều đúng",
+      "D": "to V"
     },
     "unit": "Unit 6",
     "orderIndex": 42,
@@ -10611,19 +10611,19 @@ const questions = [
   {
     "questionText": "The singer _______ sang the song is famous.",
     "options": {
-      "A": "which",
-      "B": "when",
-      "C": "where",
-      "D": "who"
+      "A": "where",
+      "B": "which",
+      "C": "who",
+      "D": "when"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Đại từ 'who' thay thế danh từ chỉ người.",
     "vietnameseTranslation": "ca sĩ hát bài hát",
     "optionTranslations": {
-      "A": "vật",
-      "B": "thời gian",
-      "C": "nơi",
-      "D": "người"
+      "A": "nơi",
+      "B": "vật",
+      "C": "người",
+      "D": "thời gian"
     },
     "unit": "Unit 6",
     "orderIndex": 43,
@@ -10635,19 +10635,19 @@ const questions = [
   {
     "questionText": "The cake _______ she baked is delicious.",
     "options": {
-      "A": "when",
-      "B": "which",
-      "C": "who",
-      "D": "where"
+      "A": "which",
+      "B": "when",
+      "C": "where",
+      "D": "who"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Đại từ 'which' thay thế danh từ chỉ vật.",
     "vietnameseTranslation": "chiếc bánh",
     "optionTranslations": {
-      "A": "thời gian",
-      "B": "vật",
-      "C": "người",
-      "D": "nơi"
+      "A": "vật",
+      "B": "thời gian",
+      "C": "nơi",
+      "D": "người"
     },
     "unit": "Unit 6",
     "orderIndex": 44,
@@ -10657,21 +10657,21 @@ const questions = [
     "setDifficulty": "hard"
   },
   {
-    "questionText": "That is the shop _______ I bought it.",
+    "questionText": "This is the shop _______ I bought it.",
     "options": {
-      "A": "when",
-      "B": "who",
-      "C": "where",
-      "D": "which"
+      "A": "which",
+      "B": "where",
+      "C": "who",
+      "D": "when"
     },
-    "correctAnswer": "C",
-    "explanation": "Đại từ 'where' thay thế danh từ chỉ nơi chốn.",
-    "vietnameseTranslation": "Đó là cửa hàng.",
+    "correctAnswer": "B",
+    "explanation": "Đại từ quan hệ 'where' dùng để thay thế cho danh từ chỉ nơi chốn.",
+    "vietnameseTranslation": "Đây là cửa hàng.",
     "optionTranslations": {
-      "A": "thời gian",
-      "B": "người",
-      "C": "nơi chốn",
-      "D": "vật"
+      "A": "vật",
+      "B": "nơi chốn",
+      "C": "người",
+      "D": "thời gian"
     },
     "unit": "Unit 6",
     "orderIndex": 45,
@@ -10684,18 +10684,18 @@ const questions = [
     "questionText": "He is very _______ because he doesn't smile much.",
     "options": {
       "A": "serious",
-      "B": "friendly",
-      "C": "honest",
-      "D": "confident"
+      "B": "confident",
+      "C": "friendly",
+      "D": "honest"
     },
     "correctAnswer": "A",
     "explanation": "Từ vựng Personality: 'serious' (nghiêm túc) phù hợp với ngữ cảnh 'doesn't smile much'.",
     "vietnameseTranslation": "Anh ấy rất _______ vì anh ấy không cười nhiều.",
     "optionTranslations": {
       "A": "nghiêm túc",
-      "B": "thân thiện",
-      "C": "trung thực",
-      "D": "tự tin"
+      "B": "tự tin",
+      "C": "thân thiện",
+      "D": "trung thực"
     },
     "unit": "Vocabulary",
     "orderIndex": 46,
@@ -10707,19 +10707,19 @@ const questions = [
   {
     "questionText": "We learn about computer programs in _______ class.",
     "options": {
-      "A": "IT",
+      "A": "biology",
       "B": "drama",
-      "C": "art",
-      "D": "biology"
+      "C": "IT",
+      "D": "art"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Từ vựng School Subjects: 'IT' (tin học) được học qua chủ đề 'computer programs'.",
     "vietnameseTranslation": "Chúng tôi học về chương trình máy tính trong lớp _______.",
     "optionTranslations": {
-      "A": "tin học",
+      "A": "sinh học",
       "B": "kịch",
-      "C": "mỹ thuật",
-      "D": "sinh học"
+      "C": "tin học",
+      "D": "mỹ thuật"
     },
     "unit": "Vocabulary",
     "orderIndex": 47,
@@ -10731,19 +10731,19 @@ const questions = [
   {
     "questionText": "He _______, so he is a organic.",
     "options": {
-      "A": "vegan",
-      "B": "organic",
-      "C": "allergy",
-      "D": "vegetarian"
+      "A": "allergy",
+      "B": "vegetarian",
+      "C": "vegan",
+      "D": "organic"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Từ vựng Food: 'organic' có nghĩa là hữu cơ.",
     "vietnameseTranslation": "Anh ấy thích thực phẩm hữu cơ không dùng hóa chất, nên anh ấy là hữu cơ.",
     "optionTranslations": {
-      "A": "thuần chay",
-      "B": "hữu cơ",
-      "C": "dị ứng",
-      "D": "ăn chay"
+      "A": "dị ứng",
+      "B": "ăn chay",
+      "C": "thuần chay",
+      "D": "hữu cơ"
     },
     "unit": "Vocabulary",
     "orderIndex": 48,
@@ -10755,19 +10755,19 @@ const questions = [
   {
     "questionText": "I like the _______ of the team to win.",
     "options": {
-      "A": "encourage",
-      "B": "challenge",
-      "C": "prize",
-      "D": "praise"
+      "A": "prize",
+      "B": "encourage",
+      "C": "praise",
+      "D": "challenge"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Từ vựng Motivation: 'encourage' có nghĩa là khuyến khích.",
     "vietnameseTranslation": "Tôi thích _______ của việc đội bóng giành chiến thắng.",
     "optionTranslations": {
-      "A": "khuyến khích",
-      "B": "thử thách",
-      "C": "giải thưởng",
-      "D": "lời khen"
+      "A": "giải thưởng",
+      "B": "khuyến khích",
+      "C": "lời khen",
+      "D": "thử thách"
     },
     "unit": "Vocabulary",
     "orderIndex": 49,
@@ -10779,19 +10779,19 @@ const questions = [
   {
     "questionText": "The concert last night is _______.",
     "options": {
-      "A": "spectacular",
-      "B": "awful",
+      "A": "brilliant",
+      "B": "spectacular",
       "C": "amazing",
-      "D": "brilliant"
+      "D": "awful"
     },
     "correctAnswer": "C",
     "explanation": "Từ vựng Extreme Adjectives: 'amazing' (tuyệt vời) là tính từ cực cấp. KHÔNG dùng 'very' với các từ này.",
     "vietnameseTranslation": "Buổi hòa nhạc tối qua thì _______.",
     "optionTranslations": {
-      "A": "ngoạn mục",
-      "B": "tệ hại",
+      "A": "tuyệt vời",
+      "B": "ngoạn mục",
       "C": "tuyệt vời",
-      "D": "tuyệt vời"
+      "D": "tệ hại"
     },
     "unit": "Vocabulary",
     "orderIndex": 50,
@@ -10805,8 +10805,8 @@ const questions = [
     "options": {
       "A": "often am",
       "B": "often",
-      "C": "don't often",
-      "D": "am often"
+      "C": "am often",
+      "D": "don't often"
     },
     "correctAnswer": "B",
     "explanation": "Adverbs of frequency đứng TRƯỚC động từ thường.",
@@ -10827,19 +10827,19 @@ const questions = [
   {
     "questionText": "John _______ careful with money.",
     "options": {
-      "A": "be often",
-      "B": "is often",
-      "C": "often is",
-      "D": "often be"
+      "A": "often be",
+      "B": "often is",
+      "C": "is often",
+      "D": "be often"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Adverbs of frequency đứng SAU động từ 'to be'.",
     "vietnameseTranslation": "John _______ cẩn thận với tiền bạc.",
     "optionTranslations": {
-      "A": "sai động từ be",
-      "B": "thường",
-      "C": "sai vị trí",
-      "D": "sai cấu trúc"
+      "A": "sai cấu trúc",
+      "B": "sai vị trí",
+      "C": "thường",
+      "D": "sai động từ be"
     },
     "unit": "Unit 1",
     "orderIndex": 2,
@@ -10851,17 +10851,17 @@ const questions = [
   {
     "questionText": "How _______ do you read the news?",
     "options": {
-      "A": "often",
-      "B": "much",
+      "A": "many",
+      "B": "often",
       "C": "long",
-      "D": "many"
+      "D": "much"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "Dùng 'How often...?' để hỏi về tần suất.",
     "vietnameseTranslation": "Bạn có _______ đọc tin tức không?",
     "optionTranslations": {
-      "A": "thường xuyên",
-      "B": "nhiều",
+      "A": "nhiều",
+      "B": "thường xuyên",
       "C": "bao lâu",
       "D": "nhiều"
     },
@@ -10876,18 +10876,18 @@ const questions = [
     "questionText": "Humans _______ oxygen.",
     "options": {
       "A": "breathing",
-      "B": "is breathe",
+      "B": "breathe",
       "C": "breathes",
-      "D": "breathe"
+      "D": "is breathe"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Sự thật hiển nhiên dùng thì Hiện tại đơn.",
     "vietnameseTranslation": "Sự thật: Con người _______ oxy.",
     "optionTranslations": {
       "A": "tiếp diễn",
-      "B": "đang",
+      "B": "hít thở",
       "C": "nguyên thể",
-      "D": "hít thở"
+      "D": "đang"
     },
     "unit": "Unit 1",
     "orderIndex": 4,
@@ -10899,19 +10899,19 @@ const questions = [
   {
     "questionText": "The meeting _______ at noon.",
     "options": {
-      "A": "finishes",
+      "A": "finiedhes",
       "B": "is finihes",
       "C": "finihes",
-      "D": "finiedhes"
+      "D": "finishes"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Lịch trình tàu xe dùng thì Hiện tại đơn.",
     "vietnameseTranslation": "Cuộc họp _______ lúc buổi trưa.",
     "optionTranslations": {
-      "A": "kết thúc",
+      "A": "đã",
       "B": "đang",
       "C": "nguyên thể",
-      "D": "đã"
+      "D": "kết thúc"
     },
     "unit": "Unit 1",
     "orderIndex": 5,
@@ -10923,10 +10923,10 @@ const questions = [
   {
     "questionText": "John _______  at a map at the moment.",
     "options": {
-      "A": "look",
+      "A": "looks",
       "B": "is looking",
       "C": "looking",
-      "D": "looks"
+      "D": "look"
     },
     "correctAnswer": "B",
     "explanation": "Dấu hiệu 'at the moment' dùng thì Hiện tại tiếp diễn.",
@@ -10949,8 +10949,8 @@ const questions = [
     "options": {
       "A": "hates",
       "B": "was hating",
-      "C": "hated",
-      "D": "is hating"
+      "C": "is hating",
+      "D": "hated"
     },
     "correctAnswer": "A",
     "explanation": "Động từ trạng thái (stative verb) KHÔNG dùng ở thì tiếp diễn.",
@@ -10958,8 +10958,8 @@ const questions = [
     "optionTranslations": {
       "A": "đúng",
       "B": "đã đang",
-      "C": "đã",
-      "D": "đang (sai)"
+      "C": "đang (sai)",
+      "D": "đã"
     },
     "unit": "Unit 1",
     "orderIndex": 7,
@@ -10971,19 +10971,19 @@ const questions = [
   {
     "questionText": "Yesterday, John _______  early.",
     "options": {
-      "A": "slept",
-      "B": "was sleeping",
-      "C": "sleeps",
-      "D": "sleep"
+      "A": "sleeps",
+      "B": "sleep",
+      "C": "slept",
+      "D": "was sleeping"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Dấu hiệu 'Yesterday' dùng thì Quá khứ đơn.",
     "vietnameseTranslation": "Hôm qua, John _______ ngủ sớm.",
     "optionTranslations": {
-      "A": "đã sleep",
-      "B": "tiếp diễn",
-      "C": "hiện tại",
-      "D": "hiện tại"
+      "A": "hiện tại",
+      "B": "hiện tại",
+      "C": "đã sleep",
+      "D": "tiếp diễn"
     },
     "unit": "Unit 2",
     "orderIndex": 8,
@@ -10995,19 +10995,19 @@ const questions = [
   {
     "questionText": "John _______ bring the umbrella.",
     "options": {
-      "A": "don't",
-      "B": "didn't",
-      "C": "doesn't",
-      "D": "wasn't"
+      "A": "didn't",
+      "B": "doesn't",
+      "C": "wasn't",
+      "D": "don't"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Câu phủ định quá khứ đơn với động từ thường dùng 'didn't'.",
     "vietnameseTranslation": "John _______ mang theo ô.",
     "optionTranslations": {
-      "A": "không",
-      "B": "đã không",
-      "C": "không",
-      "D": "không phải"
+      "A": "đã không",
+      "B": "không",
+      "C": "không phải",
+      "D": "không"
     },
     "unit": "Unit 2",
     "orderIndex": 9,
@@ -11020,17 +11020,17 @@ const questions = [
     "questionText": "_______ you call me yesterday?",
     "options": {
       "A": "Were",
-      "B": "Did",
-      "C": "Are",
+      "B": "Are",
+      "C": "Did",
       "D": "Do"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Câu hỏi Yes/No quá khứ đơn dùng 'Did'.",
     "vietnameseTranslation": "Bạn _______ gọi cho tôi ngày hôm qua không?",
     "optionTranslations": {
       "A": "Quá khứ to-be",
-      "B": "Quá khứ",
-      "C": "Hiện tại to-be",
+      "B": "Hiện tại to-be",
+      "C": "Quá khứ",
       "D": "Hiện tại"
     },
     "unit": "Unit 2",
@@ -11041,21 +11041,21 @@ const questions = [
     "setDifficulty": "hard"
   },
   {
-    "questionText": "John _______ copy the notes last night.",
+    "questionText": "John _______ the notes last night.",
     "options": {
-      "A": "copy",
-      "B": "copies",
-      "C": "copyed",
-      "D": "copied"
+      "A": "copied",
+      "B": "copyed",
+      "C": "copy",
+      "D": "copies"
     },
-    "correctAnswer": "D",
-    "explanation": "Động từ tận cùng bằng phụ âm + y, đổi y thành ied. VD: study→studied, NOT studyed.",
+    "correctAnswer": "A",
+    "explanation": "Quy tắc: phụ âm + y → đổi y thành i rồi thêm -ed. Ví dụ: copy → copied. Không viết 'copyed'.",
     "vietnameseTranslation": "John _______ chép lại ghi chú tối qua.",
     "optionTranslations": {
-      "A": "nguyên thể",
-      "B": "hiện tại s/es",
-      "C": "sai chính tả (-yed thay vì -ied)",
-      "D": "đã"
+      "A": "đã",
+      "B": "sai chính tả -yed",
+      "C": "nguyên thể (base form)",
+      "D": "hiện tại s/es"
     },
     "unit": "Unit 2",
     "orderIndex": 11,
@@ -11067,19 +11067,19 @@ const questions = [
   {
     "questionText": "_______ is your biggest fear?",
     "options": {
-      "A": "When",
+      "A": "Where",
       "B": "Who",
-      "C": "What",
-      "D": "Where"
+      "C": "When",
+      "D": "What"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Hỏi về thông tin dùng 'What'.",
     "vietnameseTranslation": "nỗi sợ lớn nhất của bạn là _______?",
     "optionTranslations": {
-      "A": "Khi nào",
+      "A": "Ở đâu",
       "B": "Ai",
-      "C": "Cái gì",
-      "D": "Ở đâu"
+      "C": "Khi nào",
+      "D": "Cái gì"
     },
     "unit": "Unit 2",
     "orderIndex": 12,
@@ -11091,19 +11091,19 @@ const questions = [
   {
     "questionText": "_______ did they travel? - To Vietnam",
     "options": {
-      "A": "When",
+      "A": "Why",
       "B": "Who",
-      "C": "Why",
-      "D": "Where"
+      "C": "Where",
+      "D": "When"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "C",
     "explanation": "Câu trả lời chỉ nơi chốn nên dùng từ để hỏi 'Where'.",
     "vietnameseTranslation": "Họ đã _______ đi du lịch? - Đến Việt Nam",
     "optionTranslations": {
-      "A": "Khi nào",
+      "A": "Tại sao",
       "B": "Ai",
-      "C": "Tại sao",
-      "D": "Ở đâu"
+      "C": "Ở đâu",
+      "D": "Khi nào"
     },
     "unit": "Unit 2",
     "orderIndex": 13,
@@ -11115,19 +11115,19 @@ const questions = [
   {
     "questionText": "_______ you call a taxi?",
     "options": {
-      "A": "Can",
+      "A": "Have",
       "B": "Do",
       "C": "Are",
-      "D": "Have"
+      "D": "Can"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Yêu cầu giúp đỡ dùng 'Can' hoặc 'Could'.",
     "vietnameseTranslation": "Bạn _______ gọi một chiếc taxi được không?",
     "optionTranslations": {
-      "A": "Có thể",
+      "A": "Có",
       "B": "Làm",
       "C": "Là",
-      "D": "Có"
+      "D": "Có thể"
     },
     "unit": "Unit 2",
     "orderIndex": 14,
@@ -11140,18 +11140,18 @@ const questions = [
     "questionText": "John _______ stand outside at 8 PM.",
     "options": {
       "A": "was standing",
-      "B": "were",
+      "B": "did",
       "C": "are",
-      "D": "did"
+      "D": "were"
     },
     "correctAnswer": "A",
     "explanation": "Dùng thì Quá khứ tiếp diễn cho hành động đang xảy ra tại một thời điểm trong quá khứ.",
     "vietnameseTranslation": "John _______ đứng bên ngoài lúc 8 giờ tối.",
     "optionTranslations": {
       "A": "đang",
-      "B": "sai to-be",
+      "B": "quá khứ",
       "C": "hiện tại",
-      "D": "quá khứ"
+      "D": "sai to-be"
     },
     "unit": "Unit 3",
     "orderIndex": 15,
@@ -11161,21 +11161,21 @@ const questions = [
     "setDifficulty": "hard"
   },
   {
-    "questionText": "The dog barked while Mary _______",
+    "questionText": "The dog barked while Mary _______.",
     "options": {
-      "A": "sleepe",
-      "B": "is sleeping",
-      "C": "sleeped",
-      "D": "was sleeping"
+      "A": "is sleeping",
+      "B": "was sleeping",
+      "C": "sleepe",
+      "D": "sleeped"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Hành động đang diễn ra trong quá khứ bị gián đoạn dùng Quá khứ tiếp diễn.",
-    "vietnameseTranslation": "Chó sủa trong khi Mary _______",
+    "vietnameseTranslation": "Chó sủa trong khi Mary _______.",
     "optionTranslations": {
-      "A": "nguyên thể",
-      "B": "hiện tại",
-      "C": "quá khứ",
-      "D": "đang"
+      "A": "hiện tại",
+      "B": "đang",
+      "C": "nguyên thể",
+      "D": "quá khứ"
     },
     "unit": "Unit 3",
     "orderIndex": 16,
@@ -11187,18 +11187,18 @@ const questions = [
   {
     "questionText": "Mary was sleeping _______ the dog barked.",
     "options": {
-      "A": "while",
-      "B": "so",
-      "C": "when",
+      "A": "so",
+      "B": "when",
+      "C": "while",
       "D": "during"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Dùng 'when' trước hành động gián đoạn ở thì Quá khứ đơn.",
     "vietnameseTranslation": "khi chó sủa",
     "optionTranslations": {
-      "A": "trong khi",
-      "B": "vì vậy",
-      "C": "khi",
+      "A": "vì vậy",
+      "B": "khi",
+      "C": "trong khi",
       "D": "trong suốt"
     },
     "unit": "Unit 3",
@@ -11212,18 +11212,18 @@ const questions = [
     "questionText": "I want to hide something. It's a secret.",
     "options": {
       "A": "everything",
-      "B": "nothing",
-      "C": "something/someone/somewhere",
-      "D": "anything"
+      "B": "something/someone/somewhere",
+      "C": "anything",
+      "D": "nothing"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Trong câu khẳng định, dùng đại từ bất định some-.",
     "vietnameseTranslation": "Tôi muốn giấu thứ gì đó. Đó là bí mật.",
     "optionTranslations": {
       "A": "mọi thứ",
-      "B": "không",
-      "C": "đại từ bất định khẳng định",
-      "D": "bất cứ"
+      "B": "đại từ bất định khẳng định",
+      "C": "bất cứ",
+      "D": "không"
     },
     "unit": "Unit 3",
     "orderIndex": 18,
@@ -11236,8 +11236,8 @@ const questions = [
     "questionText": "I didn't know anyone.",
     "options": {
       "A": "anything/anyone/anywhere",
-      "B": "everything",
-      "C": "nothing",
+      "B": "nothing",
+      "C": "everything",
       "D": "something"
     },
     "correctAnswer": "A",
@@ -11245,8 +11245,8 @@ const questions = [
     "vietnameseTranslation": "Tôi đã không biết bất cứ ai.",
     "optionTranslations": {
       "A": "đại từ phủ định",
-      "B": "mọi thứ",
-      "C": "phủ định kép",
+      "B": "phủ định kép",
+      "C": "mọi thứ",
       "D": "khẳng định"
     },
     "unit": "Unit 3",
@@ -11259,19 +11259,19 @@ const questions = [
   {
     "questionText": "There is nothing left.",
     "options": {
-      "A": "nothing/no one/nowhere",
-      "B": "anything",
-      "C": "everything",
-      "D": "something"
+      "A": "anything",
+      "B": "nothing/no one/nowhere",
+      "C": "something",
+      "D": "everything"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "'Nothing/No one/Nowhere' mang nghĩa phủ định, động từ chia ở khẳng định.",
     "vietnameseTranslation": "Không có không còn gì.",
     "optionTranslations": {
-      "A": "nghĩa phủ định",
-      "B": "bất cứ",
-      "C": "mọi",
-      "D": "một vài"
+      "A": "bất cứ",
+      "B": "nghĩa phủ định",
+      "C": "một vài",
+      "D": "mọi"
     },
     "unit": "Unit 3",
     "orderIndex": 20,
@@ -11283,19 +11283,19 @@ const questions = [
   {
     "questionText": "Everything goes according to plan.",
     "options": {
-      "A": "Some",
-      "B": "Anyone",
-      "C": "All",
-      "D": "Everyone/Everything"
+      "A": "Anyone",
+      "B": "Everyone/Everything",
+      "C": "Some",
+      "D": "All"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Đại từ 'Everyone/Everything' dùng với động từ số ít.",
     "vietnameseTranslation": "Mọi thứ diễn ra theo kế hoạch.",
     "optionTranslations": {
-      "A": "Một vài",
-      "B": "Bất cứ",
-      "C": "Tất cả",
-      "D": "Mọi người/Mọi thứ"
+      "A": "Bất cứ",
+      "B": "Mọi người/Mọi thứ",
+      "C": "Một vài",
+      "D": "Tất cả"
     },
     "unit": "Unit 3",
     "orderIndex": 21,
@@ -11307,19 +11307,19 @@ const questions = [
   {
     "questionText": "John _______ paint the house.",
     "options": {
-      "A": "will to",
-      "B": "going to",
+      "A": "going to",
+      "B": "is going",
       "C": "is going to",
-      "D": "is going"
+      "D": "will to"
     },
     "correctAnswer": "C",
     "explanation": "Nói về một kế hoạch dùng cấu trúc 'be going to'.",
     "vietnameseTranslation": "John _______ sơn lại nhà.",
     "optionTranslations": {
-      "A": "sai",
-      "B": "thiếu be",
+      "A": "thiếu be",
+      "B": "thiếu to",
       "C": "dự định",
-      "D": "thiếu to"
+      "D": "sai"
     },
     "unit": "Unit 4",
     "orderIndex": 22,
@@ -11331,19 +11331,19 @@ const questions = [
   {
     "questionText": "John _______ stay up late.",
     "options": {
-      "A": "isn't going to",
-      "B": "not going to",
-      "C": "won't going to",
-      "D": "don't going to"
+      "A": "don't going to",
+      "B": "won't going to",
+      "C": "isn't going to",
+      "D": "not going to"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "C",
     "explanation": "Phủ định của 'be going to'.",
     "vietnameseTranslation": "John _______ thức khuya.",
     "optionTranslations": {
-      "A": "không dự định",
-      "B": "thiếu be",
-      "C": "sai",
-      "D": "sai"
+      "A": "sai",
+      "B": "sai",
+      "C": "không dự định",
+      "D": "thiếu be"
     },
     "unit": "Unit 4",
     "orderIndex": 23,
@@ -11355,19 +11355,19 @@ const questions = [
   {
     "questionText": "I promise I _______ break my promise.",
     "options": {
-      "A": "not",
-      "B": "am not going to",
-      "C": "won't",
-      "D": "don't"
+      "A": "won't",
+      "B": "don't",
+      "C": "not",
+      "D": "am not going to"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Lời hứa dùng 'won't'.",
     "vietnameseTranslation": "Tôi hứa tôi _______ thất hứa.",
     "optionTranslations": {
-      "A": "không",
-      "B": "không dự định",
-      "C": "sẽ không",
-      "D": "không"
+      "A": "sẽ không",
+      "B": "không",
+      "C": "không",
+      "D": "không dự định"
     },
     "unit": "Unit 4",
     "orderIndex": 24,
@@ -11379,19 +11379,19 @@ const questions = [
   {
     "questionText": "Don't worry, I _______ drive you home.",
     "options": {
-      "A": "will",
+      "A": "am",
       "B": "am going to",
-      "C": "am",
-      "D": "do"
+      "C": "do",
+      "D": "will"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Đề nghị giúp đỡ (Offer) dùng 'will'.",
     "vietnameseTranslation": "Đừng lo, tôi _______ lái xe đưa bạn về.",
     "optionTranslations": {
-      "A": "sẽ",
+      "A": "đang",
       "B": "dự định",
-      "C": "đang",
-      "D": "làm"
+      "C": "làm",
+      "D": "sẽ"
     },
     "unit": "Unit 4",
     "orderIndex": 25,
@@ -11403,19 +11403,19 @@ const questions = [
   {
     "questionText": "Okay, I _______ have a salad.",
     "options": {
-      "A": "will",
+      "A": "am doing",
       "B": "am going to",
       "C": "do",
-      "D": "am doing"
+      "D": "will"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Quyết định đột ngột lúc nói dùng 'will'.",
     "vietnameseTranslation": "Được rồi, tôi _______ ăn món salad.",
     "optionTranslations": {
-      "A": "sẽ",
+      "A": "đang làm",
       "B": "dự định",
       "C": "làm",
-      "D": "đang làm"
+      "D": "sẽ"
     },
     "unit": "Unit 4",
     "orderIndex": 26,
@@ -11427,18 +11427,18 @@ const questions = [
   {
     "questionText": "If you _______ your phone, I'll lend you mine.",
     "options": {
-      "A": "forgot",
+      "A": "will forget",
       "B": "forget",
-      "C": "will forget",
+      "C": "forgot",
       "D": "are forgetting"
     },
     "correctAnswer": "B",
     "explanation": "KHÔNG dùng 'will' trong mệnh đề 'If'. Mệnh đề điều kiện loại 1 dùng Hiện tại đơn. Đáp án đúng: 'forget'.",
     "vietnameseTranslation": "Nếu để quên, ...",
     "optionTranslations": {
-      "A": "quá khứ (sai)",
+      "A": "tương lai (sai)",
       "B": "hiện tại",
-      "C": "tương lai (sai)",
+      "C": "quá khứ (sai)",
       "D": "tiếp diễn (sai)"
     },
     "unit": "Unit 4",
@@ -11451,19 +11451,19 @@ const questions = [
   {
     "questionText": "I'm _______ fix the car.",
     "options": {
-      "A": "going",
+      "A": "go to",
       "B": "going to",
-      "C": "will",
-      "D": "go to"
+      "C": "going",
+      "D": "will"
     },
     "correctAnswer": "B",
     "explanation": "Cấu trúc am/is/are + going to + V.",
     "vietnameseTranslation": "Kế hoạch: sửa xe",
     "optionTranslations": {
-      "A": "đang",
+      "A": "đi",
       "B": "dự định",
-      "C": "sẽ",
-      "D": "đi"
+      "C": "đang",
+      "D": "sẽ"
     },
     "unit": "Unit 4",
     "orderIndex": 28,
@@ -11475,18 +11475,18 @@ const questions = [
   {
     "questionText": "If you press the button, _______ .",
     "options": {
-      "A": "is happening",
-      "B": "might happen",
-      "C": "the screen turns on",
+      "A": "might happen",
+      "B": "the screen turns on",
+      "C": "is happening",
       "D": "will happen"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Câu điều kiện loại 0 diễn tả sự thật hiển nhiên. Cả 2 vế đều dùng Hiện tại đơn. Đáp án đúng là 'the screen turns on'.",
     "vietnameseTranslation": "Nếu bạn press the button, _______ .",
     "optionTranslations": {
-      "A": "đang diễn ra (sai)",
-      "B": "có thể (sai)",
-      "C": "bật sáng",
+      "A": "có thể (sai)",
+      "B": "bật sáng",
+      "C": "đang diễn ra (sai)",
       "D": "tương lai (sai)"
     },
     "unit": "Unit 5",
@@ -11499,19 +11499,19 @@ const questions = [
   {
     "questionText": "If you pull the string, _______ .",
     "options": {
-      "A": "is happening",
-      "B": "will happen",
-      "C": "the light goes off",
-      "D": "might happen"
+      "A": "the light goes off",
+      "B": "is happening",
+      "C": "might happen",
+      "D": "will happen"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "A",
     "explanation": "Câu điều kiện loại 0 chỉ quy luật máy móc. Cả 2 vế đều dùng Hiện tại đơn. Đáp án đúng là 'the light goes off'.",
     "vietnameseTranslation": "Nếu you pull the string, _______ .",
     "optionTranslations": {
-      "A": "đang diễn ra (sai)",
-      "B": "tương lai (sai)",
-      "C": "tắt đi",
-      "D": "có thể (sai)"
+      "A": "tắt đi",
+      "B": "đang diễn ra (sai)",
+      "C": "có thể (sai)",
+      "D": "tương lai (sai)"
     },
     "unit": "Unit 5",
     "orderIndex": 30,
@@ -11524,18 +11524,18 @@ const questions = [
     "questionText": "If it is far, _______.",
     "options": {
       "A": "we don't walk",
-      "B": "we won't walk",
-      "C": "we didn't walk",
-      "D": "we aren't walk"
+      "B": "we didn't walk",
+      "C": "we aren't walk",
+      "D": "we won't walk"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Câu điều kiện loại 1: If + HTĐ, will/won't + V.",
     "vietnameseTranslation": "Nếu trời is far, _______.",
     "optionTranslations": {
       "A": "không",
-      "B": "chúng ta sẽ không đi bộ",
-      "C": "đã không",
-      "D": "không phải"
+      "B": "đã không",
+      "C": "không phải",
+      "D": "chúng ta sẽ không đi bộ"
     },
     "unit": "Unit 5",
     "orderIndex": 31,
@@ -11547,19 +11547,19 @@ const questions = [
   {
     "questionText": "If the baby _______, I'll hold him.",
     "options": {
-      "A": "is crying",
-      "B": "cried",
-      "C": "cries",
-      "D": "will cry"
+      "A": "will cry",
+      "B": "is crying",
+      "C": "cried",
+      "D": "cries"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Mệnh đề If loại 1 dùng Hiện tại đơn.",
     "vietnameseTranslation": "Nếu khóc",
     "optionTranslations": {
-      "A": "tiếp diễn",
-      "B": "quá khứ",
-      "C": "hiện tại",
-      "D": "sẽ"
+      "A": "sẽ",
+      "B": "tiếp diễn",
+      "C": "quá khứ",
+      "D": "hiện tại"
     },
     "unit": "Unit 5",
     "orderIndex": 32,
@@ -11572,18 +11572,18 @@ const questions = [
     "questionText": "My phone is _______ than yours. (cold)",
     "options": {
       "A": "colder",
-      "B": "most cold",
-      "C": "cold",
-      "D": "more cold"
+      "B": "more cold",
+      "C": "most cold",
+      "D": "cold"
     },
     "correctAnswer": "A",
     "explanation": "So sánh hơn của tính từ ngắn 'cold': thêm -er. KHÔNG dùng 'more'.",
     "vietnameseTranslation": "Điện thoại của tôi _______ của bạn. (cold)",
     "optionTranslations": {
       "A": "lạnh hơn",
-      "B": "so sánh nhất (sai)",
-      "C": "nguyên thể",
-      "D": "so sánh hơn (sai cấu trúc)"
+      "B": "so sánh hơn (sai cấu trúc)",
+      "C": "so sánh nhất (sai)",
+      "D": "nguyên thể"
     },
     "unit": "Unit 5",
     "orderIndex": 33,
@@ -11643,19 +11643,19 @@ const questions = [
   {
     "questionText": "_______ your brother ever won a prize?",
     "options": {
-      "A": "Has",
-      "B": "Is",
+      "A": "Is",
+      "B": "Did",
       "C": "Does",
-      "D": "Did"
+      "D": "Has"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Hỏi về trải nghiệm dùng Hiện tại hoàn thành.",
     "vietnameseTranslation": "_______ bạn đã từng...",
     "optionTranslations": {
-      "A": "HT hoàn thành",
-      "B": "to-be",
+      "A": "to-be",
+      "B": "QK",
       "C": "HT",
-      "D": "QK"
+      "D": "HT hoàn thành"
     },
     "unit": "Unit 6",
     "orderIndex": 36,
@@ -11668,18 +11668,18 @@ const questions = [
     "questionText": "I've _______ lost my wallet.",
     "options": {
       "A": "ever",
-      "B": "never",
-      "C": "sometimes",
-      "D": "always"
+      "B": "sometimes",
+      "C": "always",
+      "D": "never"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "Trong câu khẳng định mang nghĩa chưa từng, dùng 'never'.",
     "vietnameseTranslation": "Tôi chưa bao giờ mất ví.",
     "optionTranslations": {
       "A": "từng",
-      "B": "chưa bao giờ",
-      "C": "thỉnh thoảng",
-      "D": "luôn"
+      "B": "thỉnh thoảng",
+      "C": "luôn",
+      "D": "chưa bao giờ"
     },
     "unit": "Unit 6",
     "orderIndex": 37,
@@ -11692,18 +11692,18 @@ const questions = [
     "questionText": "This is the best thing I have _______ done.",
     "options": {
       "A": "just",
-      "B": "ever",
-      "C": "never",
-      "D": "always"
+      "B": "always",
+      "C": "ever",
+      "D": "never"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Dùng ever trong câu so sánh nhất.",
     "vietnameseTranslation": "Đây là việc tốt nhất tôi từng làm.",
     "optionTranslations": {
       "A": "vừa mới",
-      "B": "từng",
-      "C": "chưa từng",
-      "D": "luôn"
+      "B": "luôn",
+      "C": "từng",
+      "D": "chưa từng"
     },
     "unit": "Unit 6",
     "orderIndex": 38,
@@ -11715,19 +11715,19 @@ const questions = [
   {
     "questionText": "They stopped _______ when the teacher came in.",
     "options": {
-      "A": "to talk",
-      "B": "talking",
-      "C": "is talking",
-      "D": "talk"
+      "A": "talk",
+      "B": "is talking",
+      "C": "talking",
+      "D": "to talk"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "Dùng V-ing sau các động từ như practise, enjoy, mind...",
     "vietnameseTranslation": "V-ing sau động từ.",
     "optionTranslations": {
-      "A": "to V",
-      "B": "V-ing",
-      "C": "sai",
-      "D": "V"
+      "A": "V",
+      "B": "sai",
+      "C": "V-ing",
+      "D": "to V"
     },
     "unit": "Unit 6",
     "orderIndex": 39,
@@ -11739,19 +11739,19 @@ const questions = [
   {
     "questionText": "I arranged _______ him at 5.",
     "options": {
-      "A": "is meeting",
+      "A": "meet",
       "B": "to meet",
-      "C": "meet",
-      "D": "meeting"
+      "C": "meeting",
+      "D": "is meeting"
     },
     "correctAnswer": "B",
     "explanation": "Dùng to-infinitive sau need, want, decide...",
     "vietnameseTranslation": "to V sau động từ.",
     "optionTranslations": {
-      "A": "sai",
+      "A": "V",
       "B": "to V",
-      "C": "V",
-      "D": "V-ing"
+      "C": "V-ing",
+      "D": "sai"
     },
     "unit": "Unit 6",
     "orderIndex": 40,
@@ -11763,19 +11763,19 @@ const questions = [
   {
     "questionText": "She expected him _______ on time.",
     "options": {
-      "A": "to be",
+      "A": "be",
       "B": "being",
       "C": "is being",
-      "D": "be"
+      "D": "to be"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "Cấu trúc: verb + object + to V.",
     "vietnameseTranslation": "persuade/ask/want + sb + to V",
     "optionTranslations": {
-      "A": "to V",
+      "A": "V",
       "B": "V-ing",
       "C": "sai",
-      "D": "V"
+      "D": "to V"
     },
     "unit": "Unit 6",
     "orderIndex": 41,
@@ -11813,8 +11813,8 @@ const questions = [
     "options": {
       "A": "which",
       "B": "who",
-      "C": "where",
-      "D": "when"
+      "C": "when",
+      "D": "where"
     },
     "correctAnswer": "B",
     "explanation": "Đại từ 'who' thay thế danh từ chỉ người.",
@@ -11822,8 +11822,8 @@ const questions = [
     "optionTranslations": {
       "A": "vật",
       "B": "người",
-      "C": "nơi",
-      "D": "thời gian"
+      "C": "thời gian",
+      "D": "nơi"
     },
     "unit": "Unit 6",
     "orderIndex": 43,
@@ -11835,19 +11835,19 @@ const questions = [
   {
     "questionText": "The dress _______ she wore was stunning.",
     "options": {
-      "A": "who",
-      "B": "when",
-      "C": "where",
-      "D": "which"
+      "A": "where",
+      "B": "which",
+      "C": "when",
+      "D": "who"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "B",
     "explanation": "Đại từ 'which' thay thế danh từ chỉ vật.",
     "vietnameseTranslation": "chiếc váy",
     "optionTranslations": {
-      "A": "người",
-      "B": "thời gian",
-      "C": "nơi",
-      "D": "vật"
+      "A": "nơi",
+      "B": "vật",
+      "C": "thời gian",
+      "D": "người"
     },
     "unit": "Unit 6",
     "orderIndex": 44,
@@ -11857,20 +11857,20 @@ const questions = [
     "setDifficulty": "hard"
   },
   {
-    "questionText": "That is the island _______ we visited.",
+    "questionText": "This is the island _______ we visited.",
     "options": {
       "A": "who",
-      "B": "which",
-      "C": "when",
+      "B": "when",
+      "C": "which",
       "D": "where"
     },
     "correctAnswer": "D",
-    "explanation": "Đại từ 'where' thay thế danh từ chỉ nơi chốn.",
-    "vietnameseTranslation": "Đó là hòn đảo.",
+    "explanation": "Đại từ quan hệ 'where' dùng để thay thế cho danh từ chỉ nơi chốn.",
+    "vietnameseTranslation": "Đây là hòn đảo.",
     "optionTranslations": {
       "A": "người",
-      "B": "vật",
-      "C": "thời gian",
+      "B": "thời gian",
+      "C": "vật",
       "D": "nơi chốn"
     },
     "unit": "Unit 6",
@@ -11883,19 +11883,19 @@ const questions = [
   {
     "questionText": "He is very _______ because he speaks well in public.",
     "options": {
-      "A": "friendly",
-      "B": "confident",
+      "A": "confident",
+      "B": "honest",
       "C": "serious",
-      "D": "honest"
+      "D": "friendly"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Từ vựng Personality: 'confident' (tự tin) phù hợp với ngữ cảnh 'speaks well in public'.",
     "vietnameseTranslation": "Anh ấy rất _______ vì anh ấy nói tốt trước đám đông.",
     "optionTranslations": {
-      "A": "thân thiện",
-      "B": "tự tin",
+      "A": "tự tin",
+      "B": "trung thực",
       "C": "nghiêm túc",
-      "D": "trung thực"
+      "D": "thân thiện"
     },
     "unit": "Vocabulary",
     "orderIndex": 46,
@@ -11907,19 +11907,19 @@ const questions = [
   {
     "questionText": "We learn about football and sports in _______ class.",
     "options": {
-      "A": "art",
+      "A": "PE",
       "B": "drama",
       "C": "biology",
-      "D": "PE"
+      "D": "art"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "Từ vựng School Subjects: 'PE' (thể dục) được học qua chủ đề 'football and sports'.",
     "vietnameseTranslation": "Chúng tôi học về bóng đá và thể thao trong lớp _______.",
     "optionTranslations": {
-      "A": "mỹ thuật",
+      "A": "thể dục",
       "B": "kịch",
       "C": "sinh học",
-      "D": "thể dục"
+      "D": "mỹ thuật"
     },
     "unit": "Vocabulary",
     "orderIndex": 47,
@@ -11931,19 +11931,19 @@ const questions = [
   {
     "questionText": "He _______, so he is a intolerance.",
     "options": {
-      "A": "vegan",
+      "A": "vegetarian",
       "B": "allergy",
-      "C": "intolerance",
-      "D": "vegetarian"
+      "C": "vegan",
+      "D": "intolerance"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "Từ vựng Food: 'intolerance' có nghĩa là không dung nạp.",
     "vietnameseTranslation": "Anh ấy không thể ăn sữa hay trứng, nên anh ấy là không dung nạp.",
     "optionTranslations": {
-      "A": "thuần chay",
+      "A": "ăn chay",
       "B": "dị ứng",
-      "C": "không dung nạp",
-      "D": "ăn chay"
+      "C": "thuần chay",
+      "D": "không dung nạp"
     },
     "unit": "Vocabulary",
     "orderIndex": 48,
@@ -11955,17 +11955,17 @@ const questions = [
   {
     "questionText": "I like the _______ of the best student.",
     "options": {
-      "A": "praise",
-      "B": "prize",
+      "A": "prize",
+      "B": "praise",
       "C": "challenge",
       "D": "encourage"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Từ vựng Motivation: 'prize' có nghĩa là giải thưởng.",
     "vietnameseTranslation": "Tôi thích _______ của việc học sinh xuất sắc nhất.",
     "optionTranslations": {
-      "A": "lời khen",
-      "B": "giải thưởng",
+      "A": "giải thưởng",
+      "B": "lời khen",
       "C": "thử thách",
       "D": "khuyến khích"
     },
@@ -11979,18 +11979,18 @@ const questions = [
   {
     "questionText": "The smell coming from the kitchen is _______.",
     "options": {
-      "A": "spectacular",
+      "A": "awful",
       "B": "brilliant",
-      "C": "awful",
+      "C": "spectacular",
       "D": "disgusting"
     },
     "correctAnswer": "D",
     "explanation": "Từ vựng Extreme Adjectives: 'disgusting' (kinh tởm) là tính từ cực cấp. KHÔNG dùng 'very' với các từ này.",
     "vietnameseTranslation": "Mùi từ bếp toả ra thì _______.",
     "optionTranslations": {
-      "A": "ngoạn mục",
+      "A": "tệ hại",
       "B": "tuyệt vời",
-      "C": "tệ hại",
+      "C": "ngoạn mục",
       "D": "kinh tởm"
     },
     "unit": "Vocabulary",
