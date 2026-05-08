@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Thi Trắc Nghiệm - Voices Pre-Intermediate A2-B1</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- React & ReactDOM -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    
+    <!-- Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <!-- JSPDF & HTML2Canvas for PDF Export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            min-height: 100vh;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        }
+        .option-radio:checked + div {
+            border-color: #3B82F6;
+            background-color: #EFF6FF;
+        }
+        .option-radio:checked + div .radio-inner {
+            background-color: #3B82F6;
+            transform: scale(1);
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        .fade-enter { opacity: 0; transform: translateY(10px); }
+        .fade-enter-active { opacity: 1; transform: translateY(0); transition: opacity 300ms, transform 300ms; }
+        
+        @keyframes pulse-red {
+            0%, 100% { color: #EF4444; }
+            50% { color: #7f1d1d; }
+        }
+        .time-warning { animation: pulse-red 1s infinite; }
+    </style>
+</head>
+<body class="font-sans text-slate-800 antialiased selection:bg-blue-200 selection:text-blue-900">
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect, useMemo, useRef, useCallback } = React;
+
+        // 50 Câu Hỏi
+        const questionsData = [
+    // Unit 1
+    { 
+        id: 1, question: "I _______ play tennis on weekends.", 
+        questionTranslation: "Tôi _______ chơi quần vợt vào cuối tuần.",
+        options: ["never", "don't never", "am never", "never am"], 
+        optionsTranslations: ["không bao giờ", "sai ngữ pháp", "sai cấu trúc", "sai cấu trúc"],
+        correctAnswer: "A", explanation: "Adverbs of frequency (never, always, usually...) đứng TRƯỚC động từ thường. Cấu trúc: S + adverb + V. Đáp án A đúng vì 'never' đứng trước 'play'.", 
+        commonMistake: "Dùng 'don't never' do thói quen phủ định kép trong tiếng Việt. Ngoài ra, đặt sai vị trí của 'never' (sau động từ thường thay vì trước) cũng là lỗi phổ biến.",
+        unit: "Unit 1: Adverbs of Frequency" 
+    },
+    { 
+        id: 2, question: "She _______ late for work.", 
+        questionTranslation: "Cô ấy _______ đi làm muộn.",
+        options: ["is always", "always is", "be always", "always be"], 
+        optionsTranslations: ["luôn luôn", "sai vị trí", "sai động từ be", "sai cấu trúc"],
+        correctAnswer: "A", explanation: "Adverbs of frequency đứng SAU động từ 'to be'. Cấu trúc: S + be + adverb. Đáp án A đúng: 'is always'.", 
+        commonMistake: "Đặt trạng từ tần suất trước động từ to-be (always is) thay vì sau (is always).",
+        unit: "Unit 1: Adverbs of Frequency" 
+    },
+    { 
+        id: 3, question: "How _______ do you travel abroad?", 
+        questionTranslation: "Bạn có _______ đi du lịch nước ngoài không?",
+        options: ["many", "much", "often", "long"], 
+        optionsTranslations: ["nhiều (đếm được)", "nhiều (không đếm được)", "thường xuyên", "bao lâu"],
+        correctAnswer: "C", explanation: "Dùng 'How often...?' để hỏi về tần suất.", 
+        commonMistake: "Dùng 'How long' (hỏi về khoảng thời gian) hoặc 'How many/much' thay vì 'How often' (hỏi về mức độ thường xuyên).",
+        unit: "Unit 1: Adverbs of Frequency" 
+    },
+    { 
+        id: 4, question: "Water _______ at 100°C.", 
+        questionTranslation: "Nước _______ ở 100 độ C.",
+        options: ["boil", "boils", "is boiling", "boiled"], 
+        optionsTranslations: ["sôi (nguyên thể)", "sôi (số ít)", "đang sôi", "đã sôi"],
+        correctAnswer: "B", explanation: "Sự thật hiển nhiên dùng thì Hiện tại đơn. 'Water' là danh từ không đếm được nên động từ thêm 's'.", 
+        commonMistake: "Quên thêm 's' ở động từ do nghĩ 'water' không phải là danh từ số ít, hoặc dùng thì hiện tại tiếp diễn cho sự thật hiển nhiên.",
+        unit: "Unit 1: Present Simple" 
+    },
+    { 
+        id: 5, question: "The train _______ at 9 AM.", 
+        questionTranslation: "Chuyến tàu _______ lúc 9 giờ sáng.",
+        options: ["leaves", "leave", "is leaving", "left"], 
+        optionsTranslations: ["rời đi", "nguyên thể", "đang rời đi", "đã rời đi"],
+        correctAnswer: "A", explanation: "Lịch trình tàu xe dùng thì Hiện tại đơn. 'The train' là ngôi thứ 3 số ít nên động từ thêm 's'.", 
+        commonMistake: "Dùng thì tương lai (will leave) cho lịch trình tàu xe thay vì hiện tại đơn.",
+        unit: "Unit 1: Present Simple" 
+    },
+    { 
+        id: 6, question: "I _______ a text message at the moment.", 
+        questionTranslation: "Tôi _______ một tin nhắn văn bản vào lúc này.",
+        options: ["send", "am sending", "sends", "sending"], 
+        optionsTranslations: ["gửi", "đang gửi", "gửi (số ít)", "đang gửi (thiếu be)"],
+        correctAnswer: "B", explanation: "Dấu hiệu 'at the moment' dùng thì Hiện tại tiếp diễn. Cấu trúc: S + am/is/are + V-ing.", 
+        commonMistake: "Bỏ quên động từ to-be (am/is/are) và chỉ dùng mỗi V-ing (I sending).",
+        unit: "Unit 1: Present Continuous" 
+    },
+    { 
+        id: 7, question: "I _______ what you mean.", 
+        questionTranslation: "Tôi _______ ý của bạn.",
+        options: ["am knowing", "know", "knows", "was knowing"], 
+        optionsTranslations: ["đang biết (sai)", "biết", "biết (số ít)", "đã đang biết"],
+        correctAnswer: "B", explanation: "'Know' là động từ trạng thái (stative verb), KHÔNG dùng ở thì tiếp diễn.", 
+        commonMistake: "Dùng 'am knowing' vì thấy diễn tả hành động hiện tại, nhưng 'know' là động từ chỉ trạng thái, không dùng thì tiếp diễn.",
+        unit: "Unit 1: Present Continuous" 
+    },
+
+    // Unit 2
+    { 
+        id: 8, question: "Last year, we _______ to Mexico on holiday.", 
+        questionTranslation: "Năm ngoái, chúng tôi _______ đến Mexico vào kỳ nghỉ.",
+        options: ["go", "goes", "went", "were going"], 
+        optionsTranslations: ["đi", "đi (số ít)", "đã đi", "đã đang đi"],
+        correctAnswer: "C", explanation: "Dấu hiệu 'Last year' dùng thì Quá khứ đơn. Động từ bất quy tắc 'go' chuyển thành 'went'.", 
+        commonMistake: "Quên chia quá khứ cho động từ bất quy tắc 'go' (ví dụ dùng 'goed' hoặc giữ nguyên 'go').",
+        unit: "Unit 2: Past Simple" 
+    },
+    { 
+        id: 9, question: "I _______ like the film. It was very bad.", 
+        questionTranslation: "Tôi _______ bộ phim. Nó rất tệ.",
+        options: ["didn't", "don't", "doesn't", "wasn't"], 
+        optionsTranslations: ["đã không", "không", "không (số ít)", "đã không phải"],
+        correctAnswer: "A", explanation: "Câu phủ định quá khứ đơn với động từ thường dùng trợ động từ 'didn't' + V(nguyên thể).", 
+        commonMistake: "Dùng 'wasn\'t like' thay vì 'didn\'t like' khi phủ định một động từ thường trong quá khứ.",
+        unit: "Unit 2: Past Simple" 
+    },
+    { 
+        id: 10, question: "_______ you enjoy the party last night?", 
+        questionTranslation: "Bạn _______ thích bữa tiệc tối qua không?",
+        options: ["Do", "Did", "Were", "Are"], 
+        optionsTranslations: ["Hiện tại", "Quá khứ", "Quá khứ (to-be)", "Hiện tại (to-be)"],
+        correctAnswer: "B", explanation: "Câu hỏi dạng Yes/No quá khứ đơn dùng trợ động từ 'Did' + S + V(nguyên thể).", 
+        commonMistake: "Dùng 'Were you enjoy' thay vì 'Did you enjoy'. 'Were' chỉ đi với V-ing hoặc tính từ/danh từ.",
+        unit: "Unit 2: Past Simple" 
+    },
+    { 
+        id: 11, question: "She _______ for the exam yesterday.", 
+        questionTranslation: "Cô ấy _______ cho bài kiểm tra ngày hôm qua.",
+        options: ["studied", "studies", "studys", "study"], 
+        optionsTranslations: ["đã học", "học", "sai chính tả", "nguyên thể"],
+        correctAnswer: "A", explanation: "Động từ tận cùng bằng phụ âm + y (study), đổi y thành ied -> studied.", 
+        commonMistake: "Chia sai động từ tận cùng bằng 'y' thành 'studyed' hoặc 'studys' thay vì 'studied'.",
+        unit: "Unit 2: Past Simple" 
+    },
+    { 
+        id: 12, question: "_______ is your email address?", 
+        questionTranslation: "Địa chỉ email của bạn là _______?",
+        options: ["What", "Where", "Who", "When"], 
+        optionsTranslations: ["Cái gì", "Ở đâu", "Ai", "Khi nào"],
+        correctAnswer: "A", explanation: "Hỏi về thông tin dùng 'What' (Cái gì).", 
+        commonMistake: "Nhầm lẫn giữa các từ để hỏi (Wh- words).",
+        unit: "Unit 2: Making Questions" 
+    },
+    { 
+        id: 13, question: "_______ did your parents go to school? - In London.", 
+        questionTranslation: "Bố mẹ bạn đã đi học _______? - Ở London.",
+        options: ["Where", "When", "Why", "Who"], 
+        optionsTranslations: ["Ở đâu", "Khi nào", "Tại sao", "Ai"],
+        correctAnswer: "A", explanation: "Câu trả lời chỉ nơi chốn 'In London' nên dùng từ để hỏi 'Where' (Ở đâu).", 
+        commonMistake: "Không chú ý vào câu trả lời chỉ nơi chốn 'In London' dẫn đến chọn sai từ để hỏi.",
+        unit: "Unit 2: Making Questions" 
+    },
+    { 
+        id: 14, question: "_______ you help me with this?", 
+        questionTranslation: "Bạn _______ giúp tôi việc này được không?",
+        options: ["Can", "Are", "Do", "Have"], 
+        optionsTranslations: ["Có thể", "Là/đang", "Làm", "Có"],
+        correctAnswer: "A", explanation: "Yêu cầu giúp đỡ dùng 'Can' hoặc 'Could'.", 
+        commonMistake: "Dùng 'Do you help me' thay vì 'Can you help me' để đưa ra một lời yêu cầu, nhờ vả lịch sự.",
+        unit: "Unit 2: Making Questions" 
+    },
+
+    // Unit 3
+    { 
+        id: 15, question: "They _______ waiting for a long time.", 
+        questionTranslation: "Họ _______ chờ đợi một thời gian dài.",
+        options: ["was", "were", "are", "did"], 
+        optionsTranslations: ["đã (số ít)", "đã (số nhiều)", "đang", "đã làm"],
+        correctAnswer: "B", explanation: "Chủ ngữ 'They' số nhiều nên dùng 'were' trong thì Quá khứ tiếp diễn.", 
+        commonMistake: "Dùng 'was' với chủ ngữ số nhiều 'They' (They was waiting).",
+        unit: "Unit 3: Past Continuous" 
+    },
+    { 
+        id: 16, question: "He called while I _______ lunch.", 
+        questionTranslation: "Anh ấy đã gọi trong khi tôi _______ bữa trưa.",
+        options: ["made", "make", "was making", "am making"], 
+        optionsTranslations: ["đã làm", "làm", "đang làm (quá khứ)", "đang làm (hiện tại)"],
+        correctAnswer: "C", explanation: "Hành động đang diễn ra trong quá khứ bị gián đoạn: Dùng thì Quá khứ tiếp diễn (was making) sau 'while'.", 
+        commonMistake: "Dùng thì quá khứ đơn 'made' sau 'while' thay vì quá khứ tiếp diễn 'was making'.",
+        unit: "Unit 3: Past Continuous" 
+    },
+    { 
+        id: 17, question: "I was making lunch _______ he called.", 
+        questionTranslation: "Tôi đang làm bữa trưa _______ anh ấy gọi.",
+        options: ["while", "when", "during", "so"], 
+        optionsTranslations: ["trong khi", "khi", "trong suốt", "vì vậy"],
+        correctAnswer: "B", explanation: "Dùng 'when' trước hành động gián đoạn ở thì Quá khứ đơn.", 
+        commonMistake: "Dùng 'while' trước thì quá khứ đơn. 'While' thường đi với hành động đang tiếp diễn kéo dài.",
+        unit: "Unit 3: Past Continuous" 
+    },
+    { 
+        id: 18, question: "I want to eat _______. I'm hungry.", 
+        questionTranslation: "Tôi muốn ăn _______. Tôi đang đói.",
+        options: ["anything", "something", "nothing", "everything"], 
+        optionsTranslations: ["bất cứ thứ gì", "thứ gì đó", "không có gì", "mọi thứ"],
+        correctAnswer: "B", explanation: "Trong câu khẳng định, dùng đại từ bất định 'something'.", 
+        commonMistake: "Dùng 'anything' trong câu khẳng định, trong khi 'anything' thường dùng cho câu phủ định hoặc nghi vấn.",
+        unit: "Unit 3: Indefinite Pronouns" 
+    },
+    { 
+        id: 19, question: "I didn't eat _______ this morning.", 
+        questionTranslation: "Tôi đã không ăn _______ vào sáng nay.",
+        options: ["something", "nothing", "anything", "everything"], 
+        optionsTranslations: ["thứ gì đó", "không có gì", "bất cứ thứ gì", "mọi thứ"],
+        correctAnswer: "C", explanation: "Trong câu phủ định, dùng đại từ bất định 'anything'.", 
+        commonMistake: "Dùng 'nothing' tạo thành câu phủ định kép ('didn\'t eat nothing'), hoặc dùng 'something' trong câu phủ định.",
+        unit: "Unit 3: Indefinite Pronouns" 
+    },
+    { 
+        id: 20, question: "There's _______ to drink.", 
+        questionTranslation: "Chẳng có _______ để uống cả.",
+        options: ["anything", "something", "nothing", "everything"], 
+        optionsTranslations: ["bất cứ thứ gì", "thứ gì đó", "không có gì", "mọi thứ"],
+        correctAnswer: "C", explanation: "'Nothing' mang nghĩa phủ định (= not anything), nên động từ 'is' chia ở dạng khẳng định.", 
+        commonMistake: "Dùng 'anything' khi động từ 'is' ở dạng khẳng định (There is anything -> sai ngữ pháp).",
+        unit: "Unit 3: Indefinite Pronouns" 
+    },
+    { 
+        id: 21, question: "_______ was happy at the party.", 
+        questionTranslation: "_______ đều vui vẻ tại bữa tiệc.",
+        options: ["Everyone", "Anyone", "All", "Some"], 
+        optionsTranslations: ["Mọi người", "Bất cứ ai", "Tất cả (cần số nhiều)", "Một vài"],
+        correctAnswer: "A", explanation: "Đại từ 'Everyone' dùng với động từ số ít 'was' và mang nghĩa khẳng định.", 
+        commonMistake: "Dùng động từ số nhiều (were) cho 'Everyone' vì nghĩ nó mang nghĩa số nhiều, hoặc dùng 'All was'.",
+        unit: "Unit 3: Indefinite Pronouns" 
+    },
+
+    // Unit 4
+    { 
+        id: 22, question: "I _______ buy a new phone.", 
+        questionTranslation: "Tôi _______ mua một chiếc điện thoại mới.",
+        options: ["am going to", "will to", "going to", "am going"], 
+        optionsTranslations: ["dự định", "sai cấu trúc", "thiếu to-be", "thiếu to"],
+        correctAnswer: "A", explanation: "Nói về một kế hoạch, dự định (đã quyết định trước) dùng cấu trúc 'be going to'.", 
+        commonMistake: "Quên động từ to-be ('I going to') hoặc thừa giới từ 'to' sau 'will' ('will to').",
+        unit: "Unit 4: Future Plans" 
+    },
+    { 
+        id: 23, question: "She _______ to work tomorrow.", 
+        questionTranslation: "Cô ấy _______ đi làm vào ngày mai.",
+        options: ["isn't going", "isn't going to", "not going to", "won't going to"], 
+        optionsTranslations: ["không dự định", "thừa to", "thiếu to-be", "sai cấu trúc"],
+        correctAnswer: "A", explanation: "Dùng hiện tại tiếp diễn hoặc 'be going to' diễn tả kế hoạch.", 
+        commonMistake: "Chọn 'isn\'t going to' (lỗi lặp từ 'to') hoặc chọn 'won\'t going to'.",
+        unit: "Unit 4: Future Plans" 
+    },
+    { 
+        id: 24, question: "Can I tell you a secret? - Sure, I _______ tell anyone.", 
+        questionTranslation: "Tôi có thể kể cho bạn một bí mật không? - Chắc chắn rồi, tôi _______ nói với ai đâu.",
+        options: ["don't", "not", "won't", "am not going to"], 
+        optionsTranslations: ["không", "không", "sẽ không", "không dự định"],
+        correctAnswer: "C", explanation: "Lời hứa (Promise) dùng 'will / won\'t'.", 
+        commonMistake: "Dùng 'am not going to' cho một lời hứa. Lời hứa tự phát nên dùng 'will / won\'t'.",
+        unit: "Unit 4: Will/Won't" 
+    },
+    { 
+        id: 25, question: "I've got a lot of work. - I _______ help you.", 
+        questionTranslation: "Tôi có nhiều việc quá. - Tôi _______ giúp bạn.",
+        options: ["will", "am going to", "do", "am"], 
+        optionsTranslations: ["sẽ", "dự định", "làm", "đang"],
+        correctAnswer: "A", explanation: "Đề nghị giúp đỡ (Offer) dùng 'will'.", 
+        commonMistake: "Dùng 'am going to' cho một quyết định hoặc lời đề nghị giúp đỡ đột xuất ngay lúc nói.",
+        unit: "Unit 4: Will/Won't" 
+    },
+    { 
+        id: 26, question: "It's cold in here. - Yes, you're right. I _______ close the window.", 
+        questionTranslation: "Ở đây lạnh quá. - Ừ, bạn nói đúng. Tôi _______ đóng cửa sổ lại.",
+        options: ["am going to", "will", "do", "am closing"], 
+        optionsTranslations: ["dự định", "sẽ", "làm", "đang đóng"],
+        correctAnswer: "B", explanation: "Quyết định đột ngột lúc nói (Spontaneous Decision) dùng 'will'.", 
+        commonMistake: "Dùng 'am going to' cho quyết định nảy sinh tức thời ngay tại thời điểm nói.",
+        unit: "Unit 4: Will/Won't" 
+    },
+    { 
+        id: 27, question: "If I _______ time, I'll email you the photos.", 
+        questionTranslation: "Nếu tôi _______ thời gian, tôi sẽ gửi email ảnh cho bạn.",
+        options: ["will have", "have", "had", "am having"], 
+        optionsTranslations: ["sẽ có", "có", "đã có", "đang có"],
+        correctAnswer: "B", explanation: "KHÔNG dùng thì tương lai ('will') trong mệnh đề 'If'.", 
+        commonMistake: "Dùng 'will' trong mệnh đề If (If I will have) khi nói về điều kiện trong tương lai.",
+        unit: "Unit 4: Future Plans" 
+    },
+    { 
+        id: 28, question: "I'm _______ watch the football tonight.", 
+        questionTranslation: "Tôi _______ xem bóng đá tối nay.",
+        options: ["going to", "going", "go to", "will"], 
+        optionsTranslations: ["dự định", "đang đi", "đi tới", "sẽ"],
+        correctAnswer: "A", explanation: "Kế hoạch đã định trước: am/is/are + going to + V.", 
+        commonMistake: "Dùng 'I\'m will' (sai cấu trúc trầm trọng) hoặc thiếu 'to' (I\'m going watch).",
+        unit: "Unit 4: Future Plans" 
+    },
+
+    // Unit 5
+    { 
+        id: 29, question: "If you heat water to 100°C, it _______.", 
+        questionTranslation: "Nếu bạn đun nước đến 100 độ C, nó _______.",
+        options: ["boil", "will boil", "boils", "is boiling"], 
+        optionsTranslations: ["sôi", "sẽ sôi", "sôi (số ít)", "đang sôi"],
+        correctAnswer: "C", explanation: "Câu điều kiện loại 0 (sự thật hiển nhiên): If + present simple, present simple. Water số ít nên dùng 'boils'.", 
+        commonMistake: "Quên chia động từ 'boils' (thêm s) vì chủ ngữ 'it' là ngôi thứ 3 số ít. Hoặc dùng 'will boil' thay vì điều kiện loại 0.",
+        unit: "Unit 5: Conditionals" 
+    },
+    { 
+        id: 30, question: "If the power is low, the red light _______.", 
+        questionTranslation: "Nếu nguồn điện yếu, đèn đỏ _______.",
+        options: ["flashing", "flashes", "will flash", "flash"], 
+        optionsTranslations: ["đang nhấp nháy", "nhấp nháy", "sẽ nhấp nháy", "nhấp nháy (nguyên thể)"],
+        correctAnswer: "B", explanation: "Câu điều kiện loại 0: quy luật của máy móc.", 
+        commonMistake: "Dùng điều kiện loại 1 ('will flash') thay vì loại 0 ('flashes') cho nguyên lý hoạt động cố định của máy móc.",
+        unit: "Unit 5: Conditionals" 
+    },
+    { 
+        id: 31, question: "If it rains, we _______ go out.", 
+        questionTranslation: "Nếu trời mưa, chúng ta _______ ra ngoài.",
+        options: ["won't", "don't", "aren't", "didn't"], 
+        optionsTranslations: ["sẽ không", "không", "không phải/đang", "đã không"],
+        correctAnswer: "A", explanation: "Câu điều kiện loại 1: If + present simple, will/won't + V.", 
+        commonMistake: "Dùng 'don\'t' ở mệnh đề chính (We don\'t go out) trong câu điều kiện loại 1. Mệnh đề chính phải dùng 'will/won\'t'.",
+        unit: "Unit 5: Conditionals" 
+    },
+    { 
+        id: 32, question: "If I _______ Dina, I'll give her your message.", 
+        questionTranslation: "Nếu tôi _______ Dina, tôi sẽ nhắn lại lời của bạn cho cô ấy.",
+        options: ["see", "will see", "saw", "am seeing"], 
+        optionsTranslations: ["gặp", "sẽ gặp", "đã gặp", "đang gặp"],
+        correctAnswer: "A", explanation: "Câu điều kiện loại 1: Mệnh đề If dùng hiện tại đơn.", 
+        commonMistake: "Dùng thì tương lai 'will see' trong mệnh đề 'If'.",
+        unit: "Unit 5: Conditionals" 
+    },
+    { 
+        id: 33, question: "My house is _______ than yours.", 
+        questionTranslation: "Nhà của tôi thì _______ hơn nhà của bạn.",
+        options: ["big", "bigger", "biggest", "more big"], 
+        optionsTranslations: ["to", "to hơn", "to nhất", "to hơn (sai cấu trúc)"],
+        correctAnswer: "B", explanation: "So sánh hơn của tính từ ngắn 'big' là 'bigger'.", 
+        commonMistake: "Dùng 'more big' thay vì thêm đuôi '-er' (bigger) cho tính từ ngắn. Quên nhân đôi phụ âm 'g' (biger).",
+        unit: "Unit 5: Comparatives" 
+    },
+    { 
+        id: 34, question: "This is the _______ car in the showroom.", 
+        questionTranslation: "Đây là chiếc xe _______ nhất trong phòng trưng bày.",
+        options: ["expensive", "more expensive", "most expensive", "expensivest"], 
+        optionsTranslations: ["đắt tiền", "đắt hơn", "đắt nhất", "đắt nhất (sai cấu trúc)"],
+        correctAnswer: "C", explanation: "So sánh nhất của tính từ dài 'expensive' là 'most expensive'.", 
+        commonMistake: "Thêm đuôi '-est' (expensivest) cho tính từ dài thay vì dùng 'the most'.",
+        unit: "Unit 5: Comparatives" 
+    },
+    { 
+        id: 35, question: "The place I live in is _______ crowded than the city centre.", 
+        questionTranslation: "Nơi tôi sống thì _______ đông đúc hơn trung tâm thành phố.",
+        options: ["less", "least", "little", "few"], 
+        optionsTranslations: ["ít hơn", "ít nhất", "ít", "một vài"],
+        correctAnswer: "A", explanation: "So sánh ít hơn dùng 'less' + tính từ dài + than.", 
+        commonMistake: "Dùng 'fewer' hoặc 'little' để diễn tả so sánh kém (ít hơn) với tính từ dài. Phải dùng 'less'.",
+        unit: "Unit 5: Comparatives" 
+    },
+
+    // Unit 6
+    { 
+        id: 36, question: "_______ you ever been to Japan?", 
+        questionTranslation: "Bạn đã _______ đến Nhật Bản chưa?",
+        options: ["Do", "Did", "Are", "Have"], 
+        optionsTranslations: ["Hiện tại", "Quá khứ", "Hiện tại (to-be)", "Hiện tại hoàn thành"],
+        correctAnswer: "D", explanation: "Hỏi về trải nghiệm dùng thì Hiện tại hoàn thành: Have/Has + S + V3/ed.", 
+        commonMistake: "Dùng 'Did you ever be' (Quá khứ đơn) để hỏi về trải nghiệm thay vì thì Hiện tại hoàn thành (Have you ever been).",
+        unit: "Unit 6: Present Perfect" 
+    },
+    { 
+        id: 37, question: "I've _______ seen Star Wars.", 
+        questionTranslation: "Tôi _______ xem phim Star Wars.",
+        options: ["ever", "never", "always", "sometimes"], 
+        optionsTranslations: ["đã từng", "chưa bao giờ", "luôn luôn", "thỉnh thoảng"],
+        correctAnswer: "B", explanation: "Trong câu khẳng định mang nghĩa chưa từng làm gì, dùng 'never'.", 
+        commonMistake: "Dùng 'ever' trong câu khẳng định ('I\'ve ever seen') để diễn tả chưa từng làm gì, thay vì dùng 'never'.",
+        unit: "Unit 6: Present Perfect" 
+    },
+    { 
+        id: 38, question: "This is the best food I have _______ eaten.", 
+        questionTranslation: "Đây là món ăn ngon nhất mà tôi _______ ăn.",
+        options: ["ever", "never", "always", "just"], 
+        optionsTranslations: ["từng", "chưa bao giờ", "luôn luôn", "vừa mới"],
+        correctAnswer: "A", explanation: "'Ever' thường dùng với cấu trúc so sánh nhất (the best).", 
+        commonMistake: "Bỏ quên 'ever' trong cấu trúc nhấn mạnh với so sánh nhất.",
+        unit: "Unit 6: Present Perfect" 
+    },
+    { 
+        id: 39, question: "She practises _______ the piano every day.", 
+        questionTranslation: "Cô ấy luyện tập _______ piano mỗi ngày.",
+        options: ["play", "to play", "playing", "played"], 
+        optionsTranslations: ["chơi", "để chơi", "việc chơi (V-ing)", "đã chơi"],
+        correctAnswer: "C", explanation: "Sau động từ 'practise' dùng V-ing.", 
+        commonMistake: "Dùng động từ nguyên thể có 'to' (to play) sau 'practise'. Sau 'practise' phải là V-ing.",
+        unit: "Unit 6: Verb Patterns" 
+    },
+    { 
+        id: 40, question: "We need _______ early.", 
+        questionTranslation: "Chúng ta cần _______ sớm.",
+        options: ["leave", "to leave", "leaving", "left"], 
+        optionsTranslations: ["rời đi", "rời đi (có to)", "rời đi (V-ing)", "đã rời đi"],
+        correctAnswer: "B", explanation: "Sau động từ 'need' dùng to-infinitive.", 
+        commonMistake: "Dùng V-ing (leaving) sau 'need' thay vì to-V.",
+        unit: "Unit 6: Verb Patterns" 
+    },
+    { 
+        id: 41, question: "He persuaded me _______ with him.", 
+        questionTranslation: "Anh ấy đã thuyết phục tôi _______ cùng anh ấy.",
+        options: ["go", "to go", "going", "went"], 
+        optionsTranslations: ["đi", "đi (có to)", "đi (V-ing)", "đã đi"],
+        correctAnswer: "B", explanation: "Cấu trúc: persuade + object + to + V.", 
+        commonMistake: "Dùng V-ing (going) sau tân ngữ của động từ 'persuade'. Phải dùng cấu trúc persuade sb TO do sth.",
+        unit: "Unit 6: Verb Patterns" 
+    },
+    { 
+        id: 42, question: "I started _______ English three years ago.", 
+        questionTranslation: "Tôi đã bắt đầu _______ tiếng Anh ba năm trước.",
+        options: ["learn", "to learn", "learning", "Both B & C"], 
+        optionsTranslations: ["học", "học (có to)", "học (V-ing)", "Cả B và C đều đúng"],
+        correctAnswer: "D", explanation: "Động từ 'start' có thể đi kèm với cả to V hoặc V-ing mà nghĩa không thay đổi.", 
+        commonMistake: "Không biết rằng sau 'start' có thể dùng cả to-V và V-ing mà không thay đổi ý nghĩa.",
+        unit: "Unit 6: Verb Patterns" 
+    },
+    { 
+        id: 43, question: "The person _______ inspires me is my mother.", 
+        questionTranslation: "Người _______ truyền cảm hứng cho tôi là mẹ tôi.",
+        options: ["which", "where", "who", "when"], 
+        optionsTranslations: ["vật", "nơi chốn", "người", "thời gian"],
+        correctAnswer: "C", explanation: "Đại từ quan hệ 'who' thay thế cho danh từ chỉ người 'The person'.", 
+        commonMistake: "Dùng 'which' để thay thế cho danh từ chỉ người.",
+        unit: "Unit 6: Relative Clauses" 
+    },
+    { 
+        id: 44, question: "I found a book _______ I love.", 
+        questionTranslation: "Tôi đã tìm thấy một cuốn sách _______ tôi yêu thích.",
+        options: ["who", "where", "when", "which"], 
+        optionsTranslations: ["người", "nơi chốn", "thời gian", "vật"],
+        correctAnswer: "D", explanation: "Đại từ quan hệ 'which' (hoặc that) thay thế cho danh từ chỉ vật 'a book'.", 
+        commonMistake: "Dùng 'who' cho vật hoặc quên dùng đại từ quan hệ khi câu cần làm rõ danh từ chỉ vật.",
+        unit: "Unit 6: Relative Clauses" 
+    },
+    { 
+        id: 45, question: "Look, there's the hotel _______ we stayed.", 
+        questionTranslation: "Nhìn kìa, đó là khách sạn _______ chúng ta đã ở.",
+        options: ["which", "who", "where", "when"], 
+        optionsTranslations: ["vật", "người", "nơi chốn", "thời gian"],
+        correctAnswer: "C", explanation: "Đại từ quan hệ 'where' thay thế cho nơi chốn 'the hotel'.", 
+        commonMistake: "Dùng 'which' thay vì 'where' cho địa điểm mà KHÔNG CÓ giới từ (in/at/on). Nơi chốn không giới từ dùng 'where'.",
+        unit: "Unit 6: Relative Clauses" 
+    },
+
+    // Vocabulary
+    { 
+        id: 46, question: "He is a strong and _______ person and doesn't often laugh.", 
+        questionTranslation: "Anh ấy là một người mạnh mẽ, _______ và không hay cười.",
+        options: ["friendly", "serious", "creative", "patient"], 
+        optionsTranslations: ["thân thiện", "nghiêm túc", "sáng tạo", "kiên nhẫn"],
+        correctAnswer: "B", explanation: "Từ vựng Unit 1: 'serious' nghĩa là nghiêm túc, không hay cười.", 
+        commonMistake: "Chọn sai tính từ miêu tả tính cách do không dựa vào ngữ cảnh 'doesn\'t often laugh' (không hay cười).",
+        unit: "Vocabulary: Personality" 
+    },
+    { 
+        id: 47, question: "We're studying a Shakespeare play in our _______ class.", 
+        questionTranslation: "Chúng tôi đang học một vở kịch của Shakespeare trong lớp học _______ của chúng tôi.",
+        options: ["drama", "biology", "maths", "physics"], 
+        optionsTranslations: ["kịch", "sinh học", "toán", "vật lý"],
+        correctAnswer: "A", explanation: "Từ vựng Unit 2: 'drama' là môn kịch, nơi học về các vở kịch của Shakespeare.", 
+        commonMistake: "Không liên kết được từ khóa 'play' (vở kịch) với môn 'drama' (kịch thuật).",
+        unit: "Vocabulary: School Subjects" 
+    },
+    { 
+        id: 48, question: "She's a _______, so she doesn't eat meat or fish.", 
+        questionTranslation: "Cô ấy là _______, nên cô ấy không ăn thịt hay cá.",
+        options: ["vegan", "vegetarian", "allergy", "raw"], 
+        optionsTranslations: ["người ăn chay thuần", "người ăn chay", "dị ứng", "sống"],
+        correctAnswer: "B", explanation: "Từ vựng Unit 3: 'vegetarian' là người ăn chay, không ăn thịt và cá.", 
+        commonMistake: "Nhầm lẫn giữa 'vegan' (không ăn bất cứ thứ gì từ động vật) và 'vegetarian' (không ăn thịt cá nhưng có thể ăn trứng, sữa).",
+        unit: "Vocabulary: Food" 
+    },
+    { 
+        id: 49, question: "I like the _______ of learning a new language.", 
+        questionTranslation: "Tôi thích _______ của việc học một ngôn ngữ mới.",
+        options: ["prize", "reward", "challenge", "praise"], 
+        optionsTranslations: ["giải thưởng", "phần thưởng", "thử thách", "lời khen"],
+        correctAnswer: "C", explanation: "Từ vựng Unit 4: 'challenge' nghĩa là thử thách.", 
+        commonMistake: "Dùng sai từ vựng vì không phân biệt được sắc thái nghĩa của các từ (ví dụ nhầm challenge với reward).",
+        unit: "Vocabulary: Motivation" 
+    },
+    { 
+        id: 50, question: "The views from the mountain are _______.", 
+        questionTranslation: "Cảnh nhìn từ ngọn núi thì _______.",
+        options: ["spectacular", "awful", "tiny", "filthy"], 
+        optionsTranslations: ["ngoạn mục", "tệ hại", "nhỏ bé", "bẩn thỉu"],
+        correctAnswer: "A", explanation: "Từ vựng Unit 5: 'spectacular' là ngoạn mục, tuyệt đẹp (extreme adjective).", 
+        commonMistake: "Thêm 'very' trước tính từ cực cấp (very spectacular) hoặc chọn sai tính từ (awful) không phù hợp ngữ cảnh tích cực của câu.",
+        unit: "Vocabulary: Extreme Adjectives" 
+    }
+];
+
+        // -- Icons (Inline SVGs) --
+        const Icons = {
+            Clock: () => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>,
+            CheckCircle: () => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6 text-green-500"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>,
+            XCircle: () => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6 text-red-500"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>,
+            ArrowRight: () => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>,
+            ArrowLeft: () => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>,
+            Send: () => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>,
+            Download: () => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>,
+            Refresh: () => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5"><polyline points="1 4 1 10 7 10"></polyline><polyline points="23 20 23 14 17 14"></polyline><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path></svg>,
+            Alert: () => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-12 h-12 text-yellow-500 mx-auto mb-4"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>,
+            BookOpen: ({className}) => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={className || "w-6 h-6"}><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>,
+            Lightbulb: ({className}) => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={className || "w-6 h-6"}><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A6 6 0 1 0 7.5 11.5c.76.76 1.23 1.52 1.41 2.5"></path></svg>
+        };
+
+        // -- Components --
+        
+        // 1. Pie Chart
+        const PieChart = ({ correct, total }) => {
+            const percent = total === 0 ? 0 : (correct / total) * 100;
+            return (
+                <div className="relative w-32 h-32 mx-auto">
+                    <svg viewBox="0 0 36 36" className="w-full h-full transform -rotate-90">
+                        <path className="text-red-500" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" strokeWidth="3" />
+                        <path className="text-green-500 transition-all duration-1000 ease-out" strokeDasharray={`${percent}, 100`} d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" strokeWidth="3" />
+                    </svg>
+                    <div className="absolute inset-0 flex flex-col items-center justify-center">
+                        <span className="text-2xl font-bold text-slate-800">{Math.round(percent)}%</span>
+                    </div>
+                </div>
+            );
+        };
+
+        // 2. Start Screen
+        const StartScreen = ({ onStart, userInfo, setUserInfo }) => (
+            <div className="flex items-center justify-center min-h-screen p-4 md:p-8 fade-enter-active">
+                <div className="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+                    
+                    {/* Left Panel: Quiz Form */}
+                    <div className="glass-panel rounded-2xl overflow-hidden shadow-xl flex flex-col h-full bg-white">
+                        <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-8 text-center text-white">
+                            <Icons.BookOpen className="w-12 h-12 mx-auto mb-4 opacity-90" />
+                            <h1 className="text-3xl font-bold mb-2">BÀI THI TRẮC NGHIỆM</h1>
+                            <p className="text-blue-100 font-medium">VOICES PRE-INTERMEDIATE A2-B1 (UNIT 1-6)</p>
+                        </div>
+                        <div className="p-8 flex-1 flex flex-col">
+                            <div className="flex justify-between text-sm text-slate-500 mb-8 bg-slate-50 p-4 rounded-xl border border-slate-100">
+                                <div className="flex items-center gap-2">
+                                    <svg className="w-5 h-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
+                                    Tổng số câu: <span className="font-bold text-slate-800">50</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <Icons.Clock />
+                                    Thời gian: <span className="font-bold text-slate-800">60 phút</span>
+                                </div>
+                            </div>
+                            
+                            <form onSubmit={onStart} className="space-y-5 flex-1 flex flex-col">
+                                <div>
+                                    <label className="block text-sm font-semibold text-slate-700 mb-1">Họ và tên *</label>
+                                    <input required type="text" value={userInfo.name} onChange={e => setUserInfo({...userInfo, name: e.target.value})} 
+                                           className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all" 
+                                           placeholder="Nhập họ và tên của bạn" />
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-semibold text-slate-700 mb-1">Lớp *</label>
+                                    <input required type="text" value={userInfo.className} onChange={e => setUserInfo({...userInfo, className: e.target.value})} 
+                                           className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all" 
+                                           placeholder="Nhập lớp của bạn (VD: 10A)" />
+                                </div>
+                                
+                                <div className="mt-auto pt-6">
+                                    <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-xl transition-colors shadow-lg shadow-blue-200 flex justify-center items-center gap-2 mb-3">
+                                        BẮT ĐẦU THI <Icons.ArrowRight />
+                                    </button>
+                                </div>
+                            </form>
+                            
+                            <div className="mt-6 bg-slate-50 p-5 rounded-xl border border-slate-100">
+                                <h4 className="font-bold text-slate-700 mb-2">Lưu ý:</h4>
+                                <ul className="text-sm text-slate-600 space-y-1 ml-4 list-disc marker:text-blue-500">
+                                    <li>Bài thi gồm 50 câu hỏi trắc nghiệm</li>
+                                    <li>Thời gian làm bài: 60 phút</li>
+                                    <li>Bài thi sẽ tự động nộp khi hết giờ</li>
+                                    <li>Bạn có thể xem lại và thay đổi câu trả lời trước khi nộp bài</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Right Panel: Study Guide */}
+                    <div className="glass-panel rounded-2xl overflow-hidden shadow-xl p-6 md:p-8 flex flex-col h-full bg-white border border-slate-100">
+                        <div className="flex items-center gap-3 mb-6 border-b border-slate-100 pb-4">
+                            <div className="bg-indigo-100 p-3 rounded-xl text-indigo-600">
+                                <Icons.Lightbulb />
+                            </div>
+                            <h2 className="text-2xl font-bold text-slate-800">Hướng Dẫn Làm Bài & Ôn Tập</h2>
+                        </div>
+                        
+                        <div className="overflow-y-auto pr-2 custom-scrollbar space-y-6 flex-1 text-slate-700" style={{maxHeight: "65vh"}}>
+                            
+                            <section>
+                                <h3 className="text-lg font-bold text-blue-700 mb-3 flex items-center gap-2">
+                                    <span className="w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xs">1</span> 
+                                    Chiến Thuật Làm Bài Thi
+                                </h3>
+                                <ul className="space-y-2 text-sm pl-4 list-disc marker:text-blue-300 ml-2">
+                                    <li><strong className="text-slate-800">Đọc kỹ đề bài:</strong> Đừng vội chọn đáp án ngay. Hãy xác định dấu hiệu nhận biết thì (VD: <span className="italic">last year, at the moment</span>...).</li>
+                                    <li><strong className="text-slate-800">Dùng phương pháp loại trừ:</strong> Loại bỏ ngay các đáp án sai ngữ pháp cơ bản (VD: thiếu to-be, sai thể khẳng định/phủ định).</li>
+                                    <li><strong className="text-slate-800">Quản lý thời gian:</strong> Bạn có 60 phút cho 50 câu (~1 phút/câu). Câu nào khó hãy bỏ qua làm sau, sử dụng "Bảng Câu Hỏi" để quay lại.</li>
+                                    <li><strong className="text-slate-800">Phân tích Lỗi Thường Gặp:</strong> Sau khi nộp bài, hãy đọc kỹ phần <span className="text-yellow-600 font-bold">⚠️ Lỗi Thường Gặp</span> ở các câu sai để rút kinh nghiệm.</li>
+                                </ul>
+                            </section>
+
+                            <section>
+                                <h3 className="text-lg font-bold text-emerald-700 mb-3 flex items-center gap-2">
+                                    <span className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs">2</span> 
+                                    Trọng Tâm Ngữ Pháp (Unit 1-6)
+                                </h3>
+                                <div className="bg-emerald-50/50 rounded-xl p-4 text-sm border border-emerald-100">
+                                    <ul className="space-y-3">
+                                        <li><strong className="text-emerald-800">Tần suất & Hiện tại:</strong> Trạng từ tần suất đứng <span className="underline decoration-emerald-300">trước</span> động từ thường, <span className="underline decoration-emerald-300">sau</span> to-be. Không dùng V-ing với các động từ trạng thái (know, want, like...).</li>
+                                        <li><strong className="text-emerald-800">Quá khứ:</strong> Phân biệt rõ Quá khứ đơn (hành động đã kết thúc) và Quá khứ tiếp diễn (hành động đang diễn ra bị gián đoạn).</li>
+                                        <li><strong className="text-emerald-800">Tương lai:</strong> Dùng <span className="font-semibold text-emerald-700">will</span> cho quyết định đột ngột/lời hứa; dùng <span className="font-semibold text-emerald-700">be going to</span> cho kế hoạch đã định.</li>
+                                        <li><strong className="text-emerald-800">Đại từ bất định:</strong> Dùng <span className="font-semibold text-emerald-700">some-</span> (khẳng định), <span className="font-semibold text-emerald-700">any-</span> (phủ định/nghi vấn). Động từ đi kèm luôn chia ở số ít.</li>
+                                        <li><strong className="text-emerald-800">Điều kiện & So sánh:</strong> Câu điều kiện Loại 0 (sự thật hiển nhiên), Loại 1 (có thể xảy ra). Ghi nhớ tính từ ngắn (-er/est) và dài (more/most).</li>
+                                        <li><strong className="text-emerald-800">Hiện tại hoàn thành:</strong> Dùng <span className="font-semibold text-emerald-700">ever</span> trong câu hỏi/so sánh nhất; <span className="font-semibold text-emerald-700">never</span> trong câu khẳng định.</li>
+                                    </ul>
+                                </div>
+                            </section>
+
+                            <section>
+                                <h3 className="text-lg font-bold text-amber-700 mb-3 flex items-center gap-2">
+                                    <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-xs">3</span> 
+                                    Cách Học Từ Vựng Hiệu Quả
+                                </h3>
+                                <ul className="space-y-2 text-sm pl-4 list-disc marker:text-amber-300 ml-2">
+                                    <li><strong className="text-slate-800">Học theo ngữ cảnh:</strong> Không học vẹt từ đơn lẻ. Hãy đọc phần ví dụ trong ngoặc của đáp án để hiểu sắc thái nghĩa.</li>
+                                    <li><strong className="text-slate-800">Extreme Adjectives:</strong> KHÔNG dùng "very" với từ cực cấp (VD: không dùng <span className="line-through text-slate-400">very awful</span>, hãy dùng <span className="font-semibold text-amber-600">absolutely awful</span>).</li>
+                                    <li><strong className="text-slate-800">Ghi chú sự khác biệt:</strong> Chú ý những từ dễ bị nhầm lẫn với nhau (VD: <span className="italic">vegan</span> vs <span className="italic">vegetarian</span>, <span className="italic">reward</span> vs <span className="italic">prize</span>).</li>
+                                </ul>
+                            </section>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+
+        // 3. Quiz Screen
+        const QuizScreen = ({ userInfo, answers, setAnswers, timeLeft, currentIndex, setCurrentIndex, setShowConfirm }) => {
+            const q = questionsData[currentIndex];
+            const optionLetters = ['A', 'B', 'C', 'D'];
+            const isWarning = timeLeft < 300; // < 5 mins
+
+            const formatTime = (seconds) => {
+                const m = Math.floor(seconds / 60);
+                const s = seconds % 60;
+                return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+            };
+
+            const handleAnswer = (val) => setAnswers(prev => ({ ...prev, [currentIndex]: val }));
+
+            return (
+                <div className="max-w-6xl mx-auto p-4 md:p-6 min-h-screen flex flex-col fade-enter-active">
+                    {/* Header */}
+                    <header className="glass-panel flex flex-col md:flex-row justify-between items-center p-4 rounded-2xl mb-6 sticky top-4 z-10 gap-4">
+                        <div className="flex items-center gap-4">
+                            <div className="bg-blue-100 text-blue-700 px-4 py-2 rounded-lg font-bold shadow-sm">
+                                Câu {currentIndex + 1} / 50
+                            </div>
+                            <div className="text-sm font-medium text-slate-600 hidden md:block">
+                                {userInfo.name} • Lớp {userInfo.className}
+                            </div>
+                        </div>
+                        
+                        <div className={`flex items-center gap-3 px-5 py-2 rounded-xl font-bold text-lg shadow-sm ${isWarning ? 'bg-red-100 text-red-600 time-warning' : 'bg-slate-100 text-slate-700'}`}>
+                            <Icons.Clock />
+                            {formatTime(timeLeft)}
+                        </div>
+                    </header>
+
+                    <div className="flex flex-col lg:flex-row gap-6 flex-1">
+                        {/* Question Area */}
+                        <div className="flex-1 flex flex-col">
+                            <div className="glass-panel p-6 md:p-10 rounded-2xl mb-6 flex-1 shadow-sm">
+                                <div className="inline-block px-3 py-1 bg-indigo-50 text-indigo-600 text-xs font-bold rounded-full mb-4 border border-indigo-100">
+                                    {q.unit}
+                                </div>
+                                <h2 className="text-xl md:text-2xl font-medium text-slate-800 leading-relaxed mb-8">
+                                    {q.question}
+                                </h2>
+                                
+                                <div className="space-y-4">
+                                    {q.options.map((opt, i) => {
+                                        const letter = optionLetters[i];
+                                        const isSelected = answers[currentIndex] === letter;
+                                        return (
+                                            <label key={i} className="relative flex cursor-pointer group">
+                                                <input type="radio" name="option" className="peer sr-only option-radio" 
+                                                       checked={isSelected} onChange={() => handleAnswer(letter)} />
+                                                <div className="w-full flex items-center p-4 md:p-5 rounded-xl border-2 border-slate-100 bg-white hover:border-blue-200 transition-all shadow-sm">
+                                                    <div className="w-8 h-8 rounded-full border-2 border-slate-200 flex items-center justify-center mr-4 group-hover:border-blue-400 transition-colors">
+                                                        <div className="radio-inner w-3 h-3 rounded-full bg-transparent transform scale-0 transition-transform"></div>
+                                                    </div>
+                                                    <span className="font-bold text-slate-500 mr-4 w-6">{letter}.</span>
+                                                    <span className="text-slate-700 text-lg">{opt}</span>
+                                                </div>
+                                            </label>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                            
+                            {/* Controls */}
+                            <div className="flex justify-between gap-4">
+                                <button onClick={() => setCurrentIndex(prev => Math.max(0, prev - 1))} disabled={currentIndex === 0}
+                                        className="px-6 py-3 rounded-xl bg-white border border-slate-200 font-semibold text-slate-600 disabled:opacity-50 hover:bg-slate-50 transition flex items-center gap-2 shadow-sm">
+                                    <Icons.ArrowLeft /> Câu trước
+                                </button>
+                                
+                                {currentIndex === questionsData.length - 1 ? (
+                                    <button onClick={() => setShowConfirm(true)} className="px-8 py-3 rounded-xl bg-green-500 hover:bg-green-600 text-white font-bold transition shadow-lg shadow-green-200 flex items-center gap-2">
+                                        NỘP BÀI <Icons.Send />
+                                    </button>
+                                ) : (
+                                    <button onClick={() => setCurrentIndex(prev => Math.min(questionsData.length - 1, prev + 1))} 
+                                            className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold transition flex items-center gap-2 shadow-md shadow-blue-200">
+                                        Câu sau <Icons.ArrowRight />
+                                    </button>
+                                )}
+                            </div>
+                        </div>
+
+                        {/* Grid Sidebar */}
+                        <div className="w-full lg:w-80 glass-panel p-6 rounded-2xl h-fit shadow-sm">
+                            <h3 className="font-bold text-slate-700 mb-4 flex justify-between items-center">
+                                <span>Bảng Câu Hỏi</span>
+                                <span className="text-sm bg-blue-100 text-blue-700 px-3 py-1 rounded-lg">
+                                    {Object.keys(answers).length}/50
+                                </span>
+                            </h3>
+                            <div className="grid grid-cols-5 gap-2">
+                                {questionsData.map((_, i) => {
+                                    const isAnswered = answers[i];
+                                    const isCurrent = currentIndex === i;
+                                    return (
+                                        <button key={i} onClick={() => setCurrentIndex(i)}
+                                                className={`
+                                                    aspect-square rounded-lg font-medium text-sm transition-all flex items-center justify-center border-2
+                                                    ${isCurrent ? 'ring-2 ring-blue-400 ring-offset-2 border-blue-500 bg-blue-50 text-blue-700' : 
+                                                      isAnswered ? 'bg-green-500 border-green-500 text-white hover:bg-green-600 shadow-sm' : 
+                                                      'bg-white border-slate-200 text-slate-500 hover:border-blue-300 hover:bg-blue-50 shadow-sm'}
+                                                `}>
+                                            {i + 1}
+                                        </button>
+                                    );
+                                })}
+                            </div>
+                            
+                            <div className="mt-6 space-y-3 text-sm text-slate-600 bg-slate-50 p-4 rounded-xl border border-slate-100">
+                                <div className="flex items-center gap-3"><div className="w-4 h-4 bg-green-500 rounded shadow-sm"></div> Đã trả lời</div>
+                                <div className="flex items-center gap-3"><div className="w-4 h-4 bg-white border-2 border-slate-200 rounded shadow-sm"></div> Chưa trả lời</div>
+                                <div className="flex items-center gap-3"><div className="w-4 h-4 bg-blue-50 border-2 border-blue-500 rounded shadow-sm"></div> Đang xem</div>
+                            </div>
+                            
+                            <button onClick={() => setShowConfirm(true)} className="w-full mt-6 bg-slate-800 hover:bg-slate-900 text-white font-bold py-3 px-4 rounded-xl transition-colors shadow-lg">
+                                NỘP BÀI NGAY
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        // 4. Result Screen
+        const ResultScreen = ({ userInfo, answers, timeTaken, handleRetry }) => {
+            const [isGeneratingPDF, setIsGeneratingPDF] = useState(false);
+            
+            let correctCount = 0;
+            questionsData.forEach((q, i) => {
+                if (answers[i] === q.correctAnswer) correctCount++;
+            });
+            const score = (correctCount / 50) * 10;
+            const optionLetters = ['A', 'B', 'C', 'D'];
+
+            const formatTime = (seconds) => {
+                const m = Math.floor(seconds / 60);
+                const s = seconds % 60;
+                return `${m} phút ${s} giây`;
+            };
+
+            const exportPDF = async () => {
+                setIsGeneratingPDF(true);
+                try {
+                    const resultContainer = document.getElementById('pdf-content');
+                    const canvas = await html2canvas(resultContainer, { scale: 2, useCORS: true });
+                    const imgData = canvas.toDataURL('image/png');
+                    
+                    const pdf = new window.jspdf.jsPDF('p', 'mm', 'a4');
+                    const pdfWidth = pdf.internal.pageSize.getWidth();
+                    const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+                    
+                    let position = 0;
+                    const pageHeight = pdf.internal.pageSize.getHeight();
+                    
+                    pdf.addImage(imgData, 'PNG', 0, position, pdfWidth, pdfHeight);
+                    position -= pageHeight;
+                    
+                    while (position > -pdfHeight) {
+                        pdf.addPage();
+                        pdf.addImage(imgData, 'PNG', 0, position, pdfWidth, pdfHeight);
+                        position -= pageHeight;
+                    }
+                    
+                    pdf.save(`Ket_Qua_Thi_${userInfo.name.replace(/\s+/g, '_')}.pdf`);
+                } catch (error) {
+                    console.error("PDF generation error:", error);
+                    alert("Có lỗi xảy ra khi tạo PDF.");
+                } finally {
+                    setIsGeneratingPDF(false);
+                }
+            };
+
+            return (
+                <div className="max-w-4xl mx-auto p-4 md:p-6 fade-enter-active">
+                    <div id="pdf-content" className="space-y-6">
+                        {/* Summary Card */}
+                        <div className="glass-panel rounded-3xl overflow-hidden shadow-xl">
+                            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-8 text-white text-center">
+                                <h2 className="text-2xl font-bold opacity-90 mb-1">KẾT QUẢ BÀI THI</h2>
+                                <p className="text-blue-100">{userInfo.name} - Lớp: {userInfo.className}</p>
+                            </div>
+                            <div className="p-8 flex flex-col md:flex-row items-center justify-around gap-8 bg-white">
+                                <div className="text-center">
+                                    <div className="text-6xl font-black text-blue-600 mb-2">{score.toFixed(1)}<span className="text-2xl text-slate-400">/10</span></div>
+                                    <div className="text-slate-500 font-medium">Điểm số của bạn</div>
+                                </div>
+                                
+                                <div className="w-px h-32 bg-slate-100 hidden md:block"></div>
+                                
+                                <PieChart correct={correctCount} total={50} />
+                                
+                                <div className="space-y-4 min-w-[200px]">
+                                    <div className="flex justify-between items-center border-b border-slate-100 pb-2">
+                                        <span className="text-slate-500">Số câu đúng</span>
+                                        <span className="font-bold text-green-500 text-lg">{correctCount}/50</span>
+                                    </div>
+                                    <div className="flex justify-between items-center border-b border-slate-100 pb-2">
+                                        <span className="text-slate-500">Số câu sai/bỏ qua</span>
+                                        <span className="font-bold text-red-500 text-lg">{50 - correctCount}/50</span>
+                                    </div>
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-slate-500">Thời gian làm bài</span>
+                                        <span className="font-bold text-slate-700">{formatTime(timeTaken)}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Detailed List */}
+                        <div className="glass-panel p-6 md:p-8 rounded-3xl bg-white shadow-md">
+                            <h3 className="text-xl font-bold text-slate-800 mb-6 flex items-center gap-2">
+                                <Icons.Clock /> CHI TIẾT ĐÁP ÁN
+                            </h3>
+                            <div className="space-y-6">
+                                {questionsData.map((q, i) => {
+                                    const userAns = answers[i];
+                                    const isCorrect = userAns === q.correctAnswer;
+                                    
+                                    return (
+                                        <div key={i} className={`p-5 rounded-2xl border ${isCorrect ? 'border-green-200 bg-green-50/30' : 'border-red-200 bg-red-50/30'}`}>
+                                            <div className="flex gap-4">
+                                                <div className="mt-1">
+                                                    {isCorrect ? <Icons.CheckCircle /> : <Icons.XCircle />}
+                                                </div>
+                                                <div className="flex-1">
+                                                    <div className="flex items-center gap-2 mb-2">
+                                                        <span className="font-bold text-slate-700">Câu {i + 1}:</span>
+                                                        <span className="text-xs font-bold px-2 py-1 bg-white rounded border text-slate-500 shadow-sm">{q.unit}</span>
+                                                    </div>
+                                                    <p className="text-slate-800 font-medium mb-1 text-lg">{q.question}</p>
+                                                    {q.questionTranslation && (
+                                                        <p className="text-slate-500 italic mb-4 text-sm">Nghĩa: {q.questionTranslation}</p>
+                                                    )}
+                                                    
+                                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-5">
+                                                        {q.options.map((opt, oIdx) => {
+                                                            const letter = optionLetters[oIdx];
+                                                            let bgClass = "bg-white border-slate-200 text-slate-600";
+                                                            if (letter === q.correctAnswer) bgClass = "bg-green-100 border-green-500 text-green-800 font-bold shadow-sm";
+                                                            else if (letter === userAns) bgClass = "bg-red-100 border-red-500 text-red-800 shadow-sm";
+                                                            
+                                                            return (
+                                                                <div key={oIdx} className={`p-3 rounded-xl border ${bgClass} flex items-center`}>
+                                                                    <span className="w-8 font-bold opacity-70 flex-shrink-0">{letter}.</span> 
+                                                                    <span>{opt} {q.optionsTranslations && q.optionsTranslations[oIdx] ? <span className="opacity-75 italic text-sm ml-1">({q.optionsTranslations[oIdx]})</span> : null}</span>
+                                                                    {letter === q.correctAnswer && <span className="ml-auto text-green-600 pl-2 flex-shrink-0"><Icons.CheckCircle /></span>}
+                                                                    {letter === userAns && !isCorrect && <span className="ml-auto text-red-600 pl-2 flex-shrink-0"><Icons.XCircle /></span>}
+                                                                </div>
+                                                            );
+                                                        })}
+                                                    </div>
+                                                    
+                                                    <div className="bg-white p-4 rounded-xl border border-blue-100 text-sm shadow-sm mb-3">
+                                                        <div className="font-bold text-blue-700 mb-2 flex items-center gap-2">
+                                                            LỜI GIẢI CHI TIẾT:
+                                                        </div>
+                                                        <div className="text-slate-600 leading-relaxed">{q.explanation}</div>
+                                                    </div>
+                                                    {q.commonMistake && (
+                                                    <div className="bg-yellow-50 p-4 rounded-xl border border-yellow-200 text-sm shadow-sm">
+                                                        <div className="font-bold text-yellow-700 mb-2 flex items-center gap-2">
+                                                            ⚠️ LỖI THƯỜNG GẶP:
+                                                        </div>
+                                                        <div className="text-yellow-800 leading-relaxed">{q.commonMistake}</div>
+                                                    </div>
+                                                    )}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Actions fixed at bottom */}
+                    <div className="fixed bottom-0 left-0 right-0 p-4 glass-panel border-t border-slate-200 flex justify-center gap-4 z-50 bg-white/90 backdrop-blur-md">
+                        <button onClick={handleRetry} className="px-6 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl flex items-center gap-2 transition shadow-sm">
+                            <Icons.Refresh /> LÀM LẠI BÀI THI
+                        </button>
+                        <button onClick={exportPDF} disabled={isGeneratingPDF} className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg shadow-blue-200 flex items-center gap-2 transition disabled:opacity-50">
+                            {isGeneratingPDF ? 'ĐANG XUẤT...' : <><Icons.Download /> XUẤT KẾT QUẢ PDF</>}
+                        </button>
+                    </div>
+                    <div className="h-24"></div> {/* Padding for fixed bottom bar */}
+                </div>
+            );
+        };
+
+        // -- Main App Component --
+        function App() {
+            const [screen, setScreen] = useState('start');
+            const [userInfo, setUserInfo] = useState({ name: '', className: '' });
+            const [answers, setAnswers] = useState({});
+            const [timeLeft, setTimeLeft] = useState(60 * 60);
+            const [currentIndex, setCurrentIndex] = useState(0);
+            const [showConfirm, setShowConfirm] = useState(false);
+            const [timeTaken, setTimeTaken] = useState(0);
+
+            // LocalStorage Load
+            useEffect(() => {
+                const saved = localStorage.getItem('quiz_state');
+                if (saved) {
+                    try {
+                        const data = JSON.parse(saved);
+                        if (data.screen === 'quiz' && data.timeLeft > 0) {
+                            setScreen(data.screen);
+                            setUserInfo(data.userInfo);
+                            setAnswers(data.answers || {});
+                            setTimeLeft(data.timeLeft);
+                            setCurrentIndex(data.currentIndex || 0);
+                        }
+                    } catch (e) { console.error("Error loading state", e); }
+                }
+            }, []);
+
+            // LocalStorage Save
+            useEffect(() => {
+                if (screen === 'quiz') {
+                    localStorage.setItem('quiz_state', JSON.stringify({ screen, userInfo, answers, timeLeft, currentIndex }));
+                } else if (screen === 'result') {
+                    localStorage.removeItem('quiz_state');
+                }
+            }, [screen, userInfo, answers, timeLeft, currentIndex]);
+
+            // Timer
+            useEffect(() => {
+                let timer;
+                if (screen === 'quiz' && !showConfirm && timeLeft > 0) {
+                    timer = setInterval(() => {
+                        setTimeLeft(prev => {
+                            if (prev <= 1) {
+                                clearInterval(timer);
+                                handleSubmit();
+                                return 0;
+                            }
+                            return prev - 1;
+                        });
+                    }, 1000);
+                }
+                return () => clearInterval(timer);
+            }, [screen, showConfirm, timeLeft]);
+
+            // Keyboard Shortcuts
+            useEffect(() => {
+                if (screen !== 'quiz' || showConfirm) return;
+                
+                const handleKeyDown = (e) => {
+                    if (e.key === 'ArrowRight') {
+                        setCurrentIndex(prev => Math.min(questionsData.length - 1, prev + 1));
+                    } else if (e.key === 'ArrowLeft') {
+                        setCurrentIndex(prev => Math.max(0, prev - 1));
+                    } else if (['a', 'b', 'c', 'd'].includes(e.key.toLowerCase())) {
+                        const map = { 'a': 'A', 'b': 'B', 'c': 'C', 'd': 'D' };
+                        setAnswers(prev => ({ ...prev, [currentIndex]: map[e.key.toLowerCase()] }));
+                    } else if (e.key === 'Enter' && currentIndex === questionsData.length - 1) {
+                        setShowConfirm(true);
+                    }
+                };
+                
+                window.addEventListener('keydown', handleKeyDown);
+                return () => window.removeEventListener('keydown', handleKeyDown);
+            }, [screen, showConfirm, currentIndex]);
+
+            // Prevent closing window
+            useEffect(() => {
+                if (screen === 'quiz') {
+                    const handleBeforeUnload = (e) => {
+                        e.preventDefault();
+                        e.returnValue = '';
+                    };
+                    window.addEventListener('beforeunload', handleBeforeUnload);
+                    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
+                }
+            }, [screen]);
+
+            const handleStart = (e) => {
+                e.preventDefault();
+                setScreen('quiz');
+                setTimeLeft(60 * 60);
+                setAnswers({});
+                setCurrentIndex(0);
+                setTimeTaken(0);
+            };
+
+            const handleSubmit = useCallback(() => {
+                setTimeTaken(60 * 60 - timeLeft);
+                setShowConfirm(false);
+                setScreen('result');
+            }, [timeLeft]);
+
+            const handleRetry = () => {
+                if (confirm("Bạn có chắc chắn muốn làm lại từ đầu? Mọi kết quả sẽ bị xóa.")) {
+                    setScreen('start');
+                    setAnswers({});
+                    setUserInfo({ name: '', className: '' });
+                    localStorage.removeItem('quiz_state');
+                }
+            };
+
+            return (
+                <div className="antialiased">
+                    {screen === 'start' && (
+                        <StartScreen onStart={handleStart} userInfo={userInfo} setUserInfo={setUserInfo} />
+                    )}
+                    
+                    {screen === 'quiz' && (
+                        <QuizScreen 
+                            userInfo={userInfo} answers={answers} setAnswers={setAnswers}
+                            timeLeft={timeLeft} currentIndex={currentIndex} 
+                            setCurrentIndex={setCurrentIndex} setShowConfirm={setShowConfirm}
+                        />
+                    )}
+                    
+                    {screen === 'result' && (
+                        <ResultScreen userInfo={userInfo} answers={answers} timeTaken={timeTaken} handleRetry={handleRetry} />
+                    )}
+
+                    {/* Submit Modal */}
+                    {showConfirm && (
+                        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center z-50 p-4 fade-enter-active">
+                            <div className="bg-white rounded-3xl p-8 max-w-sm w-full shadow-2xl">
+                                <Icons.Alert />
+                                <h3 className="text-2xl font-bold text-center mb-2 text-slate-800">Xác nhận nộp bài?</h3>
+                                <p className="text-center text-slate-600 mb-8 leading-relaxed">
+                                    Bạn đã hoàn thành <span className="font-bold text-blue-600 text-lg">{Object.keys(answers).length}/50</span> câu hỏi.
+                                    Sau khi nộp sẽ không thể thay đổi đáp án.
+                                </p>
+                                <div className="flex flex-col gap-3">
+                                    <button onClick={handleSubmit} className="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg shadow-blue-200 transition text-lg">
+                                        Nộp bài ngay
+                                    </button>
+                                    <button onClick={() => setShowConfirm(false)} className="w-full py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl transition">
+                                        Quay lại làm tiếp
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>
