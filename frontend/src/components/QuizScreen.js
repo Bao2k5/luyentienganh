@@ -42,7 +42,7 @@ const QuizScreen = ({ sessionId, studentInfo, selectedSet, onSubmit }) => {
         };
 
         initQuiz();
-    }, [sessionId]);
+    }, [sessionId, selectedSet]);
 
     // Save to localStorage whenever state changes
     useEffect(() => {
@@ -75,26 +75,26 @@ const QuizScreen = ({ sessionId, studentInfo, selectedSet, onSubmit }) => {
     }, [isSubmitting]);
 
     // Handle answer selection
-    const handleAnswerSelect = (answer) => {
+    const handleAnswerSelect = useCallback((answer) => {
         setAnswers((prev) => {
             const newAnswers = new Map(prev);
             newAnswers.set(currentQuestionIndex, answer);
             return newAnswers;
         });
-    };
+    }, [currentQuestionIndex]);
 
     // Navigation
-    const goToPrevious = () => {
+    const goToPrevious = useCallback(() => {
         if (currentQuestionIndex > 0) {
             setCurrentQuestionIndex(currentQuestionIndex - 1);
         }
-    };
+    }, [currentQuestionIndex]);
 
-    const goToNext = () => {
+    const goToNext = useCallback(() => {
         if (currentQuestionIndex < questions.length - 1) {
             setCurrentQuestionIndex(currentQuestionIndex + 1);
         }
-    };
+    }, [currentQuestionIndex, questions.length]);
 
     const goToQuestion = (index) => {
         setCurrentQuestionIndex(index);

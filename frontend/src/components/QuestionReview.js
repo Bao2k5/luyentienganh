@@ -5,7 +5,6 @@ const QuestionReview = ({ questions }) => {
     // Helper function to get specific explanation for why a wrong answer is incorrect
     const getWrongAnswerExplanation = (question, wrongAnswer) => {
         const unit = question.unit;
-        const correctAns = question.correctAnswer;
         const wrongAns = wrongAnswer;
 
         // Unit-specific wrong answer explanations
@@ -202,8 +201,8 @@ const QuestionReview = ({ questions }) => {
                         <div
                             key={index}
                             className={`border-2 rounded-xl p-6 ${isCorrect
-                                    ? 'border-green-300 bg-green-50'
-                                    : 'border-red-300 bg-red-50'
+                                ? 'border-green-300 bg-green-50'
+                                : 'border-red-300 bg-red-50'
                                 }`}
                         >
                             {/* Question Header */}
