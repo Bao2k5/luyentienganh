@@ -89,4 +89,15 @@ export const getStats = async (studentName) => {
     }
 };
 
+// Translate text
+export const translateText = async (text) => {
+    try {
+        const response = await api.post('/api/quiz/translate', { text });
+        return response.data.translatedText;
+    } catch (error) {
+        console.error('Translation error:', error);
+        return null;
+    }
+};
+
 export default api;

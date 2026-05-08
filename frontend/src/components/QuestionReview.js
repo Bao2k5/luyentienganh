@@ -4,179 +4,96 @@ import { CheckCircle, XCircle, AlertCircle, BookOpen } from 'lucide-react';
 const QuestionReview = ({ questions }) => {
     // Helper function to get specific explanation for why a wrong answer is incorrect
     const getWrongAnswerExplanation = (question, wrongAnswer) => {
-        const unit = question.unit;
+        const relativeIndex = question.orderIndex ? ((question.orderIndex - 1) % 50 + 1) : 0;
         const wrongAns = wrongAnswer;
 
-        // Unit-specific wrong answer explanations
-        if (unit === "Unit 1") {
-            if (wrongAns === "B" && question.questionText.includes("never")) {
-                return "Sai vì 'don't never' là double negative (phủ định kép) - không đúng ngữ pháp tiếng Anh.";
-            }
-            if (wrongAns === "C" && question.questionText.includes("never")) {
-                return "Sai vì 'am never' chỉ dùng với động từ 'to be', không dùng với động từ thường 'play'.";
-            }
-            if (wrongAns === "B" && question.questionText.includes("always")) {
-                return "Sai vì trạng từ tần suất phải đứng SAU 'to be', không đứng trước.";
-            }
-            if (wrongAns === "B" && question.questionText.includes("How often")) {
-                return "Sai vì 'are you going' là thì hiện tại tiếp diễn, không dùng cho câu hỏi về tần suất.";
-            }
-            if (wrongAns === "A" && question.questionText.includes("sun")) {
-                return "Sai vì chủ ngữ số ít (the sun) cần động từ thêm 's/es'.";
-            }
-            if (wrongAns === "A" && question.questionText.includes("at the moment")) {
-                return "Sai vì 'at the moment' yêu cầu thì hiện tại tiếp diễn, không phải hiện tại đơn.";
-            }
-            if (wrongAns === "A" && question.questionText.includes("this week")) {
-                return "Sai vì 'this week' chỉ hành động tạm thời, cần dùng thì hiện tại tiếp diễn.";
-            }
-            if (wrongAns === "A" && question.questionText.includes("stative verb")) {
-                return "Sai vì 'am knowing' là sai - động từ trạng thái không dùng ở thì tiếp diễn.";
-            }
+        // Since the distractors (A, B, C, D) are structurally similar across sets for the same relativeIndex,
+        // we can provide targeted advice.
+        if (relativeIndex === 1) {
+            if (wrongAns === "B" || wrongAns === "D") return "Sai vì trạng từ tần suất phải đứng ngay TRƯỚC động từ thường. Và không dùng phủ định kép.";
+            if (wrongAns === "C") return "Sai vì có động từ thường thì không dùng kèm 'to be' (am/is/are).";
+        } else if (relativeIndex === 2) {
+            return "Sai vì trạng từ tần suất luôn luôn phải đứng SAU động từ 'to be'.";
+        } else if (relativeIndex === 5) {
+            return "Sai vì dấu hiệu 'at the moment' (ngay lúc này) bắt buộc dùng thì Hiện tại tiếp diễn.";
+        } else if (relativeIndex === 7) {
+            return "Sai vì động từ trạng thái (như know, want, understand) KHÔNG dùng ở dạng -ing.";
+        } else if (relativeIndex === 9 || relativeIndex === 10) {
+            return "Sai vì sau 'did' hoặc 'didn't', động từ luôn phải ở dạng NGUYÊN MẪU (không thêm -ed/s/es).";
+        } else if (relativeIndex === 19) {
+            return "Sai vì 'Everyone', 'Everybody' luôn đi với động từ số ít.";
+        } else if (relativeIndex === 27) {
+            return "Sai vì mệnh đề 'If' (câu điều kiện) KHÔNG BAO GIỜ dùng thì tương lai (will/won't).";
+        } else if (relativeIndex >= 32 && relativeIndex <= 34) {
+            return "Sai cấu trúc so sánh. Tính từ ngắn (1 âm tiết, hoặc 2 âm tiết tận cùng -y) thêm '-er'. Không dùng 'more'.";
+        } else if (relativeIndex === 39) {
+            return "Sai vì sau động từ 'practise' (luyện tập) bắt buộc phải là V-ing.";
+        } else if (relativeIndex === 40) {
+            return "Sai vì sau động từ 'need' (cần) bắt buộc phải là 'to V'.";
         }
 
-        if (unit === "Unit 2") {
-            if (wrongAns === "A" && question.questionText.includes("Last year")) {
-                return "Sai vì 'go' là hiện tại đơn, không phải quá khứ. Cần dùng 'went'.";
-            }
-            if (wrongAns === "B" && question.questionText.includes("didn't")) {
-                return "Sai vì sau 'didn't' không được thêm '-ed' vào động từ.";
-            }
-            if (wrongAns === "C" && question.questionText.includes("didn't")) {
-                return "Sai vì sau 'didn't' động từ phải ở dạng nguyên mẫu, không thêm '-ed'.";
-            }
-            if (wrongAns === "B" && question.questionText.includes("Did you")) {
-                return "Sai vì 'Do' là hiện tại, không phải quá khứ. Cần dùng 'Did'.";
-            }
-            if (wrongAns === "C" && question.questionText.includes("Did you")) {
-                return "Sai vì sau 'Did' động từ phải ở dạng nguyên mẫu, không thêm '-ed'.";
-            }
-            if (wrongAns === "A" && question.questionText.includes("They") && question.questionText.includes("yesterday")) {
-                return "Sai vì 'was' dùng cho số ít (I, he, she, it), không dùng cho 'They'.";
-            }
-        }
-
-        if (unit === "Unit 3") {
-            if (wrongAns === "A" && question.questionText.includes("while")) {
-                return "Sai vì 'made' là quá khứ đơn, không thể hiện hành động đang diễn ra bị gián đoạn.";
-            }
-            if (wrongAns === "B" && question.questionText.includes("for a long time")) {
-                return "Sai vì 'waited' là quá khứ đơn, không nhấn mạnh hành động kéo dài.";
-            }
-            if (wrongAns === "A" && question.questionText.includes("want to eat")) {
-                return "Sai vì 'anything' dùng trong câu phủ định hoặc câu hỏi, không dùng trong câu khẳng định.";
-            }
-            if (wrongAns === "A" && question.questionText.includes("didn't eat")) {
-                return "Sai vì 'something' dùng trong câu khẳng định, không dùng trong câu phủ định.";
-            }
-            if (wrongAns === "B" && question.questionText.includes("was happy")) {
-                return "Sai vì 'Anyone' thường dùng trong câu phủ định hoặc câu hỏi.";
-            }
-            if (wrongAns === "A" && question.questionText.includes("to drink")) {
-                return "Sai vì 'something' có nghĩa khẳng định, không phù hợp với ngữ cảnh 'không có gì'.";
-            }
-        }
-
-        if (unit === "Unit 4") {
-            if (wrongAns === "A" && question.questionText.includes("next month")) {
-                return "Sai vì 'will' dùng cho quyết định đột ngột, không phải kế hoạch đã định trước.";
-            }
-            if (wrongAns === "B" && question.questionText.includes("won't going to")) {
-                return "Sai vì không có cấu trúc 'won't going to' - đây là sự nhầm lẫn giữa 'will' và 'be going to'.";
-            }
-            if (wrongAns === "A" && question.questionText.includes("secret")) {
-                return "Sai vì 'will' là khẳng định, nhưng câu này cần phủ định 'won't' để hứa không nói.";
-            }
-            if (wrongAns === "A" && question.questionText.includes("help you")) {
-                return "Sai vì 'am going to' dùng cho kế hoạch trước, không phải đề nghị giúp đỡ đột ngột.";
-            }
-            if (wrongAns === "A" && question.questionText.includes("close the window")) {
-                return "Sai vì 'am going to' dùng cho kế hoạch trước, không phải quyết định đột ngột lúc nói.";
-            }
-            if (wrongAns === "A" && question.questionText.includes("If I")) {
-                return "Sai vì KHÔNG bao giờ dùng 'will' trong mệnh đề 'if' của câu điều kiện loại 1.";
-            }
-        }
-
-        if (unit === "Unit 5") {
-            if (wrongAns === "A" && question.questionText.includes("100°C")) {
-                return "Sai vì câu điều kiện loại 0 (sự thật hiển nhiên) dùng present simple ở cả 2 mệnh đề, không dùng 'will'.";
-            }
-            if (wrongAns === "A" && question.questionText.includes("see Dina")) {
-                return "Sai vì mệnh đề chính của câu điều kiện loại 1 cần 'will', không phải present simple.";
-            }
-            if (wrongAns === "B" && question.questionText.includes("rains")) {
-                return "Sai vì 'don't' là hiện tại đơn, không phải future. Cần dùng 'won't'.";
-            }
-            if (wrongAns === "A" && question.questionText.includes("than yours")) {
-                return "Sai vì 'big' là dạng gốc, không phải so sánh hơn. Cần thêm '-er'.";
-            }
-            if (wrongAns === "D" && question.questionText.includes("than yours")) {
-                return "Sai vì không có cấu trúc 'more big' - tính từ 1 âm tiết dùng '-er', không dùng 'more'.";
-            }
-            if (wrongAns === "A" && question.questionText.includes("ever read")) {
-                return "Sai vì 'more interesting' là so sánh hơn, không phải so sánh nhất. Cần 'most'.";
-            }
-            if (wrongAns === "B" && question.questionText.includes("than her sister")) {
-                return "Sai vì không có dạng 'happyer' - tính từ kết thúc -y phải đổi thành '-ier'.";
-            }
-            if (wrongAns === "A" && question.questionText.includes("than yesterday")) {
-                return "Sai vì 'good' là dạng gốc, không phải so sánh hơn. Cần dùng 'better'.";
-            }
-        }
-
-        if (unit === "Unit 6") {
-            if (wrongAns === "A" && question.questionText.includes("ever been")) {
-                return "Sai vì 'Did' dùng cho quá khứ đơn, không phải Present Perfect. Cần dùng 'Have'.";
-            }
-            if (wrongAns === "B" && question.questionText.includes("seen Star Wars")) {
-                return "Sai vì 'ever' dùng trong câu hỏi, không dùng trong câu phủ định. Cần dùng 'never'.";
-            }
-            if (wrongAns === "A" && question.questionText.includes("best food")) {
-                return "Sai vì thiếu 'have' - cần cấu trúc đầy đủ 'have ever eaten'.";
-            }
-            if (wrongAns === "B" && question.questionText.includes("practises")) {
-                return "Sai vì 'practise' theo sau bởi V-ing, không phải 'to + infinitive'.";
-            }
-            if (wrongAns === "A" && question.questionText.includes("need")) {
-                return "Sai vì 'need' theo sau bởi 'to + infinitive', không phải động từ nguyên mẫu.";
-            }
-            if (wrongAns === "C" && question.questionText.includes("started")) {
-                return "Sai vì 'learning' đúng nhưng 'to learn' cũng đúng - cả 2 đều được chấp nhận.";
-            }
-            if (wrongAns === "B" && question.questionText.includes("person")) {
-                return "Sai vì 'which' dùng cho vật, không dùng cho người. Cần dùng 'who'.";
-            }
-            if (wrongAns === "A" && question.questionText.includes("book")) {
-                return "Sai vì 'who' dùng cho người, không dùng cho vật. Cần dùng 'which'.";
-            }
-            if (wrongAns === "B" && question.questionText.includes("hotel")) {
-                return "Sai vì 'which' dùng cho vật, không dùng cho nơi chốn. Cần dùng 'where'.";
-            }
-            if (wrongAns === "B" && question.questionText.includes("month")) {
-                return "Sai vì 'which' dùng cho vật, không dùng cho thời gian. Cần dùng 'when'.";
-            }
-        }
-
-        // Default explanation if no specific match
-        return `Đáp án ${wrongAns} không đúng theo ngữ pháp hoặc ngữ cảnh của câu.`;
+        // Default fallback if no specific rule
+        return `Đáp án ${wrongAns} không đúng theo ngữ pháp hoặc ngữ cảnh của câu. Xem giải thích chi tiết ở trên để hiểu rõ hơn.`;
     };
 
-    // Helper function to get common mistakes for each unit
+    // Helper function to get common mistakes for each specific grammatical point
     const getCommonMistake = (question) => {
-        const unit = question.unit;
+        const relativeIndex = question.orderIndex ? ((question.orderIndex - 1) % 50 + 1) : 0;
 
-        const commonMistakes = {
-            "Unit 1": "⚠️ Lỗi thường gặp: Nhầm lẫn vị trí trạng từ tần suất với 'to be' và động từ thường. Nhớ: SAU 'to be', TRƯỚC động từ thường.",
-            "Unit 2": "⚠️ Lỗi thường gặp: Thêm '-ed' vào động từ sau 'did/didn't'. Nhớ: Sau 'did/didn't' động từ luôn ở dạng nguyên mẫu.",
-            "Unit 3": "⚠️ Lỗi thường gặp: Dùng 'something' trong câu phủ định hoặc 'anything' trong câu khẳng định. Nhớ: something (khẳng định), anything (phủ định/hỏi).",
-            "Unit 4": "⚠️ Lỗi thường gặp: Nhầm lẫn giữa 'will' (quyết định đột ngột, lời hứa) và 'be going to' (kế hoạch trước). Và KHÔNG dùng 'will' trong mệnh đề 'if'.",
-            "Unit 5": "⚠️ Lỗi thường gặp: Dùng 'more' với tính từ 1 âm tiết (sai: more big, đúng: bigger). Và nhầm lẫn giữa so sánh hơn (-er) và so sánh nhất (most).",
-            "Unit 6": "⚠️ Lỗi thường gặp: Dùng 'ever' trong câu khẳng định (phải dùng 'never'). Và nhầm lẫn đại từ quan hệ: who (người), which (vật), where (nơi), when (thời gian).",
-            "Vocabulary": "⚠️ Lưu ý: Chú ý ngữ cảnh và collocation (từ đi với từ) để chọn từ vựng chính xác."
+        const specificMistakes = {
+            1: "⚠️ Lỗi thường gặp: Đặt trạng từ tần suất sai vị trí. Nhớ: TRƯỚC động từ thường.",
+            2: "⚠️ Lỗi thường gặp: Đặt trạng từ tần suất sai vị trí. Nhớ: SAU động từ 'to be'.",
+            3: "⚠️ Lỗi thường gặp: Dùng sai thì khi hỏi về tần suất. 'How often' phải dùng Hiện tại đơn.",
+            4: "⚠️ Lỗi thường gặp: Quên thêm 's/es' cho động từ khi chủ ngữ là số ít (ngôi thứ 3) ở Hiện tại đơn.",
+            5: "⚠️ Lỗi thường gặp: Không nhận ra dấu hiệu 'at the moment' để dùng Hiện tại tiếp diễn.",
+            6: "⚠️ Lỗi thường gặp: Dùng Hiện tại đơn cho hành động tạm thời. 'this week/these days' cần Hiện tại tiếp diễn.",
+            7: "⚠️ Lỗi thường gặp: Thêm '-ing' vào động từ trạng thái (know, want...). Các từ này KHÔNG dùng ở thì tiếp diễn.",
+            8: "⚠️ Lỗi thường gặp: Không thuộc động từ bất quy tắc (go -> went).",
+            9: "⚠️ Lỗi thường gặp: Thêm '-ed' vào động từ sau 'didn't'. Sau 'didn't' động từ phải ở dạng nguyên mẫu.",
+            10: "⚠️ Lỗi thường gặp: Thêm '-ed' vào động từ trong câu hỏi. Sau 'Did' động từ phải ở dạng nguyên mẫu.",
+            11: "⚠️ Lỗi thường gặp: Thiếu trợ động từ 'did' trong câu hỏi Wh- ở quá khứ.",
+            12: "⚠️ Lỗi thường gặp: Dùng sai 'was/were'. Nhớ: I/He/She/It + was; You/We/They + were.",
+            13: "⚠️ Lỗi thường gặp: Chia sai đuôi '-ed' với từ kết thúc bằng 'y'. Chú ý trước 'y' là nguyên âm hay phụ âm.",
+            14: "⚠️ Lỗi thường gặp: Dùng sai từ để hỏi (What, Where, Who...). Phải đọc kỹ thông tin cần hỏi.",
+            15: "⚠️ Lỗi thường gặp: Không phân biệt được hành động ĐANG diễn ra (Qúa khứ tiếp diễn) và XEN VÀO (Quá khứ đơn).",
+            16: "⚠️ Lỗi thường gặp: Dùng Quá khứ đơn thay vì Tiếp diễn khi muốn nhấn mạnh một hành động kéo dài.",
+            17: "⚠️ Lỗi thường gặp: Dùng 'anything' trong câu khẳng định. Khẳng định phải dùng 'something'.",
+            18: "⚠️ Lỗi thường gặp: Dùng 'something' trong câu phủ định/nghi vấn. Phủ định/nghi vấn phải dùng 'anything'.",
+            19: "⚠️ Lỗi thường gặp: Chia động từ số nhiều cho 'Everyone/Everybody'. Các đại từ này luôn đi với động từ SỐ ÍT.",
+            20: "⚠️ Lỗi thường gặp: Phủ định kép. 'Nothing/nobody' bản thân nó đã mang nghĩa phủ định, không dùng thêm not.",
+            21: "⚠️ Lỗi thường gặp: Không hiểu nghĩa khẳng định của 'anywhere' ('bất cứ đâu').",
+            22: "⚠️ Lỗi thường gặp: Nhầm lẫn 'will' và 'be going to'. Kế hoạch đã định trước phải dùng 'be going to'.",
+            23: "⚠️ Lỗi thường gặp: Viết sai cấu trúc phủ định của 'be going to'.",
+            24: "⚠️ Lỗi thường gặp: Dùng 'be going to' cho Lời hứa. Lời hứa phải dùng 'will/won't'.",
+            25: "⚠️ Lỗi thường gặp: Dùng 'be going to' cho Lời đề nghị giúp đỡ. Đề nghị giúp đỡ phải dùng 'will'.",
+            26: "⚠️ Lỗi thường gặp: Dùng 'be going to' cho Quyết định đột ngột lúc nói. Phải dùng 'will'.",
+            27: "⚠️ Lỗi thường gặp: Dùng thì Tương lai ('will') trong mệnh đề 'If'. Mệnh đề 'If' phải dùng Hiện tại đơn.",
+            28: "⚠️ Lỗi thường gặp: Dùng sai trợ động từ khi đưa ra yêu cầu giúp đỡ. Dùng 'Will you...?'",
+            29: "⚠️ Lỗi thường gặp: Dùng 'will' trong câu điều kiện loại 0 (sự thật hiển nhiên). Cả 2 vế đều là Hiện tại đơn.",
+            30: "⚠️ Lỗi thường gặp: Chia sai vế chính của câu điều kiện loại 1. Vế chính phải có 'will + V'.",
+            31: "⚠️ Lỗi thường gặp: Phủ định sai cấu trúc trong câu điều kiện loại 1.",
+            32: "⚠️ Lỗi thường gặp: Dùng 'more' với tính từ ngắn. Tính từ 1 âm tiết chỉ thêm '-er'.",
+            33: "⚠️ Lỗi thường gặp: Nhầm lẫn so sánh hơn và so sánh nhất. Có 'the' thì phải là so sánh nhất.",
+            34: "⚠️ Lỗi thường gặp: Không đổi 'y' thành 'i' trước khi thêm '-er' với tính từ 2 âm tiết kết thúc bằng 'y'.",
+            35: "⚠️ Lỗi thường gặp: Không nhớ dạng so sánh bất quy tắc (good -> better -> best).",
+            36: "⚠️ Lỗi thường gặp: Dùng quá khứ đơn thay vì Hiện tại hoàn thành khi hỏi về trải nghiệm (ever).",
+            37: "⚠️ Lỗi thường gặp: Dùng 'ever' trong câu kể phủ định. Dùng 'never' thay thế.",
+            38: "⚠️ Lỗi thường gặp: Thiếu 'have/has' trong cấu trúc 'the best... I have ever...'.",
+            39: "⚠️ Lỗi thường gặp: Dùng 'to V' sau 'practise'. 'Practise' bắt buộc đi với 'V-ing'.",
+            40: "⚠️ Lỗi thường gặp: Dùng 'V-ing' sau 'need'. 'Need' phải đi với 'to V'.",
+            41: "⚠️ Lỗi thường gặp: Nhầm lẫn các động từ có thể đi với cả 'V-ing' và 'to V' mà không đổi nghĩa.",
+            42: "⚠️ Lỗi thường gặp: Dùng 'which' thay thế cho Người. Phải dùng 'who'.",
+            43: "⚠️ Lỗi thường gặp: Dùng 'who' thay thế cho Vật. Phải dùng 'which'.",
+            44: "⚠️ Lỗi thường gặp: Dùng 'which' cho Nơi chốn. Phải dùng 'where'.",
+            45: "⚠️ Lỗi thường gặp: Dùng 'which' cho Thời gian. Phải dùng 'when'.",
+            46: "⚠️ Lỗi thường gặp: Nhầm lẫn ngữ cảnh của các tính từ miêu tả tính cách.",
+            47: "⚠️ Lỗi thường gặp: Nhầm lẫn từ vựng các môn học.",
+            48: "⚠️ Lỗi thường gặp: Dùng sai giới từ đi kèm với từ vựng (collocation).",
+            49: "⚠️ Lỗi thường gặp: Không tìm được từ đồng nghĩa phù hợp.",
+            50: "⚠️ Lỗi thường gặp: Dùng 'very' với tính từ cực cấp. Tính từ cực cấp (freezing, awful...) không đi với very."
         };
 
-        return commonMistakes[unit] || "⚠️ Lưu ý: Đọc kỹ đề và chú ý ngữ cảnh câu.";
+        return specificMistakes[relativeIndex] || "⚠️ Lưu ý: Đọc kỹ đề và chú ý ngữ cảnh câu.";
     };
 
     return (
@@ -237,6 +154,11 @@ const QuestionReview = ({ questions }) => {
                                     <p className="text-lg text-gray-800 font-medium leading-relaxed">
                                         {q.questionText}
                                     </p>
+                                    {q.vietnameseTranslation && (
+                                        <p className="text-blue-700 mt-2 text-md italic font-medium">
+                                            Vi: {q.vietnameseTranslation}
+                                        </p>
+                                    )}
                                 </div>
                             </div>
 
@@ -283,6 +205,11 @@ const QuestionReview = ({ questions }) => {
                                                     </span>
                                                 )}
                                             </div>
+                                            {q.optionTranslations && q.optionTranslations[option] && (
+                                                <div className="mt-1 ml-6 text-blue-700 italic text-sm font-medium">
+                                                    Vi: {q.optionTranslations[option]}
+                                                </div>
+                                            )}
                                         </div>
                                     );
                                 })}

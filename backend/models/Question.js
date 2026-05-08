@@ -20,6 +20,16 @@ const QuestionSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    vietnameseTranslation: {
+        type: String,
+        required: false
+    },
+    optionTranslations: {
+        A: { type: String, required: false },
+        B: { type: String, required: false },
+        C: { type: String, required: false },
+        D: { type: String, required: false }
+    },
     unit: {
         type: String,
         enum: ['Unit 1', 'Unit 2', 'Unit 3', 'Unit 4', 'Unit 5', 'Unit 6', 'Vocabulary'],

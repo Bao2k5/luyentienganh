@@ -158,8 +158,8 @@ router.post('/submit', async (req, res) => {
             });
         }
 
-        // Fetch all questions to compare answers
-        const questions = await Question.find({});
+        // Fetch only questions for this set (optimization: only 50 questions instead of all 500)
+        const questions = await Question.find({ setNumber: session.setNumber });
         const questionMap = {};
         questions.forEach(q => {
             questionMap[q._id.toString()] = q;
@@ -228,6 +228,38 @@ router.post('/submit', async (req, res) => {
     }
 });
 
+// POST /api/quiz/translate - Translate text
+router.post('/translate', async (req, res) => {
+    try {
+        const { text } = req.body;
+
+        if (!text) {
+            return res.status(400).json({
+                error: { message: 'Text is required' }
+            });
+        }
+
+        // Call Google Translate free API
+        const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=vi&dt=t&q=${encodeURIComponent(text)}`;
+        const response = await fetch(url);
+        const data = await response.json();
+        
+        // Extract translation
+        const translatedText = data[0].map(item => item[0]).join('');
+
+        res.status(200).json({
+            originalText: text,
+            translatedText
+        });
+
+    } catch (error) {
+        console.error('Error translating text:', error);
+        res.status(500).json({
+            error: { message: 'Failed to translate text' }
+        });
+    }
+});
+
 // GET /api/results/:id - Get detailed quiz results
 router.get('/results/:id', async (req, res) => {
     try {
@@ -253,7 +285,10 @@ router.get('/results/:id', async (req, res) => {
                 correctAnswer: question.correctAnswer,
                 studentAnswer: answer.selectedAnswer,
                 explanation: question.explanation,
+                vietnameseTranslation: question.vietnameseTranslation,
+                optionTranslations: question.optionTranslations,
                 unit: question.unit,
+                orderIndex: question.orderIndex,
                 isCorrect: answer.isCorrect
             };
         });
