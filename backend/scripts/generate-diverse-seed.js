@@ -16,46 +16,485 @@ const subjects = [
     {en: "John", vi: "John", p: false, be: "is", pastBe: "was", do: "does", did: "did"}
 ];
 
-const verbs = [
-    {v: "play", vs: "plays", ving: "playing", v2: "played", v3: "played", en: "tennis", vi: "quần vợt"},
-    {v: "work", vs: "works", ving: "working", v2: "worked", v3: "worked", en: "late", vi: "muộn"},
-    {v: "study", vs: "studies", ving: "studying", v2: "studied", v3: "studied", en: "maths", vi: "môn toán"},
-    {v: "watch", vs: "watches", ving: "watching", v2: "watched", v3: "watched", en: "TV", vi: "TV"},
-    {v: "cook", vs: "cooks", ving: "cooking", v2: "cooked", v3: "cooked", en: "dinner", vi: "bữa tối"},
-    {v: "read", vs: "reads", ving: "reading", v2: "read", v3: "read", en: "a book", vi: "một cuốn sách"},
-    {v: "clean", vs: "cleans", ving: "cleaning", v2: "cleaned", v3: "cleaned", en: "the room", vi: "căn phòng"},
-    {v: "listen", vs: "listens", ving: "listening", v2: "listened", v3: "listened", en: "to music", vi: "nhạc"},
-    {v: "travel", vs: "travels", ving: "travelling", v2: "travelled", v3: "travelled", en: "abroad", vi: "nước ngoài"},
-    {v: "visit", vs: "visits", ving: "visiting", v2: "visited", v3: "visited", en: "friends", vi: "bạn bè"}
+const advs = ["never", "always", "usually", "often", "sometimes", "rarely", "occasionally", "hardly ever", "always", "often"];
+const advsVi = ["không bao giờ", "luôn luôn", "thường xuyên", "thường", "thỉnh thoảng", "hiếm khi", "đôi khi", "hầu như không bao giờ", "luôn luôn", "thường"];
+
+// Q1: Adverb before verb (Sentence|Translation|verb|verb+s/es)
+const q1_list = [
+    "play tennis|chơi quần vợt|play|plays",
+    "go jogging|chạy bộ|go|goes",
+    "eat out|ăn ngoài|eat|eats",
+    "visit museums|thăm bảo tàng|visit|visits",
+    "watch movies|xem phim|watch|watches",
+    "cook dinner|nấu bữa tối|cook|cooks",
+    "clean the classroom|dọn phòng học|clean|cleans",
+    "read news|đọc tin tức|read|reads",
+    "travel abroad|đi du lịch nước ngoài|travel|travels",
+    "do yoga|tập yoga|do|does"
 ];
 
-const adverbs = [
-    {en: "never", vi: "không bao giờ"}, {en: "always", vi: "luôn luôn"}, {en: "usually", vi: "thường xuyên"},
-    {en: "often", vi: "thường"}, {en: "sometimes", vi: "thỉnh thoảng"}, {en: "rarely", vi: "hiếm khi"},
-    {en: "occasionally", vi: "đôi khi"}, {en: "never", vi: "không bao giờ"}, {en: "always", vi: "luôn luôn"}, {en: "often", vi: "thường"}
+// Q2: Adverb after to be (Adjective|Translation)
+const q2_list = [
+    "late for school|muộn học", "happy at work|vui vẻ ở chỗ làm", "tired in the morning|mệt mỏi vào buổi sáng", 
+    "busy on weekends|bận rộn vào cuối tuần", "hungry at night|đói vào ban đêm", "ready for exams|sẵn sàng cho kỳ thi", 
+    "excited about trips|hào hứng về chuyến đi", "nervous before tests|lo lắng trước bài kiểm tra", 
+    "bored at home|buồn chán ở nhà", "careful with money|cẩn thận với tiền bạc"
 ];
 
-const timeExpr = [
-    {en: "on weekends", vi: "vào cuối tuần"}, {en: "in the morning", vi: "vào buổi sáng"}, 
-    {en: "at night", vi: "vào ban đêm"}, {en: "every day", vi: "mỗi ngày"}, 
-    {en: "on Sundays", vi: "vào Chủ nhật"}, {en: "after school", vi: "sau giờ học"},
-    {en: "in the evening", vi: "vào buổi tối"}, {en: "at the weekend", vi: "vào cuối tuần"},
-    {en: "every week", vi: "mỗi tuần"}, {en: "on Mondays", vi: "vào các ngày thứ Hai"}
+// Q3: How often (Verb phrase|Translation)
+const q3_list = [
+    "travel abroad|đi du lịch nước ngoài", "visit your parents|thăm bố mẹ", "go to the gym|đến phòng gym",
+    "clean your room|dọn phòng", "check your emails|kiểm tra email", "buy new clothes|mua quần áo mới",
+    "eat fast food|ăn đồ ăn nhanh", "play video games|chơi trò chơi điện tử", "go swimming|đi bơi", "read the news|đọc tin tức"
 ];
 
-const pastTime = [
-    {en: "yesterday", vi: "hôm qua"}, {en: "last week", vi: "tuần trước"}, {en: "last month", vi: "tháng trước"},
-    {en: "last year", vi: "năm ngoái"}, {en: "two days ago", vi: "hai ngày trước"}, {en: "this morning", vi: "sáng nay"},
-    {en: "in 2010", vi: "vào năm 2010"}, {en: "last night", vi: "tối qua"}, {en: "a few days ago", vi: "vài ngày trước"}, {en: "last summer", vi: "mùa hè năm ngoái"}
+// Q4: Present Simple Truth (Subject|Verb|Rest|viSubj|viVerb|viRest|viTense)
+const q4_list = [
+    "Water|boils|at 100°C|Nước|sôi|ở 100°C|boils|boil|boiling",
+    "The sun|rises|in the east|Mặt trời|mọc|ở hướng đông|rises|rise|rising",
+    "Ice|melts|at 0°C|Đá|tan chảy|ở 0°C|melts|melt|melting",
+    "Wood|floats|on water|Gỗ|nổi|trên mặt nước|floats|float|floating",
+    "Plants|need|light to grow|Thực vật|cần|ánh sáng để phát triển|need|needs|needing",
+    "Earth|goes|around the sun|Trái đất|quay|quanh mặt trời|goes|go|going",
+    "A magnet|attracts|iron|Nam châm|hút|sắt|attracts|attract|attracting",
+    "Birds|have|feathers|Chim chóc|có|lông vũ|have|has|having",
+    "Fish|live|in water|Cá|sống|dưới nước|live|lives|living",
+    "Humans|breathe|oxygen|Con người|hít thở|oxy|breathe|breathes|breathing"
 ];
 
-const futureTime = [
-    {en: "tomorrow", vi: "ngày mai"}, {en: "next week", vi: "tuần tới"}, {en: "next month", vi: "tháng tới"},
-    {en: "next year", vi: "năm tới"}, {en: "this weekend", vi: "cuối tuần này"}, {en: "tonight", vi: "tối nay"},
-    {en: "in two days", vi: "trong hai ngày tới"}, {en: "soon", vi: "sớm thôi"}, {en: "later", vi: "lát nữa"}, {en: "next summer", vi: "mùa hè tới"}
+// Q5: Present Simple Schedule (Subject|Verb|Rest|viSubj|viVerb|viRest)
+const q5_list = [
+    "The train|leaves|at 9 AM|Chuyến tàu|rời đi|lúc 9 giờ sáng",
+    "The bus|arrives|at 10 PM|Chuyến xe buýt|đến nơi|lúc 10 giờ tối",
+    "The flight|departs|at midnight|Chuyến bay|khởi hành|lúc nửa đêm",
+    "The match|starts|at 3 PM|Trận đấu|bắt đầu|lúc 3 giờ chiều",
+    "The museum|opens|at 8 AM|Bảo tàng|mở cửa|lúc 8 giờ sáng",
+    "The supermarket|closes|at 11 PM|Siêu thị|đóng cửa|lúc 11 giờ tối",
+    "The movie|ends|at 10:30 PM|Bộ phim|kết thúc|lúc 10 rưỡi tối",
+    "The class|begins|at 7 AM|Lớp học|bắt đầu|lúc 7 giờ sáng",
+    "The festival|takes place|on Sunday|Lễ hội|diễn ra|vào Chủ nhật",
+    "The meeting|finishes|at noon|Cuộc họp|kết thúc|lúc buổi trưa"
 ];
 
-// Helper to shuffle options and correctly assign correctAnswer (A, B, C, D)
+// Q6: Present Continuous (Phrase|Translation|verb|ving)
+const q6_list = [
+    "send a text message|gửi một tin nhắn|send|sending",
+    "write an email|viết email|write|writing",
+    "talk on the phone|nói chuyện điện thoại|talk|talking",
+    "drink coffee|uống cà phê|drink|drinking",
+    "wait for a bus|đợi xe buýt|wait|waiting",
+    "have lunch|ăn trưa|have|having",
+    "study for a test|học cho bài kiểm tra|study|studying",
+    "play a game|chơi game|play|playing",
+    "listen to a podcast|nghe podcast|listen|listening",
+    "look at a map|nhìn bản đồ|look|looking"
+];
+
+// Q7: Stative Verbs
+const q7_list = [
+    "know what you mean|biết ý của bạn|know|knows|knowing|knew",
+    "believe his story|tin câu chuyện của anh ấy|believe|believes|believing|believed",
+    "understand the lesson|hiểu bài học|understand|understands|understanding|understood",
+    "like this song|thích bài hát này|like|likes|liking|liked",
+    "need some help|cần chút sự giúp đỡ|need|needs|needing|needed",
+    "want a drink|muốn một đồ uống|want|wants|wanting|wanted",
+    "love this city|yêu thành phố này|love|loves|loving|loved",
+    "remember her name|nhớ tên cô ấy|remember|remembers|remembering|remembered",
+    "prefer tea|thích trà hơn|prefer|prefers|preferring|preferred",
+    "hate the cold weather|ghét thời tiết lạnh|hate|hates|hating|hated"
+];
+
+// Q8: Past Simple Affirmative
+const q8_list = [
+    "went to Mexico|đi Mexico|go|goes|went|going",
+    "bought a new car|mua một chiếc xe mới|buy|buys|bought|buying",
+    "saw a good film|xem một bộ phim hay|see|sees|saw|seeing",
+    "ate at a restaurant|ăn ở nhà hàng|eat|eats|ate|eating",
+    "met some friends|gặp vài người bạn|meet|meets|met|meeting",
+    "found a wallet|tìm thấy một chiếc ví|find|finds|found|finding",
+    "lost his keys|đánh mất chìa khóa|lose|loses|lost|losing",
+    "drank some milk|uống chút sữa|drink|drinks|drank|drinking",
+    "wrote a letter|viết một lá thư|write|writes|wrote|writing",
+    "slept early|ngủ sớm|sleep|sleeps|slept|sleeping"
+];
+
+// Q9: Past Simple Negative
+const q9_list = [
+    "like the film|thích bộ phim", "finish the project|hoàn thành dự án", "see him at the party|thấy anh ấy ở bữa tiệc",
+    "arrive on time|đến đúng giờ", "answer my call|trả lời cuộc gọi của tôi", "open the door|mở cửa",
+    "pass the exam|qua kỳ thi", "tell the truth|nói sự thật", "work yesterday|làm việc ngày hôm qua", "bring the umbrella|mang theo ô"
+];
+
+// Q10: Past Simple Question
+const q10_list = [
+    "enjoy the party|thích bữa tiệc", "find your keys|tìm thấy chìa khóa", "see the news|xem tin tức",
+    "hear that noise|nghe thấy tiếng ồn đó", "buy the tickets|mua vé", "talk to him|nói chuyện với anh ấy",
+    "sleep well|ngủ ngon", "finish the report|hoàn thành báo cáo", "go out|đi chơi", "call me|gọi cho tôi"
+];
+
+// Q11: Past Simple Spelling (-ied)
+const q11_list = [
+    "study for the exam|học cho bài kiểm tra|studied|study|studies",
+    "try to call|cố gắng gọi|tried|try|tries",
+    "carry the bags|mang những chiếc túi|carried|carry|carries",
+    "cry at the end|khóc vào lúc cuối|cried|cry|cries",
+    "reply to the email|trả lời email|replied|reply|replies",
+    "hurry to the station|vội vã đến nhà ga|hurried|hurry|hurries",
+    "worry about the test|lo lắng về bài thi|worried|worry|worries",
+    "marry his girlfriend|kết hôn với bạn gái|married|marry|marries",
+    "empty the bin|đổ thùng rác|emptied|empty|empties",
+    "copy the notes|chép lại ghi chú|copied|copy|copies"
+];
+
+// Q12: Wh- Question (What)
+const q12_list = ["email address|địa chỉ email", "phone number|số điện thoại", "full name|họ và tên", "favorite color|màu yêu thích", "dream job|công việc mơ ước", "main hobby|sở thích chính", "home address|địa chỉ nhà", "favorite food|món ăn yêu thích", "ultimate goal|mục tiêu cuối cùng", "biggest fear|nỗi sợ lớn nhất"];
+
+// Q13: Wh- Question (Where)
+const q13_list = [
+    "go? - To London|đi? - Đến London", "stay? - In Paris|ở? - Ở Paris", "work? - At a bank|làm việc? - Ở ngân hàng",
+    "live? - In Tokyo|sống? - Ở Tokyo", "eat? - At the cafe|ăn? - Ở quán cà phê", "meet? - At the park|gặp nhau? - Ở công viên",
+    "hide? - Under the bed|trốn? - Dưới gầm giường", "park? - In the garage|đỗ xe? - Trong gara", "sit? - On the sofa|ngồi? - Trên ghế sofa", "travel? - To Vietnam|đi du lịch? - Đến Việt Nam"
+];
+
+// Q14: Can Request
+const q14_list = [
+    "help me with this|giúp tôi việc này", "open the window|mở cửa sổ", "pass the salt|đưa lọ muối",
+    "turn off the light|tắt đèn", "speak louder|nói to hơn", "repeat that|nhắc lại điều đó",
+    "close the door|đóng cửa", "wait a minute|đợi một phút", "show me the way|chỉ đường cho tôi", "call a taxi|gọi một chiếc taxi"
+];
+
+// Q15: Past Continuous
+const q15_list = [
+    "wait for a long time|chờ đợi một thời gian dài", "sleep on the sofa|ngủ trên ghế sofa", "read a magazine|đọc một cuốn tạp chí",
+    "play chess|chơi cờ vua", "talk to the manager|nói chuyện với quản lý", "look out the window|nhìn ra ngoài cửa sổ",
+    "drive to work|lái xe đi làm", "listen to the radio|nghe đài", "work in the garden|làm việc trong vườn", "stand outside|đứng bên ngoài"
+];
+
+// Q16: Past Continuous Interrupted (while)
+const q16_list = [
+    "He called while I _______ lunch.|Anh ấy đã gọi trong khi tôi _______ bữa trưa.|was making",
+    "The power went out while we _______ TV.|Mất điện trong khi chúng tôi _______ TV.|were watching",
+    "It started to rain while they _______ football.|Trời bắt đầu mưa trong khi họ _______ bóng đá.|were playing",
+    "I dropped my phone while I _______ for the bus.|Tôi đánh rơi điện thoại trong khi tôi _______ xe buýt.|was waiting",
+    "She hurt her leg while she _______|Cô ấy bị đau chân trong khi cô ấy _______|was running",
+    "The bell rang while the students _______|Chuông reo trong khi học sinh _______|were studying",
+    "He arrived while my parents _______ dinner.|Anh ấy đến trong khi bố mẹ tôi _______ bữa tối.|were cooking",
+    "I saw an accident while I _______ to work.|Tôi thấy một vụ tai nạn trong khi tôi _______ đi làm.|was driving",
+    "My pen broke while I _______ the essay.|Bút của tôi bị hỏng trong khi tôi _______ bài luận.|was writing",
+    "The dog barked while Mary _______|Chó sủa trong khi Mary _______|was sleeping"
+];
+
+// Q17: when vs while
+const q17_list = [
+    "I was making lunch _______ he called.|khi anh ấy gọi",
+    "We were watching TV _______ the power went out.|khi mất điện",
+    "They were playing football _______ it started to rain.|khi trời bắt đầu mưa",
+    "I was waiting for the bus _______ I dropped my phone.|khi tôi đánh rơi điện thoại",
+    "She was running _______ she hurt her leg.|khi cô ấy bị đau chân",
+    "The students were studying _______ the bell rang.|khi chuông reo",
+    "My parents were cooking dinner _______ he arrived.|khi anh ấy đến",
+    "I was driving to work _______ I saw an accident.|khi tôi thấy một vụ tai nạn",
+    "I was writing the essay _______ my pen broke.|khi bút bị hỏng",
+    "Mary was sleeping _______ the dog barked.|khi chó sủa"
+];
+
+// Q18: something/someone/somewhere
+const q18_list = [
+    "eat something. I'm hungry.|ăn thứ gì đó. Tôi đang đói.",
+    "drink something. I'm thirsty.|uống thứ gì đó. Tôi đang khát.",
+    "talk to someone. I'm lonely.|nói chuyện với ai đó. Tôi cô đơn.",
+    "go somewhere. I'm bored.|đi đâu đó. Tôi đang buồn chán.",
+    "buy something. I need clothes.|mua thứ gì đó. Tôi cần quần áo.",
+    "ask someone. I'm lost.|hỏi ai đó. Tôi bị lạc.",
+    "find somewhere quiet. I have a headache.|tìm nơi nào đó yên tĩnh. Tôi bị đau đầu.",
+    "read something. I have free time.|đọc thứ gì đó. Tôi có thời gian rảnh.",
+    "meet someone new. I want to make friends.|gặp ai đó mới. Tôi muốn kết bạn.",
+    "hide something. It's a secret.|giấu thứ gì đó. Đó là bí mật."
+];
+
+// Q19: anything/anyone/anywhere
+const q19_list = [
+    "eat anything|ăn bất cứ thứ gì", "drink anything|uống bất cứ thứ gì", "see anyone|thấy bất cứ ai",
+    "go anywhere|đi bất cứ đâu", "buy anything|mua bất cứ thứ gì", "meet anyone|gặp bất cứ ai",
+    "find anywhere to park|tìm bất cứ chỗ nào để đỗ xe", "read anything|đọc bất cứ thứ gì", "say anything|nói bất cứ điều gì", "know anyone|biết bất cứ ai"
+];
+
+// Q20: nothing/no one/nowhere
+const q20_list = [
+    "nothing to drink|không có gì để uống", "no one to talk to|không có ai để nói chuyện cùng", "nowhere to go|không có nơi nào để đi",
+    "nothing to eat|không có gì để ăn", "nothing to do|không có gì để làm", "no one at home|không có ai ở nhà",
+    "nowhere to hide|không có nơi nào để trốn", "nothing to say|không có gì để nói", "no one in the room|không có ai trong phòng", "nothing left|không còn gì"
+];
+
+// Q21: everyone/everything
+const q21_list = [
+    "Everyone was happy at the party.|Mọi người đều vui vẻ ở bữa tiệc.",
+    "Everything is ready for the meeting.|Mọi thứ đã sẵn sàng cho cuộc họp.",
+    "Everyone wants to succeed.|Mọi người đều muốn thành công.",
+    "Everything costs more nowadays.|Mọi thứ đều đắt đỏ hơn ngày nay.",
+    "Everyone knows the truth.|Mọi người đều biết sự thật.",
+    "Everything was perfect on that day.|Mọi thứ đều hoàn hảo vào ngày hôm đó.",
+    "Everyone is waiting outside.|Mọi người đang đợi bên ngoài.",
+    "Everything looks clean here.|Mọi thứ trông có vẻ sạch sẽ ở đây.",
+    "Everyone loves this movie.|Mọi người đều yêu thích bộ phim này.",
+    "Everything goes according to plan.|Mọi thứ diễn ra theo kế hoạch."
+];
+
+// Q22: be going to
+const q22_list = [
+    "buy a new phone|mua một chiếc điện thoại mới", "start a new job|bắt đầu công việc mới", "visit my grandparents|thăm ông bà",
+    "sell my car|bán xe", "learn Spanish|học tiếng Tây Ban Nha", "move to a new city|chuyển đến thành phố mới",
+    "clean the garage|dọn dẹp gara", "bake a cake|nướng bánh", "take a vacation|đi nghỉ mát", "paint the house|sơn lại nhà"
+];
+
+// Q23: be going to negative
+const q23_list = [
+    "work tomorrow|đi làm vào ngày mai", "cook tonight|nấu ăn tối nay", "travel this summer|đi du lịch mùa hè này",
+    "buy that expensive car|mua chiếc xe đắt tiền đó", "attend the meeting|tham dự cuộc họp", "watch TV later|xem TV lát nữa",
+    "play football this weekend|chơi bóng đá cuối tuần này", "invite him to the party|mời anh ấy đến bữa tiệc", "change my mind|thay đổi ý định", "stay up late|thức khuya"
+];
+
+// Q24: won't promise
+const q24_list = [
+    "tell anyone|nói với ai", "forget your birthday|quên sinh nhật bạn", "be late again|đến muộn nữa",
+    "make that mistake|phạm sai lầm đó", "lose it|làm mất nó", "let you down|làm bạn thất vọng",
+    "stop trying|ngừng cố gắng", "leave without you|rời đi mà không có bạn", "hurt your feelings|làm tổn thương bạn", "break my promise|thất hứa"
+];
+
+// Q25: will offer
+const q25_list = [
+    "help you|giúp bạn", "carry your bags|mang túi cho bạn", "open the door for you|mở cửa cho bạn",
+    "pay for the tickets|trả tiền vé", "lend you some money|cho bạn mượn tiền", "show you the way|chỉ đường cho bạn",
+    "call a taxi for you|gọi taxi cho bạn", "make some coffee|pha cà phê", "turn on the AC|bật điều hòa", "drive you home|lái xe đưa bạn về"
+];
+
+// Q26: will spontaneous
+const q26_list = [
+    "close the window|đóng cửa sổ lại", "answer the phone|trả lời điện thoại", "check the email|kiểm tra email",
+    "take a look|xem thử", "buy some water|mua chút nước", "ask the waiter|hỏi người phục vụ",
+    "turn down the volume|vặn nhỏ âm lượng", "grab an umbrella|lấy một chiếc ô", "write it down|viết nó ra", "have a salad|ăn món salad"
+];
+
+// Q27: If no future
+const q27_list = [
+    "If I _______ time, I'll email you.|có thời gian|have|had",
+    "If he _______ early, we'll go out.|đến sớm|arrives|arrived",
+    "If they _______ the game, they'll celebrate.|thắng trận đấu|win|won",
+    "If you _______ hard, you'll pass.|làm việc chăm chỉ|work|worked",
+    "If she _______ the keys, she'll open the door.|tìm thấy chìa khóa|finds|found",
+    "If we _______ money, we'll buy it.|có tiền|have|had",
+    "If John _______ me, I'll answer.|gọi tôi|calls|called",
+    "If the weather _______ good, we'll swim.|tốt|is|was",
+    "If Mary _______ the truth, she'll be angry.|biết sự thật|knows|knew",
+    "If the bus _______, we'll be late.|đến trễ|is late|was late"
+];
+
+// Q28: going to structure
+const q28_list = [
+    "I'm _______ watch the football tonight.|xem bóng đá", "He's _______ clean his room.|dọn phòng",
+    "She's _______ call her mom.|gọi mẹ", "They're _______ build a house.|xây nhà",
+    "We're _______ order pizza.|gọi pizza", "John is _______ buy a gift.|mua quà",
+    "Mary is _______ take a photo.|chụp ảnh", "The students are _______ take a test.|làm bài kiểm tra",
+    "My parents are _______ retire soon.|nghỉ hưu", "I'm _______ fix the car.|sửa xe"
+];
+
+// Q29: Zero cond
+const q29_list = [
+    "heat water to 100°C|it boils|sôi", "mix red and blue|you get purple|thu được",
+    "freeze water|it becomes ice|trở thành", "touch fire|you get burned|bị bỏng",
+    "don't water plants|they die|chết", "drop a glass|it breaks|vỡ",
+    "eat too much|you get fat|trở nên", "stay in the rain|you get wet|bị ướt",
+    "heat ice|it melts|tan chảy", "press the button|the screen turns on|bật sáng"
+];
+
+// Q30: Zero cond machine
+const q30_list = [
+    "the power is low|the red light flashes|nhấp nháy", "the door is open|the alarm rings|reo lên",
+    "the temperature rises|the fan starts|khởi động", "the paper jams|the printer stops|dừng lại",
+    "the battery is full|the green light turns on|bật sáng", "you push the lever|the machine works|hoạt động",
+    "the tank is empty|the engine fails|ngừng chạy", "you insert a coin|the gate opens|mở ra",
+    "the memory is full|the phone lags|bị giật", "you pull the string|the light goes off|tắt đi"
+];
+
+// Q31: First cond won't
+const q31_list = [
+    "rains|we won't go out|chúng ta sẽ không ra ngoài", "snows|the flights won't depart|chuyến bay sẽ không cất cánh",
+    "is cold|I won't swim|tôi sẽ không bơi", "is late|she won't wait|cô ấy sẽ không đợi",
+    "is expensive|they won't buy it|họ sẽ không mua", "is hard|we won't finish|chúng ta sẽ không hoàn thành",
+    "is closed|you won't enter|bạn sẽ không vào được", "is busy|he won't call|anh ấy sẽ không gọi",
+    "is dark|I won't walk alone|tôi sẽ không đi dạo một mình", "is far|we won't walk|chúng ta sẽ không đi bộ"
+];
+
+// Q32: First cond if
+const q32_list = [
+    "If I _______ Dina, I'll give her your message.|gặp|see|saw|will see|am seeing",
+    "If he _______ early, we'll go out.|đến|arrives|arrived|will arrive|is arriving",
+    "If she _______ the keys, she'll open the door.|tìm thấy|finds|found|will find|is finding",
+    "If they _______ the game, they'll celebrate.|thắng|win|won|will win|are winning",
+    "If you _______ hard, you'll pass.|làm việc|work|worked|will work|are working",
+    "If we _______ money, we'll buy it.|có|have|had|will have|are having",
+    "If John _______ me, I'll answer.|gọi|calls|called|will call|is calling",
+    "If Mary _______ the truth, she'll be angry.|biết|knows|knew|will know|is knowing",
+    "If the dog _______, I'll feed it.|sủa|barks|barked|will bark|is barking",
+    "If the baby _______, I'll hold him.|khóc|cries|cried|will cry|is crying"
+];
+
+// Q33: Comp short
+const q33_list = [
+    "big|bigger|to hơn", "small|smaller|nhỏ hơn", "tall|taller|cao hơn", "short|shorter|ngắn hơn",
+    "fast|faster|nhanh hơn", "slow|slower|chậm hơn", "cheap|cheaper|rẻ hơn", "old|older|cũ hơn",
+    "young|younger|trẻ hơn", "cold|colder|lạnh hơn"
+];
+
+// Q34: Sup long
+const q34_list = [
+    "expensive|most expensive|đắt nhất", "beautiful|most beautiful|đẹp nhất", "interesting|most interesting|thú vị nhất",
+    "difficult|most difficult|khó nhất", "important|most important|quan trọng nhất", "dangerous|most dangerous|nguy hiểm nhất",
+    "popular|most popular|phổ biến nhất", "comfortable|most comfortable|thoải mái nhất", "crowded|most crowded|đông đúc nhất", "modern|most modern|hiện đại nhất"
+];
+
+// Q35: Comp less
+const q35_list = [
+    "crowded|đông đúc hơn", "expensive|đắt đỏ hơn", "dangerous|nguy hiểm hơn", "difficult|khó khăn hơn",
+    "popular|phổ biến hơn", "interesting|thú vị hơn", "beautiful|xinh đẹp hơn", "important|quan trọng hơn",
+    "comfortable|thoải mái hơn", "modern|hiện đại hơn"
+];
+
+// Q36: Pres Perf Have/Has
+const q36_list = [
+    "_______ you ever been to Japan?|Have|Do|Did|Are", "_______ she ever eaten sushi?|Has|Does|Did|Is",
+    "_______ they ever seen a ghost?|Have|Do|Did|Are", "_______ he ever played golf?|Has|Does|Did|Is",
+    "_______ we ever met before?|Have|Do|Did|Are", "_______ John ever traveled alone?|Has|Does|Did|Is",
+    "_______ Mary ever lost her phone?|Has|Does|Did|Is", "_______ the students ever passed this?|Have|Do|Did|Are",
+    "_______ you ever driven a truck?|Have|Do|Did|Are", "_______ your brother ever won a prize?|Has|Does|Did|Is"
+];
+
+// Q37: never
+const q37_list = [
+    "seen Star Wars|xem Star Wars", "eaten snake|ăn thịt rắn", "been to Africa|đến Châu Phi",
+    "driven a Ferrari|lái Ferrari", "met a famous person|gặp người nổi tiếng", "flown in a helicopter|bay trực thăng",
+    "broken a bone|bị gãy xương", "ridden a horse|cưỡi ngựa", "sung on stage|hát trên sân khấu", "lost my wallet|mất ví"
+];
+
+// Q38: ever
+const q38_list = [
+    "food I have _______ eaten.|thức ăn|ăn", "movie I have _______ seen.|bộ phim|xem",
+    "book I have _______ read.|cuốn sách|đọc", "place I have _______ visited.|nơi|đến thăm",
+    "song I have _______ heard.|bài hát|nghe", "game I have _______ played.|trò chơi|chơi",
+    "car I have _______ driven.|chiếc xe|lái", "person I have _______ met.|người|gặp",
+    "joke I have _______ heard.|trò đùa|nghe", "thing I have _______ done.|việc|làm"
+];
+
+// Q39: Verb + ing
+const q39_list = [
+    "She practises _______ the piano every day.|playing|play|to play", "I enjoy _______ in the sea.|swimming|swim|to swim",
+    "He finished _______ his homework.|doing|do|to do", "They don't mind _______ the window.|opening|open|to open",
+    "We miss _______ in the countryside.|living|live|to live", "I recommend _______ this book.|reading|read|to read",
+    "She avoids _______ in rush hour.|driving|drive|to drive", "He suggested _______ a break.|taking|take|to take",
+    "I feel like _______ a pizza.|eating|eat|to eat", "They stopped _______ when the teacher came in.|talking|talk|to talk"
+];
+
+// Q40: Verb + to
+const q40_list = [
+    "We need _______ early.|to leave|leave|leaving", "They want _______ a new house.|to buy|buy|buying",
+    "She decided _______ the job.|to accept|accept|accepting", "He promised _______ me.|to help|help|helping",
+    "I hope _______ you soon.|to see|see|seeing", "We plan _______ to Europe.|to travel|travel|traveling",
+    "She offered _______ the dishes.|to wash|wash|washing", "They agreed _______ the contract.|to sign|sign|signing",
+    "He managed _______ the exam.|to pass|pass|passing", "I arranged _______ him at 5.|to meet|meet|meeting"
+];
+
+// Q41: Persuade sb to
+const q41_list = [
+    "He persuaded me _______ with him.|to go|go|going", "She asked him _______ the door.|to open|open|opening",
+    "They wanted us _______ early.|to arrive|arrive|arriving", "I told her _______ quiet.|to be|be|being",
+    "He advised me _______ hard.|to study|study|studying", "She invited him _______ dinner.|to have|have|having",
+    "They warned us not _______ there.|to go|go|going", "I reminded her _______ the keys.|to bring|bring|bringing",
+    "He allowed me _______ his car.|to use|use|using", "She expected him _______ on time.|to be|be|being"
+];
+
+// Q42: Start to/ing
+const q42_list = [
+    "English three years ago|tiếng Anh ba năm trước", "piano when I was five|piano khi tôi năm tuổi",
+    "the book yesterday|cuốn sách ngày hôm qua", "the project last week|dự án tuần trước",
+    "yoga last month|yoga tháng trước", "tennis recently|quần vợt gần đây",
+    "Spanish last year|tiếng Tây Ban Nha năm ngoái", "the new job on Monday|công việc mới vào thứ Hai",
+    "the course in September|khóa học vào tháng Chín", "painting as a hobby|vẽ như một sở thích"
+];
+
+// Q43: Relative who
+const q43_list = [
+    "The person _______ inspires me is my mother.|người truyền cảm hứng cho tôi", "The man _______ lives next door is a doctor.|người sống cạnh nhà",
+    "The woman _______ called you is my aunt.|người đã gọi bạn", "The boy _______ broke the window is crying.|cậu bé đã làm vỡ cửa sổ",
+    "The girl _______ won the prize is happy.|cô gái đã giành giải", "The teacher _______ teaches math is strict.|giáo viên dạy toán",
+    "The student _______ got an A is smart.|học sinh đạt điểm A", "The player _______ scored the goal is my friend.|cầu thủ ghi bàn",
+    "The singer _______ sang the song is famous.|ca sĩ hát bài hát", "The actor _______ played the hero is great.|diễn viên đóng vai anh hùng"
+];
+
+// Q44: Relative which
+const q44_list = [
+    "I found a book _______ I love.|cuốn sách", "This is the car _______ he bought.|chiếc xe",
+    "The movie _______ we watched was scary.|bộ phim", "The bag _______ she lost was red.|chiếc túi",
+    "The phone _______ I use is old.|chiếc điện thoại", "The house _______ they built is big.|ngôi nhà",
+    "The song _______ is playing is my favorite.|bài hát", "The letter _______ arrived today is for you.|bức thư",
+    "The cake _______ she baked is delicious.|chiếc bánh", "The dress _______ she wore was stunning.|chiếc váy"
+];
+
+// Q45: Relative where
+const q45_list = [
+    "the hotel _______ we stayed|khách sạn", "the city _______ I was born|thành phố",
+    "the restaurant _______ we ate|nhà hàng", "the park _______ we met|công viên",
+    "the school _______ he studies|ngôi trường", "the room _______ she sleeps|căn phòng",
+    "the street _______ they live|con đường", "the hospital _______ he works|bệnh viện",
+    "the shop _______ I bought it|cửa hàng", "the island _______ we visited|hòn đảo"
+];
+
+// Q46: Personality
+const q46_list = [
+    "doesn't often laugh|không hay cười|serious|nghiêm túc", "is always sure of himself|luôn tin chắc vào bản thân|confident|tự tin",
+    "is kind and helpful|tốt bụng và hay giúp đỡ|friendly|thân thiện", "always tells the truth|luôn nói sự thật|honest|trung thực",
+    "is calm with children|bình tĩnh với trẻ em|patient|kiên nhẫn", "keeps his promises|giữ lời hứa|reliable|đáng tin cậy",
+    "makes new things|làm ra những thứ mới|creative|sáng tạo", "works hard and well|làm việc chăm chỉ và tốt|professional|chuyên nghiệp",
+    "doesn't smile much|không cười nhiều|serious|nghiêm túc", "speaks well in public|nói tốt trước đám đông|confident|tự tin"
+];
+
+// Q47: Subjects
+const q47_list = [
+    "a Shakespeare play|một vở kịch Shakespeare|drama|kịch", "paints and brushes|sơn và cọ|art|mỹ thuật",
+    "the human heart|trái tim con người|biology|sinh học", "numbers and equations|số và phương trình|maths|toán",
+    "light and colour|ánh sáng và màu sắc|physics|vật lý", "past events and dates|các sự kiện và ngày tháng trong quá khứ|history|lịch sử",
+    "maps and countries|bản đồ và các quốc gia|geography|địa lý", "liquids and reactions|chất lỏng và phản ứng|chemistry|hóa học",
+    "computer programs|chương trình máy tính|IT|tin học", "football and sports|bóng đá và thể thao|PE|thể dục"
+];
+
+// Q48: Food
+const q48_list = [
+    "doesn't eat meat or fish|không ăn thịt hay cá|vegetarian|người ăn chay", "doesn't eat animal products|không ăn các sản phẩm từ động vật|vegan|người ăn chay thuần",
+    "gets sick from nuts|bị ốm vì ăn các loại hạt|allergy|dị ứng", "is very tasty|rất ngon|delicious|ngon",
+    "is the best on the menu|là ngon nhất trong thực đơn|dish|món ăn", "is not cooked|chưa được nấu chín|raw|sống",
+    "cooks the meal|nấu bữa ăn|prepare|chuẩn bị", "brings the food to the table|mang thức ăn ra bàn|serve|phục vụ",
+    "only eats vegetables|chỉ ăn rau củ|vegetarian|người ăn chay", "avoids dairy and eggs|tránh sữa và trứng|vegan|người ăn chay thuần"
+];
+
+// Q49: Motivation
+const q49_list = [
+    "learning a new language|học một ngôn ngữ mới|challenge|thử thách", "her students to study|học sinh của cô ấy học tập|encourage|khuyến khích",
+    "a lot of for his essay|rất nhiều cho bài tiểu luận của anh ấy|praise|lời khen", "a return flight to New York|một chuyến bay khứ hồi tới New York|prize|giải thưởng",
+    "us by sending us to bed early|chúng tôi bằng cách bắt chúng tôi đi ngủ sớm|punish|phạt", "your phone call|cuộc gọi của bạn|purpose|mục đích",
+    "for any information|cho bất kỳ thông tin nào|reward|phần thưởng", "climbing the mountain|leo núi|challenge|thử thách",
+    "the team to win|đội bóng giành chiến thắng|encourage|khuyến khích", "the best student|học sinh xuất sắc nhất|prize|giải thưởng"
+];
+
+// Q50: Extreme Adj
+const q50_list = [
+    "views from the mountain|Cảnh nhìn từ ngọn núi|spectacular|ngoạn mục", "accommodation we stayed in|Chỗ ở mà chúng tôi ở|awful|tệ hại",
+    "cake she baked|Chiếc bánh mà cô ấy nướng|brilliant|tuyệt vời", "food at the restaurant|Đồ ăn ở nhà hàng|disgusting|kinh tởm",
+    "house he lives in|Ngôi nhà anh ấy đang sống|enormous|khổng lồ", "bedroom I sleep in|Phòng ngủ tôi ngủ|filthy|bẩn thỉu",
+    "weather outside|Thời tiết bên ngoài|freezing|lạnh cóng", "room she rented|Căn phòng cô ấy thuê|tiny|nhỏ bé",
+    "sunset at the beach|Hoàng hôn trên bãi biển|spectacular|ngoạn mục", "smell in the kitchen|Mùi trong bếp|disgusting|kinh tởm"
+];
+
+const allQuestions = [];
+
 function createQuestion(text, tText, correctOption, correctTrans, wrongOptions, wrongTransList, exp, unit, orderIndex, setNumber) {
     const opts = [
         { text: correctOption, trans: correctTrans, isCorrect: true },
@@ -63,557 +502,239 @@ function createQuestion(text, tText, correctOption, correctTrans, wrongOptions, 
         { text: wrongOptions[1], trans: wrongTransList[1], isCorrect: false },
         { text: wrongOptions[2], trans: wrongTransList[2], isCorrect: false }
     ];
-    
-    // Optional: shuffle opts here if you want randomized positions. For simplicity, we keep A as correct to match the original unless specified.
-    // Actually, keeping A as correct is what the original did, but randomizing is better! Let's shuffle!
     for (let i = opts.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [opts[i], opts[j]] = [opts[j], opts[i]];
     }
-
     let correctLetter = 'A';
     const finalOptions = {};
     const finalTrans = {};
     const letters = ['A', 'B', 'C', 'D'];
-    
     opts.forEach((o, index) => {
         finalOptions[letters[index]] = o.text;
         finalTrans[letters[index]] = o.trans;
         if (o.isCorrect) correctLetter = letters[index];
     });
-
-    let cleanUnit = unit.split(':')[0].trim();
     return {
-        questionText: text,
-        options: finalOptions,
-        correctAnswer: correctLetter,
-        explanation: exp,
-        vietnameseTranslation: tText,
-        optionTranslations: finalTrans,
-        unit: cleanUnit,
-        orderIndex: orderIndex,
-        setNumber: setNumber
+        questionText: text, options: finalOptions, correctAnswer: correctLetter,
+        explanation: exp, vietnameseTranslation: tText, optionTranslations: finalTrans,
+        unit: unit.split(':')[0].trim(), orderIndex, setNumber
     };
 }
 
-const allQuestions = [];
+function parseAndPush(setIdx, qText, tText, correct, cT, wrongArr, wTArr, exp, unit, orderIndex) {
+    allQuestions.push(createQuestion(qText, tText, correct, cT, wrongArr, wTArr, exp, unit, orderIndex, setIdx));
+}
 
 for (let setIdx = 1; setIdx <= 10; setIdx++) {
-    const i = setIdx - 1; // 0 to 9 index for arrays
+    const i = setIdx - 1; 
 
     const s = subjects[i];
-    const v = verbs[i];
-    const adv = adverbs[i];
-    const t = timeExpr[i];
-    const pt = pastTime[i];
-    const ft = futureTime[i];
+    const adv = advs[i];
+    const advVi = advsVi[i];
 
-    // Q1: Adverb before main verb
-    allQuestions.push(createQuestion(
-        `${s.en} _______ ${v.v} ${v.en} ${t.en}.`,
-        `${s.vi} _______ ${v.v} ${v.vi} ${t.vi}.`,
-        adv.en, adv.vi,
-        [`don't ${adv.en}`, `am ${adv.en}`, `${adv.en} am`], ["sai cấu trúc", "sai cấu trúc", "sai cấu trúc"],
-        "Adverbs of frequency (never, always, usually...) đứng TRƯỚC động từ thường. Cấu trúc: S + adverb + V.",
-        "Unit 1: Adverbs of Frequency", 1, setIdx
-    ));
+    // Q1
+    let p1 = q1_list[i].split('|');
+    let vPhrase = s.p || s.en==='I'||s.en==='You' ? p1[0] : p1[0].replace(p1[2], p1[3]);
+    parseAndPush(setIdx, `${s.en} _______ ${vPhrase}.`, `${s.vi} _______ ${p1[1]}.`, adv, advVi, [`don't ${adv}`, `am ${adv}`, `${adv} am`], ["sai", "sai", "sai"], "Adverbs of frequency đứng TRƯỚC động từ thường.", "Unit 1", 1);
 
-    // Q2: Adverb after to be
-    allQuestions.push(createQuestion(
-        `${s.en} _______ late for school.`,
-        `${s.vi} _______ muộn học.`,
-        `${s.be} ${adv.en}`, `${adv.vi}`,
-        [`${adv.en} ${s.be}`, `be ${adv.en}`, `${adv.en} be`], ["sai vị trí", "sai động từ be", "sai cấu trúc"],
-        "Adverbs of frequency đứng SAU động từ 'to be'. Cấu trúc: S + be + adverb.",
-        "Unit 1: Adverbs of Frequency", 2, setIdx
-    ));
+    // Q2
+    let p2 = q2_list[i].split('|');
+    parseAndPush(setIdx, `${s.en} _______ ${p2[0]}.`, `${s.vi} _______ ${p2[1]}.`, `${s.be} ${adv}`, `${advVi}`, [`${adv} ${s.be}`, `be ${adv}`, `${adv} be`], ["sai vị trí", "sai động từ be", "sai cấu trúc"], "Adverbs of frequency đứng SAU động từ 'to be'.", "Unit 1", 2);
 
-    // Q3: How often
-    allQuestions.push(createQuestion(
-        `How _______ do you ${v.v} ${v.en}?`,
-        `Bạn có _______ ${v.vi} không?`,
-        "often", "thường xuyên",
-        ["many", "much", "long"], ["nhiều (đếm được)", "nhiều (không đếm được)", "bao lâu"],
-        "Dùng 'How often...?' để hỏi về tần suất.",
-        "Unit 1: Adverbs of Frequency", 3, setIdx
-    ));
+    // Q3
+    let p3 = q3_list[i].split('|');
+    parseAndPush(setIdx, `How _______ do you ${p3[0]}?`, `Bạn có _______ ${p3[1]} không?`, "often", "thường xuyên", ["many", "much", "long"], ["nhiều", "nhiều", "bao lâu"], "Dùng 'How often...?' để hỏi về tần suất.", "Unit 1", 3);
 
-    // Q4: Present Simple (truth)
-    const truths = ["Water _______ at 100°C.", "The sun _______ in the east.", "Ice _______ at 0°C.", "Wood _______ on water.", "Plants _______ light to grow.", "Earth _______ around the sun.", "A magnet _______ iron.", "Birds _______ feathers.", "Fish _______ in water.", "Humans _______ oxygen."];
-    const truthV = [{v:"boils", vi:"sôi"}, {v:"rises", vi:"mọc"}, {v:"melts", vi:"tan chảy"}, {v:"floats", vi:"nổi"}, {v:"need", vi:"cần"}, {v:"goes", vi:"quay"}, {v:"attracts", vi:"hút"}, {v:"have", vi:"có"}, {v:"live", vi:"sống"}, {v:"breathe", vi:"hít thở"}];
-    const tV = truthV[i];
-    allQuestions.push(createQuestion(
-        truths[i],
-        `Sự thật hiển nhiên: ${truths[i].replace("_______", tV.vi)}`,
-        tV.v, tV.vi,
-        [tV.v.replace('s',''), `is ${tV.v}`, `${tV.v}ed`], ["nguyên thể", "đang", "quá khứ"],
-        "Sự thật hiển nhiên dùng thì Hiện tại đơn.",
-        "Unit 1: Present Simple", 4, setIdx
-    ));
+    // Q4
+    let p4 = q4_list[i].split('|');
+    parseAndPush(setIdx, `${p4[0]} _______ ${p4[2]}.`, `Sự thật: ${p4[3]} _______ ${p4[5]}.`, p4[1], p4[4], [p4[7], `is ${p4[1]}`, p4[8]], ["nguyên thể", "đang", "tiếp diễn"], "Sự thật hiển nhiên dùng thì Hiện tại đơn.", "Unit 1", 4);
 
-    // Q5: Present Simple (schedule)
-    allQuestions.push(createQuestion(
-        `The train _______ at 9 AM ${t.en}.`,
-        `Chuyến tàu _______ lúc 9 giờ sáng ${t.vi}.`,
-        "leaves", "rời đi",
-        ["leave", "is leaving", "left"], ["nguyên thể", "đang rời đi", "đã rời đi"],
-        "Lịch trình tàu xe dùng thì Hiện tại đơn. 'The train' là ngôi thứ 3 số ít nên động từ thêm 's'.",
-        "Unit 1: Present Simple", 5, setIdx
-    ));
+    // Q5
+    let p5 = q5_list[i].split('|');
+    parseAndPush(setIdx, `${p5[0]} _______ ${p5[2]}.`, `${p5[3]} _______ ${p5[5]}.`, p5[1], p5[4], [p5[1].replace('s',''), `is ${p5[1].replace('s','')}`, p5[1].replace('s','ed')], ["nguyên thể", "đang", "đã"], "Lịch trình tàu xe dùng thì Hiện tại đơn.", "Unit 1", 5);
 
-    // Q6: Present Continuous
-    allQuestions.push(createQuestion(
-        `${s.en} _______ a text message at the moment.`,
-        `${s.vi} _______ một tin nhắn văn bản vào lúc này.`,
-        `${s.be} sending`, `đang gửi`,
-        ["send", "sends", "sending"], ["gửi", "gửi (số ít)", "đang gửi (thiếu be)"],
-        "Dấu hiệu 'at the moment' dùng thì Hiện tại tiếp diễn. Cấu trúc: S + am/is/are + V-ing.",
-        "Unit 1: Present Continuous", 6, setIdx
-    ));
+    // Q6
+    let p6 = q6_list[i].split('|');
+    parseAndPush(setIdx, `${s.en} _______ ${p6[0].replace(p6[2],'')} at the moment.`, `${s.vi} _______ ${p6[1]} vào lúc này.`, `${s.be} ${p6[3]}`, `đang ${p6[2]}`, [p6[2], p6[2]+'s', p6[3]], ["hiện tại", "hiện tại", "thiếu be"], "Dấu hiệu 'at the moment' dùng thì Hiện tại tiếp diễn.", "Unit 1", 6);
 
-    // Q7: Stative verb
-    allQuestions.push(createQuestion(
-        `${s.en} _______ what you mean.`,
-        `${s.vi} _______ ý của bạn.`,
-        s.p ? "know" : "knows", "biết",
-        [`${s.be} knowing`, "knew", "was knowing"], ["đang biết (sai)", "đã biết", "đã đang biết"],
-        "'Know' là động từ trạng thái (stative verb), KHÔNG dùng ở thì tiếp diễn.",
-        "Unit 1: Present Continuous", 7, setIdx
-    ));
+    // Q7
+    let p7 = q7_list[i].split('|');
+    let v7 = s.p || s.en==='I' ? p7[2] : p7[3];
+    parseAndPush(setIdx, `${s.en} _______ ${p7[0].replace(p7[2],'')}.`, `${s.vi} _______ ${p7[1]}.`, v7, "đúng", [`${s.be} ${p7[4]}`, p7[5], `was ${p7[4]}`], ["đang (sai)", "đã", "đã đang"], "Động từ trạng thái (stative verb) KHÔNG dùng ở thì tiếp diễn.", "Unit 1", 7);
 
-    // Q8: Past Simple
-    allQuestions.push(createQuestion(
-        `${pt.en}, ${s.en} _______ ${v.en}.`,
-        `${pt.vi}, ${s.vi} _______ ${v.vi}.`,
-        v.v2, `đã ${v.vi}`,
-        [v.v, v.vs, `${s.pastBe} ${v.ving}`], ["hiện tại", "hiện tại số ít", "quá khứ tiếp diễn"],
-        `Dấu hiệu '${pt.en}' dùng thì Quá khứ đơn.`,
-        "Unit 2: Past Simple", 8, setIdx
-    ));
+    // Q8
+    let p8 = q8_list[i].split('|');
+    parseAndPush(setIdx, `Yesterday, ${s.en} _______ ${p8[0].replace(p8[4],'')}.`, `Hôm qua, ${s.vi} _______ ${p8[1]}.`, p8[4], `đã ${p8[2]}`, [p8[2], p8[3], `${s.pastBe} ${p8[5]}`], ["hiện tại", "hiện tại", "tiếp diễn"], "Dấu hiệu 'Yesterday' dùng thì Quá khứ đơn.", "Unit 2", 8);
 
-    // Q9: Past Simple Negative
-    allQuestions.push(createQuestion(
-        `${s.en} _______ like the film. It was very bad.`,
-        `${s.vi} _______ bộ phim. Nó rất tệ.`,
-        "didn't", "đã không",
-        ["don't", "doesn't", "wasn't"], ["không", "không (số ít)", "đã không phải"],
-        "Câu phủ định quá khứ đơn với động từ thường dùng trợ động từ 'didn't' + V(nguyên thể).",
-        "Unit 2: Past Simple", 9, setIdx
-    ));
+    // Q9
+    let p9 = q9_list[i].split('|');
+    parseAndPush(setIdx, `${s.en} _______ ${p9[0]}.`, `${s.vi} _______ ${p9[1]}.`, "didn't", "đã không", ["don't", "doesn't", "wasn't"], ["không", "không", "không phải"], "Câu phủ định quá khứ đơn với động từ thường dùng 'didn't'.", "Unit 2", 9);
 
-    // Q10: Past Simple Question
-    allQuestions.push(createQuestion(
-        `_______ you enjoy the party ${pt.en}?`,
-        `Bạn _______ thích bữa tiệc ${pt.vi} không?`,
-        "Did", "Quá khứ",
-        ["Do", "Were", "Are"], ["Hiện tại", "Quá khứ (to-be)", "Hiện tại (to-be)"],
-        "Câu hỏi dạng Yes/No quá khứ đơn dùng trợ động từ 'Did' + S + V(nguyên thể).",
-        "Unit 2: Past Simple", 10, setIdx
-    ));
+    // Q10
+    let p10 = q10_list[i].split('|');
+    parseAndPush(setIdx, `_______ you ${p10[0]} yesterday?`, `Bạn _______ ${p10[1]} ngày hôm qua không?`, "Did", "Quá khứ", ["Do", "Were", "Are"], ["Hiện tại", "Quá khứ to-be", "Hiện tại to-be"], "Câu hỏi Yes/No quá khứ đơn dùng 'Did'.", "Unit 2", 10);
 
-    // Q11: Past Simple Spelling
-    allQuestions.push(createQuestion(
-        `${s.en} _______ for the exam ${pt.en}.`,
-        `${s.vi} _______ cho bài kiểm tra ${pt.vi}.`,
-        "studied", "đã học",
-        ["studies", "studys", "study"], ["học", "sai chính tả", "nguyên thể"],
-        "Động từ tận cùng bằng phụ âm + y (study), đổi y thành ied -> studied.",
-        "Unit 2: Past Simple", 11, setIdx
-    ));
+    // Q11
+    let p11 = q11_list[i].split('|');
+    parseAndPush(setIdx, `${s.en} _______ ${p11[0].replace(p11[1],'')} last night.`, `${s.vi} _______ ${p11[1]} tối qua.`, p11[2], "đã", [p11[3], p11[4], p11[1]+'ys'], ["nguyên thể", "hiện tại", "sai chính tả"], "Động từ tận cùng bằng phụ âm + y, đổi y thành ied.", "Unit 2", 11);
 
-    // Q12: Wh- Question (What)
-    const whQ = ["email address", "phone number", "name", "favorite color", "job", "hobby", "address", "favorite food", "goal", "dream"];
-    allQuestions.push(createQuestion(
-        `_______ is your ${whQ[i]}?`,
-        `${whQ[i]} của bạn là _______?`,
-        "What", "Cái gì",
-        ["Where", "Who", "When"], ["Ở đâu", "Ai", "Khi nào"],
-        "Hỏi về thông tin dùng 'What' (Cái gì).",
-        "Unit 2: Making Questions", 12, setIdx
-    ));
+    // Q12
+    let p12 = q12_list[i].split('|');
+    parseAndPush(setIdx, `_______ is your ${p12[0]}?`, `${p12[1]} của bạn là _______?`, "What", "Cái gì", ["Where", "Who", "When"], ["Ở đâu", "Ai", "Khi nào"], "Hỏi về thông tin dùng 'What'.", "Unit 2", 12);
 
-    // Q13: Wh- Question (Where)
-    const places = ["London", "Paris", "New York", "Tokyo", "Berlin", "Sydney", "Rome", "Madrid", "Seoul", "Beijing"];
-    allQuestions.push(createQuestion(
-        `_______ did your parents go? - To ${places[i]}.`,
-        `Bố mẹ bạn đã đi _______? - Đến ${places[i]}.`,
-        "Where", "Ở đâu",
-        ["When", "Why", "Who"], ["Khi nào", "Tại sao", "Ai"],
-        `Câu trả lời chỉ nơi chốn 'To ${places[i]}' nên dùng từ để hỏi 'Where' (Ở đâu).`,
-        "Unit 2: Making Questions", 13, setIdx
-    ));
+    // Q13
+    let p13 = q13_list[i].split('|');
+    parseAndPush(setIdx, `_______ did they ${p13[0]}`, `Họ đã _______ ${p13[1]}`, "Where", "Ở đâu", ["When", "Why", "Who"], ["Khi nào", "Tại sao", "Ai"], "Câu trả lời chỉ nơi chốn nên dùng từ để hỏi 'Where'.", "Unit 2", 13);
 
-    // Q14: Can Request
-    allQuestions.push(createQuestion(
-        `_______ you help me with this?`,
-        `Bạn _______ giúp tôi việc này được không?`,
-        "Can", "Có thể",
-        ["Are", "Do", "Have"], ["Là/đang", "Làm", "Có"],
-        "Yêu cầu giúp đỡ dùng 'Can' hoặc 'Could'.",
-        "Unit 2: Making Questions", 14, setIdx
-    ));
+    // Q14
+    let p14 = q14_list[i].split('|');
+    parseAndPush(setIdx, `_______ you ${p14[0]}?`, `Bạn _______ ${p14[1]} được không?`, "Can", "Có thể", ["Are", "Do", "Have"], ["Là", "Làm", "Có"], "Yêu cầu giúp đỡ dùng 'Can' hoặc 'Could'.", "Unit 2", 14);
 
-    // Q15: Past Continuous
-    allQuestions.push(createQuestion(
-        `${s.en} _______ waiting for a long time.`,
-        `${s.vi} _______ chờ đợi một thời gian dài.`,
-        s.pastBe, `đã (${s.isPlural?'số nhiều':'số ít'})`,
-        [s.pastBe==='was'?'were':'was', "are", "did"], ["sai số lượng", "hiện tại", "đã làm"],
-        `Chủ ngữ '${s.en}' dùng '${s.pastBe}' trong thì Quá khứ tiếp diễn.`,
-        "Unit 3: Past Continuous", 15, setIdx
-    ));
+    // Q15
+    let p15 = q15_list[i].split('|');
+    parseAndPush(setIdx, `${s.en} _______ ${p15[0]} at 8 PM.`, `${s.vi} _______ ${p15[1]} lúc 8 giờ tối.`, `${s.pastBe} ${p15[0].split(' ')[0]}ing`, "đang", [s.pastBe==='was'?'were':'was', "are", "did"], ["sai to-be", "hiện tại", "quá khứ"], "Dùng thì Quá khứ tiếp diễn cho hành động đang xảy ra tại một thời điểm trong quá khứ.", "Unit 3", 15);
 
-    // Q16: Past Continuous Interrupted
-    allQuestions.push(createQuestion(
-        `He called while ${s.en} _______ lunch.`,
-        `Anh ấy đã gọi trong khi ${s.vi} _______ bữa trưa.`,
-        `${s.pastBe} making`, "đang làm (quá khứ)",
-        ["made", "make", `${s.be} making`], ["đã làm", "làm", "đang làm (hiện tại)"],
-        "Hành động đang diễn ra trong quá khứ bị gián đoạn: Dùng thì Quá khứ tiếp diễn sau 'while'.",
-        "Unit 3: Past Continuous", 16, setIdx
-    ));
+    // Q16
+    let p16 = q16_list[i].split('|');
+    parseAndPush(setIdx, p16[0], p16[1], p16[2], "đang", [p16[2].split(' ')[1].replace('ing','e'), p16[2].split(' ')[1].replace('ing','ed'), p16[2].replace('was','is').replace('were','are')], ["nguyên thể", "quá khứ", "hiện tại"], "Hành động đang diễn ra trong quá khứ bị gián đoạn dùng Quá khứ tiếp diễn.", "Unit 3", 16);
 
-    // Q17: when vs while
-    allQuestions.push(createQuestion(
-        `I was making lunch _______ he called.`,
-        `Tôi đang làm bữa trưa _______ anh ấy gọi.`,
-        "when", "khi",
-        ["while", "during", "so"], ["trong khi", "trong suốt", "vì vậy"],
-        "Dùng 'when' trước hành động gián đoạn ở thì Quá khứ đơn.",
-        "Unit 3: Past Continuous", 17, setIdx
-    ));
+    // Q17
+    let p17 = q17_list[i].split('|');
+    parseAndPush(setIdx, p17[0], p17[1], "when", "khi", ["while", "during", "so"], ["trong khi", "trong suốt", "vì vậy"], "Dùng 'when' trước hành động gián đoạn ở thì Quá khứ đơn.", "Unit 3", 17);
 
-    // Q18: Indefinite Affirmative
-    allQuestions.push(createQuestion(
-        `I want to eat _______. I'm hungry.`,
-        `Tôi muốn ăn _______. Tôi đang đói.`,
-        "something", "thứ gì đó",
-        ["anything", "nothing", "everything"], ["bất cứ thứ gì", "không có gì", "mọi thứ"],
-        "Trong câu khẳng định, dùng đại từ bất định 'something'.",
-        "Unit 3: Indefinite Pronouns", 18, setIdx
-    ));
+    // Q18
+    let p18 = q18_list[i].split('|');
+    parseAndPush(setIdx, `I want to ${p18[0]}`, `Tôi muốn ${p18[1]}`, "something/someone/somewhere", "đại từ bất định khẳng định", ["anything", "nothing", "everything"], ["bất cứ", "không", "mọi thứ"], "Trong câu khẳng định, dùng đại từ bất định some-.", "Unit 3", 18);
 
-    // Q19: Indefinite Negative
-    allQuestions.push(createQuestion(
-        `I didn't eat _______ ${pt.en}.`,
-        `Tôi đã không ăn _______ ${pt.vi}.`,
-        "anything", "bất cứ thứ gì",
-        ["something", "nothing", "everything"], ["thứ gì đó", "không có gì", "mọi thứ"],
-        "Trong câu phủ định, dùng đại từ bất định 'anything'.",
-        "Unit 3: Indefinite Pronouns", 19, setIdx
-    ));
+    // Q19
+    let p19 = q19_list[i].split('|');
+    parseAndPush(setIdx, `I didn't ${p19[0]}.`, `Tôi đã không ${p19[1]}.`, "anything/anyone/anywhere", "đại từ phủ định", ["something", "nothing", "everything"], ["khẳng định", "phủ định kép", "mọi thứ"], "Trong câu phủ định, dùng đại từ bất định any-.", "Unit 3", 19);
 
-    // Q20: Indefinite Negative meaning
-    allQuestions.push(createQuestion(
-        `There's _______ to drink.`,
-        `Chẳng có _______ để uống cả.`,
-        "nothing", "không có gì",
-        ["anything", "something", "everything"], ["bất cứ thứ gì", "thứ gì đó", "mọi thứ"],
-        "'Nothing' mang nghĩa phủ định (= not anything), nên động từ 'is' chia ở dạng khẳng định.",
-        "Unit 3: Indefinite Pronouns", 20, setIdx
-    ));
+    // Q20
+    let p20 = q20_list[i].split('|');
+    parseAndPush(setIdx, `There is ${p20[0]}.`, `Không có ${p20[1]}.`, "nothing/no one/nowhere", "nghĩa phủ định", ["anything", "something", "everything"], ["bất cứ", "một vài", "mọi"], "'Nothing/No one/Nowhere' mang nghĩa phủ định, động từ chia ở khẳng định.", "Unit 3", 20);
 
-    // Q21: Everyone
-    allQuestions.push(createQuestion(
-        `_______ was happy at the party.`,
-        `_______ đều vui vẻ tại bữa tiệc.`,
-        "Everyone", "Mọi người",
-        ["Anyone", "All", "Some"], ["Bất cứ ai", "Tất cả (cần số nhiều)", "Một vài"],
-        "Đại từ 'Everyone' dùng với động từ số ít 'was' và mang nghĩa khẳng định.",
-        "Unit 3: Indefinite Pronouns", 21, setIdx
-    ));
+    // Q21
+    let p21 = q21_list[i].split('|');
+    parseAndPush(setIdx, p21[0], p21[1], "Everyone/Everything", "Mọi người/Mọi thứ", ["Anyone", "All", "Some"], ["Bất cứ", "Tất cả", "Một vài"], "Đại từ 'Everyone/Everything' dùng với động từ số ít.", "Unit 3", 21);
 
-    // Q22: going to
-    allQuestions.push(createQuestion(
-        `${s.en} _______ buy a new phone.`,
-        `${s.vi} _______ mua một chiếc điện thoại mới.`,
-        `${s.be} going to`, "dự định",
-        ["will to", "going to", `${s.be} going`], ["sai cấu trúc", "thiếu to-be", "thiếu to"],
-        "Nói về một kế hoạch, dự định (đã quyết định trước) dùng cấu trúc 'be going to'.",
-        "Unit 4: Future Plans", 22, setIdx
-    ));
+    // Q22
+    let p22 = q22_list[i].split('|');
+    parseAndPush(setIdx, `${s.en} _______ ${p22[0]}.`, `${s.vi} _______ ${p22[1]}.`, `${s.be} going to`, "dự định", ["will to", "going to", `${s.be} going`], ["sai", "thiếu be", "thiếu to"], "Nói về một kế hoạch dùng cấu trúc 'be going to'.", "Unit 4", 22);
 
-    // Q23: going to negative
-    allQuestions.push(createQuestion(
-        `${s.en} _______ to work ${ft.en}.`,
-        `${s.vi} _______ đi làm ${ft.vi}.`,
-        `${s.be === 'am' ? 'am not' : s.be + "n't"} going`, "không dự định",
-        [`${s.be === 'am' ? 'am not' : s.be + "n't"} going to`, "not going to", "won't going to"], ["thừa to", "thiếu to-be", "sai cấu trúc"],
-        "Dùng hiện tại tiếp diễn hoặc 'be going to' diễn tả kế hoạch. Ở đây câu có 'to work' rồi nên chọn 'isn't going'.",
-        "Unit 4: Future Plans", 23, setIdx
-    ));
+    // Q23
+    let p23 = q23_list[i].split('|');
+    let negBe = s.be === 'am' ? "am not" : (s.be === 'is' ? "isn't" : "aren't");
+    parseAndPush(setIdx, `${s.en} _______ ${p23[0]}.`, `${s.vi} _______ ${p23[1]}.`, `${negBe} going to`, "không dự định", ["not going to", "won't going to", "don't going to"], ["thiếu be", "sai", "sai"], "Phủ định của 'be going to'.", "Unit 4", 23);
 
-    // Q24: won't promise
-    allQuestions.push(createQuestion(
-        `Can I tell you a secret? - Sure, I _______ tell anyone.`,
-        `Tôi có thể kể cho bạn một bí mật không? - Chắc chắn rồi, tôi _______ nói với ai đâu.`,
-        "won't", "sẽ không",
-        ["don't", "not", "am not going to"], ["không", "không", "không dự định"],
-        "Lời hứa (Promise) dùng 'will / won't'.",
-        "Unit 4: Will/Won't", 24, setIdx
-    ));
+    // Q24
+    let p24 = q24_list[i].split('|');
+    parseAndPush(setIdx, `I promise I _______ ${p24[0]}.`, `Tôi hứa tôi _______ ${p24[1]}.`, "won't", "sẽ không", ["don't", "not", "am not going to"], ["không", "không", "không dự định"], "Lời hứa dùng 'won't'.", "Unit 4", 24);
 
-    // Q25: will offer
-    allQuestions.push(createQuestion(
-        `I've got a lot of work. - I _______ help you.`,
-        `Tôi có nhiều việc quá. - Tôi _______ giúp bạn.`,
-        "will", "sẽ",
-        ["am going to", "do", "am"], ["dự định", "làm", "đang"],
-        "Đề nghị giúp đỡ (Offer) dùng 'will'.",
-        "Unit 4: Will/Won't", 25, setIdx
-    ));
+    // Q25
+    let p25 = q25_list[i].split('|');
+    parseAndPush(setIdx, `Don't worry, I _______ ${p25[0]}.`, `Đừng lo, tôi _______ ${p25[1]}.`, "will", "sẽ", ["am going to", "do", "am"], ["dự định", "làm", "đang"], "Đề nghị giúp đỡ (Offer) dùng 'will'.", "Unit 4", 25);
 
-    // Q26: will spontaneous
-    allQuestions.push(createQuestion(
-        `It's cold in here. - Yes, you're right. I _______ close the window.`,
-        `Ở đây lạnh quá. - Ừ, bạn nói đúng. Tôi _______ đóng cửa sổ lại.`,
-        "will", "sẽ",
-        ["am going to", "do", "am closing"], ["dự định", "làm", "đang đóng"],
-        "Quyết định đột ngột lúc nói (Spontaneous Decision) dùng 'will'.",
-        "Unit 4: Will/Won't", 26, setIdx
-    ));
+    // Q26
+    let p26 = q26_list[i].split('|');
+    parseAndPush(setIdx, `Okay, I _______ ${p26[0]}.`, `Được rồi, tôi _______ ${p26[1]}.`, "will", "sẽ", ["am going to", "do", "am doing"], ["dự định", "làm", "đang làm"], "Quyết định đột ngột lúc nói dùng 'will'.", "Unit 4", 26);
 
-    // Q27: If conditional No future
-    allQuestions.push(createQuestion(
-        `If I _______ time, I'll email you.`,
-        `Nếu tôi _______ thời gian, tôi sẽ email cho bạn.`,
-        "have", "có",
-        ["will have", "had", "am having"], ["sẽ có", "đã có", "đang có"],
-        "KHÔNG dùng thì tương lai ('will') trong mệnh đề 'If'.",
-        "Unit 4: Future Plans", 27, setIdx
-    ));
+    // Q27
+    let p27 = q27_list[i].split('|');
+    parseAndPush(setIdx, p27[0], `Nếu ${s.vi} ${p27[1]}, ...`, p27[2], "hiện tại", [`will ${p27[2]}`, p27[3], `am ${p27[3]}ing`], ["sẽ", "quá khứ", "tiếp diễn"], "KHÔNG dùng 'will' trong mệnh đề 'If'.", "Unit 4", 27);
 
-    // Q28: Future Plans going to
-    allQuestions.push(createQuestion(
-        `I'm _______ watch the football tonight.`,
-        `Tôi _______ xem bóng đá tối nay.`,
-        "going to", "dự định",
-        ["going", "go to", "will"], ["đang đi", "đi tới", "sẽ"],
-        "Kế hoạch đã định trước: am/is/are + going to + V.",
-        "Unit 4: Future Plans", 28, setIdx
-    ));
+    // Q28
+    let p28 = q28_list[i].split('|');
+    parseAndPush(setIdx, p28[0], `Kế hoạch: ${p28[1]}`, "going to", "dự định", ["going", "go to", "will"], ["đang", "đi", "sẽ"], "Cấu trúc am/is/are + going to + V.", "Unit 4", 28);
 
-    // Q29: Zero Conditional
-    allQuestions.push(createQuestion(
-        `If you heat water to 100°C, it _______.`,
-        `Nếu bạn đun nước đến 100 độ C, nó _______.`,
-        "boils", "sôi (số ít)",
-        ["boil", "will boil", "is boiling"], ["sôi", "sẽ sôi", "đang sôi"],
-        "Câu điều kiện loại 0 (sự thật hiển nhiên): If + present simple, present simple.",
-        "Unit 5: Conditionals", 29, setIdx
-    ));
+    // Q29
+    let p29 = q29_list[i].split('|');
+    parseAndPush(setIdx, `If you ${p29[0]}, _______ .`, `Nếu bạn ${p29[0]}, _______ .`, p29[1], p29[2], [p29[1].replace('s',''), `will ${p29[1].replace('s','')}`, `is ${p29[1]}`], ["nguyên thể", "sẽ", "đang"], "Câu điều kiện loại 0: If + HTĐ, HTĐ.", "Unit 5", 29);
 
-    // Q30: Zero Conditional machine
-    allQuestions.push(createQuestion(
-        `If the power is low, the red light _______.`,
-        `Nếu nguồn điện yếu, đèn đỏ _______.`,
-        "flashes", "nhấp nháy",
-        ["flashing", "will flash", "flash"], ["đang nhấp nháy", "sẽ nhấp nháy", "nhấp nháy (nguyên thể)"],
-        "Câu điều kiện loại 0: quy luật của máy móc.",
-        "Unit 5: Conditionals", 30, setIdx
-    ));
+    // Q30
+    let p30 = q30_list[i].split('|');
+    parseAndPush(setIdx, `If ${p30[0]}, _______ .`, `Nếu ${p30[0]}, _______ .`, p30[1], p30[2], [p30[1].replace('s',''), `will ${p30[1].replace('es','').replace('s','')}`, `is ${p30[1]}`], ["nguyên thể", "sẽ", "đang"], "Câu điều kiện loại 0 chỉ máy móc.", "Unit 5", 30);
 
-    // Q31: First conditional won't
-    allQuestions.push(createQuestion(
-        `If it rains, we _______ go out.`,
-        `Nếu trời mưa, chúng ta _______ ra ngoài.`,
-        "won't", "sẽ không",
-        ["don't", "aren't", "didn't"], ["không", "không phải/đang", "đã không"],
-        "Câu điều kiện loại 1: If + present simple, will/won't + V.",
-        "Unit 5: Conditionals", 31, setIdx
-    ));
+    // Q31
+    let p31 = q31_list[i].split('|');
+    parseAndPush(setIdx, `If it ${p31[0]}, _______.`, `Nếu trời ${p31[0]}, _______.`, p31[1], p31[2], [p31[1].replace("won't", "don't"), p31[1].replace("won't", "didn't"), p31[1].replace("won't", "aren't")], ["không", "đã không", "không phải"], "Câu điều kiện loại 1: If + HTĐ, will/won't + V.", "Unit 5", 31);
 
-    // Q32: First conditional see
-    allQuestions.push(createQuestion(
-        `If I _______ Dina, I'll give her your message.`,
-        `Nếu tôi _______ Dina, tôi sẽ nhắn lại lời của bạn cho cô ấy.`,
-        "see", "gặp",
-        ["will see", "saw", "am seeing"], ["sẽ gặp", "đã gặp", "đang gặp"],
-        "Câu điều kiện loại 1: Mệnh đề If dùng hiện tại đơn.",
-        "Unit 5: Conditionals", 32, setIdx
-    ));
+    // Q32
+    let p32 = q32_list[i].split('|');
+    parseAndPush(setIdx, p32[0], `Nếu ${p32[1]}`, p32[2], "hiện tại", [p32[3], p32[4], p32[5]], ["quá khứ", "sẽ", "tiếp diễn"], "Mệnh đề If loại 1 dùng Hiện tại đơn.", "Unit 5", 32);
 
-    // Q33: Comparative short
-    allQuestions.push(createQuestion(
-        `My house is _______ than yours.`,
-        `Nhà của tôi thì _______ hơn nhà của bạn.`,
-        "bigger", "to hơn",
-        ["big", "biggest", "more big"], ["to", "to nhất", "to hơn (sai cấu trúc)"],
-        "So sánh hơn của tính từ ngắn 'big' là 'bigger'.",
-        "Unit 5: Comparatives", 33, setIdx
-    ));
+    // Q33
+    let p33 = q33_list[i].split('|');
+    parseAndPush(setIdx, `This is _______ than that.`, `Cái này thì _______ hơn cái kia.`, p33[1], p33[2], [p33[0], `most ${p33[0]}`, `more ${p33[0]}`], ["nguyên thể", "nhất", "hơn (sai)"], "So sánh hơn của tính từ ngắn.", "Unit 5", 33);
 
-    // Q34: Superlative long
-    allQuestions.push(createQuestion(
-        `This is the _______ car in the showroom.`,
-        `Đây là chiếc xe _______ nhất trong phòng trưng bày.`,
-        "most expensive", "đắt nhất",
-        ["expensive", "more expensive", "expensivest"], ["đắt tiền", "đắt hơn", "đắt nhất (sai cấu trúc)"],
-        "So sánh nhất của tính từ dài 'expensive' là 'most expensive'.",
-        "Unit 5: Comparatives", 34, setIdx
-    ));
+    // Q34
+    let p34 = q34_list[i].split('|');
+    parseAndPush(setIdx, `This is the _______ in the world.`, `Đây là thứ _______ nhất thế giới.`, p34[1], p34[2], [p34[0], `more ${p34[0]}`, p34[0]+'est'], ["nguyên thể", "hơn", "nhất (sai)"], "So sánh nhất của tính từ dài.", "Unit 5", 34);
 
-    // Q35: Comparative less
-    allQuestions.push(createQuestion(
-        `The place I live in is _______ crowded than the city centre.`,
-        `Nơi tôi sống thì _______ đông đúc hơn trung tâm thành phố.`,
-        "less", "ít hơn",
-        ["least", "little", "few"], ["ít nhất", "ít", "một vài"],
-        "So sánh ít hơn dùng 'less' + tính từ dài + than.",
-        "Unit 5: Comparatives", 35, setIdx
-    ));
+    // Q35
+    let p35 = q35_list[i].split('|');
+    parseAndPush(setIdx, `It is _______ ${p35[0]} than before.`, `Nó thì ít _______ hơn trước.`, "less", "ít hơn", ["least", "little", "few"], ["ít nhất", "ít", "vài"], "So sánh ít hơn dùng less + tính từ dài + than.", "Unit 5", 35);
 
-    // Q36: Present perfect Have
-    allQuestions.push(createQuestion(
-        `_______ you ever been to Japan?`,
-        `Bạn đã _______ đến Nhật Bản chưa?`,
-        "Have", "Hiện tại hoàn thành",
-        ["Do", "Did", "Are"], ["Hiện tại", "Quá khứ", "Hiện tại (to-be)"],
-        "Hỏi về trải nghiệm dùng thì Hiện tại hoàn thành: Have/Has + S + V3/ed.",
-        "Unit 6: Present Perfect", 36, setIdx
-    ));
+    // Q36
+    let p36 = q36_list[i].split('|');
+    parseAndPush(setIdx, p36[0], `_______ bạn đã từng...`, p36[1], "HT hoàn thành", [p36[2], p36[3], p36[4]], ["HT", "QK", "to-be"], "Hỏi về trải nghiệm dùng Hiện tại hoàn thành.", "Unit 6", 36);
 
-    // Q37: Present perfect never
-    allQuestions.push(createQuestion(
-        `I've _______ seen Star Wars.`,
-        `Tôi _______ xem phim Star Wars.`,
-        "never", "chưa bao giờ",
-        ["ever", "always", "sometimes"], ["đã từng", "luôn luôn", "thỉnh thoảng"],
-        "Trong câu khẳng định mang nghĩa chưa từng làm gì, dùng 'never'.",
-        "Unit 6: Present Perfect", 37, setIdx
-    ));
+    // Q37
+    let p37 = q37_list[i].split('|');
+    parseAndPush(setIdx, `I've _______ ${p37[0]}.`, `Tôi chưa bao giờ ${p37[1]}.`, "never", "chưa bao giờ", ["ever", "always", "sometimes"], ["từng", "luôn", "thỉnh thoảng"], "Trong câu khẳng định mang nghĩa chưa từng, dùng 'never'.", "Unit 6", 37);
 
-    // Q38: Present perfect ever
-    allQuestions.push(createQuestion(
-        `This is the best food I have _______ eaten.`,
-        `Đây là món ăn ngon nhất mà tôi _______ ăn.`,
-        "ever", "từng",
-        ["never", "always", "just"], ["chưa bao giờ", "luôn luôn", "vừa mới"],
-        "'Ever' thường dùng với cấu trúc so sánh nhất (the best).",
-        "Unit 6: Present Perfect", 38, setIdx
-    ));
+    // Q38
+    let p38 = q38_list[i].split('|');
+    parseAndPush(setIdx, `This is the best ${p38[0]}`, `Đây là ${p38[1]} tốt nhất tôi từng ${p38[2]}.`, "ever", "từng", ["never", "always", "just"], ["chưa từng", "luôn", "vừa mới"], "Dùng ever trong câu so sánh nhất.", "Unit 6", 38);
 
-    // Q39: Verb + ing
-    allQuestions.push(createQuestion(
-        `She practises _______ the piano every day.`,
-        `Cô ấy luyện tập _______ piano mỗi ngày.`,
-        "playing", "việc chơi (V-ing)",
-        ["play", "to play", "played"], ["chơi", "để chơi", "đã chơi"],
-        "Sau động từ 'practise' dùng V-ing.",
-        "Unit 6: Verb Patterns", 39, setIdx
-    ));
+    // Q39
+    let p39 = q39_list[i].split('|');
+    parseAndPush(setIdx, p39[0], `V-ing sau động từ.`, p39[1], "V-ing", [p39[2], p39[3], `is ${p39[1]}`], ["V", "to V", "sai"], "Dùng V-ing sau các động từ như practise, enjoy, mind...", "Unit 6", 39);
 
-    // Q40: Verb + to
-    allQuestions.push(createQuestion(
-        `We need _______ early.`,
-        `Chúng ta cần _______ sớm.`,
-        "to leave", "rời đi (có to)",
-        ["leave", "leaving", "left"], ["rời đi", "rời đi (V-ing)", "đã rời đi"],
-        "Sau động từ 'need' dùng to-infinitive.",
-        "Unit 6: Verb Patterns", 40, setIdx
-    ));
+    // Q40
+    let p40 = q40_list[i].split('|');
+    parseAndPush(setIdx, p40[0], `to V sau động từ.`, p40[1], "to V", [p40[2], p40[3], `is ${p40[3]}`], ["V", "V-ing", "sai"], "Dùng to-infinitive sau need, want, decide...", "Unit 6", 40);
 
-    // Q41: Persuade sb to
-    allQuestions.push(createQuestion(
-        `He persuaded me _______ with him.`,
-        `Anh ấy đã thuyết phục tôi _______ cùng anh ấy.`,
-        "to go", "đi (có to)",
-        ["go", "going", "went"], ["đi", "đi (V-ing)", "đã đi"],
-        "Cấu trúc: persuade + object + to + V.",
-        "Unit 6: Verb Patterns", 41, setIdx
-    ));
+    // Q41
+    let p41 = q41_list[i].split('|');
+    parseAndPush(setIdx, p41[0], `persuade/ask/want + sb + to V`, p41[1], "to V", [p41[2], p41[3], `is ${p41[3]}`], ["V", "V-ing", "sai"], "Cấu trúc: verb + object + to V.", "Unit 6", 41);
 
-    // Q42: Start to/ing
-    allQuestions.push(createQuestion(
-        `I started _______ English three years ago.`,
-        `Tôi đã bắt đầu _______ tiếng Anh ba năm trước.`,
-        "Both B & C", "Cả B và C đều đúng",
-        ["learn", "to learn", "learning"], ["học", "học (có to)", "học (V-ing)"],
-        "Động từ 'start' có thể đi kèm với cả to V hoặc V-ing mà nghĩa không thay đổi.",
-        "Unit 6: Verb Patterns", 42, setIdx
-    ));
+    // Q42
+    let p42 = q42_list[i].split('|');
+    parseAndPush(setIdx, `I started learning ${p42[0]}.`, `Tôi bắt đầu học ${p42[1]}.`, "Both B & C", "Cả 2 đều đúng", ["learn", "to learn", "learning"], ["V", "to V", "V-ing"], "Sau start có thể dùng cả to V và V-ing.", "Unit 6", 42);
 
-    // Q43: Relative who
-    allQuestions.push(createQuestion(
-        `The person _______ inspires me is my mother.`,
-        `Người _______ truyền cảm hứng cho tôi là mẹ tôi.`,
-        "who", "người",
-        ["which", "where", "when"], ["vật", "nơi chốn", "thời gian"],
-        "Đại từ quan hệ 'who' thay thế cho danh từ chỉ người.",
-        "Unit 6: Relative Clauses", 43, setIdx
-    ));
+    // Q43
+    let p43 = q43_list[i].split('|');
+    parseAndPush(setIdx, p43[0], p43[1], "who", "người", ["which", "where", "when"], ["vật", "nơi", "thời gian"], "Đại từ 'who' thay thế danh từ chỉ người.", "Unit 6", 43);
 
-    // Q44: Relative which
-    allQuestions.push(createQuestion(
-        `I found a book _______ I love.`,
-        `Tôi đã tìm thấy một cuốn sách _______ tôi yêu thích.`,
-        "which", "vật",
-        ["who", "where", "when"], ["người", "nơi chốn", "thời gian"],
-        "Đại từ quan hệ 'which' (hoặc that) thay thế cho danh từ chỉ vật.",
-        "Unit 6: Relative Clauses", 44, setIdx
-    ));
+    // Q44
+    let p44 = q44_list[i].split('|');
+    parseAndPush(setIdx, p44[0], p44[1], "which", "vật", ["who", "where", "when"], ["người", "nơi", "thời gian"], "Đại từ 'which' thay thế danh từ chỉ vật.", "Unit 6", 44);
 
-    // Q45: Relative where
-    allQuestions.push(createQuestion(
-        `Look, there's the hotel _______ we stayed.`,
-        `Nhìn kìa, đó là khách sạn _______ chúng ta đã ở.`,
-        "where", "nơi chốn",
-        ["which", "who", "when"], ["vật", "người", "thời gian"],
-        "Đại từ quan hệ 'where' thay thế cho nơi chốn.",
-        "Unit 6: Relative Clauses", 45, setIdx
-    ));
+    // Q45
+    let p45 = q45_list[i].split('|');
+    parseAndPush(setIdx, `That is ${p45[0]}.`, `Đó là ${p45[1]}.`, "where", "nơi chốn", ["which", "who", "when"], ["vật", "người", "thời gian"], "Đại từ 'where' thay thế danh từ chỉ nơi chốn.", "Unit 6", 45);
 
-    // Q46: Personality
-    const pers = [{e:"serious",v:"nghiêm túc",q:"doesn't often laugh"}, {e:"confident",v:"tự tin",q:"is always sure"}, {e:"friendly",v:"thân thiện",q:"is kind and helpful"}, {e:"honest",v:"trung thực",q:"always tells the truth"}, {e:"patient",v:"kiên nhẫn",q:"is calm with children"}, {e:"reliable",v:"đáng tin cậy",q:"keeps promises"}, {e:"creative",v:"sáng tạo",q:"makes new things"}, {e:"professional",v:"chuyên nghiệp",q:"works hard"}, {e:"serious",v:"nghiêm túc",q:"is very focused"}, {e:"confident",v:"tự tin",q:"speaks well"}];
-    allQuestions.push(createQuestion(
-        `He is a strong and _______ person and ${pers[i].q}.`,
-        `Anh ấy là một người mạnh mẽ, _______ và ${pers[i].q}.`,
-        pers[i].e, pers[i].v,
-        ["friendly", "creative", "patient"], ["thân thiện", "sáng tạo", "kiên nhẫn"],
-        `Từ vựng Unit 1: '${pers[i].e}' phù hợp với ngữ cảnh câu.`,
-        "Vocabulary: Personality", 46, setIdx
-    ));
+    // Q46
+    let p46 = q46_list[i].split('|');
+    parseAndPush(setIdx, `He is very _______ because he ${p46[0]}.`, `Anh ấy rất _______ vì anh ấy ${p46[1]}.`, p46[2], p46[3], ["friendly", "lazy", "bored"], ["thân thiện", "lười", "chán"], "Từ vựng Personality.", "Vocabulary", 46);
 
-    // Q47: Subjects
-    const subj = [{e:"drama",v:"kịch"}, {e:"art",v:"mỹ thuật"}, {e:"biology",v:"sinh học"}, {e:"maths",v:"toán"}, {e:"physics",v:"vật lý"}, {e:"history",v:"lịch sử"}, {e:"geography",v:"địa lý"}, {e:"chemistry",v:"hóa học"}, {e:"IT",v:"tin học"}, {e:"PE",v:"thể dục"}];
-    allQuestions.push(createQuestion(
-        `We're studying a lot in our _______ class.`,
-        `Chúng tôi đang học rất nhiều trong lớp _______ của chúng tôi.`,
-        subj[i].e, subj[i].v,
-        ["music", "english", "french"], ["âm nhạc", "tiếng anh", "tiếng pháp"],
-        `Từ vựng Unit 2: '${subj[i].e}' là một môn học.`,
-        "Vocabulary: School Subjects", 47, setIdx
-    ));
+    // Q47
+    let p47 = q47_list[i].split('|');
+    parseAndPush(setIdx, `We learn about ${p47[0]} in _______ class.`, `Chúng tôi học về ${p47[1]} trong lớp _______.`, p47[2], p47[3], ["music", "english", "french"], ["âm nhạc", "tiếng anh", "tiếng pháp"], "Từ vựng School Subjects.", "Vocabulary", 47);
 
-    // Q48: Food
-    allQuestions.push(createQuestion(
-        `She's a _______, so she doesn't eat meat or fish.`,
-        `Cô ấy là _______, nên cô ấy không ăn thịt hay cá.`,
-        "vegetarian", "người ăn chay",
-        ["vegan", "allergy", "raw"], ["người ăn chay thuần", "dị ứng", "sống"],
-        "Từ vựng Unit 3: 'vegetarian' là người ăn chay.",
-        "Vocabulary: Food", 48, setIdx
-    ));
+    // Q48
+    let p48 = q48_list[i].split('|');
+    parseAndPush(setIdx, `He _______, so he is a ${p48[2]}.`, `Anh ấy ${p48[1]}, nên anh ấy là ${p48[3]}.`, p48[2], p48[3], ["vegan", "allergy", "raw"], ["thuần chay", "dị ứng", "sống"], "Từ vựng Food.", "Vocabulary", 48);
 
-    // Q49: Motivation
-    allQuestions.push(createQuestion(
-        `I like the _______ of learning a new language.`,
-        `Tôi thích _______ của việc học một ngôn ngữ mới.`,
-        "challenge", "thử thách",
-        ["prize", "reward", "praise"], ["giải thưởng", "phần thưởng", "lời khen"],
-        "Từ vựng Unit 4: 'challenge' nghĩa là thử thách.",
-        "Vocabulary: Motivation", 49, setIdx
-    ));
+    // Q49
+    let p49 = q49_list[i].split('|');
+    parseAndPush(setIdx, `I like the _______ of ${p49[0]}.`, `Tôi thích _______ của việc ${p49[1]}.`, p49[2], p49[3], ["prize", "reward", "praise"], ["giải thưởng", "phần thưởng", "lời khen"], "Từ vựng Motivation.", "Vocabulary", 49);
 
-    // Q50: Extreme Adj
-    allQuestions.push(createQuestion(
-        `The views from the mountain are _______.`,
-        `Cảnh nhìn từ ngọn núi thì _______.`,
-        "spectacular", "ngoạn mục",
-        ["awful", "tiny", "filthy"], ["tệ hại", "nhỏ bé", "bẩn thỉu"],
-        "Từ vựng Unit 5: 'spectacular' là ngoạn mục, tuyệt đẹp.",
-        "Vocabulary: Extreme Adjectives", 50, setIdx
-    ));
+    // Q50
+    let p50 = q50_list[i].split('|');
+    parseAndPush(setIdx, `The ${p50[0]} is _______.`, `${p50[1]} thì _______.`, p50[2], p50[3], ["awful", "tiny", "filthy"], ["tệ", "nhỏ", "bẩn"], "Từ vựng Extreme Adjectives.", "Vocabulary", 50);
 }
 
 const seedDatabase = async () => {
