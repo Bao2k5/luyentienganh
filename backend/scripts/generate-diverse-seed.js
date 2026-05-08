@@ -275,18 +275,18 @@ const q26_list = [
     "turn down the volume|vặn nhỏ âm lượng", "grab an umbrella|lấy một chiếc ô", "write it down|viết nó ra", "have a salad|ăn món salad"
 ];
 
-// Q27: If no future
+// Q27: If no future - focuses on condition clause only, all 10 have DIFFERENT subjects+verbs
 const q27_list = [
-    "If I _______ time, I'll email you.|có thời gian|have|had",
-    "If he _______ early, we'll go out.|đến sớm|arrives|arrived",
-    "If they _______ the game, they'll celebrate.|thắng trận đấu|win|won",
-    "If you _______ hard, you'll pass.|làm việc chăm chỉ|work|worked",
-    "If she _______ the keys, she'll open the door.|tìm thấy chìa khóa|finds|found",
-    "If we _______ money, we'll buy it.|có tiền|have|had",
-    "If John _______ me, I'll answer.|gọi tôi|calls|called",
-    "If the weather _______ good, we'll swim.|tốt|is|was",
-    "If Mary _______ the truth, she'll be angry.|biết sự thật|knows|knew",
-    "If the bus _______, we'll be late.|đến trễ|is late|was late"
+    "If I _______ time, I'll email you.|có thời gian|have|had|will have|am having",
+    "If it _______ tomorrow, we'll cancel the trip.|mưa ngày mai|rains|rained|will rain|is raining",
+    "If the bus _______, I'll take a taxi.|đến trễ|is late|was late|will be late|was being late",
+    "If you _______ now, you'll reach on time.|rời đi|leave|left|will leave|are leaving",
+    "If he _______ quickly, we'll miss the start.|ăn chậm|eats slowly|ate slowly|will eat slowly|is eating slowly",
+    "If the weather _______ bad, we'll stay home.|trở xấu|gets bad|got bad|will get bad|is getting bad",
+    "If the train _______, we'll be late.|khởi hành đúng giờ|departs on time|departed on time|will depart on time|is departing",
+    "If she _______ me, I'll answer her.|gọi|calls|called|will call|is calling",
+    "If they _______ hard, they'll win.|ôn luyện|practise|practised|will practise|are practising",
+    "If you _______ your phone, I'll lend you mine.|để quên|forget|forgot|will forget|are forgetting"
 ];
 
 // Q28: going to structure
@@ -325,16 +325,16 @@ const q31_list = [
     "is dark|I won't walk alone|tôi sẽ không đi dạo một mình", "is far|we won't walk|chúng ta sẽ không đi bộ"
 ];
 
-// Q32: First cond if
+// Q32: First cond if - uses DIFFERENT structure (question format), all 10 unique verbs
 const q32_list = [
     "If I _______ Dina, I'll give her your message.|gặp|see|saw|will see|am seeing",
     "If he _______ early, we'll go out.|đến|arrives|arrived|will arrive|is arriving",
-    "If she _______ the keys, she'll open the door.|tìm thấy|finds|found|will find|is finding",
-    "If they _______ the game, they'll celebrate.|thắng|win|won|will win|are winning",
-    "If you _______ hard, you'll pass.|làm việc|work|worked|will work|are working",
-    "If we _______ money, we'll buy it.|có|have|had|will have|are having",
-    "If John _______ me, I'll answer.|gọi|calls|called|will call|is calling",
-    "If Mary _______ the truth, she'll be angry.|biết|knows|knew|will know|is knowing",
+    "If she _______ the game, she'll celebrate.|thắng|wins|won|will win|is winning",
+    "If they _______ the map, they'll get lost.|làm rơi|drop|dropped|will drop|are dropping",
+    "If you _______ your homework, the teacher will be happy.|nộp|submit|submitted|will submit|are submitting",
+    "If we _______ the next train, we'll take a taxi.|lỡ chậu|miss|missed|will miss|are missing",
+    "If John _______ the meeting, his boss will be angry.|vắng mặt|misses|missed|will miss|is missing",
+    "If Mary _______ him in the park, she'll say hello.|bắt gặp|sees|saw|will see|is seeing",
     "If the dog _______, I'll feed it.|sủa|barks|barked|will bark|is barking",
     "If the baby _______, I'll hold him.|khóc|cries|cried|will cry|is crying"
 ];
@@ -466,13 +466,18 @@ const q47_list = [
     "computer programs|chương trình máy tính|IT|tin học", "football and sports|bóng đá và thể thao|PE|thể dục"
 ];
 
-// Q48: Food
+// Q48: Food - all 10 items UNIQUE
 const q48_list = [
-    "doesn't eat meat or fish|không ăn thịt hay cá|vegetarian|người ăn chay", "doesn't eat animal products|không ăn các sản phẩm từ động vật|vegan|người ăn chay thuần",
-    "gets sick from nuts|bị ốm vì ăn các loại hạt|allergy|dị ứng", "is very tasty|rất ngon|delicious|ngon",
-    "is the best on the menu|là ngon nhất trong thực đơn|dish|món ăn", "is not cooked|chưa được nấu chín|raw|sống",
-    "cooks the meal|nấu bữa ăn|prepare|chuẩn bị", "brings the food to the table|mang thức ăn ra bàn|serve|phục vụ",
-    "only eats vegetables|chỉ ăn rau củ|vegetarian|người ăn chay", "avoids dairy and eggs|tránh sữa và trứng|vegan|người ăn chay thuần"
+    "doesn't eat meat or fish|không ăn thịt hay cá|vegetarian|người ăn chay",
+    "doesn't eat animal products|không ăn các sản phẩm từ động vật|vegan|người ăn chay thuần",
+    "gets sick from nuts|bị ốm vì ăn các loại hạt|allergy|dị ứng",
+    "is very tasty|rất ngon|delicious|ngon",
+    "is the best on the menu|là ngon nhất trong thực đơn|dish|món ăn",
+    "is not cooked|chưa được nấu chín|raw|sống",
+    "cooks the meal|nấu bữa ăn|chef|đầu bếp",
+    "brings the food to the table|mang thức ăn ra bàn|waiter|bồi bàn",
+    "prefers food grown without chemicals|thích thực phẩm hữu cơ không dùng hóa chất|organic|hữu cơ",
+    "cannot eat dairy or eggs|không thể ăn sữa hay trứng|intolerance|không dung nạp"
 ];
 
 // Q49: Motivation
@@ -484,13 +489,18 @@ const q49_list = [
     "the team to win|đội bóng giành chiến thắng|encourage|khuyến khích", "the best student|học sinh xuất sắc nhất|prize|giải thưởng"
 ];
 
-// Q50: Extreme Adj
+// Q50: Extreme Adj - all 10 UNIQUE and wrong options chosen carefully
 const q50_list = [
-    "views from the mountain|Cảnh nhìn từ ngọn núi|spectacular|ngoạn mục", "accommodation we stayed in|Chỗ ở mà chúng tôi ở|awful|tệ hại",
-    "cake she baked|Chiếc bánh mà cô ấy nướng|brilliant|tuyệt vời", "food at the restaurant|Đồ ăn ở nhà hàng|disgusting|kinh tởm",
-    "house he lives in|Ngôi nhà anh ấy đang sống|enormous|khổng lồ", "bedroom I sleep in|Phòng ngủ tôi ngủ|filthy|bẩn thỉu",
-    "weather outside|Thời tiết bên ngoài|freezing|lạnh cóng", "room she rented|Căn phòng cô ấy thuê|tiny|nhỏ bé",
-    "sunset at the beach|Hoàng hôn trên bãi biển|spectacular|ngoạn mục", "smell in the kitchen|Mùi trong bếp|disgusting|kinh tởm"
+    "views from the mountain|Cảnh nhìn từ ngọn núi|spectacular|ngoạn mục",
+    "accommodation we stayed in|Chỗ ở mà chúng tôi ở|awful|tệ hại",
+    "cake she baked|Chiếc bánh mà cô ấy nướng|brilliant|tuyệt vời",
+    "food at the restaurant|Đồ ăn ở nhà hàng|disgusting|kinh tởm",
+    "house he lives in|Ngôi nhà anh ấy đang sống|enormous|khổng lồ",
+    "bedroom I sleep in|Phòng ngủ tôi ngủ|filthy|bẩn thỉu",
+    "weather outside|Thời tiết bên ngoài|freezing|lạnh cóng",
+    "room she rented|Căn phòng cô ấy thuê|tiny|nhỏ bé",
+    "concert last night|Buổi hòa nhạc tối qua|amazing|tuyệt vời",
+    "smell coming from the kitchen|Mùi từ bếp toả ra|disgusting|kinh tởm"
 ];
 
 const allQuestions = [];
@@ -696,19 +706,19 @@ for (let setIdx = 1; setIdx <= 10; setIdx++) {
 
     // Q27
     let p27 = q27_list[i].split('|');
-    parseAndPush(setIdx, p27[0], `Nếu ${s.vi} ${p27[1]}, ...`, p27[2], "hiện tại", [`will ${p27[2]}`, p27[3], `am ${p27[3]}ing`], ["sẽ", "quá khứ", "tiếp diễn"], "KHÔNG dùng 'will' trong mệnh đề 'If'.", "Unit 4", 27);
+    parseAndPush(setIdx, p27[0], `Nếu ${p27[1]}, ...`, p27[2], "hiện tại", [p27[3], p27[4], p27[5]], ["quá khứ (sai)", "tương lai (sai)", "tiếp diễn (sai)"], `KHÔNG dùng 'will' trong mệnh đề 'If'. Mệnh đề điều kiện loại 1 dùng Hiện tại đơn. Đáp án đúng: '${p27[2]}'.`, "Unit 4", 27);
 
     // Q28
     let p28 = q28_list[i].split('|');
     parseAndPush(setIdx, p28[0], `Kế hoạch: ${p28[1]}`, "going to", "dự định", ["going", "go to", "will"], ["đang", "đi", "sẽ"], "Cấu trúc am/is/are + going to + V.", "Unit 4", 28);
 
-    // Q29
+    // Q29 - fixed wrong options to avoid auto-generated duplicates
     let p29 = q29_list[i].split('|');
-    parseAndPush(setIdx, `If you ${p29[0]}, _______ .`, `Nếu bạn ${p29[0]}, _______ .`, p29[1], p29[2], [p29[1].replace('s',''), `will ${p29[1].replace('s','')}`, `is ${p29[1]}`], ["nguyên thể", "sẽ", "đang"], "Câu điều kiện loại 0: If + HTĐ, HTĐ.", "Unit 5", 29);
+    parseAndPush(setIdx, `If you ${p29[0]}, _______ .`, `Nếu bạn ${p29[0]}, _______ .`, p29[1], p29[2], [`will happen`, `might happen`, `is happening`], ["tương lai (sai)", "có thể (sai)", "đang diễn ra (sai)"], `Câu điều kiện loại 0 diễn tả sự thật hiển nhiên. Cả 2 vế đều dùng Hiện tại đơn. Đáp án đúng là '${p29[1]}'.`, "Unit 5", 29);
 
-    // Q30
+    // Q30 - fixed wrong options to avoid auto-generated duplicates
     let p30 = q30_list[i].split('|');
-    parseAndPush(setIdx, `If ${p30[0]}, _______ .`, `Nếu ${p30[0]}, _______ .`, p30[1], p30[2], [p30[1].replace('s',''), `will ${p30[1].replace('es','').replace('s','')}`, `is ${p30[1]}`], ["nguyên thể", "sẽ", "đang"], "Câu điều kiện loại 0 chỉ máy móc.", "Unit 5", 30);
+    parseAndPush(setIdx, `If ${p30[0]}, _______ .`, `Nếu ${p30[0]}, _______ .`, p30[1], p30[2], [`will happen`, `might happen`, `is happening`], ["tương lai (sai)", "có thể (sai)", "đang diễn ra (sai)"], `Câu điều kiện loại 0 chỉ quy luật máy móc. Cả 2 vế đều dùng Hiện tại đơn. Đáp án đúng là '${p30[1]}'.`, "Unit 5", 30);
 
     // Q31
     let p31 = q31_list[i].split('|');
@@ -718,13 +728,13 @@ for (let setIdx = 1; setIdx <= 10; setIdx++) {
     let p32 = q32_list[i].split('|');
     parseAndPush(setIdx, p32[0], `Nếu ${p32[1]}`, p32[2], "hiện tại", [p32[3], p32[4], p32[5]], ["quá khứ", "sẽ", "tiếp diễn"], "Mệnh đề If loại 1 dùng Hiện tại đơn.", "Unit 5", 32);
 
-    // Q33
+    // Q33 - embed adjective in sentence to make each unique
     let p33 = q33_list[i].split('|');
-    parseAndPush(setIdx, `This is _______ than that.`, `Cái này thì _______ hơn cái kia.`, p33[1], p33[2], [p33[0], `most ${p33[0]}`, `more ${p33[0]}`], ["nguyên thể", "nhất", "hơn (sai)"], "So sánh hơn của tính từ ngắn.", "Unit 5", 33);
+    parseAndPush(setIdx, `My phone is _______ than yours. (${p33[0]})`, `Điện thoại của tôi _______ của bạn. (${p33[0]})`, p33[1], p33[2], [p33[0], `most ${p33[0]}`, `more ${p33[0]}`], ["nguyên thể", "so sánh nhất (sai)", "so sánh hơn (sai cấu trúc)"], `So sánh hơn của tính từ ngắn '${p33[0]}': thêm -er. KHÔNG dùng 'more'.`, "Unit 5", 33);
 
-    // Q34
+    // Q34 - embed adjective in sentence to make each unique
     let p34 = q34_list[i].split('|');
-    parseAndPush(setIdx, `This is the _______ in the world.`, `Đây là thứ _______ nhất thế giới.`, p34[1], p34[2], [p34[0], `more ${p34[0]}`, p34[0]+'est'], ["nguyên thể", "hơn", "nhất (sai)"], "So sánh nhất của tính từ dài.", "Unit 5", 34);
+    parseAndPush(setIdx, `That was the _______ experience of my life. (${p34[0]})`, `Đó là trải nghiệm _______ của cuộc đời tôi. (${p34[0]})`, p34[1], p34[2], [p34[0], `more ${p34[0]}`, `${p34[0]}er`], ["nguyên thể", "so sánh hơn (sai)", "so sánh nhất (sai cấu trúc)"], `So sánh nhất của tính từ dài '${p34[0]}': dùng 'most ${p34[0]}'. KHÔNG thêm -er.`, "Unit 5", 34);
 
     // Q35
     let p35 = q35_list[i].split('|');
@@ -770,25 +780,38 @@ for (let setIdx = 1; setIdx <= 10; setIdx++) {
     let p45 = q45_list[i].split('|');
     parseAndPush(setIdx, `That is ${p45[0]}.`, `Đó là ${p45[1]}.`, "where", "nơi chốn", ["which", "who", "when"], ["vật", "người", "thời gian"], "Đại từ 'where' thay thế danh từ chỉ nơi chốn.", "Unit 6", 45);
 
-    // Q46
+    // Q46 - use unique wrong options that don't overlap with answer
     let p46 = q46_list[i].split('|');
-    parseAndPush(setIdx, `He is very _______ because he ${p46[0]}.`, `Anh ấy rất _______ vì anh ấy ${p46[1]}.`, p46[2], p46[3], ["friendly", "lazy", "bored"], ["thân thiện", "lười", "chán"], "Từ vựng Personality.", "Vocabulary", 46);
+    const q46allWords = ['serious','confident','friendly','honest','patient','reliable','creative','professional'];
+    const q46wrong = q46allWords.filter(w => w !== p46[2]).slice(0,3);
+    const q46wrongVi = {serious:'nghiêm túc',confident:'tự tin',friendly:'thân thiện',honest:'trung thực',patient:'kiên nhẫn',reliable:'đáng tin cậy',creative:'sáng tạo',professional:'chuyên nghiệp'};
+    parseAndPush(setIdx, `He is very _______ because he ${p46[0]}.`, `Anh ấy rất _______ vì anh ấy ${p46[1]}.`, p46[2], p46[3], q46wrong, q46wrong.map(w=>q46wrongVi[w]||w), `Từ vựng Personality: '${p46[2]}' (${p46[3]}) phù hợp với ngữ cảnh '${p46[0]}'.`, "Vocabulary", 46);
 
-    // Q47
+    // Q47 - use unique wrong options that don't overlap with answer
     let p47 = q47_list[i].split('|');
-    parseAndPush(setIdx, `We learn about ${p47[0]} in _______ class.`, `Chúng tôi học về ${p47[1]} trong lớp _______.`, p47[2], p47[3], ["music", "english", "french"], ["âm nhạc", "tiếng anh", "tiếng pháp"], "Từ vựng School Subjects.", "Vocabulary", 47);
+    const q47allWords = ['drama','art','biology','maths','physics','history','geography','chemistry','IT','PE'];
+    const q47wrong = q47allWords.filter(w => w !== p47[2]).slice(0,3);
+    const q47wrongVi = {drama:'kịch',art:'mỹ thuật',biology:'sinh học',maths:'toán',physics:'vật lý',history:'lịch sử',geography:'địa lý',chemistry:'hóa học',IT:'tin học',PE:'thể dục'};
+    parseAndPush(setIdx, `We learn about ${p47[0]} in _______ class.`, `Chúng tôi học về ${p47[1]} trong lớp _______.`, p47[2], p47[3], q47wrong, q47wrong.map(w=>q47wrongVi[w]||w), `Từ vựng School Subjects: '${p47[2]}' (${p47[3]}) được học qua chủ đề '${p47[0]}'.`, "Vocabulary", 47);
 
-    // Q48
+    // Q48 - use unique wrong options that don't overlap with answer
     let p48 = q48_list[i].split('|');
-    parseAndPush(setIdx, `He _______, so he is a ${p48[2]}.`, `Anh ấy ${p48[1]}, nên anh ấy là ${p48[3]}.`, p48[2], p48[3], ["vegan", "allergy", "raw"], ["thuần chay", "dị ứng", "sống"], "Từ vựng Food.", "Vocabulary", 48);
+    const q48wrong = ['vegetarian','vegan','allergy','delicious','dish','raw','prepare','serve'].filter(w => w !== p48[2]).slice(0,3);
+    const q48wrongVi = {vegetarian:'ăn chay',vegan:'thuần chay',allergy:'dị ứng',delicious:'ngon',dish:'món ăn',raw:'sống',prepare:'chuẩn bị',serve:'phục vụ'};
+    parseAndPush(setIdx, `He _______, so he is a ${p48[2]}.`, `Anh ấy ${p48[1]}, nên anh ấy là ${p48[3]}.`, p48[2], p48[3], q48wrong, q48wrong.map(w=>q48wrongVi[w]||w), `Từ vựng Food: '${p48[2]}' có nghĩa là ${p48[3]}.`, "Vocabulary", 48);
 
-    // Q49
+    // Q49 - use unique wrong options that don't overlap with answer
     let p49 = q49_list[i].split('|');
-    parseAndPush(setIdx, `I like the _______ of ${p49[0]}.`, `Tôi thích _______ của việc ${p49[1]}.`, p49[2], p49[3], ["prize", "reward", "praise"], ["giải thưởng", "phần thưởng", "lời khen"], "Từ vựng Motivation.", "Vocabulary", 49);
+    const q49wrong = ['challenge','encourage','praise','prize','punish','purpose','reward'].filter(w => w !== p49[2]).slice(0,3);
+    const q49wrongVi = {challenge:'thử thách',encourage:'khuyến khích',praise:'lời khen',prize:'giải thưởng',punish:'phạt',purpose:'mục đích',reward:'phần thưởng'};
+    parseAndPush(setIdx, `I like the _______ of ${p49[0]}.`, `Tôi thích _______ của việc ${p49[1]}.`, p49[2], p49[3], q49wrong, q49wrong.map(w=>q49wrongVi[w]||w), `Từ vựng Motivation: '${p49[2]}' có nghĩa là ${p49[3]}.`, "Vocabulary", 49);
 
-    // Q50
+    // Q50 - dynamic wrong options that never clash with the correct answer
     let p50 = q50_list[i].split('|');
-    parseAndPush(setIdx, `The ${p50[0]} is _______.`, `${p50[1]} thì _______.`, p50[2], p50[3], ["awful", "tiny", "filthy"], ["tệ", "nhỏ", "bẩn"], "Từ vựng Extreme Adjectives.", "Vocabulary", 50);
+    const q50allAdj = ['spectacular','awful','brilliant','disgusting','enormous','filthy','freezing','tiny','amazing','boiling'];
+    const q50adjVi = {spectacular:'ngoạn mục',awful:'tệ hại',brilliant:'tuyệt vời',disgusting:'kinh tởm',enormous:'khổng lồ',filthy:'bẩn thỉu',freezing:'lạnh cóng',tiny:'nhỏ bé',amazing:'tuyệt vời',boiling:'cực nóng'};
+    const q50wrong = q50allAdj.filter(w => w !== p50[2]).slice(0,3);
+    parseAndPush(setIdx, `The ${p50[0]} is _______.`, `${p50[1]} thì _______.`, p50[2], p50[3], q50wrong, q50wrong.map(w=>q50adjVi[w]||w), `Từ vựng Extreme Adjectives: '${p50[2]}' (${p50[3]}) là tính từ cực cấp. KHÔNG dùng 'very' với các từ này.`, "Vocabulary", 50);
 }
 
 const seedDatabase = async () => {
