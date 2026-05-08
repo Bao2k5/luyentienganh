@@ -3,15 +3,17 @@ import StartScreen from './components/StartScreen';
 import SetSelectionScreen from './components/SetSelectionScreen';
 import QuizScreen from './components/QuizScreen';
 import ResultScreen from './components/ResultScreen';
+import HistoryScreen from './components/HistoryScreen';
 import { startQuiz } from './services/api';
 import { clearSession } from './utils/localStorage';
 
 function App() {
-  const [currentScreen, setCurrentScreen] = useState('start'); // 'start' | 'setSelection' | 'quiz' | 'result'
+  const [currentScreen, setCurrentScreen] = useState('start'); // 'start' | 'setSelection' | 'quiz' | 'result' | 'history'
   const [sessionId, setSessionId] = useState(null);
   const [resultId, setResultId] = useState(null);
   const [studentInfo, setStudentInfo] = useState(null);
   const [selectedSet, setSelectedSet] = useState(null);
+  const [historyStudentName, setHistoryStudentName] = useState(null);
 
   const handleStartQuiz = async (name, studentClass) => {
     try {
@@ -49,10 +51,28 @@ function App() {
     setCurrentScreen('start');
   };
 
+  const handleViewHistory = (studentName) => {
+    setHistoryStudentName(studentName);
+    setCurrentScreen('history');
+  };
+
+  const handleBackFromHistory = () => {
+    setHistoryStudentName(null);
+    setCurrentScreen('start');
+  };
+
+  const handleViewResultFromHistory = (resultIdFromHistory) => {
+    setResultId(resultIdFromHistory);
+    setCurrentScreen('result');
+  };
+
   return (
     <div className="App">
       {currentScreen === 'start' && (
-        <StartScreen onStart={handleStartQuiz} />
+        <StartScreen
+          onStart={handleStartQuiz}
+          onViewHistory={handleViewHistory}
+        />
       )}
 
       {currentScreen === 'setSelection' && studentInfo && (
@@ -75,6 +95,14 @@ function App() {
         <ResultScreen
           resultId={resultId}
           onRetake={handleRetake}
+        />
+      )}
+
+      {currentScreen === 'history' && historyStudentName && (
+        <HistoryScreen
+          studentName={historyStudentName}
+          onBack={handleBackFromHistory}
+          onViewResult={handleViewResultFromHistory}
         />
       )}
     </div>

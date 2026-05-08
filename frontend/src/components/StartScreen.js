@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { BookOpen } from 'lucide-react';
+import { BookOpen, History } from 'lucide-react';
 
-const StartScreen = ({ onStart }) => {
+const StartScreen = ({ onStart, onViewHistory }) => {
   const [name, setName] = useState('');
   const [studentClass, setStudentClass] = useState('');
   const [errors, setErrors] = useState({});
@@ -80,9 +80,8 @@ const StartScreen = ({ onStart }) => {
               id="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition ${
-                errors.name ? 'border-red-500' : 'border-gray-300'
-              }`}
+              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition ${errors.name ? 'border-red-500' : 'border-gray-300'
+                }`}
               placeholder="Nhập họ và tên của bạn"
               disabled={isLoading}
             />
@@ -101,9 +100,8 @@ const StartScreen = ({ onStart }) => {
               id="class"
               value={studentClass}
               onChange={(e) => setStudentClass(e.target.value)}
-              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition ${
-                errors.studentClass ? 'border-red-500' : 'border-gray-300'
-              }`}
+              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition ${errors.studentClass ? 'border-red-500' : 'border-gray-300'
+                }`}
               placeholder="Nhập lớp của bạn (VD: 10A)"
               disabled={isLoading}
             />
@@ -126,6 +124,22 @@ const StartScreen = ({ onStart }) => {
             className="w-full bg-primary hover:bg-blue-600 text-white font-semibold py-4 px-6 rounded-lg transition duration-200 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
           >
             {isLoading ? 'Đang khởi tạo...' : 'BẮT ĐẦU THI'}
+          </button>
+
+          {/* View History Button */}
+          <button
+            type="button"
+            onClick={() => {
+              if (name.trim().length >= 2) {
+                onViewHistory(name.trim());
+              } else {
+                setErrors({ name: 'Vui lòng nhập họ tên để xem lịch sử' });
+              }
+            }}
+            className="w-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-4 px-6 rounded-lg transition duration-200 flex items-center justify-center gap-2"
+          >
+            <History className="w-5 h-5" />
+            XEM LỊCH SỬ LÀM BÀI
           </button>
         </form>
 

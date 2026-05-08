@@ -65,4 +65,28 @@ export const getResult = async (resultId) => {
     }
 };
 
+// Get student quiz history
+export const getHistory = async (studentName) => {
+    try {
+        const response = await api.get(`/api/quiz/history/${encodeURIComponent(studentName)}`);
+        return response.data;
+    } catch (error) {
+        throw new Error(
+            error.response?.data?.error?.message || 'Failed to fetch history'
+        );
+    }
+};
+
+// Get student statistics
+export const getStats = async (studentName) => {
+    try {
+        const response = await api.get(`/api/quiz/stats/${encodeURIComponent(studentName)}`);
+        return response.data;
+    } catch (error) {
+        throw new Error(
+            error.response?.data?.error?.message || 'Failed to fetch statistics'
+        );
+    }
+};
+
 export default api;
