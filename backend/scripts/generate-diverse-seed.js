@@ -683,7 +683,7 @@ for (let setIdx = 1; setIdx <= 10; setIdx++) {
 
     // Q11
     let p11 = q11_list[i].split('|');
-    parseAndPush(setIdx, `${s.en} _______ ${p11[0].replace(p11[1],'')} last night.`, `${s.vi} _______ ${p11[1]} tối qua.`, p11[2], "đã", [p11[3], p11[4], p11[1]+'ys'], ["nguyên thể", "hiện tại", "sai chính tả"], "Động từ tận cùng bằng phụ âm + y, đổi y thành ied.", "Unit 2", 11);
+    parseAndPush(setIdx, `${s.en} _______ ${p11[0]} last night.`, `${s.vi} _______ ${p11[1]} tối qua.`, p11[2], "đã", [p11[3], p11[4], p11[3]+'ed'], ["nguyên thể", "hiện tại s/es", "sai chính tả (-yed thay vì -ied)"], "Động từ tận cùng bằng phụ âm + y, đổi y thành ied. VD: study→studied, NOT studyed.", "Unit 2", 11);
 
     // Q12
     let p12 = q12_list[i].split('|');
