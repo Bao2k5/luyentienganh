@@ -45,6 +45,10 @@ const QuestionSchema = new mongoose.Schema({
         min: 1,
         max: 10,
         default: 1
+    },
+    commonMistake: {
+        type: String,
+        required: false
     }
 }, {
     timestamps: true

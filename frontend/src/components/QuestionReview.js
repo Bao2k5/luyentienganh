@@ -240,11 +240,13 @@ const QuestionReview = ({ questions }) => {
                             )}
 
                             {/* Common Mistake Warning */}
-                            <div className="bg-yellow-50 border-l-4 border-yellow-500 p-5 rounded-r-lg">
-                                <p className="text-yellow-900 text-sm font-semibold leading-relaxed">
-                                    {getCommonMistake(q)}
-                                </p>
-                            </div>
+                            {q.commonMistake && (
+                                <div className="bg-yellow-50 border-l-4 border-yellow-500 p-5 rounded-r-lg">
+                                    <p className="text-yellow-900 text-sm font-semibold leading-relaxed">
+                                        {q.commonMistake}
+                                    </p>
+                                </div>
+                            )}
                         </div>
                     );
                 })}

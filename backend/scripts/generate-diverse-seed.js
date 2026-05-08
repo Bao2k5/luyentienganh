@@ -495,6 +495,59 @@ const q50_list = [
 
 const allQuestions = [];
 
+const commonMistakes = {
+    1: "⚠️ Lỗi thường gặp: Đặt trạng từ tần suất sai vị trí. Nhớ: TRƯỚC động từ thường.",
+    2: "⚠️ Lỗi thường gặp: Đặt trạng từ tần suất sai vị trí. Nhớ: SAU động từ 'to be'.",
+    3: "⚠️ Lỗi thường gặp: Dùng sai thì khi hỏi về tần suất. 'How often' phải dùng Hiện tại đơn.",
+    4: "⚠️ Lỗi thường gặp: Quên thêm 's/es' cho động từ khi chủ ngữ là số ít (ngôi thứ 3) ở Hiện tại đơn.",
+    5: "⚠️ Lỗi thường gặp: Không chia động từ theo đúng lịch trình (Present Simple).",
+    6: "⚠️ Lỗi thường gặp: Không nhận ra dấu hiệu 'at the moment' để dùng Hiện tại tiếp diễn.",
+    7: "⚠️ Lỗi thường gặp: Thêm '-ing' vào động từ trạng thái (know, want...). Các từ này KHÔNG dùng ở thì tiếp diễn.",
+    8: "⚠️ Lỗi thường gặp: Không thuộc động từ bất quy tắc (go -> went).",
+    9: "⚠️ Lỗi thường gặp: Thêm '-ed' vào động từ sau 'didn't'. Sau 'didn't' động từ phải ở dạng nguyên mẫu.",
+    10: "⚠️ Lỗi thường gặp: Thêm '-ed' vào động từ trong câu hỏi. Sau 'Did' động từ phải ở dạng nguyên mẫu.",
+    11: "⚠️ Lỗi thường gặp: Chia sai đuôi '-ed' với từ kết thúc bằng 'y'. Nhớ đổi y -> ied.",
+    12: "⚠️ Lỗi thường gặp: Dùng sai từ để hỏi thông tin (What, Who...).",
+    13: "⚠️ Lỗi thường gặp: Dùng sai từ để hỏi nơi chốn (Where).",
+    14: "⚠️ Lỗi thường gặp: Dùng sai trợ động từ khi đưa ra yêu cầu giúp đỡ. Dùng 'Can' hoặc 'Could'.",
+    15: "⚠️ Lỗi thường gặp: Chia sai động từ to-be ở quá khứ (was/were).",
+    16: "⚠️ Lỗi thường gặp: Không phân biệt được hành động ĐANG diễn ra (Quá khứ tiếp diễn) bị xen vào.",
+    17: "⚠️ Lỗi thường gặp: Dùng 'while' thay cho 'when' trước hành động xen vào (quá khứ đơn).",
+    18: "⚠️ Lỗi thường gặp: Dùng 'anything' trong câu khẳng định. Khẳng định phải dùng 'something'.",
+    19: "⚠️ Lỗi thường gặp: Dùng 'something' trong câu phủ định. Phủ định phải dùng 'anything'.",
+    20: "⚠️ Lỗi thường gặp: Phủ định kép. 'Nothing' bản thân nó đã mang nghĩa phủ định.",
+    21: "⚠️ Lỗi thường gặp: Chia động từ số nhiều cho 'Everyone'. Các đại từ này luôn đi với động từ SỐ ÍT.",
+    22: "⚠️ Lỗi thường gặp: Nhầm lẫn 'will' và 'be going to'. Kế hoạch đã định trước dùng 'be going to'.",
+    23: "⚠️ Lỗi thường gặp: Viết sai cấu trúc phủ định của 'be going to'.",
+    24: "⚠️ Lỗi thường gặp: Dùng 'be going to' cho Lời hứa. Lời hứa phải dùng 'will/won't'.",
+    25: "⚠️ Lỗi thường gặp: Dùng 'be going to' cho Lời đề nghị. Đề nghị giúp đỡ phải dùng 'will'.",
+    26: "⚠️ Lỗi thường gặp: Dùng 'be going to' cho Quyết định đột ngột lúc nói. Phải dùng 'will'.",
+    27: "⚠️ Lỗi thường gặp: Dùng thì Tương lai ('will') trong mệnh đề 'If'. Mệnh đề 'If' dùng Hiện tại đơn.",
+    28: "⚠️ Lỗi thường gặp: Thiếu 'to-be' hoặc 'to' trong cấu trúc 'be going to'.",
+    29: "⚠️ Lỗi thường gặp: Dùng 'will' trong câu điều kiện loại 0 (sự thật hiển nhiên).",
+    30: "⚠️ Lỗi thường gặp: Không chia đúng thì hiện tại đơn cho quy luật máy móc (loại 0).",
+    31: "⚠️ Lỗi thường gặp: Phủ định sai cấu trúc trong câu điều kiện loại 1.",
+    32: "⚠️ Lỗi thường gặp: Chia sai vế 'If' của câu điều kiện loại 1 (phải là Hiện tại đơn).",
+    33: "⚠️ Lỗi thường gặp: Dùng 'more' với tính từ ngắn. Tính từ 1 âm tiết chỉ thêm '-er'.",
+    34: "⚠️ Lỗi thường gặp: Nhầm lẫn so sánh hơn và so sánh nhất. Có 'the' thì phải là so sánh nhất.",
+    35: "⚠️ Lỗi thường gặp: Dùng 'least' hoặc 'few' thay cho 'less' trong so sánh ít hơn.",
+    36: "⚠️ Lỗi thường gặp: Dùng quá khứ đơn thay vì Hiện tại hoàn thành khi hỏi về trải nghiệm (ever).",
+    37: "⚠️ Lỗi thường gặp: Dùng 'ever' trong câu phủ định mang nghĩa chưa bao giờ (dùng 'never').",
+    38: "⚠️ Lỗi thường gặp: Thiếu 'have/has' trong cấu trúc 'the best... I have ever...'.",
+    39: "⚠️ Lỗi thường gặp: Dùng 'to V' sau 'practise/enjoy/mind'. Các từ này đi với 'V-ing'.",
+    40: "⚠️ Lỗi thường gặp: Dùng 'V-ing' sau 'need/want/decide'. Các từ này đi với 'to V'.",
+    41: "⚠️ Lỗi thường gặp: Thiếu 'to' trong cấu trúc 'persuade/ask someone to do something'.",
+    42: "⚠️ Lỗi thường gặp: Không nhớ rằng 'start' có thể đi với cả 'to V' và 'V-ing'.",
+    43: "⚠️ Lỗi thường gặp: Dùng 'which' thay thế cho Người. Phải dùng 'who'.",
+    44: "⚠️ Lỗi thường gặp: Dùng 'who' thay thế cho Vật. Phải dùng 'which'.",
+    45: "⚠️ Lỗi thường gặp: Dùng 'which' cho Nơi chốn. Phải dùng 'where'.",
+    46: "⚠️ Lỗi thường gặp: Nhầm lẫn ngữ cảnh của các tính từ miêu tả tính cách.",
+    47: "⚠️ Lỗi thường gặp: Nhầm lẫn tên các môn học trong tiếng Anh.",
+    48: "⚠️ Lỗi thường gặp: Nhầm lẫn các chế độ ăn uống (vegetarian vs vegan).",
+    49: "⚠️ Lỗi thường gặp: Nhầm lẫn giữa 'prize', 'reward' và 'challenge'.",
+    50: "⚠️ Lỗi thường gặp: Dùng 'very' với tính từ cực cấp (spectacular, awful...).",
+};
+
 function createQuestion(text, tText, correctOption, correctTrans, wrongOptions, wrongTransList, exp, unit, orderIndex, setNumber) {
     const opts = [
         { text: correctOption, trans: correctTrans, isCorrect: true },
@@ -518,7 +571,8 @@ function createQuestion(text, tText, correctOption, correctTrans, wrongOptions, 
     return {
         questionText: text, options: finalOptions, correctAnswer: correctLetter,
         explanation: exp, vietnameseTranslation: tText, optionTranslations: finalTrans,
-        unit: unit.split(':')[0].trim(), orderIndex, setNumber
+        unit: unit.split(':')[0].trim(), orderIndex, setNumber,
+        commonMistake: commonMistakes[orderIndex]
     };
 }
 
