@@ -49,6 +49,18 @@ const QuestionSchema = new mongoose.Schema({
     commonMistake: {
         type: String,
         required: false
+    },
+    difficulty: {
+        type: String,
+        enum: ['easy', 'medium', 'hard'],
+        required: true,
+        default: 'medium'
+    },
+    setDifficulty: {
+        type: String,
+        enum: ['easy', 'medium', 'hard'],
+        required: true,
+        default: 'medium'
     }
 }, {
     timestamps: true
@@ -58,5 +70,7 @@ const QuestionSchema = new mongoose.Schema({
 QuestionSchema.index({ orderIndex: 1 });
 QuestionSchema.index({ unit: 1 });
 QuestionSchema.index({ setNumber: 1 });
+QuestionSchema.index({ difficulty: 1 });
+QuestionSchema.index({ setDifficulty: 1 });
 
 module.exports = mongoose.model('Question', QuestionSchema);

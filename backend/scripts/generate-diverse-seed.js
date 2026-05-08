@@ -503,6 +503,46 @@ const q50_list = [
     "smell coming from the kitchen|Mùi từ bếp toả ra|disgusting|kinh tởm"
 ];
 
+// =============================================
+// DIFFICULTY CLASSIFICATION
+// Based on Voices A2-B1 grammar progression
+// =============================================
+const questionDifficulty = {
+    // 🟢 EASY — Basic grammar structures, very clear rules
+    1: 'easy', 2: 'easy', 3: 'easy',     // Adverbs of Frequency
+    4: 'easy', 5: 'easy',                // Present Simple
+    6: 'easy',                           // Present Continuous signal words
+    7: 'easy',                           // Stative verbs
+    8: 'easy', 9: 'easy', 10: 'easy',   // Past Simple basic
+    11: 'easy',                          // Past Simple spelling (-ied)
+    12: 'easy', 13: 'easy', 14: 'easy', // Wh-questions, Can
+    46: 'easy', 47: 'easy',             // Vocabulary: Personality, Subjects
+
+    // 🟡 MEDIUM — More context needed, common confusion points
+    15: 'medium', 16: 'medium', 17: 'medium',  // Past Continuous
+    18: 'medium', 19: 'medium', 20: 'medium', 21: 'medium', // Indefinite pronouns
+    22: 'medium', 23: 'medium',                // be going to
+    24: 'medium', 25: 'medium', 26: 'medium',  // will (promise/offer/spontaneous)
+    27: 'medium', 28: 'medium',                // Future: if/going to structure
+    48: 'medium', 49: 'medium',                // Vocabulary: Food, Motivation
+
+    // 🔴 HARD — Complex structures, subtle differences
+    29: 'hard', 30: 'hard',             // Zero conditionals
+    31: 'hard', 32: 'hard',             // First conditionals
+    33: 'hard', 34: 'hard', 35: 'hard', // Comparatives & Superlatives
+    36: 'hard', 37: 'hard', 38: 'hard', // Present Perfect (ever/never)
+    39: 'hard', 40: 'hard', 41: 'hard', 42: 'hard', // Verb patterns
+    43: 'hard', 44: 'hard', 45: 'hard', // Relative clauses
+    50: 'hard'                          // Extreme Adjectives
+};
+
+// Set difficulty: Sets 1-3 = easy, 4-7 = medium, 8-10 = hard
+const getSetDifficulty = (setNumber) => {
+    if (setNumber <= 3) return 'easy';
+    if (setNumber <= 7) return 'medium';
+    return 'hard';
+};
+
 const allQuestions = [];
 
 const commonMistakes = {
@@ -582,7 +622,9 @@ function createQuestion(text, tText, correctOption, correctTrans, wrongOptions, 
         questionText: text, options: finalOptions, correctAnswer: correctLetter,
         explanation: exp, vietnameseTranslation: tText, optionTranslations: finalTrans,
         unit: unit.split(':')[0].trim(), orderIndex, setNumber,
-        commonMistake: commonMistakes[orderIndex]
+        commonMistake: commonMistakes[orderIndex],
+        difficulty: questionDifficulty[orderIndex] || 'medium',
+        setDifficulty: getSetDifficulty(setNumber)
     };
 }
 
