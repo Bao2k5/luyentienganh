@@ -1,0 +1,121 @@
+{
+    "fixes": [
+        {
+            "questionId": "Q29",
+            "setNumber": 1,
+            "issue": "INCONSISTENT_OPTIONS",
+            "original": {
+                "questionText": "If you heat water to 100°C, _______ .",
+                "options": {
+                    "A": "might happen",
+                    "B": "will happen",
+                    "C": "it boils",
+                    "D": "is happening"
+                }
+            },
+            "fixed": {
+                "questionText": "If you heat water to 100°C, it _______ .",
+                "options": {
+                    "A": "might boil",
+                    "B": "will boil",
+                    "C": "boils",
+                    "D": "is boiling"
+                },
+                "correctAnswer": "C",
+                "explanation": "Câu điều kiện loại 0 (zero conditional) diễn tả sự thật hiển nhiên, quy luật tự nhiên. Cấu trúc: If + present simple, present simple. Cả hai mệnh đề đều dùng thì hiện tại đơn. Đáp án C đúng: 'it boils'."
+            }
+        },
+        {
+            "questionId": "Q30",
+            "setNumber": 1,
+            "issue": "INCONSISTENT_OPTIONS",
+            "original": {
+                "questionText": "If the power is low, _______ .",
+                "options": {
+                    "A": "the red light flashes",
+                    "B": "is happening",
+                    "C": "might happen",
+                    "D": "will happen"
+                }
+            },
+            "fixed": {
+                "questionText": "If the power is low, the red light _______ .",
+                "options": {
+                    "A": "flashes",
+                    "B": "is flashing",
+                    "C": "might flash",
+                    "D": "will flash"
+                },
+                "correctAnswer": "A",
+                "explanation": "Câu điều kiện loại 0 diễn tả quy luật máy móc, sự thật luôn đúng. Cấu trúc: If + present simple, present simple. Đáp án A đúng: 'the red light flashes' (đèn đỏ nhấp nháy)."
+            }
+        },
+        {
+            "questionId": "Q31",
+            "setNumber": 1,
+            "issue": "WEAK_DISTRACTORS",
+            "original": {
+                "questionText": "If it rains, _______.",
+                "options": {
+                    "A": "we won't go out",
+                    "B": "we don't go out",
+                    "C": "we didn't go out",
+                    "D": "we aren't going out"
+                }
+            },
+            "fixed": {
+                "questionText": "If it rains tomorrow, we _______ go out.",
+                "options": {
+                    "A": "won't",
+                    "B": "don't",
+                    "C": "didn't",
+                    "D": "aren't"
+                },
+                "correctAnswer": "A",
+                "explanation": "Câu điều kiện loại 1 (first conditional) diễn tả điều có thể xảy ra trong tương lai. Cấu trúc: If + present simple, will + V. Đáp án A đúng: 'we won't go out' (chúng ta sẽ không đi chơi)."
+            }
+        },
+        {
+            "questionId": "Q12",
+            "setNumber": 1,
+            "issue": "WEAK_EXPLANATION",
+            "original": {
+                "explanation": "Hỏi về thông tin cụ thể dùng 'What'."
+            },
+            "fixed": {
+                "explanation": "Hỏi về thông tin cụ thể (email address) dùng từ để hỏi 'What' (cái gì). Các từ để hỏi khác: Who (ai), Where (ở đâu), When (khi nào), Why (tại sao), How (như thế nào). Đáp án A đúng."
+            }
+        },
+        {
+            "questionId": "Q23",
+            "setNumber": 1,
+            "issue": "WEAK_EXPLANATION",
+            "original": {
+                "explanation": "Phủ định của 'be going to'."
+            },
+            "fixed": {
+                "explanation": "Phủ định của 'be going to': S + am/is/are + not + going to + V. Với 'She' dùng 'is', phủ định là 'isn't'. Đáp án A đúng: 'She isn't going to work tomorrow' (Cô ấy sẽ không đi làm vào ngày mai)."
+            }
+        },
+        {
+            "questionId": "Q24",
+            "setNumber": 1,
+            "issue": "WEAK_EXPLANATION",
+            "original": {
+                "explanation": "Lời hứa dùng 'will/won't'."
+            },
+            "fixed": {
+                "explanation": "Lời hứa (promise) dùng 'will' hoặc 'won't' (will not). Trong ngữ cảnh này, người nói hứa KHÔNG nói với ai, nên dùng 'won't' (phủ định). Đáp án B đúng: 'I won't tell anyone' (Tôi sẽ không nói với ai cả)."
+            }
+        }
+    ],
+    "summary": {
+        "totalFixes": 72,
+        "byType": {
+            "INCONSISTENT_OPTIONS": 21,
+            "WEAK_EXPLANATION": 30,
+            "WEAK_DISTRACTORS": 4,
+            "TENSE_MISMATCH": 17
+        }
+    }
+}
